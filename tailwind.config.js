@@ -7,9 +7,28 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        bounceCustom: "bounce 2s infinite ease-in-out",
+      },
+      keyframes: {
+        bounce: {
+          "0%, 20%, 50%, 80%, 100%": { transform: "translateY(0)" },
+          "40%": { transform: "translateY(-20px)" },
+          "60%": { transform: "translateY(-10px)" },
+        },
+      },
+      fontFamily: {
+        sans: ["Lato", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        Helvetica: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        customGray: "#3e3e3e",
+        lightblue: "#5ad4fb",
+        offWhite: "#f5f5f5",
+        darkGray: "#797979",
+        Gray: "#4a4a4a",
+        gray878: "#878787",
       },
     },
   },
