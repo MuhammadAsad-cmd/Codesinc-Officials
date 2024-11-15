@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import ServicesDropdown from "../../Dropdowns/ServicesDropdown";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,14 +59,7 @@ const Header = () => {
                       </p>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/services">
-                      <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
-                        Services
-                        <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                      </p>
-                    </Link>
-                  </li>
+                  <ServicesDropdown />
                   <li>
                     <Link href="/contact-us">
                       <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
