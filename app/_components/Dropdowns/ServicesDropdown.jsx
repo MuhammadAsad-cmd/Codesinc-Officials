@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const Dropdown = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -8,59 +7,59 @@ const Dropdown = () => {
   const services = [
     {
       title: "Web Design & Development",
-      icon: "/icons/web-design.svg",
+      icon: "/images/1.png",
       link: "/services/web-development",
     },
     {
       title: "Mobile App Development",
-      icon: "/icons/mobile-app.svg",
+      icon: "/images/3.png",
       link: "/services/mobile-development",
     },
     {
       title: "Software Development",
-      icon: "/icons/software-development.svg",
+      icon: "/images/4.png",
       link: "/services/software-development",
     },
     {
       title: "Startup",
-      icon: "/icons/startup.svg",
+      icon: "/images/9.png",
       link: "/services/startup",
       extra: "360 Degree Solution",
     },
     {
       title: "Digital Marketing",
-      icon: "/icons/digital-marketing.svg",
+      icon: "/images/11.png",
       link: "/services/digital-marketing",
     },
     {
       title: "Laravel Development",
-      icon: "/icons/laravel.svg",
+      icon: "/images/laravel-menu.png",
       link: "/services/laravel-development",
     },
     {
       title: "Ecommerce Development",
-      icon: "/icons/ecommerce.svg",
+      icon: "/images/5.png",
       link: "/services/ecommerce-development",
       extra: "360 Degree Solution",
     },
     {
       title: "Managed Cloud Hosting",
-      icon: "/icons/cloud-hosting.svg",
+      icon: "/images/6.png",
       link: "/services/cloud-hosting",
     },
     {
       title: "IT Resource Allocation & Management",
-      icon: "/icons/it-resource.svg",
+      icon: "/images/8.png",
       link: "/services/it-resource",
     },
     {
       title: "Business Intelligence",
-      icon: "/icons/business-intelligence.svg",
+      icon: "/images/7.png",
       link: "/services/business-intelligence",
     },
     {
       title: "Business Process Outsourcing",
-      icon: "/icons/bpo.svg",
+      icon: "/images/10.png",
       link: "/services/bpo",
     },
   ];
@@ -77,17 +76,18 @@ const Dropdown = () => {
       </p>
 
       {isDropdownOpen && (
-        <div className="absolute left-1/2 top-[100%] z-50 mt-2 w-[790px] -translate-x-1/2 transform rounded bg-white p-6 shadow-lg">
-          <div className="grid grid-cols-3 gap-6">
+        <div className="absolute left-1/2 top-[100%] z-50 mt-2 h-[570px] w-[790px] -translate-x-1/2 transform rounded bg-white p-6 shadow-lg">
+          <div className="grid h-full grid-cols-4 gap-4">
             {services.map((service, index) => (
               <Link href={service.link} key={index} passHref>
                 <div className="flex cursor-pointer flex-col items-center text-center text-gray-700 hover:text-blue-500">
-                  {/* <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={50}
-                    height={50}
-                  /> */}
+                  <div
+                    className="h-[72px] w-[119px] transform bg-no-repeat transition-transform hover:scale-105"
+                    style={{
+                      backgroundImage: `url(${service.icon})`,
+                      filter: "brightness(80%)",
+                    }}
+                  ></div>
                   <p className="mt-2 font-semibold">{service.title}</p>
                   {service.extra && (
                     <span className="mt-1 text-xs text-blue-500">

@@ -4,6 +4,7 @@ import ContactForm from "./_components/Common/Contact/ContactForm";
 import SupportOptions from "./_components/SupportOptions/SupportOptions";
 import OurServices from "./_components/OurServices/OurServices";
 import AllProjects from "./_components/AllProjects/AllProjects";
+import TechnologySection from "./_components/Technologies/Technologies";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <OurServices />
       <SupportOptions />
       <AllProjects />
+      <TechnologySection />
       <ContactForm />
     </>
   );
