@@ -231,14 +231,14 @@ const MobileApplicationDevelopment = () => {
           </p>
           <p className="tetxt-[#4a4a4a] text-[15px] font-normal leading-[1.75]">
             Our crew of skilled and professional php developers have worked on
-            tasks for complete SDLC. We've labored on initiatives right from
+            tasks for complete SDLC. We&apos;ve labored on initiatives right from
             idea to manufacturing and renovation thereafter. In a number of the
             alternative initiatives, we joined the assignment someplace in
             middle of development and have efficaciously been capable of helping
             clients enforce them. As a custom php improvement agency, we pay
-            close interest to future preservation and it's significance of
-            documenting the undertaking, as it's crucial for future growth of
-            the mission. We've worked on initiatives with a couple of group
+            close interest to future preservation and it&apos;s significance of
+            documenting the undertaking, as it&apos;s crucial for future growth of
+            the mission. We&apos;ve worked on initiatives with a couple of group
             members spread across unique places and understand the manner
             orientated, code sub versioning using GIThub, SVN and distinct
             undertaking management tools.
