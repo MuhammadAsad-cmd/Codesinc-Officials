@@ -9,17 +9,17 @@ const Dropdown = () => {
     {
       title: "Web Design & Development",
       icon: "/images/1.png",
-      link: "/services/web-development",
+      link: "/web-design-development",
     },
     {
       title: "Mobile App Development",
       icon: "/images/3.png",
-      link: "/services/mobile-development",
+      link: "/mobile-application-development",
     },
     {
       title: "Software Development",
       icon: "/images/4.png",
-      link: "/services/software-development",
+      link: "/software-development",
     },
     {
       title: "Startup",

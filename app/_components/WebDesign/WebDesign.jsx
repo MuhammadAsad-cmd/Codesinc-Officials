@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { application, ServicesItems } from "@/app/Data/Services";
 import FileIcon from "@/public/icons/FileIcon";
-import { FaRegFileAlt } from "react-icons/fa";
+import { PiNotePencilBold } from "react-icons/pi";
+import { FaPaintBrush, FaRegLifeRing, FaSearch } from "react-icons/fa";
+import { FaGears } from "react-icons/fa6";
+import { IoIosSend } from "react-icons/io";
 
 const WebDesign = () => {
   return (
@@ -112,7 +115,7 @@ const WebDesign = () => {
                         </div>
                         <Link
                           href={item.link}
-                          className="group-hover:text-brightOrange group-hover:border-brightOrange flex items-center justify-center rounded-full border border-gray-400 px-2 py-0.5 text-xs text-gray-500 transition duration-300 ease-in-out"
+                          className="flex items-center justify-center rounded-full border border-gray-400 px-2 py-0.5 text-xs text-gray-500 transition duration-300 ease-in-out group-hover:border-brightOrange group-hover:text-brightOrange"
                         >
                           Read More
                         </Link>
@@ -121,7 +124,7 @@ const WebDesign = () => {
                   </div>
                 </div>
 
-                <button className="border-brightOrange text-brightOrange mt-4 rounded-full border px-10 py-1.5 font-montserrat text-[13px] font-semibold uppercase transition duration-300">
+                <button className="mt-4 rounded-full border border-brightOrange px-10 py-1.5 font-montserrat text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
                   Get Free Quote
                 </button>
               </div>
@@ -172,7 +175,7 @@ const WebDesign = () => {
                   </div>
                 </div>
 
-                <button className="border-brightOrange text-brightOrange mt-4 rounded-full border px-10 py-1.5 font-montserrat text-[13px] font-semibold uppercase transition duration-300">
+                <button className="mt-4 rounded-full border border-brightOrange px-10 py-1.5 font-montserrat text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
                   Get Free Quote
                 </button>
               </div>
@@ -284,61 +287,62 @@ const WebDesign = () => {
             </li>
             <li>
               <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
-                <div className="text-3xl text-[#b6b6b6]">
-                  <FileIcon />
+                <div className="text-5xl text-[#b6b6b6]">
+                  {/* <FileIcon /> */}
+                  <PiNotePencilBold />
                 </div>
                 <h4 className="mt-5 w-[70%] text-[13px] font-semibold uppercase leading-[21px] text-[#222] text-current">
-                  Define Requirement
+                  Architect Solution
                 </h4>
               </div>
             </li>
             <li>
               <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
                 <div className="text-3xl text-[#b6b6b6]">
-                  <FileIcon />
+                  <FaPaintBrush />
                 </div>
                 <h4 className="mt-5 w-[70%] text-[13px] font-semibold uppercase leading-[21px] text-[#222] text-current">
-                  Define Requirement
+                  Design Interface
                 </h4>
               </div>
             </li>
             <li>
               <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
                 <div className="text-3xl text-[#b6b6b6]">
-                  <FileIcon />
+                  <FaGears />
                 </div>
                 <h4 className="mt-5 w-[70%] text-[13px] font-semibold uppercase leading-[21px] text-[#222] text-current">
-                  Define Requirement
+                  Develop Functionality
                 </h4>
               </div>
             </li>
             <li className="flex-shrink-0">
               <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
                 <div className="text-3xl text-[#b6b6b6]">
-                  <FileIcon />
+                  <FaSearch />
                 </div>
                 <h4 className="mt-5 w-[70%] text-[13px] font-semibold uppercase leading-[21px] text-[#222] text-current">
-                  Define Requirement
+                  Testing
                 </h4>
               </div>
             </li>
             <li className="flex-shrink-0">
               <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
-                <div className="text-3xl text-[#b6b6b6]">
-                  <FileIcon />
+                <div className="text-4xl text-[#b6b6b6]">
+                  <IoIosSend />
                 </div>
                 <h4 className="mt-5 w-[70%] text-[13px] font-semibold uppercase leading-[21px] text-[#222] text-current">
-                  Define Requirement
+                  Deliver
                 </h4>
               </div>
             </li>
             <li className="flex-shrink-0">
               <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
-                <div className="text-3xl text-[#b6b6b6]">
-                  <FileIcon />
+                <div className="text-4xl text-[#b6b6b6]">
+                  <FaRegLifeRing />
                 </div>
                 <h4 className="mt-5 w-[70%] text-[13px] font-semibold uppercase leading-[21px] text-[#222] text-current">
-                  Define Requirement
+                  Support
                 </h4>
               </div>
             </li>
