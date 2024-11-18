@@ -39,7 +39,7 @@ const ContactForm = () => {
           className="h-[805px] w-full"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div className="container mx-auto w-full max-w-[1140px]">
+          <div className="container w-full">
             <h1 className="text-center text-[60px] font-bold uppercase tracking-tighter text-white">
               let&apos;s start your project
             </h1>

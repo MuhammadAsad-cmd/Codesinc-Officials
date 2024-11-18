@@ -91,7 +91,7 @@ const AllProjects = () => {
   };
 
   return (
-    <section className="container mx-auto mb-10 w-full max-w-[1170px] py-[50px]">
+    <section className="container mb-10 w-full py-[50px]">
       {/* Filter Controls */}
       <div className="flex w-full gap-3">
         <div className="w-1/2">

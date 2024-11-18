@@ -5,7 +5,7 @@ const MobileApplicationDevelopment = () => {
   return (
     <>
       <div className="bg-[url('/images/mobile-01.gif')] bg-[length:15.25%] bg-fixed bg-[16.9%_170px] bg-no-repeat py-[100px]">
-        <div className="container mx-auto w-full max-w-[1140px]">
+        <div className="container">
           <div className="flex justify-end text-center">
             <div className="max-w-[66.66%]">
               <h2 className="text-[40px] uppercase">
@@ -84,7 +84,7 @@ const MobileApplicationDevelopment = () => {
           height={350}
           className="absolute right-0 top-3"
         />
-        <div className="container mx-auto mb-12 w-full max-w-[1140px]">
+        <div className="container mb-12">
           <div className="flex justify-end">
             <div className="max-w-[66.66%]">
               <h2 className="mb-[30px] border-b border-b-white/40 pb-5 text-[40px] font-bold uppercase">
@@ -137,7 +137,7 @@ const MobileApplicationDevelopment = () => {
           height={350}
           className="absolute -right-5 top-3"
         />
-        <div className="container mx-auto mb-12 w-full max-w-[1140px]">
+        <div className="container mb-12">
           <div className="flex justify-end">
             <div className="max-w-[66.66%]">
               <h2 className="text-[40px] font-bold uppercase leading-[38px]">
@@ -175,7 +175,7 @@ const MobileApplicationDevelopment = () => {
         </div>
       </div>
       <div className="bg-[#f5f5f5]">
-        <div className="container mx-auto w-full max-w-[1140px] py-[100px]">
+        <div className="container py-[100px]">
           <h2 className="mb-2.5 mt-5 text-center text-[30px] uppercase text-black">
             What is custom mobile App development?
           </h2>
@@ -215,7 +215,7 @@ const MobileApplicationDevelopment = () => {
             </div>
           </div>
         </div>
-        <div className="container mx-auto w-full max-w-[1140px] pb-[50px]">
+        <div className="container pb-[50px]">
           <h2 className="mb-2.5 mt-5 text-[24px] uppercase">
             Situations for mobile app development
           </h2>
@@ -231,15 +231,15 @@ const MobileApplicationDevelopment = () => {
           </p>
           <p className="tetxt-[#4a4a4a] text-[15px] font-normal leading-[1.75]">
             Our crew of skilled and professional php developers have worked on
-            tasks for complete SDLC. We&apos;ve labored on initiatives right from
-            idea to manufacturing and renovation thereafter. In a number of the
-            alternative initiatives, we joined the assignment someplace in
+            tasks for complete SDLC. We&apos;ve labored on initiatives right
+            from idea to manufacturing and renovation thereafter. In a number of
+            the alternative initiatives, we joined the assignment someplace in
             middle of development and have efficaciously been capable of helping
             clients enforce them. As a custom php improvement agency, we pay
             close interest to future preservation and it&apos;s significance of
-            documenting the undertaking, as it&apos;s crucial for future growth of
-            the mission. We&apos;ve worked on initiatives with a couple of group
-            members spread across unique places and understand the manner
+            documenting the undertaking, as it&apos;s crucial for future growth
+            of the mission. We&apos;ve worked on initiatives with a couple of
+            group members spread across unique places and understand the manner
             orientated, code sub versioning using GIThub, SVN and distinct
             undertaking management tools.
           </p>
@@ -311,7 +311,7 @@ const MobileApplicationDevelopment = () => {
               We develop delightful apps our every app is an everlasting
               experience
             </h2>
-            <p className="tetxt-[#4a4a4a] mb-2.5 text-[15px] font-normal leading-[1.75]">
+            <p className="mb-2.5 text-[15px] font-normal leading-[1.75] text-[#4a4a4a]">
               We take pride in being a mobile application development company
               which understands your business needs and then we cater to various
               development aspects ranging from web development to mobile app

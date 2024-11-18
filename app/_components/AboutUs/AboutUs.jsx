@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaHouseChimney } from "react-icons/fa6";
+import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 
 const AboutUs = () => {
   return (
@@ -16,7 +17,7 @@ const AboutUs = () => {
           className="h-[661px] w-full object-cover"
         />
         <div className="absolute top-[20%] w-full">
-          <div className="container mx-auto w-full max-w-[1140px]">
+          <div className="container">
             <div className="mx-auto">
               <Image
                 width={250}
@@ -35,24 +36,9 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex h-[55px] items-center justify-center bg-[#e1dfdf]">
-        <div className="container mx-auto flex h-full w-full max-w-[1140px] items-center">
-          <div className="flex h-10 items-center justify-center rounded border border-customGray">
-            <Link
-              href="/"
-              className="flex h-full cursor-pointer items-center justify-center bg-customGray pl-2.5 pr-1.5 text-lg text-[#f1f1f1]"
-            >
-              <FaHouseChimney />
-            </Link>
-            <div className="h-full border border-y-[17px] border-l-[10px] border-customGray border-y-transparent border-r-transparent"></div>
-            <p className="px-2 text-[13px] uppercase text-[#3e3e3e]">
-              about us
-            </p>
-          </div>
-        </div>
-      </div>
+      <Breadcrumbs title="about us" breadcrumbPath="/about-us" />
 
-      <section className="container mx-auto w-full max-w-[1170px]">
+      <section className="container">
         <div className="py-[50px]">
           <h2 className="mb-2.5 mt-5 font-montserrat text-[60px] font-bold uppercase leading-[66px] tracking-tighter">
             About Us
@@ -135,7 +121,7 @@ const AboutUs = () => {
           className="h-[618px] w-full"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div className="container mx-auto w-full max-w-[1140px]">
+          <div className="container">
             <h1 className="text-center text-[60px] font-bold uppercase tracking-tighter text-white">
               Brains Behind Codesinc
             </h1>

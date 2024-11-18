@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Dropdown = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -76,29 +77,43 @@ const Dropdown = () => {
       </p>
 
       {isDropdownOpen && (
-        <div className="absolute left-1/2 top-[100%] z-50 mt-2 h-[570px] w-[790px] -translate-x-1/2 transform rounded bg-white p-6 shadow-lg">
-          <div className="grid h-full grid-cols-4 gap-4">
-            {services.map((service, index) => (
-              <Link href={service.link} key={index} passHref>
-                <div className="flex cursor-pointer flex-col items-center text-center text-gray-700 hover:text-blue-500">
-                  <div
-                    className="h-[72px] w-[119px] transform bg-no-repeat transition-transform hover:scale-105"
-                    style={{
-                      backgroundImage: `url(${service.icon})`,
-                      filter: "brightness(80%)",
-                    }}
-                  ></div>
-                  <p className="mt-2 font-semibold">{service.title}</p>
-                  {service.extra && (
-                    <span className="mt-1 text-xs text-blue-500">
-                      {service.extra}
-                    </span>
-                  )}
-                </div>
-              </Link>
-            ))}
+        <>
+          <div className="absolute left-0 top-[100%]">
+            <Image
+              width={72}
+              height={35}
+              unoptimized
+              src="/images/dd-arrow.png"
+              alt="arrow"
+            />
           </div>
-        </div>
+          <div className="absolute left-0 top-10 z-50 h-[570px] w-[790px] -translate-x-1/2 transform rounded-lg bg-white shadow-lg">
+            <div className="grid h-full grid-cols-4 gap-7 p-6">
+              {services.map((service, index) => (
+                <Link href={service.link} key={index} passHref>
+                  <div className="flex cursor-pointer flex-col items-center text-center text-[#797979] hover:text-lightblue">
+                    <div
+                      className="h-[72px] w-[119px] transform bg-no-repeat transition-transform hover:brightness-90"
+                      style={{
+                        backgroundImage: `url(${service.icon})`,
+                        width: "119px",
+                        height: "72px",
+                      }}
+                    ></div>
+                    <p className="mt-2 font-montserrat text-[13px] font-normal leading-[18px]">
+                      {service.title}
+                    </p>
+                    {service.extra && (
+                      <span className="mt-1 text-xs text-blue-500">
+                        {service.extra}
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </>
       )}
     </li>
   );

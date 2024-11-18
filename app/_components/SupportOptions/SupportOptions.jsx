@@ -6,7 +6,7 @@ const SupportOptions = () => {
   return (
     <>
       <div className="bg-lightblue">
-        <div className="container mx-auto w-full max-w-[1170px] py-[50px]">
+        <div className="container py-[50px]">
           <div className="flex items-center justify-between">
             <div className="py-5">
               <p className="max-w-[350px] text-xl font-semibold">

@@ -28,7 +28,7 @@ const HeroSection = () => {
           Your browser does not support the video tag.
         </video>
         <div className="absolute top-[18%] w-full">
-          <div className="container mx-auto w-full max-w-[1140px]">
+          <div className="container">
             <div className="mx-auto">
               <Image
                 width={250}

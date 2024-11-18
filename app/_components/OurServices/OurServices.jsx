@@ -1,12 +1,13 @@
 import { services } from "@/app/Data/Services";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const OurServices = () => {
   return (
     <>
       <div className="bg-offWhite py-[50px]">
-        <div className="container mx-auto mb-12 w-full max-w-[1140px]">
+        <div className="container mb-12">
           <div className="mb-[60px]">
             <h2 className="mb-2.5 mt-5 text-center text-[45px] font-[550] uppercase">
               What we do
@@ -31,9 +32,11 @@ const OurServices = () => {
                   <div className="mb-4">
                     <service.icon className="text-[44px] font-black text-lightblue duration-300 ease-in-out group-hover:text-white" />
                   </div>
-                  <h2 className="my-2.5 text-2xl font-bold capitalize duration-300 ease-in-out group-hover:text-white">
-                    {service.title}
-                  </h2>
+                  <Link href={service.link}>
+                    <h2 className="my-2.5 text-2xl font-bold capitalize duration-300 ease-in-out group-hover:text-white">
+                      {service.title}
+                    </h2>
+                  </Link>
                   <p className="my-2 w-full max-w-[272px] text-center text-base font-normal text-darkGray duration-300 ease-in-out group-hover:text-white">
                     {service.description}
                   </p>

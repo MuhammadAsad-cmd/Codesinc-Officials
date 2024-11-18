@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        // padding: "1rem",
+        screens: {
+          DEFAULT: "1170px",
+        },
+      },
       animation: {
         bounceCustom: "bounce 2s infinite ease-in-out",
       },
@@ -29,6 +36,11 @@ module.exports = {
         darkGray: "#797979",
         Gray: "#4a4a4a",
         gray878: "#878787",
+        brightOrange: "#ff7e00",
+        neutralGray: "#808080",
+        emeraldGreen: "#19d576",
+        skyBlue: "#00bff3",
+        redAccent: "#ef3139",
       },
     },
   },
