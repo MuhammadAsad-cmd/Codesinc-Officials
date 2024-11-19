@@ -24,7 +24,7 @@ const Dropdown = () => {
     {
       title: "Startup",
       icon: "/images/9.png",
-      link: "/services/startup",
+      link: "/startup",
       extra: "360 Degree Solution",
     },
     {

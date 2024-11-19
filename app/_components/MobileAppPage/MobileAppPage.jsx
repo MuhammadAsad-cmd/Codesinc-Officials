@@ -230,7 +230,7 @@ const MobileAppPage = () => {
           <h2 className="mb-2.5 mt-5 text-center text-[30px] uppercase text-black">
             What is custom mobile App development?
           </h2>
-          <p className="tetxt-[#4a4a4a] text-center text-[14px] font-normal leading-[1.75]">
+          <p className="tetxt-Gray text-center text-[14px] font-normal leading-[1.75]">
             In easy terms, cell app development is the advent of cell
             applications on a software platform. preferably, the answers brought
             are authentic to the name, attractive the commercial enterprise in
@@ -270,7 +270,7 @@ const MobileAppPage = () => {
           <h2 className="mb-2.5 mt-5 text-[24px] uppercase">
             Situations for mobile app development
           </h2>
-          <p className="tetxt-[#4a4a4a] mb-2.5 text-[15px] font-normal leading-[1.75]">
+          <p className="tetxt-Gray mb-2.5 text-[15px] font-normal leading-[1.75]">
             Normally a consumer has high expectancies of ease-of-use, beautiful
             UI/UX pics, and development potential. If the user experience turns
             out the opposite or is made to wait longer, then he will simply
@@ -280,7 +280,7 @@ const MobileAppPage = () => {
             than perfect and that is precisely what our best mobile app
             development platform supplies.
           </p>
-          <p className="tetxt-[#4a4a4a] text-[15px] font-normal leading-[1.75]">
+          <p className="tetxt-Gray text-[15px] font-normal leading-[1.75]">
             Our crew of skilled and professional php developers have worked on
             tasks for complete SDLC. We&apos;ve labored on initiatives right
             from idea to manufacturing and renovation thereafter. In a number of
@@ -362,7 +362,7 @@ const MobileAppPage = () => {
               We develop delightful apps our every app is an everlasting
               experience
             </h2>
-            <p className="mb-2.5 text-[15px] font-normal leading-[1.75] text-[#4a4a4a]">
+            <p className="mb-2.5 text-[15px] font-normal leading-[1.75] text-Gray">
               We take pride in being a mobile application development company
               which understands your business needs and then we cater to various
               development aspects ranging from web development to mobile app
@@ -373,7 +373,7 @@ const MobileAppPage = () => {
         </div>
       </div>
       <div className="container mx-auto w-full max-w-[1140px] py-[100px]">
-        <h2 className="text-center text-[40px] uppercase text-[#4a4a4a]">
+        <h2 className="text-center text-[40px] uppercase text-Gray">
           Our Simple Mantra For Your Success
         </h2>
         <Image

@@ -40,7 +40,7 @@ const ContactForm = () => {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="container w-full">
-            <h1 className="text-center text-[60px] font-bold uppercase tracking-tighter text-white">
+            <h1 className="mb-4 text-center text-5xl font-bold uppercase leading-10 text-white">
               let&apos;s start your project
             </h1>
             <form onSubmit={handleSubmit}>
@@ -65,38 +65,48 @@ const ContactForm = () => {
                   required
                 />
 
-                <select
-                  name="projectType"
-                  value={formData.projectType}
-                  onChange={handleChange}
-                  className="w-full border-b border-[#cdcdcd] px-5 py-4 font-montserrat text-[15px] font-medium text-[#797979] outline-none"
-                  required
-                >
-                  <option value="" disabled>
-                    Select Project Type
-                  </option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="Mobile App">Mobile App</option>
-                  <option value="UI/UX Design">UI/UX Design</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                </select>
-
-                <select
-                  name="country"
-                  value={formData.country}
-                  onChange={handleChange}
-                  className="w-full border-b border-[#cdcdcd] px-5 py-4 font-montserrat text-[15px] font-medium text-[#797979] outline-none"
-                  required
-                >
-                  <option value="" disabled>
-                    Select Country
-                  </option>
-                  {countries.map((country, index) => (
-                    <option key={index} value={country}>
-                      {country}
+                <div className="relative w-full">
+                  <select
+                    name="projectType"
+                    value={formData.projectType}
+                    onChange={handleChange}
+                    className="w-full appearance-none border-b border-[#cdcdcd] bg-transparent px-5 py-4 font-montserrat text-[15px] font-medium uppercase text-[#969696] outline-none placeholder:text-[#797979]"
+                    required
+                  >
+                    <option value="" disabled>
+                      Select Project Type
                     </option>
-                  ))}
-                </select>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                  </select>
+                  {/* Optional dropdown arrow */}
+                  <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#969696]">
+                    ▼
+                  </span>
+                </div>
+                <div className="relative w-full">
+                  <select
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    className="w-full appearance-none border-b border-[#cdcdcd] bg-transparent px-5 py-4 font-montserrat text-[15px] font-medium uppercase text-[#969696] outline-none placeholder:text-[#797979]"
+                    required
+                  >
+                    <option value="" className="text-[#969696]" disabled>
+                      Select Country
+                    </option>
+                    {countries.map((country, index) => (
+                      <option key={index} value={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </select>
+                  <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#969696]">
+                    ▼
+                  </span>
+                </div>
 
                 <input
                   type="tel"

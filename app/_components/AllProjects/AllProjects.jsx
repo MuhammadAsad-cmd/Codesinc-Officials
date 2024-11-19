@@ -91,75 +91,77 @@ const AllProjects = () => {
   };
 
   return (
-    <section className="container mb-10 w-full py-[50px]">
-      {/* Filter Controls */}
-      <div className="flex w-full gap-3">
-        <div className="w-1/2">
-          <h2 className="text-[38px] uppercase leading-10 text-[#464646]">
-            Award Winning Projects
-          </h2>
+    <>
+      <section className="container mb-10 w-full py-[50px]">
+        {/* Filter Controls */}
+        <div className="flex w-full gap-3">
+          <div className="w-1/2">
+            <h2 className="text-[38px] uppercase leading-10 text-[#464646]">
+              Award Winning Projects
+            </h2>
+          </div>
+          <div className="flex w-1/2 flex-wrap justify-center gap-3">
+            {technologies.map((tech, index) => (
+              <button
+                key={index}
+                className={`text-sm font-semibold uppercase leading-[19px] ${
+                  activeFilter === tech.filter
+                    ? "text-lightblue"
+                    : "text-gray-700"
+                } hover:text-lightblue`}
+                data-filter={tech.filter}
+                onClick={() => handleFilterClick(tech.filter)}
+              >
+                {tech.name}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="flex w-1/2 flex-wrap justify-center gap-3">
-          {technologies.map((tech, index) => (
-            <button
-              key={index}
-              className={`text-sm font-semibold uppercase leading-[19px] ${
-                activeFilter === tech.filter
-                  ? "text-lightblue"
-                  : "text-gray-700"
-              } hover:text-lightblue`}
-              data-filter={tech.filter}
-              onClick={() => handleFilterClick(tech.filter)}
+
+        {/* MixItUp Container */}
+        <div className="mt-10 grid grid-cols-4 gap-4" ref={containerRef}>
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`mix ${project.category} group relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md`}
             >
-              {tech.name}
-            </button>
+              {/* Image */}
+              <Image
+                width={283}
+                height={255}
+                unoptimized
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full rounded-lg object-cover transition-all duration-300 group-hover:scale-125 group-hover:opacity-50"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                {/* Link Icon */}
+                <Link
+                  href={`/projects/${project.id}`}
+                  className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-4xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
+                  title="View Project Details"
+                >
+                  <FaLink />
+                </Link>
+
+                {/* Image Icon */}
+                <a
+                  href={project.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-3xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
+                  title="View Image"
+                >
+                  <FaImage />
+                </a>
+              </div>
+            </div>
           ))}
         </div>
-      </div>
-
-      {/* MixItUp Container */}
-      <div className="mt-10 grid grid-cols-4 gap-4" ref={containerRef}>
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className={`mix ${project.category} group relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md`}
-          >
-            {/* Image */}
-            <Image
-              width={283}
-              height={255}
-              unoptimized
-              src={project.image}
-              alt={project.title}
-              className="h-full w-full rounded-lg object-cover transition-all duration-300 group-hover:scale-125 group-hover:opacity-50"
-            />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-              {/* Link Icon */}
-              <Link
-                href={`/projects/${project.id}`}
-                className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-4xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
-                title="View Project Details"
-              >
-                <FaLink />
-              </Link>
-
-              {/* Image Icon */}
-              <a
-                href={project.image}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-3xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
-                title="View Image"
-              >
-                <FaImage />
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

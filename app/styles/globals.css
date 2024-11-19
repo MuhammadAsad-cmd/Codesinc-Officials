@@ -80,3 +80,7 @@ body {
   display: inline-block;
   animation: float 4s ease-in-out infinite;
 }
+
+.animate-slideLeft:hover {
+  animation-play-state: paused;
+}

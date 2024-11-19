@@ -2,31 +2,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
-import { countries } from "@/app/Data/Countries";
+import ProjectContact from "../Common/Contact/ProjectContact";
 
 const SoftwareDevelop = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    projectType: "",
-    country: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    // Handle form submission
-  };
   return (
     <>
       <div className="relative w-full">
@@ -64,98 +42,7 @@ const SoftwareDevelop = () => {
                 </div>
               </div>
               <div className="w-1/3 px-4">
-                <div className="border-customBorder mt-[50px] w-full border-[10px] bg-[#07befa] p-[25px]">
-                  <p className="text-center font-montserrat text-[22px] font-semibold uppercase leading-[22px] text-white">
-                    Get Free Quote Now
-                  </p>
-                  <p className="mx-auto mt-[5px] w-full border-b border-white pb-[13px] text-center font-montserrat text-sm font-normal capitalize leading-5 tracking-[1px] text-white">
-                    Tell us about your Project
-                  </p>
-                  <form onSubmit={handleSubmit}>
-                    <div>
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name*"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="border-oceanBlue bg-skyBlue2 h-[42px] w-full border-b pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
-                        required
-                      />
-
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email *"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="border-oceanBlue bg-skyBlue2 h-[42px] w-full border-b pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
-                        required
-                      />
-
-                      <select
-                        name="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="border-oceanBlue bg-skyBlue2 h-[42px] w-full border-b pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
-                        required
-                      >
-                        <option value="" disabled>
-                          Select Project Type
-                        </option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Mobile App">Mobile App</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Digital Marketing">
-                          Digital Marketing
-                        </option>
-                      </select>
-
-                      <select
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                        className="border-oceanBlue bg-skyBlue2 h-[42px] w-full border-b pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
-                        required
-                      >
-                        <option value="" disabled>
-                          Select Country
-                        </option>
-                        {countries.map((country, index) => (
-                          <option key={index} value={country}>
-                            {country}
-                          </option>
-                        ))}
-                      </select>
-
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Your Phone *"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="border-oceanBlue bg-skyBlue2 h-[42px] w-full border-b pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
-                        required
-                      />
-
-                      <textarea
-                        name="message"
-                        placeholder="Your Message *"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="bg-skyBlue2 h-[120px] w-full pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
-                        rows="4"
-                        required
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      className="mx-auto mt-[30px] flex h-9 items-center justify-center rounded-full border-2 border-white bg-transparent px-[30px] py-1.5 font-montserrat text-lg font-semibold uppercase text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
-                    >
-                      GET STARTED
-                    </button>
-                  </form>
-                </div>
+                <ProjectContact />
               </div>
             </div>
           </div>
@@ -200,7 +87,7 @@ const SoftwareDevelop = () => {
       <div className="bg-white py-[70px] text-center">
         <div className="container">
           <div>
-            <h2 className="border-skyBlue2 inline-block border-b-[3px] pb-3 font-montserrat text-[40px] font-semibold uppercase text-Gray">
+            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-[40px] font-semibold uppercase text-Gray">
               SOFTWARE DEVELOPMENT
             </h2>
             <div className="mt-20 flex justify-center">
@@ -223,7 +110,7 @@ const SoftwareDevelop = () => {
                 </p>
               </div>
             </div>
-            <button className="text-skyBlue2 border-skyBlue2 mx-auto mt-10 flex items-center justify-center rounded-full border-2 px-[60px] py-2.5 text-[15px] capitalize">
+            <button className="mx-auto mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2">
               Get Started
             </button>
           </div>
@@ -301,7 +188,7 @@ const SoftwareDevelop = () => {
       </div>
       <div className="mt-[50px] pb-5 pt-[30px]">
         <div className="text-center">
-          <h2 className="border-skyBlue2 mb-20 inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-black">
+          <h2 className="mb-20 inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-black">
             How We Work
           </h2>
         </div>
