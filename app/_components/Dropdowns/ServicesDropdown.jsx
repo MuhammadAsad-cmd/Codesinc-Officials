@@ -40,13 +40,13 @@ const Dropdown = () => {
     {
       title: "Ecommerce Development",
       icon: "/images/5.png",
-      link: "/services/ecommerce-development",
+      link: "/ecommerce-development",
       extra: "360 Degree Solution",
     },
     {
       title: "Managed Cloud Hosting",
       icon: "/images/6.png",
-      link: "/services/cloud-hosting",
+      link: "/managed-cloud-hosting",
     },
     {
       title: "IT Resource Allocation & Management",

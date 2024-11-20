@@ -10,6 +10,7 @@ const StartUpPage = () => {
         <Image
           width={320}
           height={755}
+          unoptimized
           src="/images/cms/startup-bg.jpg"
           alt="Software Development"
           className="h-full w-full object-cover"

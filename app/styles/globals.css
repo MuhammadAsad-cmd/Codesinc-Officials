@@ -77,10 +77,25 @@ body {
 }
 
 .icon-container {
-  display: inline-block;
   animation: float 4s ease-in-out infinite;
 }
 
 .animate-slideLeft:hover {
   animation-play-state: paused;
+}
+
+.ContactBg {
+  background-color: rgb(42 42 42 / 80%);
+}
+
+.BgTechHub {
+  background: linear-gradient(
+    45deg,
+    rgba(32, 27, 68, 1) 0%,
+    rgba(89, 22, 97, 1) 100%
+  );
+}
+
+.techitem {
+  background-image: linear-gradient(to right, #42b2dc, #173f94) !important;
 }

@@ -14,14 +14,23 @@ module.exports = {
           DEFAULT: "1170px",
         },
       },
+
       keyframes: {
         slideLeft: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+
+        run: {
+          "0%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(10px)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
-        slideLeft: "slideLeft 10s linear infinite",
+        slideLeft: "slideLeft 1s ease-out forwards",
+        // slideLeft: "slideLeft 10s linear infinite",
+        run: "run 0.7s linear infinite",
       },
       fontFamily: {
         sans: ["Lato", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
