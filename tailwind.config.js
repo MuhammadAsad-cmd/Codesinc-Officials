@@ -29,7 +29,7 @@ module.exports = {
       },
       animation: {
         slideLeft: "slideLeft 1s ease-out forwards",
-        // slideLeft: "slideLeft 10s linear infinite",
+        slideLeft: "slideLeft 10s linear infinite",
         run: "run 0.7s linear infinite",
       },
       fontFamily: {
@@ -52,6 +52,8 @@ module.exports = {
         customBorder: "rgba(77, 108, 132, 0.69)",
         oceanBlue: "#477294",
         skyBlue2: "#07befa",
+        goldenYellow: "#ffcd38",
+        rosePink: "#f21860",
       },
     },
   },

@@ -51,17 +51,17 @@ const Dropdown = () => {
     {
       title: "IT Resource Allocation & Management",
       icon: "/images/8.png",
-      link: "/services/it-resource",
+      link: "/it-resource-management",
     },
     {
       title: "Business Intelligence",
       icon: "/images/7.png",
-      link: "/services/business-intelligence",
+      link: "/business-intelligence",
     },
     {
       title: "Business Process Outsourcing",
       icon: "/images/10.png",
-      link: "/services/bpo",
+      link: "/business-process-outsourcing",
     },
   ];
 

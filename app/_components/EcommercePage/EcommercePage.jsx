@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import Image from "next/image";
 import { countries } from "@/app/Data/Countries";
+import ContactsForm from "../Common/Contact/ContactsForm";
 
 const EcommercePage = () => {
   const [formData, setFormData] = useState({
@@ -63,101 +64,19 @@ const EcommercePage = () => {
                 </div>
               </div>
               <div className="w-[41.6%] px-4">
-                <div className="ContactBg w-full p-[25px]">
-                  <p className="text-center font-montserrat text-[22px] font-semibold uppercase leading-6 text-white">
-                    Get Free Quote Now
-                  </p>
-                  <p className="mx-auto mt-[5px] w-full pb-[13px] text-center font-montserrat text-[15px] font-normal capitalize leading-5 tracking-[1px] text-white">
-                    Tell us about your Project
-                  </p>
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name*"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      />
-                    </div>
-                    <div className="mb-4 grid grid-cols-2 gap-5">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email *"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      />
-
-                      <select
-                        name="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      >
-                        <option value="" disabled>
-                          Select Project Type
-                        </option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Mobile App">Mobile App</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Digital Marketing">
-                          Digital Marketing
-                        </option>
-                      </select>
-                    </div>
-                    <div className="mb-4 grid grid-cols-2 gap-5">
-                      <select
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      >
-                        <option value="" disabled>
-                          Select Country
-                        </option>
-                        {countries.map((country, index) => (
-                          <option key={index} value={country}>
-                            {country}
-                          </option>
-                        ))}
-                      </select>
-
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Your Phone *"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <textarea
-                        name="message"
-                        placeholder="Your Message *"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="ContactBg h-[120px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        rows="4"
-                        required
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      className="mt-[30px] flex h-[41px] w-full items-center justify-center bg-[#591661] px-[30px] py-1.5 font-montserrat text-lg font-semibold uppercase text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
-                    >
-                      Request a Quote
-                    </button>
-                  </form>
-                </div>
+                <ContactsForm
+                  bgColor="ContactBg"
+                  textColor="text-white"
+                  buttonColor="bg-[#591661]"
+                  buttonText="Get Started"
+                  placeholders={{
+                    name: "Enter Your Name *",
+                    email: "Enter Your Email *",
+                    projectType: "Choose a Project Type",
+                    phone: "Enter Your Phone *",
+                    message: "Describe Your Project *",
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -220,7 +139,7 @@ const EcommercePage = () => {
           </div>
         </div>
         <div className="w-[41.66%] px-4">
-          <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold text-Gray">
+          <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
             OPTIMIZED ECOMMERCE ENGINES?
           </h2>
           <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
