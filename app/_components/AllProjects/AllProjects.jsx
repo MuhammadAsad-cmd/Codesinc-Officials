@@ -160,6 +160,14 @@ const AllProjects = () => {
             </div>
           ))}
         </div>
+        <div className="flex items-center justify-center">
+          <Link
+            href="/all-projects"
+            className="mt-6 flex h-[34px] w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 py-1.5 text-sm font-bold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
+          >
+            Show more
+          </Link>
+        </div>
       </section>
     </>
   );

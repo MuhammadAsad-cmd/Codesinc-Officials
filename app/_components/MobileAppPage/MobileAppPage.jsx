@@ -1,28 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
+import VideoSection from "../VideoSection/VideoSection";
 
 const MobileAppPage = () => {
   return (
     <>
       <div className="relative w-full">
-        <video
-          width={320}
-          height={755}
-          className="h-[650px] w-full object-cover"
-          autoPlay
-          loop
-          muted
-        >
-          <source src="/video/Mock-up.mp4" type="video/mp4" />
-          <track
-            src="/video/Mock-up.webm"
-            kind="subtitles"
-            srcLang="en"
-            label="English"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <VideoSection
+          src="/video/Mock-up.mp4"
+          subtitles={{
+            src: "/video/Mock-up.webm",
+            kind: "subtitles",
+            srcLang: "en",
+            label: "English",
+          }}
+          heightClass="h-[650px]"
+        />
 
         {/* Overlay with Opacity */}
         <div className="absolute inset-0 bg-black/50"></div>

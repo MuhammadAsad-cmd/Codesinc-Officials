@@ -6,7 +6,7 @@ import Footer from "../Common/footer/Footer";
 export default function MainLayout({ children }) {
   return (
     <>
-      <div>
+      <div className="relative">
         <Header />
         {children}
         <Offices />

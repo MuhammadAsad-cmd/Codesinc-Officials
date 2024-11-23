@@ -6,7 +6,7 @@ import React from "react";
 const OurServices = () => {
   return (
     <>
-      <div className="bg-offWhite py-[50px]">
+      <div id="services" className="bg-offWhite py-[50px]">
         <div className="container mb-12">
           <div className="mb-[60px]">
             <h2 className="mb-2.5 mt-5 text-center text-[45px] font-[550] uppercase">

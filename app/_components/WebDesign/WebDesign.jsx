@@ -8,30 +8,23 @@ import { PiNotePencilBold } from "react-icons/pi";
 import { FaPaintBrush, FaRegLifeRing, FaSearch } from "react-icons/fa";
 import { FaGears } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
+import VideoSection from "../VideoSection/VideoSection";
 
 const WebDesign = () => {
   return (
     <>
       <div className="relative w-full">
-        <video
-          width={320}
-          height={755}
-          className="h-[650px] w-full object-cover"
-          autoPlay
-          loop
-          muted
-        >
-          <source src="/video/For_Wes.mp4" type="video/mp4" />
-          <track
-            src="/video/For_Wes.webm"
-            kind="subtitles"
-            srcLang="en"
-            label="English"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <VideoSection
+          src="/video/For_Wes.mp4"
+          subtitles={{
+            src: "/video/For_Wes.webm",
+            kind: "subtitles",
+            srcLang: "en",
+            label: "English",
+          }}
+          heightClass="h-[650px]"
+        />
 
-        {/* Overlay with Opacity */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute top-[25%] w-full">
           <div className="container">

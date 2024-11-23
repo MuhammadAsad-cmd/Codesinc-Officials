@@ -5,28 +5,28 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/autoplay";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import VideoSection from "../VideoSection/VideoSection";
 
 const HeroSection = () => {
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <div className="relative w-full">
-        <video
-          width={320}
-          height={755}
-          className="h-[755px] w-full"
-          autoPlay
-          loop
-          muted
-        >
-          <source src="/video/DS_WWD_Masthead.mp4" type="video/mp4" />
-          <track
-            src="/video/Mock-up.webm"
-            kind="subtitles"
-            srcLang="en"
-            label="English"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <VideoSection
+          src="/video/DS_WWD_Masthead.mp4"
+          subtitles={{
+            src: "/video/Mock-up.webm",
+            kind: "subtitles",
+            srcLang: "en",
+            label: "English",
+          }}
+          heightClass="h-[755px]"
+        />
         <div className="absolute top-[18%] w-full">
           <div className="container">
             <div className="mx-auto">
@@ -139,10 +139,16 @@ const HeroSection = () => {
               </Swiper>
             </div>
             <div className="mt-9 flex h-full w-full items-center justify-center gap-5">
-              <button className="flex h-14 items-center justify-center rounded-full bg-lightblue px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue">
+              <button
+                onClick={() => handleScroll("services")}
+                className="flex h-14 items-center justify-center rounded-full bg-lightblue px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
+              >
                 View Services
               </button>
-              <button className="flex h-14 items-center justify-center rounded-full border-2 border-white bg-transparent px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue">
+              <button
+                onClick={() => handleScroll("portfolio")}
+                className="flex h-14 items-center justify-center rounded-full border-2 border-white bg-transparent px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
+              >
                 View Portfolio
               </button>
             </div>

@@ -27,16 +27,16 @@ const Dropdown = () => {
       link: "/startup",
       extra: "360 Degree Solution",
     },
-    {
-      title: "Digital Marketing",
-      icon: "/images/11.png",
-      link: "/services/digital-marketing",
-    },
-    {
-      title: "Laravel Development",
-      icon: "/images/laravel-menu.png",
-      link: "/services/laravel-development",
-    },
+    // {
+    //   title: "DevOps",
+    //   icon: "/images/11.png",
+    //   link: "/services/digital-marketing",
+    // },
+    // {
+    //   title: "Laravel Development",
+    //   icon: "/images/laravel-menu.png",
+    //   link: "/services/laravel-development",
+    // },
     {
       title: "Ecommerce Development",
       icon: "/images/5.png",
@@ -78,7 +78,7 @@ const Dropdown = () => {
 
       {isDropdownOpen && (
         <>
-          <div className="absolute left-0 top-[100%]">
+          <div className="absolute right-0 top-[100%]">
             <Image
               width={72}
               height={35}
@@ -87,7 +87,7 @@ const Dropdown = () => {
               alt="arrow"
             />
           </div>
-          <div className="absolute left-0 top-10 z-50 h-[570px] w-[790px] -translate-x-1/2 transform rounded-lg bg-white shadow-lg">
+          <div className="absolute left-20 top-10 z-50 h-[570px] w-[790px] -translate-x-1/2 transform rounded-lg bg-white shadow-lg">
             <div className="grid h-full grid-cols-4 gap-7 p-6">
               {services.map((service, index) => (
                 <Link href={service.link} key={index} passHref>

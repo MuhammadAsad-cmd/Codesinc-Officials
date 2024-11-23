@@ -29,7 +29,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="relative">
+      <div id="contact" className="relative">
         <Image
           width={1300}
           height={805}

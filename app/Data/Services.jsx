@@ -27,7 +27,7 @@ export const services = [
       "Codesinc enjoins a hallmark of projects in mobile application development and contributed to the industry.",
     icon: FaMobileScreenButton,
     image: "/images/ser2.jpg",
-    link: "/web-design-development",
+    link: "/mobile-application-development",
   },
   {
     title: "Software Development",
@@ -35,7 +35,7 @@ export const services = [
       "For various startups and established businesses alike, our exceptional software development company.",
     icon: FaGears,
     image: "/images/ser3.jpg",
-    link: "/web-design-development",
+    link: "/software-development",
   },
   {
     title: "Startup Solution",
@@ -43,7 +43,7 @@ export const services = [
       "We are the enablers of tech-savvy and budding entrepreneurs. We groom and nurture entrepreneurs from various industries.",
     icon: FaRocket,
     image: "/images/ser4.jpg",
-    link: "/web-design-development",
+    link: "/startup",
   },
   {
     title: "DevOps",
@@ -51,7 +51,7 @@ export const services = [
       "Codesinc would like to offer its services to move your workload to Azure with our Free migration and DevOps services during the lockdown!",
     icon: FaMixcloud,
     image: "/images/ser5.jpg",
-    link: "/web-design-development",
+    link: "/cloudservices",
   },
   {
     title: "Resource Augmentation",
@@ -67,7 +67,7 @@ export const services = [
       "E-commerce solution requires a technically holistic approach and it caters to all aspects including, design, development and e-cart.",
     icon: IoCartOutline,
     image: "/images/ser7.jpg",
-    link: "/web-design-development",
+    link: "/ecommerce-development",
   },
   {
     title: "Managed Cloud Hosting",
@@ -75,7 +75,7 @@ export const services = [
       "Codesinc Cloud Management Services drives us to create a customized solution that addresses all unique requirements.",
     icon: FaCloud,
     image: "/images/ser8.jpg",
-    link: "/web-design-development",
+    link: "/managed-cloud-hosting",
   },
   {
     title: "IT Resource Allocation",
@@ -83,7 +83,7 @@ export const services = [
       "Codesinc IT allocation service is all about managing human resources frontiers including tracking, optimization, and stages of analysis.",
     icon: FaUsers,
     image: "/images/ser9.jpg",
-    link: "/web-design-development",
+    link: "/it-resource-management",
   },
   {
     title: "Business Intelligence",
@@ -91,7 +91,7 @@ export const services = [
       "One of our hallmarks is Business Intelligence and Analytics services. It offers a unique basis for insights.",
     icon: FaBriefcase,
     image: "/images/ser10.jpg",
-    link: "/web-design-development",
+    link: "/business-intelligence",
   },
   {
     title: "Business Process Outsourcing",
@@ -99,16 +99,16 @@ export const services = [
       "We have bespoke cost-effective, and quite flexible Business Process Outsourcing services for clients to enable them across their journey.",
     icon: FaMale,
     image: "/images/ser11.jpg",
-    link: "/web-design-development",
+    link: "/business-process-outsourcing",
   },
-  {
-    title: "Digital Marketing",
-    description:
-      "To establish the marketing possibilities of digital services, you have to crack the supremacy of social media platforms.",
-    icon: FaBullhorn,
-    image: "/images/ser12.jpg",
-    link: "/web-design-development",
-  },
+  // {
+  //   title: "Digital Marketing",
+  //   description:
+  //     "To establish the marketing possibilities of digital services, you have to crack the supremacy of social media platforms.",
+  //   icon: FaBullhorn,
+  //   image: "/images/ser12.jpg",
+  //   link: "/web-design-development",
+  // },
 ];
 
 export const ServicesItems = [

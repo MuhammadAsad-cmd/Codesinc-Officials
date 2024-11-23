@@ -19,6 +19,7 @@ const SupportOptions = () => {
             <div className="border-r border-Gray px-7">
               {" "}
               <Link
+                target="_blank"
                 href="tel:+923013887598"
                 className="flex items-center gap-2"
               >
@@ -37,6 +38,7 @@ const SupportOptions = () => {
             <div className="border-r border-Gray px-10 py-2.5">
               {" "}
               <Link
+                target="_blank"
                 href="https://tawk.to/Codesinc"
                 className="flex items-center gap-2"
               >
