@@ -27,16 +27,12 @@ const Dropdown = () => {
       link: "/startup",
       extra: "360 Degree Solution",
     },
-    // {
-    //   title: "DevOps",
-    //   icon: "/images/11.png",
-    //   link: "/services/digital-marketing",
-    // },
-    // {
-    //   title: "Laravel Development",
-    //   icon: "/images/laravel-menu.png",
-    //   link: "/services/laravel-development",
-    // },
+
+    {
+      title: "Digital Marketing",
+      icon: "/images/11.png",
+      link: "/services/digital-marketing",
+    },
     {
       title: "Ecommerce Development",
       icon: "/images/5.png",
@@ -47,6 +43,11 @@ const Dropdown = () => {
       title: "Managed Cloud Hosting",
       icon: "/images/6.png",
       link: "/managed-cloud-hosting",
+    },
+    {
+      title: "DevOps",
+      icon: "/images/11.png",
+      link: "/services/digital-marketing",
     },
     {
       title: "IT Resource Allocation & Management",

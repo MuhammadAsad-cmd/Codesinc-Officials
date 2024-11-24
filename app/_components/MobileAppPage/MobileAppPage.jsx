@@ -219,7 +219,7 @@ const MobileAppPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f5f5f5]">
+      <div className="bg-offWhite">
         <div className="container py-[100px]">
           <h2 className="mb-2.5 mt-5 text-center text-[30px] uppercase text-black">
             What is custom mobile App development?

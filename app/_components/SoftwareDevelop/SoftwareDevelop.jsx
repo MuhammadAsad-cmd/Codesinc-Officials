@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ProjectContact from "../Common/Contact/ProjectContact";
+import EmergencySupport from "../EmergencySupport/EmergencySupport";
 
 const SoftwareDevelop = () => {
   return (
@@ -53,37 +54,7 @@ const SoftwareDevelop = () => {
         breadcrumbPath="/web-design"
       />
 
-      <div className="bg-skyBlue2 py-[25px]">
-        <div className="container">
-          <div className="mx-auto flex w-[83%] items-center justify-center px-4">
-            <div className="w-1/3 px-4">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={107}
-                  height={120}
-                  unoptimized
-                  src="/images/logos/test.png"
-                  alt="Test Logo"
-                />
-              </div>
-            </div>
-            <div className="w-[66.66%] px-4">
-              <p className="mb-2.5 font-montserrat text-xl font-normal capitalize leading-7 text-white">
-                <strong>Get Emergency Support.</strong> Our 24/7 Support
-                Representatives will help you with your project
-              </p>
-              <a href="#contact">
-                <button
-                  type="button"
-                  className="flex items-center justify-center rounded-full border-2 border-white px-5 py-[7px] font-montserrat text-base font-normal leading-7 text-white"
-                >
-                  Click Here For Support
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <EmergencySupport BgColor="bg-skyBlue2" />
       <div className="bg-white py-[70px] text-center">
         <div className="container">
           <div>

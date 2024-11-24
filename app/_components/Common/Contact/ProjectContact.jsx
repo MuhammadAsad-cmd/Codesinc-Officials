@@ -2,7 +2,7 @@
 import { countries } from "@/app/Data/Countries";
 import React, { useState } from "react";
 
-const ProjectContact = () => {
+const ProjectContact = ({ bgColor, borderColor, borderBottom }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +27,9 @@ const ProjectContact = () => {
   };
   return (
     <>
-      <div className="mt-[50px] w-full border-[10px] border-customBorder bg-[#07befa] p-[25px]">
+      <div
+        className={`mt-[50px] w-full border-[10px] ${borderColor} ${bgColor} p-[25px]`}
+      >
         <p className="text-center font-montserrat text-[22px] font-semibold uppercase leading-[22px] text-white">
           Get Free Quote Now
         </p>
@@ -42,7 +44,7 @@ const ProjectContact = () => {
               placeholder="Your Name*"
               value={formData.name}
               onChange={handleChange}
-              className="h-[42px] w-full border-b border-oceanBlue bg-skyBlue2 pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
+              className={`h-[42px] w-full border-b ${borderBottom} ${bgColor} pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white`}
               required
             />
 
@@ -52,7 +54,7 @@ const ProjectContact = () => {
               placeholder="Your Email *"
               value={formData.email}
               onChange={handleChange}
-              className="h-[42px] w-full border-b border-oceanBlue bg-skyBlue2 pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
+              className={`h-[42px] w-full border-b ${borderBottom} ${bgColor} pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white`}
               required
             />
 
@@ -60,7 +62,7 @@ const ProjectContact = () => {
               name="projectType"
               value={formData.projectType}
               onChange={handleChange}
-              className="h-[42px] w-full border-b border-oceanBlue bg-skyBlue2 pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
+              className={`h-[42px] w-full border-b ${borderBottom} ${bgColor} pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white`}
               required
             >
               <option value="" disabled>
@@ -76,7 +78,7 @@ const ProjectContact = () => {
               name="country"
               value={formData.country}
               onChange={handleChange}
-              className="h-[42px] w-full border-b border-oceanBlue bg-skyBlue2 pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
+              className={`h-[42px] w-full border-b ${borderBottom} ${bgColor} pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white`}
               required
             >
               <option value="" disabled>
@@ -95,7 +97,7 @@ const ProjectContact = () => {
               placeholder="Your Phone *"
               value={formData.phone}
               onChange={handleChange}
-              className="h-[42px] w-full border-b border-oceanBlue bg-skyBlue2 pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
+              className={`h-[42px] w-full border-b ${borderBottom} ${bgColor} pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white`}
               required
             />
 
@@ -104,7 +106,7 @@ const ProjectContact = () => {
               placeholder="Your Message *"
               value={formData.message}
               onChange={handleChange}
-              className="h-[120px] w-full bg-skyBlue2 pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white"
+              className={`${bgColor} h-[120px] w-full pt-5 font-montserrat text-[15px] font-medium text-white outline-none placeholder:text-white`}
               rows="4"
               required
             ></textarea>

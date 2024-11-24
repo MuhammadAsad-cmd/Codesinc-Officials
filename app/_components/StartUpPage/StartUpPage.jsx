@@ -2,8 +2,54 @@ import Image from "next/image";
 import React from "react";
 import ProjectContact from "../Common/Contact/ProjectContact";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
+import Services from "../ServicesComponent/Services";
+import EmergencySupport from "../EmergencySupport/EmergencySupport";
 
 const StartUpPage = () => {
+  const servicesData = [
+    {
+      imgSrc: "/images/cms/mentor.png",
+      altText: "Dedicated Mentorship",
+      title: "Dedicated Mentorship",
+      description:
+        "Our dedicated mentors give entrepreneurs the guidance, technical and practical advice for their specific business needs, helping the startups to learn and grow in this competitive industry.",
+    },
+    {
+      imgSrc: "/images/cms/training.png",
+      altText: "Trainings",
+      title: "Trainings",
+      description:
+        "Workshops and training sessions are organized by the top industry experts to tell the startups about the right tools and skills to further develop and grow their startup business.",
+    },
+    {
+      imgSrc: "/images/cms/scale.png",
+      altText: "Scalability",
+      title: "Scalability",
+      description:
+        "Our startups are uniquely positioned in a competitive ecosystem with the perspective to grow and accommodate according to the workload without compromising on the performance.",
+    },
+    {
+      imgSrc: "/images/cms/customer.png",
+      altText: "Customer Acquisition",
+      title: "Customer Acquisition",
+      description:
+        "With the help of various marketing strategies, our startups are equipped with the latest and right tools to help them beat their target market and acquire a great market share.",
+    },
+    {
+      imgSrc: "/images/cms/resources.png",
+      altText: "Resources",
+      title: "Resources",
+      description:
+        "Our startups are offered with free co-working space, legal aid, business development, mentorship, and networking opportunities.",
+    },
+    {
+      imgSrc: "/images/cms/Business.png",
+      altText: "Business Development",
+      title: "Business Development",
+      description:
+        "The business developers do meetings with the startups to smoothen the communication channel and advise them on goal setting, business planning, and startup events.",
+    },
+  ];
   return (
     <>
       <div className="relative w-full">
@@ -44,37 +90,7 @@ const StartUpPage = () => {
       </div>
       <Breadcrumbs title="Startup" breadcrumbPath="/web-design" />
 
-      <div className="bg-skyBlue2 py-[25px]">
-        <div className="container">
-          <div className="mx-auto flex w-[83%] items-center justify-center px-4">
-            <div className="w-1/3 px-4">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={107}
-                  height={120}
-                  unoptimized
-                  src="/images/logos/test.png"
-                  alt="Test Logo"
-                />
-              </div>
-            </div>
-            <div className="w-[66.66%] px-4">
-              <p className="mb-2.5 font-montserrat text-xl font-normal capitalize leading-7 text-white">
-                <strong>Get Emergency Support.</strong> Our 24/7 Support
-                Representatives will help you with your project
-              </p>
-              <a href="#contact">
-                <button
-                  type="button"
-                  className="flex items-center justify-center rounded-full border-2 border-white px-5 py-[7px] font-montserrat text-base font-normal leading-7 text-white"
-                >
-                  Click Here For Support
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <EmergencySupport BgColor="bg-skyBlue2" />
       <div className="bg-white py-[70px] text-center">
         <div className="container">
           <div>
@@ -107,7 +123,7 @@ const StartUpPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f5f5f5] py-[60px]">
+      <div className="bg-offWhite py-[60px]">
         <div className="container text-center">
           <h2 className="inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-Gray">
             What We Offer
@@ -207,7 +223,7 @@ const StartUpPage = () => {
           </div>
         </div>
       </div>
-      <div className="mt-[50px] bg-[#f5f5f5] py-[70px]">
+      {/* <div className="mt-[50px] bg-offWhite py-[70px]">
         <div className="container px-4 text-center">
           <h2 className="inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-Gray">
             Services
@@ -333,7 +349,8 @@ const StartUpPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Services title="Services" des1="" des2="" items={servicesData} />
     </>
   );
 };

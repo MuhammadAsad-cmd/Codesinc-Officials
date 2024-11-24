@@ -136,3 +136,7 @@ body {
 .TooltipShadow {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+.DrupalBorder {
+  border: 10px solid rgba(0, 119, 192, 0.4);
+}

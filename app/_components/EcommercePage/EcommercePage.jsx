@@ -412,7 +412,7 @@ const EcommercePage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f5f5f5] py-[50px]">
+      <div className="bg-offWhite py-[50px]">
         <div className="container mt-[50px] px-4">
           <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-black">
             eCommerce web cart

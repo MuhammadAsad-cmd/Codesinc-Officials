@@ -97,20 +97,19 @@ const WebDesign = () => {
                         key={itemIndex}
                         className="group flex flex-col items-center justify-center"
                       >
-                        <div className="mb-2 size-20 flex-shrink-0 cursor-pointer">
-                          <Image
-                            width={80}
-                            height={80}
-                            src={item.image}
-                            alt={item.name}
-                            className="h-full w-full grayscale filter transition duration-300 hover:grayscale-0"
-                          />
-                        </div>
-                        <Link
-                          href={item.link}
-                          className="flex items-center justify-center rounded-full border border-gray-400 px-2 py-0.5 text-xs text-gray-500 transition duration-300 ease-in-out group-hover:border-brightOrange group-hover:text-brightOrange"
-                        >
-                          Read More
+                        <Link href={item.link}>
+                          <div className="mb-2 size-20 flex-shrink-0 cursor-pointer">
+                            <Image
+                              width={80}
+                              height={80}
+                              src={item.image}
+                              alt={item.name}
+                              className="h-full w-full grayscale filter transition duration-300 hover:grayscale-0"
+                            />
+                          </div>
+                          <button className="flex items-center justify-center rounded-full border border-gray-400 px-2 py-0.5 text-xs text-gray-500 transition duration-300 ease-in-out group-hover:border-brightOrange group-hover:text-brightOrange">
+                            Read More
+                          </button>
                         </Link>
                       </div>
                     ))}
