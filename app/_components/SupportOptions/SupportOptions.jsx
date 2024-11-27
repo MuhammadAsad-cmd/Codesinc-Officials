@@ -5,8 +5,8 @@ import React from "react";
 const SupportOptions = () => {
   return (
     <>
-      <div className="bg-lightblue">
-        <div className="container py-[50px]">
+      <div className="hidden bg-lightblue lg:block">
+        <div className="container px-4 py-[50px]">
           <div className="flex items-center justify-between">
             <div className="py-5">
               <p className="max-w-[350px] text-xl font-semibold">
@@ -21,7 +21,7 @@ const SupportOptions = () => {
               <Link
                 target="_blank"
                 href="tel:+923013887598"
-                className="flex items-center gap-2"
+                className="flex flex-col items-center gap-2 xl:flex-row"
               >
                 <Image
                   width={32}
@@ -40,7 +40,7 @@ const SupportOptions = () => {
               <Link
                 target="_blank"
                 href="https://tawk.to/Codesinc"
-                className="flex items-center gap-2"
+                className="flex flex-col items-center gap-2 xl:flex-row"
               >
                 <Image
                   width={60}
@@ -54,7 +54,10 @@ const SupportOptions = () => {
             </div>
             <div className="px-10 py-[17px]">
               {" "}
-              <Link href="#" className="flex items-center gap-2">
+              <Link
+                href="#"
+                className="flex flex-col items-center gap-2 xl:flex-row"
+              >
                 <Image
                   width={49}
                   height={34}

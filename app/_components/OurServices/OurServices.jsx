@@ -7,9 +7,9 @@ const OurServices = () => {
   return (
     <>
       <div id="services" className="bg-offWhite py-[50px]">
-        <div className="container mb-12">
+        <div className="container mb-12 px-4 md:px-8">
           <div className="mb-[60px]">
-            <h2 className="mb-2.5 mt-5 text-center text-[45px] font-[550] uppercase">
+            <h2 className="mb-2.5 mt-5 text-center text-4xl font-[550] uppercase md:text-[45px] md:leading-[49px]">
               What we do
             </h2>
             <p className="text-center text-lg font-normal leading-7">
@@ -26,9 +26,9 @@ const OurServices = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative h-[290px] overflow-hidden border border-lightblue bg-white px-[38px] py-10 hover:bg-none"
+                className="group relative h-[290px] overflow-hidden border border-lightblue bg-white p-6 hover:bg-none lg:px-[38px] lg:py-10"
               >
-                <div className="absolute inset-x-[38px] inset-y-10 z-50 flex flex-col items-center text-center">
+                <div className="absolute inset-x-5 inset-y-10 z-50 flex flex-col items-center text-center md:inset-x-[38px]">
                   <div className="mb-4">
                     <service.icon className="text-[44px] font-black text-lightblue duration-300 ease-in-out group-hover:text-white" />
                   </div>

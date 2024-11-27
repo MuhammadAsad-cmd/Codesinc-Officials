@@ -39,12 +39,12 @@ const ContactForm = () => {
           className="h-[805px] w-full"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div className="container w-full">
-            <h1 className="mb-4 text-center text-5xl font-bold uppercase leading-10 text-white">
+          <div className="container w-full px-4 md:px-8">
+            <h1 className="mb-8 text-center text-4xl font-bold uppercase text-white lg:text-5xl">
               let&apos;s start your project
             </h1>
             <form onSubmit={handleSubmit}>
-              <div className="mx-auto w-full max-w-[555px] bg-white">
+              <div className="mx-auto w-full bg-white md:max-w-[555px]">
                 <input
                   type="text"
                   name="name"

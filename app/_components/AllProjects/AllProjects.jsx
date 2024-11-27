@@ -92,19 +92,19 @@ const AllProjects = () => {
 
   return (
     <>
-      <section className="container mb-10 w-full py-[50px]">
+      <section className="container w-full px-4 py-[50px] md:mb-10 md:px-8">
         {/* Filter Controls */}
-        <div className="flex w-full gap-3">
-          <div className="w-1/2">
-            <h2 className="text-[38px] uppercase leading-10 text-[#464646]">
+        <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
+          <div className="lg:w-1/2">
+            <h2 className="text-[32px] uppercase leading-10 text-[#464646] max-lg:text-center md:text-[38px]">
               Award Winning Projects
             </h2>
           </div>
-          <div className="flex w-1/2 flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center max-lg:gap-4 lg:w-1/2 lg:gap-3">
             {technologies.map((tech, index) => (
               <button
                 key={index}
-                className={`text-sm font-semibold uppercase leading-[19px] ${
+                className={`text-sm font-semibold uppercase leading-4 lg:leading-[19px] ${
                   activeFilter === tech.filter
                     ? "text-lightblue"
                     : "text-gray-700"
@@ -118,8 +118,10 @@ const AllProjects = () => {
           </div>
         </div>
 
-        {/* MixItUp Container */}
-        <div className="mt-10 grid grid-cols-4 gap-4" ref={containerRef}>
+        <div
+          className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4"
+          ref={containerRef}
+        >
           {projects.map((project) => (
             <div
               key={project.id}

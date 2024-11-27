@@ -5,7 +5,7 @@ import { FaHouseChimney } from "react-icons/fa6";
 const Breadcrumbs = ({ title, breadcrumbPath }) => {
   return (
     <div className="flex h-[55px] items-center justify-center bg-[#e1dfdf] font-montserrat">
-      <div className="container flex h-full w-full items-center">
+      <div className="container flex h-full w-full items-center px-4 md:px-8">
         <div className="flex h-10 items-center justify-center rounded border border-customGray">
           {/* Home Icon Link */}
           <Link

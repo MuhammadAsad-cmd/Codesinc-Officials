@@ -29,9 +29,9 @@ const Offices = () => {
 
   return (
     <>
-      <div className="container py-[50px]">
-        <div className="flex w-full items-center gap-2">
-          <div className="w-[41.67%]">
+      <div className="container px-4 py-[50px] md:px-8">
+        <div className="flex w-full flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="lg:w-[41.67%]">
             <div className="relative">
               <Image
                 width={400}
@@ -73,86 +73,96 @@ const Offices = () => {
               ))}
             </div>
           </div>
-          <div className="w-[58.33%] pb-[60px] pt-[70px]">
+          <div className="pb-[60px] pt-[70px] lg:w-[58.33%]">
             <div>
-              <h5 className="my-2.5 text-[53px] font-medium uppercase leading-[58px] tracking-tighter text-Gray">
-                our global offices
-              </h5>
-              <h4 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
-                Asia
-              </h4>
-              <h2 className="text-[21px] font-light uppercase leading-[23px] text-Gray">
-                pakistan
-              </h2>
-              <div className="mt-6 flex items-center gap-4">
-                <div className="w-1/3">
-                  <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    Rahim Yar Khan
-                  </h3>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    Office Number 1 Huzaifa Town, Islamia university RYK campus
-                    Road.
-                  </p>
-                  <h3 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    Phone
-                  </h3>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    +92 (301) 3887598
-                  </p>
+              {/* Main heading */}
+              <h1 className="my-2.5 text-3xl font-medium uppercase tracking-tighter text-Gray md:text-4xl lg:leading-[58px] xl:text-5xl">
+                Our Global Offices
+              </h1>
+
+              {/* Asia Section */}
+              <section>
+                <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
+                  Asia
+                </h2>
+                <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-center">
+                  {/* Pakistan - Rahim Yar Khan */}
+                  <div className="lg:w-1/3">
+                    <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
+                      Rahim Yar Khan
+                    </h3>
+                    <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                      Office Number 1 Huzaifa Town, Islamia university RYK
+                      campus Road.
+                    </p>
+                    <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                      Phone
+                    </h4>
+                    <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                      +92 (301) 3887598
+                    </p>
+                  </div>
+
+                  {/* Pakistan - Lahore */}
+                  <div className="lg:w-1/3">
+                    <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
+                      Lahore
+                    </h3>
+                    <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                      Office No. 1, First Floor CSD Bedian Road, Near R A Bazar
+                      cantt Lahore.
+                    </p>
+                    <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                      Phone
+                    </h4>
+                    <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                      +92 (331) 0099811
+                    </p>
+                  </div>
                 </div>
-                <div className="w-1/3">
+              </section>
+
+              {/* Australia Section */}
+              <section>
+                <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
+                  Australia
+                </h2>
+                <div className="lg:w-1/3">
                   <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    LAHORE
+                    Melbourne
                   </h3>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    Office No. 1, First Floor CSD Bedian Road, Near R A Bazar
-                    cantt Lahore.
-                  </p>
-                  <h3 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    Phone
-                  </h3>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    +92 (331) 0099811
-                  </p>
-                </div>
-              </div>
-              <div className="mt-6 flex items-center gap-4">
-                <div className="w-1/3">
-                  <h4 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
-                    Australia
-                  </h4>
-                  <h2 className="text-[17px] font-normal uppercase text-Gray">
-                    Australia
-                  </h2>
                   <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
                     167 – 169 Street South Melbourne 3205.
                   </p>
-                  <h3 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                  <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
                     Phone
-                  </h3>
+                  </h4>
                   <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
                     +61 (386) 460100
                   </p>
                 </div>
+              </section>
 
-                <div className="w-1/3">
-                  <h4 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
-                    america
-                  </h4>
-                  <h2 className="text-[17px] font-normal uppercase text-Gray">
+              {/* America Section */}
+              <section>
+                <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
+                  America
+                </h2>
+                <div className="lg:w-1/3">
+                  <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
                     USA
-                  </h2>
+                  </h3>
                   <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
                     1 Merchants Plz, Bangor, ME, United States, Maine.
                   </p>
-                  <h3 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                  <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
                     Phone
-                  </h3>
+                  </h4>
                   <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
                     +1 (207) 947-9333
                   </p>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>

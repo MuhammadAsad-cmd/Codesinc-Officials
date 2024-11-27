@@ -22,27 +22,27 @@ const WebDesign = () => {
             srcLang: "en",
             label: "English",
           }}
-          heightClass="h-[650px]"
+          heightClass="h-[600px] md:h-[650px]"
         />
 
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute top-[25%] w-full">
-          <div className="container">
-            <h1 className="mx-auto mb-2.5 mt-5 max-w-[730px] text-center font-montserrat text-[48px] font-bold uppercase leading-[52px] text-white">
+        <div className="absolute top-[16%] w-full lg:top-[25%]">
+          <div className="container px-4 md:px-8">
+            <h1 className="mx-auto mb-2.5 mt-5 text-center font-montserrat text-[45px] font-bold uppercase leading-[48px] text-white sm:max-w-[730px] lg:text-[48px] lg:leading-[52px]">
               We Create Exceptionally Creative{" "}
               <span className="text-lightblue"> Web Designs </span>
             </h1>
-            <p className="mx-auto w-4/5 text-center font-montserrat text-[13px] font-normal text-white">
+            <p className="mx-auto text-center font-montserrat text-[13px] font-normal text-white md:w-4/5">
               Codesinc knows your high standards and loves to meet them
               ingeniously. We being a pioneer web development company respect
               your time and ideas and deliver most alluring web designs.
             </p>
 
             <div className="mt-10 flex h-full w-full items-center justify-center gap-5">
-              <button className="flex h-14 items-center justify-center rounded-full bg-lightblue px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue">
+              <button className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]">
                 Read more
               </button>
-              <button className="flex h-14 items-center justify-center rounded-full border-2 border-white bg-transparent px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue">
+              <button className="flex h-14 items-center justify-center whitespace-nowrap rounded-full border-2 border-white bg-transparent px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]">
                 Get Started
               </button>
             </div>
@@ -53,16 +53,16 @@ const WebDesign = () => {
         title="Web Design & Development"
         breadcrumbPath="/web-design"
       />
-      <div className="container">
+      <div className="container px-4 md:px-8">
         <div className="mt-10 w-full">
-          <h2 className="text-center font-montserrat text-[40px] font-bold uppercase leading-[44px] text-Gray">
+          <h2 className="text-center font-montserrat text-4xl font-bold uppercase text-Gray md:text-[40px] md:leading-[44px]">
             choose your desired service
           </h2>
-          <p className="my-2.5 text-center text-[30px] font-normal uppercase tracking-[3px] text-Gray">
+          <p className="my-2.5 text-center text-2xl font-normal uppercase tracking-[3px] text-Gray md:text-[30px]">
             And Let us worry about the rest!
           </p>
 
-          <div className="my-[70px] grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="my-[70px] grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {ServicesItems.map((service, index) => (
               <div
                 key={index}
@@ -176,8 +176,8 @@ const WebDesign = () => {
         </div>
       </div>
       <div className="bg-emeraldGreen py-[100px] text-white">
-        <div className="container flex gap-7">
-          <div className="w-[58.33%]">
+        <div className="container flex flex-col gap-7 px-4 max-md:gap-y-9 md:flex-row">
+          <div className="md:w-[58.33%]">
             <div>
               <Image
                 width={685}
@@ -189,8 +189,8 @@ const WebDesign = () => {
               />
             </div>
           </div>
-          <div className="mt-20 w-[41.66%]">
-            <h3 className="mb-5 font-montserrat text-[30px] font-semibold uppercase leading-10">
+          <div className="md:w-[41.66%] lg:mt-20">
+            <h3 className="mb-5 font-montserrat text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
               Ecommerce Websites Based On Globally Recognized Standards
             </h3>
             <p className="font-montserrat text-base font-normal leading-7">
@@ -204,8 +204,8 @@ const WebDesign = () => {
         </div>
       </div>
       <div className="bg-skyBlue py-[100px] text-white">
-        <div className="container flex items-center gap-10">
-          <div className="w-[41.66%] px-4">
+        <div className="container flex flex-col gap-10 px-4 max-md:gap-y-9 md:flex-row">
+          <div className="px-4 md:w-[41.66%]">
             <div>
               <Image
                 width={685}
@@ -217,8 +217,8 @@ const WebDesign = () => {
               />
             </div>
           </div>
-          <div className="mt-20 w-[58.33%] border-b border-[#00afdf] px-4 pb-[60px]">
-            <h3 className="mb-5 font-montserrat text-[30px] font-semibold uppercase leading-10">
+          <div className="border-b border-[#00afdf] px-4 pb-[60px] md:w-[58.33%] lg:mt-20">
+            <h3 className="mb-5 font-montserrat text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
               We Mold Web Designs According To Your Brand
             </h3>
             <p className="font-montserrat text-base font-normal leading-7">
@@ -233,9 +233,9 @@ const WebDesign = () => {
         </div>
       </div>
       <div className="bg-redAccent py-[100px] text-white">
-        <div className="container flex items-center gap-10">
-          <div className="w-[41.66%]">
-            <div className="mx-20">
+        <div className="container flex flex-col gap-10 px-4 max-md:gap-y-9 md:flex-row">
+          <div className="md:w-[41.66%]">
+            <div className="lg:mx-20">
               <Image
                 width={285}
                 height={573}
@@ -246,8 +246,8 @@ const WebDesign = () => {
               />
             </div>
           </div>
-          <div className="mt-20 w-[58.33%]">
-            <h3 className="mb-5 font-montserrat text-[30px] font-semibold uppercase leading-10">
+          <div className="md:w-[58.33%] lg:mt-20">
+            <h3 className="mb-5 font-montserrat text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
               We Deliver Mobile Sophisticated Web Development Services
             </h3>
             <p className="font-montserrat text-base font-normal leading-7">
@@ -262,13 +262,13 @@ const WebDesign = () => {
         </div>
       </div>
       <div className="bg-[#f3f3f3] py-[100px] text-center">
-        <div className="container">
+        <div className="container px-4">
           <h3 className="text-center font-montserrat text-[40px] font-semibold uppercase text-Gray">
             How We Do It
           </h3>
-          <ul className="my-[50px] grid grid-cols-4 items-center justify-center">
+          <ul className="my-[50px] grid grid-cols-2 items-center justify-center md:grid-cols-4">
             <li>
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-3xl text-[#b6b6b6]">
                   <FileIcon />
                 </div>
@@ -278,7 +278,7 @@ const WebDesign = () => {
               </div>
             </li>
             <li>
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-5xl text-[#b6b6b6]">
                   {/* <FileIcon /> */}
                   <PiNotePencilBold />
@@ -289,7 +289,7 @@ const WebDesign = () => {
               </div>
             </li>
             <li>
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-3xl text-[#b6b6b6]">
                   <FaPaintBrush />
                 </div>
@@ -299,7 +299,7 @@ const WebDesign = () => {
               </div>
             </li>
             <li>
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-3xl text-[#b6b6b6]">
                   <FaGears />
                 </div>
@@ -309,7 +309,7 @@ const WebDesign = () => {
               </div>
             </li>
             <li className="flex-shrink-0">
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-3xl text-[#b6b6b6]">
                   <FaSearch />
                 </div>
@@ -319,7 +319,7 @@ const WebDesign = () => {
               </div>
             </li>
             <li className="flex-shrink-0">
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-4xl text-[#b6b6b6]">
                   <IoIosSend />
                 </div>
@@ -329,7 +329,7 @@ const WebDesign = () => {
               </div>
             </li>
             <li className="flex-shrink-0">
-              <div className="short-box-choose flex h-[211px] max-w-[182px] flex-col items-center justify-center rounded-lg">
+              <div className="short-box-choose flex h-[211px] flex-col items-center justify-center rounded-lg md:max-w-[182px]">
                 <div className="text-4xl text-[#b6b6b6]">
                   <FaRegLifeRing />
                 </div>

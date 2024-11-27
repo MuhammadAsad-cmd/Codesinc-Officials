@@ -1,4 +1,6 @@
+import { services } from "@/app/Data/Services";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebookF,
@@ -8,24 +10,24 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
-  const services = [
-    "Web Development",
-    "Mobile App Development",
-    "Software Development",
-    "Managed Cloud Hosting",
-    "Startups",
-    "Digital Marketing",
-    "Business Process Outsourcing",
-    "Business Intelligence",
-    "IT Management Services",
-  ];
+  // const services = [
+  //   "Web Development",
+  //   "Mobile App Development",
+  //   "Software Development",
+  //   "Managed Cloud Hosting",
+  //   "Startups",
+  //   "Digital Marketing",
+  //   "Business Process Outsourcing",
+  //   "Business Intelligence",
+  //   "IT Management Services",
+  // ];
 
   return (
     <>
       <div className="bg-[#fafafa]">
-        <div className="container pb-7 pt-[60px]">
-          <div className="mb-20 flex">
-            <div className="mr-[70px] w-[25.35294%] pb-[50px]">
+        <div className="container px-4 pb-7 pt-[60px] md:px-8">
+          <div className="mb-6 flex flex-col gap-y-6 md:flex-row lg:mb-20">
+            <div className="pb-5 md:mr-[70px] md:w-[25.35294%] md:pb-[50px]">
               <div className="mb-2.5 h-[43px] w-[233px]">
                 <Image
                   width={223}
@@ -42,25 +44,27 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="ml-[3.52941%] w-[25.35294%]">
+            <div className="md:ml-[3.52941%] md:w-[25.35294%]">
               <h3 className="mb-4 text-base font-bold leading-[21px] tracking-wide text-[#555555]">
                 Services
               </h3>
-              <ul>
+              <ul className="space-y-1 max-lg:space-y-2">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
-                      {service}
-                    </p>
+                    <Link href={service.link}>
+                      <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
+                        {service.title}
+                      </p>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="ml-[3.52941%] w-[25.35294%]">
+            <div className="md:ml-[3.52941%] md:w-[25.35294%]">
               <h3 className="mb-4 text-base font-bold leading-[21px] tracking-wide text-[#555555]">
                 Company
               </h3>
-              <ul>
+              <ul className="space-y-1 max-lg:space-y-2">
                 <li>
                   <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
                     About
@@ -73,11 +77,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-[8.33%] px-4 pb-[50px]">
+            <div className="pb-[50px] md:w-[8.33%] md:px-4">
               <h3 className="mb-4 text-base font-bold leading-[21px] tracking-wide text-[#555555]">
                 Social
               </h3>
-              <ul className="space-y-[5px]">
+              <ul className="space-y-[5px] max-md:flex max-md:items-center max-md:gap-4">
                 <li>
                   <div className="flex size-10 items-center justify-center bg-[#3b5b99] text-2xl text-white">
                     <FaFacebookF />

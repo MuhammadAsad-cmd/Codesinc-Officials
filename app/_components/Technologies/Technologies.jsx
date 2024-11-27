@@ -94,11 +94,11 @@ const TechnologySection = () => {
   }, [activeTab]);
 
   return (
-    <section className="container mx-auto mb-20 px-4 py-14 pb-14">
+    <section className="container mx-auto mb-12 h-[600px] px-4 py-6 pb-2 md:mb-20 md:px-8 md:py-14 md:pb-14 lg:h-[750px]">
       <div className="mb-8 text-center">
-        <h3 className="text-center font-montserrat text-[40px] font-semibold uppercase leading-[58px]">
+        <h3 className="text-center font-montserrat text-4xl font-semibold uppercase leading-[42px] md:text-[40px] md:leading-[58px]">
           Technology & Business <br />
-          <span className="text-[32px] font-medium tracking-[6px]">
+          <span className="text-lg font-medium tracking-[6px] md:text-[26px] lg:text-[32px]">
             Partners Around the World
           </span>
         </h3>
@@ -106,13 +106,13 @@ const TechnologySection = () => {
 
       {/* Horizontal Tab Icons */}
       <div className="">
-        <ul className="relative mb-5 flex w-full items-center justify-between">
+        <ul className="relative mb-5 flex w-full items-center justify-between max-md:overflow-x-auto">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
               <li
                 key={tab.id}
-                className={`relative flex size-[70px] flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-2 bg-white transition-all duration-300 ease-in-out ${
+                className={`relative flex size-14 flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-2 bg-white transition-all duration-300 ease-in-out lg:size-[70px] ${
                   activeTab === tab.id
                     ? "border-[#ddd] text-[#ddd]"
                     : `border-[${tab.color}] text-[${tab.color}]`
@@ -140,7 +140,7 @@ const TechnologySection = () => {
         <div className="w-full border-t border-[#ddd]"></div>
       </div>
       {/* Active Tab Content */}
-      <div className="pt-[50px] text-center">
+      <div className="overflow-hidden pt-[50px] text-center">
         {tabs.map(
           (tab) =>
             activeTab === tab.id && (

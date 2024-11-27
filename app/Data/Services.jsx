@@ -102,14 +102,14 @@ export const services = [
     image: "/images/ser11.jpg",
     link: "/business-process-outsourcing",
   },
-  // {
-  //   title: "Digital Marketing",
-  //   description:
-  //     "To establish the marketing possibilities of digital services, you have to crack the supremacy of social media platforms.",
-  //   icon: FaBullhorn,
-  //   image: "/images/ser12.jpg",
-  //   link: "/web-design-development",
-  // },
+  {
+    title: "Digital Marketing",
+    description:
+      "To establish the marketing possibilities of digital services, you have to crack the supremacy of social media platforms.",
+    icon: FaBullhorn,
+    image: "/images/ser12.jpg",
+    link: "/web-design-development",
+  },
 ];
 
 export const ServicesItems = [
