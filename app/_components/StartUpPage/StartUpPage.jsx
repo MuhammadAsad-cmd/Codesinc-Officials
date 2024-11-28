@@ -52,39 +52,32 @@ const StartUpPage = () => {
   ];
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={320}
-          height={755}
-          unoptimized
-          src="/images/cms/startup-bg.jpg"
-          alt="Software Development"
-          className="h-full w-full object-cover"
-        />
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[100px]"
+        style={{ backgroundImage: "url('/images/cms/startup-bg.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="md:w-1/2 xl:w-2/3">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
+              WE HELP, SUPPORT & ELEVATE STARTUPS!
+            </h1>
 
-        {/* Overlay with Opacity */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute top-[100px] w-full pb-[30px]">
-          <div className="container">
-            <div className="flex items-center">
-              <div className="w-[66.66%] px-4 pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  WE HELP, SUPPORT & ELEVATE STARTUPS!
-                </h1>
+            <a
+              href="#second-sec"
+              className="inline-block text-lg font-bold text-[#07befa] hover:underline"
+            >
+              View Detail &gt;
+            </a>
+          </div>
 
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-lg font-bold leading-6 text-[#07befa] hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-1/3 px-4">
-                <ProjectContact />
-              </div>
-            </div>
+          {/* Right Section */}
+          <div className="mt-8 md:w-1/2 lg:mt-0 xl:w-1/3">
+            <ProjectContact
+              bgColor="bg-[#00b1ff]"
+              borderColor="border-[#157e94]"
+              borderBottom="border-white"
+            />
           </div>
         </div>
       </div>
@@ -92,13 +85,13 @@ const StartUpPage = () => {
 
       <EmergencySupport BgColor="bg-skyBlue2" />
       <div className="bg-white py-[70px] text-center">
-        <div className="container">
+        <div className="container px-4">
           <div>
-            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-[40px] font-semibold uppercase text-Gray">
+            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
               STARTUPS
             </h2>
-            <div className="mt-20 flex justify-center">
-              <div className="w-1/2 px-4">
+            <div className="mt-20 flex flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
+              <div className="md:w-1/2 lg:px-4">
                 <Image
                   width={555}
                   height={264}
@@ -107,8 +100,8 @@ const StartUpPage = () => {
                   alt="Software Development"
                 />
               </div>
-              <div className="w-1/2 px-4">
-                <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray">
+              <div className="md:w-1/2 lg:px-4">
+                <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray max-md:text-center">
                   We Empower Startups And Enable Them Reach New Heights! We
                   believe in collaborative approach so as to groom the
                   entrepreneurs throughout their startup journey and further
@@ -124,12 +117,12 @@ const StartUpPage = () => {
         </div>
       </div>
       <div className="bg-offWhite py-[60px]">
-        <div className="container text-center">
-          <h2 className="inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-Gray">
+        <div className="container px-4 text-center">
+          <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
             What We Offer
           </h2>
-          <div className="mt-[70px] flex items-center justify-center gap-8">
-            <div className="flex w-1/3 flex-col items-center px-4">
+          <div className="mt-[70px] flex flex-col justify-center max-md:items-center max-md:space-y-8 md:flex-row lg:gap-8">
+            <div className="flex flex-col items-center md:w-1/3">
               <Image
                 width={180}
                 height={180}
@@ -140,7 +133,7 @@ const StartUpPage = () => {
               <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
                 Web Development
               </h3>
-              <p className="w-[90%] font-montserrat text-[13px] font-normal leading-[22px] text-Gray">
+              <p className="font-montserrat text-[13px] font-normal leading-[22px] text-Gray md:w-[90%]">
                 We give realistic web development services to your startup
                 business. We implement your ideas to create the website which
                 best reflects your startup and give your brand an identity.
@@ -149,7 +142,7 @@ const StartUpPage = () => {
                 Get Started
               </button>
             </div>
-            <div className="flex w-1/3 flex-col items-center px-4">
+            <div className="flex flex-col items-center md:w-1/3">
               <Image
                 width={180}
                 height={180}
@@ -160,7 +153,7 @@ const StartUpPage = () => {
               <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
                 App Development
               </h3>
-              <p className="w-[90%] font-montserrat text-[13px] font-normal leading-[22px] text-Gray">
+              <p className="font-montserrat text-[13px] font-normal leading-[22px] text-Gray md:w-[90%]">
                 Develop secure, clean-coded, responsive and fully documented web
                 app development for your startup business with us. Our solid
                 foundation will help your startup to be adaptable and scalable.
@@ -169,7 +162,7 @@ const StartUpPage = () => {
                 Get Started
               </button>
             </div>
-            <div className="flex w-1/3 flex-col items-center px-4">
+            <div className="flex flex-col items-center md:w-1/3">
               <Image
                 width={180}
                 height={180}
@@ -180,7 +173,7 @@ const StartUpPage = () => {
               <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
                 Cloud Hosting
               </h3>
-              <p className="w-[90%] font-montserrat text-[13px] font-normal leading-[22px] text-Gray">
+              <p className="font-montserrat text-[13px] font-normal leading-[22px] text-Gray md:w-[90%]">
                 We give your startup website the on going maintenance to make
                 them safe and secure. From monitoring the services to install
                 security patches, managed cloud hosting and bug fixing, we serve
@@ -193,24 +186,24 @@ const StartUpPage = () => {
           </div>
         </div>
       </div>
-      <div className="container py-[50px]">
-        <div className="flex justify-center">
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-2.5 mt-5 font-montserrat text-[30px] font-normal uppercase text-black">
+      <div className="container px-4 py-[50px]">
+        <div className="flex flex-col justify-center max-md:space-y-10 md:flex-row">
+          <div className="md:w-[41.66%]">
+            <h2 className="mb-2.5 mt-5 font-montserrat text-[26px] font-normal uppercase text-black max-md:text-center md:text-[30px]">
               Incubation &amp; Funding
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray">
+            <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray max-md:text-center">
               With the strong network of worldwide investors both local and
               international associated with Codesinc, we help connecting our
               startups with the best potential investors to support and turn
               their raw ideas into great companies.
             </p>
-            <button className="mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2">
+            <button className="mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2 max-md:mx-auto">
               Get Started
             </button>
           </div>
-          <div className="w-[58.33%] px-4">
-            <div className="mx-auto w-[90%]">
+          <div className="px-4 md:w-[58.33%]">
+            <div className="mx-auto md:w-[90%]">
               <Image
                 width={555}
                 height={264}
@@ -223,134 +216,15 @@ const StartUpPage = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mt-[50px] bg-offWhite py-[70px]">
-        <div className="container px-4 text-center">
-          <h2 className="inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-Gray">
-            Services
-          </h2>
-          <div className="mx-auto mt-[50px] w-[83.33%]">
-            <div className="grid grid-cols-3 gap-8">
-              <div className="group flex flex-col items-center p-5 duration-300 ease-in-out hover:bg-[#00b1ff] hover:text-white">
-                <div>
-                  <Image
-                    width={100}
-                    height={100}
-                    unoptimized
-                    src="/images/cms/mentor.png"
-                    alt="Cloud"
-                  />
-                </div>
-                <h3 className="mb-3 mt-[30px] min-h-[47px] border-b border-black pb-[15px] text-center text-sm font-semibold uppercase group-hover:border-white">
-                  Dedicated Mentorship
-                </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-[#a6a6a6] group-hover:text-white">
-                  Our dedicated mentors gives entrepreneurs the guidance,
-                  technical and practical advices for their specific business
-                  needs, helping the startups to learn and grow in this
-                  competitive industry.
-                </p>
-              </div>
-              <div className="group flex flex-col items-center p-5 duration-300 ease-in-out hover:bg-[#00b1ff] hover:text-white">
-                <div>
-                  <Image
-                    width={100}
-                    height={100}
-                    unoptimized
-                    src="/images/cms/training.png"
-                    alt="Cloud"
-                  />
-                </div>
-                <h3 className="mb-3 mt-[30px] min-h-[47px] border-b border-black pb-[15px] text-center text-sm font-semibold uppercase group-hover:border-white">
-                  Trainings
-                </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-[#a6a6a6] group-hover:text-white">
-                  Workshops and training sessions are organized by the top
-                  industry experts to tell the startups about the right tools
-                  and skills to further develop and grow their startup business.
-                </p>
-              </div>
-              <div className="group flex flex-col items-center p-5 duration-300 ease-in-out hover:bg-[#00b1ff] hover:text-white">
-                <div>
-                  <Image
-                    width={100}
-                    height={100}
-                    unoptimized
-                    src="/images/cms/scale.png"
-                    alt="Cloud"
-                  />
-                </div>
-                <h3 className="mb-3 mt-[30px] min-h-[47px] border-b border-black pb-[15px] text-center text-sm font-semibold uppercase group-hover:border-white">
-                  Scalability
-                </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-[#a6a6a6] group-hover:text-white">
-                  Our startups are uniquely positioned in a competitive
-                  ecosystem with the perspective to grow and accommodate
-                  according to the workload without compromising on the
-                  performance.
-                </p>
-              </div>
-              <div className="group flex flex-col items-center p-5 duration-300 ease-in-out hover:bg-[#00b1ff] hover:text-white">
-                <div>
-                  <Image
-                    width={100}
-                    height={100}
-                    unoptimized
-                    src="/images/cms/customer.png"
-                    alt="Cloud"
-                  />
-                </div>
-                <h3 className="mb-3 mt-[30px] min-h-[47px] border-b border-black pb-[15px] text-center text-sm font-semibold uppercase group-hover:border-white">
-                  Customer Acquisition
-                </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-[#a6a6a6] group-hover:text-white">
-                  With the help of various marketing strategies, our startups
-                  are equipped with the latest and right tools to help them beat
-                  their target market and acquire a great market share.
-                </p>
-              </div>
-              <div className="group flex flex-col items-center p-5 duration-300 ease-in-out hover:bg-[#00b1ff] hover:text-white">
-                <div>
-                  <Image
-                    width={100}
-                    height={100}
-                    unoptimized
-                    src="/images/cms/resources.png"
-                    alt="Cloud"
-                  />
-                </div>
-                <h3 className="mb-3 mt-[30px] min-h-[47px] border-b border-black pb-[15px] text-center text-sm font-semibold uppercase group-hover:border-white">
-                  Resources
-                </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-[#a6a6a6] group-hover:text-white">
-                  Our startups are offered with free co-working space, legal
-                  aid, business development, mentorship and networking
-                  opportunities.
-                </p>
-              </div>
-              <div className="group flex flex-col items-center p-5 duration-300 ease-in-out hover:bg-[#00b1ff] hover:text-white">
-                <div>
-                  <Image
-                    width={100}
-                    height={100}
-                    unoptimized
-                    src="/images/cms/Business.png"
-                    alt="Cloud"
-                  />
-                </div>
-                <h3 className="mb-3 mt-[30px] min-h-[47px] border-b border-black pb-[15px] text-center text-sm font-semibold uppercase group-hover:border-white">
-                  Business Development
-                </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-[#a6a6a6] group-hover:text-white">
-                  The business developers do meetings with the startups to
-                  smoothen the communication channel and advise them on goal
-                  setting, business planning and startup events.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <Services title="Services" des1="" des2="" items={servicesData} />
+
+      <Services
+        title="Services"
+        des1=""
+        des2=""
+        items={servicesData}
+        hoverBgColor="hover:bg-skyBlue2"
+        borderBottom="border-skyBlue2"
+      />
     </>
   );
 };

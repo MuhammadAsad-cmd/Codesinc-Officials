@@ -29,141 +29,129 @@ const CloudHosting = () => {
   };
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={320}
-          height={755}
-          unoptimized
-          src="/images/cms/cloud-bg.jpg"
-          alt="Software Development"
-          className="h-full w-full object-cover"
-        />
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[150px]"
+        style={{ backgroundImage: "url('/images/cms/cloud-bg.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-12 px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="md:w-1/2 xl:w-2/3">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
+              Get Secure Managed Cloud Hosting Services
+            </h1>
+            <p className="mb-6 text-white md:text-lg">
+              With our Cloud Management services, experience the power and
+              flexibility of cloud without any hassle or doing it yourself.
+            </p>
+            <a
+              href="#second-sec"
+              className="inline-block text-lg font-bold text-[#07befa] hover:underline"
+            >
+              View Detail &gt;
+            </a>
+          </div>
 
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full pb-[30px] pt-16">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[58.33%] px-4 pb-[200px] pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
-                  Get Secure Managed Cloud Hosting Services
-                </h1>
-                <p className="mt-[25px] font-montserrat text-base font-medium leading-7 text-white">
-                  With our Cloud Management services, experience the power and
-                  flexibility of cloud without any hassle or doing it yourself.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-xl font-extrabold leading-7 text-[#4dbac8] hover:underline"
+          {/* Right Section */}
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+            <div className="ContactBg w-full p-[25px]">
+              <p className="text-center font-montserrat text-[22px] font-semibold uppercase leading-6 text-white">
+                Get Free Quote Now
+              </p>
+              <p className="mx-auto mt-[5px] w-full pb-[13px] text-center font-montserrat text-[15px] font-normal capitalize leading-5 tracking-[1px] text-white">
+                Tell us about your Project
+              </p>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name*"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
+                    required
+                  />
+                </div>
+                <div className="mb-4 grid grid-cols-2 gap-5">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email *"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
+                    required
+                  />
+
+                  <select
+                    name="projectType"
+                    value={formData.projectType}
+                    onChange={handleChange}
+                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
+                    required
                   >
-                    view detail &gt;
-                  </a>
+                    <option value="" disabled>
+                      Select Project Type
+                    </option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                  </select>
                 </div>
-              </div>
-              <div className="w-[41.6%] px-4">
-                <div className="ContactBg w-full p-[25px]">
-                  <p className="text-center font-montserrat text-[22px] font-semibold uppercase leading-6 text-white">
-                    Get Free Quote Now
-                  </p>
-                  <p className="mx-auto mt-[5px] w-full pb-[13px] text-center font-montserrat text-[15px] font-normal capitalize leading-5 tracking-[1px] text-white">
-                    Tell us about your Project
-                  </p>
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name*"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      />
-                    </div>
-                    <div className="mb-4 grid grid-cols-2 gap-5">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email *"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      />
+                <div className="mb-4 grid grid-cols-2 gap-5">
+                  <select
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
+                    required
+                  >
+                    <option value="" disabled>
+                      Select Country
+                    </option>
+                    {countries.map((country, index) => (
+                      <option key={index} value={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </select>
 
-                      <select
-                        name="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      >
-                        <option value="" disabled>
-                          Select Project Type
-                        </option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Mobile App">Mobile App</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Digital Marketing">
-                          Digital Marketing
-                        </option>
-                      </select>
-                    </div>
-                    <div className="mb-4 grid grid-cols-2 gap-5">
-                      <select
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      >
-                        <option value="" disabled>
-                          Select Country
-                        </option>
-                        {countries.map((country, index) => (
-                          <option key={index} value={country}>
-                            {country}
-                          </option>
-                        ))}
-                      </select>
-
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Your Phone *"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        required
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <textarea
-                        name="message"
-                        placeholder="Your Message *"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="ContactBg h-[120px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                        rows="4"
-                        required
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      className="mt-[30px] flex h-[41px] w-full items-center justify-center bg-[#591661] px-[30px] py-1.5 font-montserrat text-lg font-semibold uppercase text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
-                    >
-                      Request a Quote
-                    </button>
-                  </form>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone *"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
+                    required
+                  />
                 </div>
-              </div>
+                <div className="mb-4">
+                  <textarea
+                    name="message"
+                    placeholder="Your Message *"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="ContactBg h-[120px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="mt-[30px] flex h-[41px] w-full items-center justify-center bg-[#591661] px-[30px] py-1.5 font-montserrat text-lg font-semibold uppercase text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
+                >
+                  Request a Quote
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
       <Breadcrumbs title="Managed Cloud Hosting" breadcrumbPath="/web-design" />
-      <div className="container my-20 flex">
-        <div className="w-[58.33%] px-4">
+      <div className="container my-20 flex flex-col px-4 md:flex-row">
+        <div className="md:w-[58.33%] lg:px-4">
           <div className="mt-6">
             <Image
               width={580}
@@ -175,8 +163,8 @@ const CloudHosting = () => {
             />
           </div>
         </div>
-        <div className="w-[41.66%] px-4">
-          <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold text-Gray">
+        <div className="md:w-[41.66%] lg:px-4">
+          <h2 className="mb-5 mt-10 text-left text-2xl font-semibold text-Gray lg:text-[30px]">
             Managed Cloud Hosting
           </h2>
           <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -198,7 +186,7 @@ const CloudHosting = () => {
       </div>
       <div className="py-[50px]">
         <div className="container px-4">
-          <h2 className="mb-5 mt-10 text-center text-[30px] font-bold uppercase text-[#333333]">
+          <h2 className="mb-5 mt-10 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px]">
             TECHNOLOGY <span className="font-medium"> STACK </span>
           </h2>
           <p className="text-center text-sm font-bold leading-6 text-[#333333]">
@@ -207,7 +195,7 @@ const CloudHosting = () => {
             solutions. The different eCommerce software and technologies, our
             experts utilize includes:
           </p>
-          <div className="mt-[30px] grid grid-cols-3 gap-8">
+          <div className="mt-[30px] grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             <div className="group relative flex h-[263px] w-full flex-col items-center justify-center overflow-hidden rounded-[10px] bg-[#171616] text-white hover:bg-none">
               <div className="absolute z-50 flex flex-col items-center justify-center px-5 pt-5">
                 <div className="h-[86px] w-[201px] p-[18px]">
@@ -225,7 +213,7 @@ const CloudHosting = () => {
                   scale apps that run concurrently on several computers.
                 </p>
                 <div className="mt-2 flex w-full cursor-pointer items-end justify-end opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-                  <div className="animate-run relative p-[18px]">
+                  <div className="relative animate-run p-[18px]">
                     <Image
                       width={47}
                       height={56}
@@ -258,7 +246,7 @@ const CloudHosting = () => {
                   is committed to simplifying the cloud.
                 </p>
                 <div className="mt-2 flex w-full cursor-pointer items-end justify-end opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-                  <div className="animate-run relative p-[18px]">
+                  <div className="relative animate-run p-[18px]">
                     <Image
                       width={47}
                       height={56}
@@ -291,7 +279,7 @@ const CloudHosting = () => {
                   cache the contents.
                 </p>
                 <div className="mt-2 flex w-full cursor-pointer items-end justify-end opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-                  <div className="animate-run relative p-[18px]">
+                  <div className="relative animate-run p-[18px]">
                     <Image
                       width={47}
                       height={56}
@@ -324,7 +312,7 @@ const CloudHosting = () => {
                   value throughout cloud, on-premises, and hybrid deployments.
                 </p>
                 <div className="mt-2 flex w-full cursor-pointer items-end justify-end opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-                  <div className="animate-run relative p-[18px]">
+                  <div className="relative animate-run p-[18px]">
                     <Image
                       width={47}
                       height={56}
@@ -357,7 +345,7 @@ const CloudHosting = () => {
                   bytecode in shared memory.
                 </p>
                 <div className="mt-2 flex w-full cursor-pointer items-end justify-end opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-                  <div className="animate-run relative p-[18px]">
+                  <div className="relative animate-run p-[18px]">
                     <Image
                       width={47}
                       height={56}
@@ -392,7 +380,7 @@ const CloudHosting = () => {
                   driving real-time applications.
                 </p>
                 <div className="mt-2 flex w-full cursor-pointer items-end justify-end opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-                  <div className="animate-run relative p-[18px]">
+                  <div className="relative animate-run p-[18px]">
                     <Image
                       width={47}
                       height={56}
@@ -412,12 +400,12 @@ const CloudHosting = () => {
       </div>
       <div className="container px-4 py-[50px]">
         <div>
-          <h2 className="mb-5 mt-10 text-center text-[30px] font-bold uppercase text-[#333333]">
+          <h2 className="mb-5 mt-10 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px]">
             SOLUTION <span className="font-medium"> EXPERTISE </span>
           </h2>
 
-          <div className="mt-[30px] grid grid-cols-3">
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+          <div className="mt-[30px] grid grid-cols-1 md:grid-cols-3">
+            <div className="border-b border-[#f3f3f3] py-5 text-center md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -436,7 +424,7 @@ const CloudHosting = () => {
                 their different business requirements.
               </p>
             </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-b border-[#f3f3f3] py-5 text-center md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -455,7 +443,7 @@ const CloudHosting = () => {
                 real time fast.
               </p>
             </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-b border-[#f3f3f3] py-5 text-center md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -473,7 +461,7 @@ const CloudHosting = () => {
                 easily store and secure your mass volumes of data in the cloud.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] py-5 text-center max-md:border-b md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -492,7 +480,7 @@ const CloudHosting = () => {
                 site and application now avails 24X7 care.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] py-5 text-center max-md:border-b md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -511,7 +499,7 @@ const CloudHosting = () => {
                 case of increased traffic and server consumption.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] py-5 text-center md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}

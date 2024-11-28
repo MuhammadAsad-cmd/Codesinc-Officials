@@ -6,85 +6,53 @@ import { countries } from "@/app/Data/Countries";
 import ContactsForm from "../Common/Contact/ContactsForm";
 
 const EcommercePage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    projectType: "",
-    country: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    // Handle form submission
-  };
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={320}
-          height={755}
-          unoptimized
-          src="/images/cms/ecom-bg.jpg"
-          alt="Software Development"
-          className="h-full w-full object-cover"
-        />
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[170px]"
+        style={{ backgroundImage: "url('/images/cms/ecom-bg.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="md:w-1/2 xl:w-[58.33%]">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase text-white lg:text-[46px] lg:leading-[50px]">
+              Ecommerce web development
+            </h1>
+            <p className="mb-6 text-white md:text-lg">
+              Our tech teams give you a complete set of solutions packed in the
+              form of your ecommerce website. From product personalization to
+              continued purchases, our shopping systems will back you up by
+              running efficiently.{" "}
+            </p>
+            <a
+              href="#second-sec"
+              className="inline-block text-lg font-bold text-[#07befa] hover:underline"
+            >
+              View Detail &gt;
+            </a>
+          </div>
 
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full py-[130px] pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[58.33%] px-4 pb-[200px] pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
-                  Ecommerce web development
-                </h1>
-                <p className="mt-[25px] font-montserrat text-base font-medium leading-7 text-white">
-                  Our tech teams give you a complete set of solutions packed in
-                  the form of your ecommerce website. From product
-                  personalization to continued purchases, our shopping systems
-                  will back you up by running efficiently.{" "}
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-xl font-extrabold leading-7 text-[#9f76a8] hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[41.6%] px-4">
-                <ContactsForm
-                  bgColor="ContactBg"
-                  textColor="text-white"
-                  buttonColor="bg-[#591661]"
-                  buttonText="Get Started"
-                  placeholders={{
-                    name: "Enter Your Name *",
-                    email: "Enter Your Email *",
-                    projectType: "Choose a Project Type",
-                    phone: "Enter Your Phone *",
-                    message: "Describe Your Project *",
-                  }}
-                />
-              </div>
-            </div>
+          {/* Right Section */}
+          <div className="md:w-1/2 xl:w-[41.6%]">
+            <ContactsForm
+              bgColor="ContactBg"
+              textColor="text-white"
+              buttonColor="bg-[#591661]"
+              buttonText="Get Started"
+              placeholders={{
+                name: "Enter Your Name *",
+                email: "Enter Your Email *",
+                projectType: "Choose a Project Type",
+                phone: "Enter Your Phone *",
+                message: "Describe Your Project *",
+              }}
+            />
           </div>
         </div>
       </div>
       <Breadcrumbs title="Ecommerce Development" breadcrumbPath="/web-design" />
-      <div className="w-full bg-[url('/images/meetup-bar.png')] bg-cover bg-[34%] py-2.5">
-        <div className="container flex items-center px-4">
+      <div className="w-full bg-none bg-cover bg-[34%] py-2.5 md:bg-[url('/images/meetup-bar.png')]">
+        <div className="container hidden items-center px-4 md:flex">
           <div className="flex w-[49%] items-center justify-around">
             <div className="w-1/2">
               <h2 className="text-center text-[21px] font-medium uppercase leading-[29px] text-[#333333]">
@@ -125,8 +93,8 @@ const EcommercePage = () => {
         </div>
       </div>
 
-      <div className="container my-20 flex">
-        <div className="w-[58.33%] px-4">
+      <div className="container my-20 flex flex-col px-4 md:flex-row">
+        <div className="md:w-[58.33%] lg:px-4">
           <div className="mt-6">
             <Image
               width={580}
@@ -138,8 +106,8 @@ const EcommercePage = () => {
             />
           </div>
         </div>
-        <div className="w-[41.66%] px-4">
-          <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+        <div className="md:w-[41.66%] lg:px-4">
+          <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
             OPTIMIZED ECOMMERCE ENGINES?
           </h2>
           <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -160,7 +128,7 @@ const EcommercePage = () => {
       <div className="BgTechHub py-[30px] text-center text-white">
         <div className="container px-4">
           <div className="technology-stack-main">
-            <h3 className="mb-2.5 mt-5 font-montserrat text-[30px] font-bold uppercase leading-[33px]">
+            <h3 className="mb-2.5 mt-5 font-montserrat text-[26px] font-bold uppercase leading-[33px] md:text-[30px]">
               Tech <span className="font-medium"> Hub </span>
             </h3>
             <p className="font-montserrat text-[15px] font-normal leading-[26px]">
@@ -231,8 +199,8 @@ const EcommercePage = () => {
         </div>
       </div>
       <div className="bg-[#e3e3e3] pb-[70px]">
-        <div className="container flex pt-20">
-          <div className="w-[58.33%] px-4">
+        <div className="container flex flex-col px-4 pt-20 md:flex-row">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="">
               <Image
                 width={580}
@@ -244,8 +212,8 @@ const EcommercePage = () => {
               />
             </div>
           </div>
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold text-Gray">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold text-Gray md:text-[30px]">
               Where Codesinc Comes In
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -271,7 +239,7 @@ const EcommercePage = () => {
 
       <div className="container px-4 py-[50px]">
         <div>
-          <h2 className="mb-5 mt-10 text-center text-[30px] font-bold text-Gray">
+          <h2 className="mb-5 mt-10 text-center text-2xl font-bold text-Gray md:text-[30px]">
             BENEFITS OF WORKING WITH US
           </h2>
           <p className="mt-4 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -283,8 +251,8 @@ const EcommercePage = () => {
             creates for a more suitable performance in business activities and
             user experience.
           </p>
-          <div className="mt-[30px] grid grid-cols-3">
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+          <div className="mt-[30px] grid grid-cols-1 md:grid-cols-3">
+            <div className="border-b border-[#f3f3f3] px-5 py-5 text-center md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -294,7 +262,7 @@ const EcommercePage = () => {
                   alt="Responsive E-Commerce Site"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
                 RESPONSIVE WEBSITE SOLUTIONS
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -304,7 +272,7 @@ const EcommercePage = () => {
                 perfectly responsive to easily adjust in all screen sizes.
               </p>
             </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-b border-[#f3f3f3] py-5 text-center md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -314,7 +282,7 @@ const EcommercePage = () => {
                   alt="Best User Experience"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
                 User Experience
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -324,7 +292,7 @@ const EcommercePage = () => {
                 they&apos;re on your website holds far greater importance.
               </p>
             </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-b border-[#f3f3f3] px-5 py-5 text-center md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -334,7 +302,7 @@ const EcommercePage = () => {
                   alt="Data Acquisitions &amp; Migration"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
                 Data Procurement &amp; Migration
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -345,7 +313,7 @@ const EcommercePage = () => {
                 due data migration.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] py-5 text-center max-md:border-b md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -355,7 +323,7 @@ const EcommercePage = () => {
                   alt="Plugin Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
                 Plugin Development
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -367,7 +335,7 @@ const EcommercePage = () => {
                 approach.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] py-5 text-center max-md:border-b md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -377,7 +345,7 @@ const EcommercePage = () => {
                   alt="App Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
                 App Development
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -388,7 +356,7 @@ const EcommercePage = () => {
                 ecommerce businesses.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] py-5 text-center max-md:border-b md:border-r lg:px-5">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -398,7 +366,7 @@ const EcommercePage = () => {
                   alt="E-Commerce Maintenance"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
                 Maintenance &amp; Support
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -414,7 +382,7 @@ const EcommercePage = () => {
       </div>
       <div className="bg-offWhite py-[50px]">
         <div className="container mt-[50px] px-4">
-          <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-black">
+          <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-black md:text-[30px]">
             eCommerce web cart
           </h2>
           <p className="text-left font-montserrat text-sm font-medium leading-6 text-Gray">
@@ -435,7 +403,7 @@ const EcommercePage = () => {
       </div>
       <div className="container px-4 py-[50px]">
         <div>
-          <h2 className="mb-5 mt-10 text-center text-[30px] font-bold uppercase text-Gray">
+          <h2 className="mb-5 mt-10 text-center text-2xl font-bold uppercase text-Gray md:text-[30px]">
             eCommerce website development company in USA
           </h2>
           <p className="mt-4 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -460,8 +428,8 @@ const EcommercePage = () => {
           <p className="mb-2 mt-[15px] text-center text-[15px] font-normal leading-[21px] text-Gray">
             The vital elements for an E-trade website are:{" "}
           </p>
-          <div className="mt-[30px] grid grid-cols-3">
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+          <div className="mt-[30px] grid grid-cols-1 md:grid-cols-3">
+            <div className="border-b border-[#f3f3f3] px-5 py-5 text-center md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -471,7 +439,7 @@ const EcommercePage = () => {
                   alt="Responsive E-Commerce Site"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                 Product Purchase Online
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -484,7 +452,7 @@ const EcommercePage = () => {
                 to go along with the product.
               </p>
             </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-b border-[#f3f3f3] px-5 py-5 text-center md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -494,7 +462,7 @@ const EcommercePage = () => {
                   alt="Best User Experience"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                 Purchasing Cart
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -507,7 +475,7 @@ const EcommercePage = () => {
                 time-saving.
               </p>
             </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-b border-[#f3f3f3] px-5 py-5 text-center md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -517,7 +485,7 @@ const EcommercePage = () => {
                   alt="Data Acquisitions &amp; Migration"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                 Payment Gateway Integration
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -530,7 +498,7 @@ const EcommercePage = () => {
                 more shoppers to buyers by decreasing checkout hassle.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] px-5 py-5 text-center max-md:border-b md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -540,7 +508,7 @@ const EcommercePage = () => {
                   alt="Plugin Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                 Minimalism in layout
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -553,7 +521,7 @@ const EcommercePage = () => {
                 operations further simplifies the process for mobile devices.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] px-5 py-5 text-center max-md:border-b md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -563,7 +531,7 @@ const EcommercePage = () => {
                   alt="loading-time"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                 Loading Time conundrum
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -576,7 +544,7 @@ const EcommercePage = () => {
                 ecommerce web development services come into play.
               </p>
             </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
+            <div className="border-[#f3f3f3] px-5 py-5 text-center md:border-r">
               <div className="flex items-center justify-center">
                 <Image
                   width={56}
@@ -586,7 +554,7 @@ const EcommercePage = () => {
                   alt="E-Commerce Maintenance"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                 Leveraging Social Media
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">

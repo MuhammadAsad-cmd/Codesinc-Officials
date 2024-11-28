@@ -96,7 +96,7 @@ const AllProjects = () => {
         {/* Filter Controls */}
         <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
           <div className="lg:w-1/2">
-            <h2 className="text-[32px] uppercase leading-10 text-[#464646] max-lg:text-center md:text-[38px]">
+            <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
               Award Winning Projects
             </h2>
           </div>

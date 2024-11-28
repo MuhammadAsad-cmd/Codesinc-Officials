@@ -50,53 +50,43 @@ const ItResourcePage = () => {
   ];
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/cms/it-bg.jpg"
-          alt="Software Development"
-          className="h-[720px] w-full"
-        />
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 lg:py-[170px]"
+        style={{ backgroundImage: "url('/images/cms/it-bg.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="md:w-3/4 lg:w-[58.33%]">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
+              Effective IT Support & Management Services
+            </h1>
+            <p className="mb-6 text-white md:text-lg">
+              We are the best information technology management service
+              provider.
+            </p>
+            <a
+              href="#second-sec"
+              className="inline-block text-lg font-bold text-rosePink hover:underline"
+            >
+              View Detail &gt;
+            </a>
+          </div>
 
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[58.33%] px-4 pb-[200px] pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
-                  Effective IT Support & Management Services
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  We are the best information technology management service
-                  provider.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-rosePink font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[41.6%] px-4">
-                <ContactsForm
-                  bgColor="ContactBg"
-                  textColor="text-white"
-                  buttonColor="bg-rosePink"
-                  buttonText="Get Started"
-                  placeholders={{
-                    name: "Enter Your Name *",
-                    email: "Enter Your Email *",
-                    projectType: "Choose a Project Type",
-                    phone: "Enter Your Phone *",
-                    message: "Describe Your Project *",
-                  }}
-                />
-              </div>
-            </div>
+          {/* Right Section */}
+          <div className="md:w-3/4 md:px-4 lg:w-[41.6%]">
+            <ContactsForm
+              bgColor="ContactBg"
+              textColor="text-white"
+              buttonColor="bg-rosePink"
+              buttonText="Get Started"
+              placeholders={{
+                name: "Enter Your Name *",
+                email: "Enter Your Email *",
+                projectType: "Choose a Project Type",
+                phone: "Enter Your Phone *",
+                message: "Describe Your Project *",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -105,9 +95,9 @@ const ItResourcePage = () => {
         breadcrumbPath="/business-intelligence"
       />
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-it.jpg')] bg-cover bg-[34%]"></div>
-      <div className="container">
-        <div className="my-20 flex">
-          <div className="w-[58.33%] px-4">
+      <div className="container px-4">
+        <div className="my-20 flex flex-col md:flex-row">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="w- mt-6 flex items-center justify-center">
               <Image
                 width={560}
@@ -118,8 +108,8 @@ const ItResourcePage = () => {
               />
             </div>
           </div>
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               What we do
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -129,8 +119,8 @@ const ItResourcePage = () => {
               critical tasks, projects and processes by smart resource
               allotment.
             </p>
-            <div className="flex items-center justify-center">
-              <button className="bg-rosePink mt-10 flex h-[45px] items-center justify-center px-[60px] py-2.5 capitalize text-white">
+            <div className="flex md:items-center md:justify-center">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
             </div>
@@ -138,8 +128,8 @@ const ItResourcePage = () => {
         </div>
       </div>
       <div className="bg-[#f2f5f9] py-[50px] text-center text-Gray">
-        <div className="container">
-          <h3 className="mb-2.5 mt-5 text-center text-[30px] font-bold uppercase text-[#333333]">
+        <div className="container px-4">
+          <h3 className="mb-2.5 mt-5 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px] md:leading-9">
             We take an agile and collective approach to leverage growth
           </h3>
           <p className="font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -147,7 +137,7 @@ const ItResourcePage = () => {
             customers, to grow your business virtually with our IT Support &
             Management services.
           </p>
-          <div className="grid grid-cols-4 gap-6 py-[50px]">
+          <div className="grid grid-cols-1 gap-6 py-[50px] md:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col items-center justify-center">
               <Image
                 width={96}
@@ -220,9 +210,9 @@ const ItResourcePage = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="my-28 flex">
-          <div className="w-[58.33%] px-4">
+      <div className="container px-4">
+        <div className="my-28 flex flex-col md:flex-row">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}
@@ -233,8 +223,8 @@ const ItResourcePage = () => {
               />
             </div>
           </div>
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Resource Planning
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -248,9 +238,9 @@ const ItResourcePage = () => {
             </p>
           </div>
         </div>
-        <div className="my-28 flex">
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+        <div className="my-28 flex flex-col md:flex-row">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px] md:leading-9">
               Resource Management
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -263,7 +253,7 @@ const ItResourcePage = () => {
               leverage the business.
             </p>
           </div>
-          <div className="w-[58.33%] px-4">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}
@@ -280,17 +270,17 @@ const ItResourcePage = () => {
       <div className="bg-[#fbfbfb]">
         <div className="container px-4 py-[50px]">
           <div>
-            <h2 className="mb-2.5 mt-5 text-center text-[30px] font-bold uppercase text-[#333333]">
+            <h2 className="mb-2.5 mt-5 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px]">
               This is how we will accelerate your growth
             </h2>
 
-            <div className="mt-[30px] grid grid-cols-3">
+            <div className="mt-[30px] grid grid-cols-1 md:grid-cols-3">
               {servicesData.map((service, index) => (
                 <div
                   key={index}
                   className={`${
                     index < servicesData.length - 3 ? "border-b" : ""
-                  } ${index % 3 !== 2 ? "border-r" : ""} border-[#f3f3f3] px-5 py-5 text-center`}
+                  } ${index % 3 !== 2 ? "max-md:border-b md:border-r" : ""} border-[#f3f3f3] px-5 py-5 text-center`}
                 >
                   <div className="flex items-center justify-center">
                     <Image
@@ -301,7 +291,7 @@ const ItResourcePage = () => {
                       alt={service.alt}
                     />
                   </div>
-                  <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
+                  <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
                     {service.title}
                   </h4>
                   <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">

@@ -40,7 +40,7 @@ const ContactForm = () => {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="container w-full px-4 md:px-8">
-            <h1 className="mb-8 text-center text-4xl font-bold uppercase text-white lg:text-5xl">
+            <h1 className="mb-8 text-center text-3xl font-bold uppercase text-white lg:text-5xl">
               let&apos;s start your project
             </h1>
             <form onSubmit={handleSubmit}>

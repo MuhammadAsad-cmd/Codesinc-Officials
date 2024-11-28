@@ -17,17 +17,17 @@ const Clients = () => {
   const duplicatedClients = [...clients, ...clients];
   return (
     <>
-      <div className="container">
-        <h4 className="mb-[30px] mt-2.5 text-center font-montserrat text-[40px] font-black uppercase leading-5 text-Gray">
+      <div className="container px-4">
+        <h4 className="mb-[30px] mt-2.5 text-center font-montserrat text-3xl font-black uppercase leading-5 text-Gray md:text-[40px]">
           Clients
         </h4>
-        <p className="mx-auto mb-[30px] w-[44%] text-center font-montserrat text-sm font-normal leading-6 text-Gray">
+        <p className="mx-auto mb-[30px] text-center font-montserrat text-sm font-normal leading-6 text-Gray md:w-[44%]">
           These are some names of clienteles that trust us and chose our
           development services for their complex ecosystems.
         </p>
       </div>
       <div className="mb-10 overflow-hidden">
-        <ul className="animate-slideLeft my-2.5 flex items-center gap-10">
+        <ul className="my-2.5 flex animate-slideLeft items-center gap-10">
           {duplicatedClients.map((src, index) => (
             <li key={index} className="mr-8 flex-shrink-0">
               <Image

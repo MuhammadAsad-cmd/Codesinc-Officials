@@ -8,47 +8,41 @@ import EmergencySupport from "../EmergencySupport/EmergencySupport";
 const SoftwareDevelop = () => {
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={320}
-          height={755}
-          src="/images/cms/soft-bg.jpg"
-          alt="Software Development"
-          className="h-full w-full object-cover"
-        />
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[100px]"
+        style={{ backgroundImage: "url('/images/cms/soft-bg.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="md:w-1/2 xl:w-2/3">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
+              A Software Development Company
+            </h1>
+            <p className="mb-6 text-white md:text-lg">
+              Our dedicated team of expert software developers gives you the
+              best custom software development services worldwide. As a software
+              development firm, we believe in developing mission-critical,
+              scalable, and highly available software applications.
+            </p>
+            <a
+              href="#second-sec"
+              className="inline-block text-lg font-bold text-[#07befa] hover:underline"
+            >
+              View Detail &gt;
+            </a>
+          </div>
 
-        {/* Overlay with Opacity */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute top-[100px] w-full pb-[30px]">
-          <div className="container">
-            <div className="flex items-center">
-              <div className="w-[66.66%] px-4 pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  A Software Development Company
-                </h1>
-                <p className="mt-[25px] font-montserrat text-base font-medium leading-7 text-white">
-                  Our dedicated team of experts software developer gives you the
-                  best custom software development services worldwide. As a
-                  software development firm, we believe in developing mission
-                  critical, scalable and highly available software applications.
-                </p>
-
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-lg font-bold leading-6 text-[#07befa] hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-1/3 px-4">
-                <ProjectContact />
-              </div>
-            </div>
+          {/* Right Section */}
+          <div className="mt-8 md:w-1/2 lg:mt-0 xl:w-1/3">
+            <ProjectContact
+              bgColor="bg-[#07befa]"
+              borderColor="border-[#3686a7]"
+              borderBottom="border-white"
+            />
           </div>
         </div>
       </div>
+
       <Breadcrumbs
         title="Web Design & Development"
         breadcrumbPath="/web-design"
@@ -56,13 +50,13 @@ const SoftwareDevelop = () => {
 
       <EmergencySupport BgColor="bg-skyBlue2" />
       <div className="bg-white py-[70px] text-center">
-        <div className="container">
+        <div className="container px-4">
           <div>
-            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-[40px] font-semibold uppercase text-Gray">
+            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
               SOFTWARE DEVELOPMENT
             </h2>
-            <div className="mt-20 flex justify-center">
-              <div className="w-1/2 px-4">
+            <div className="mt-20 flex flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
+              <div className="shrink-0 px-4 md:w-1/2">
                 <Image
                   width={555}
                   height={264}
@@ -71,7 +65,7 @@ const SoftwareDevelop = () => {
                   alt="Software Development"
                 />
               </div>
-              <div className="w-1/2 px-4">
+              <div className="px-4 md:w-1/2">
                 <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray">
                   We have offered custom software development services to
                   industries ranging from healthcare, finance, manufacturing and
@@ -88,12 +82,12 @@ const SoftwareDevelop = () => {
         </div>
       </div>
       <div className="bg-skyBlue2 py-[60px] text-white">
-        <div className="container text-center">
-          <h2 className="inline-block items-center justify-center border-b-[3px] border-white pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-white">
+        <div className="container px-4 text-center">
+          <h2 className="inline-block items-center justify-center border-b-[3px] border-white pb-3 text-center font-montserrat text-3xl font-semibold uppercase text-white md:text-[40px]">
             Services
           </h2>
-          <div className="mt-[70px] flex items-center justify-center gap-8">
-            <div className="flex w-1/3 flex-col items-center px-4">
+          <div className="mt-[70px] flex flex-col justify-center gap-4 md:flex-row lg:gap-8">
+            <div className="flex flex-col items-center md:w-1/3">
               <Image
                 width={80}
                 height={80}
@@ -113,7 +107,7 @@ const SoftwareDevelop = () => {
                 best software development company.
               </p>
             </div>
-            <div className="flex w-1/3 flex-col items-center px-4">
+            <div className="flex flex-col items-center md:w-1/3">
               <Image
                 width={80}
                 height={80}
@@ -133,7 +127,7 @@ const SoftwareDevelop = () => {
                 desired needs you are looking for.
               </p>
             </div>
-            <div className="flex w-1/3 flex-col items-center px-4">
+            <div className="flex flex-col items-center md:w-1/3">
               <Image
                 width={80}
                 height={80}
@@ -159,13 +153,13 @@ const SoftwareDevelop = () => {
       </div>
       <div className="mt-[50px] pb-5 pt-[30px]">
         <div className="text-center">
-          <h2 className="mb-20 inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-black">
+          <h2 className="mb-20 inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-3xl font-semibold uppercase text-black md:text-[40px]">
             How We Work
           </h2>
         </div>
 
-        <div className="grid grid-cols-4">
-          <div className="min-h-[410px] bg-[#52d2fc] p-[30px] text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="bg-[#52d2fc] p-[30px] text-white md:min-h-[410px]">
             <span className="font-montserrat text-[70px] font-semibold leading-[70px]">
               1.
             </span>
@@ -179,7 +173,7 @@ const SoftwareDevelop = () => {
               stakeholders in sync.
             </p>
           </div>
-          <div className="min-h-[410px] bg-[#39cbfb] p-[30px] text-white">
+          <div className="bg-[#39cbfb] p-[30px] text-white md:min-h-[410px]">
             <span className="font-montserrat text-[70px] font-semibold leading-[70px]">
               2.
             </span>
@@ -193,7 +187,7 @@ const SoftwareDevelop = () => {
               technical support, fix bugs and guides you.
             </p>
           </div>
-          <div className="min-h-[410px] bg-[#20c5fb] p-[30px] text-white">
+          <div className="bg-[#20c5fb] p-[30px] text-white md:min-h-[410px]">
             <span className="font-montserrat text-[70px] font-semibold leading-[70px]">
               3.
             </span>
@@ -207,7 +201,7 @@ const SoftwareDevelop = () => {
               code and quick deploying.
             </p>
           </div>
-          <div className="min-h-[410px] bg-[#07befa] p-[30px] text-white">
+          <div className="bg-[#07befa] p-[30px] text-white md:min-h-[410px]">
             <span className="font-montserrat text-[70px] font-semibold leading-[70px]">
               4.
             </span>

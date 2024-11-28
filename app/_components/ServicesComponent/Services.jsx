@@ -14,7 +14,7 @@ const Services = ({
       <div className="mt-[50px] bg-offWhite py-[70px]">
         <div className="container px-4 text-center">
           <h2
-            className={`inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-Gray ${borderBottom} `}
+            className={`inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-3xl font-semibold uppercase text-Gray md:text-[40px] ${borderBottom} `}
           >
             {title}
           </h2>
@@ -24,11 +24,11 @@ const Services = ({
           </p>
 
           <div className="mx-auto mt-[50px] w-[83.33%]">
-            <div className="mt-8 grid grid-cols-3 gap-8">
+            <div className="mt-8 grid grid-cols-1 max-md:gap-y-4 md:grid-cols-3 lg:gap-8">
               {items.map((item, index) => (
                 <div
                   key={index}
-                  className={`group flex flex-col items-center p-5 duration-300 ease-in-out ${hoverBgColor} hover:text-white`}
+                  className={`group flex flex-col items-center p-5 duration-300 ease-in-out ${hoverBgColor} `}
                 >
                   <div>
                     <Image

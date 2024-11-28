@@ -62,13 +62,13 @@ const StacksWeUse = () => {
     <>
       <div className="mt-[50px] pb-20 pt-[30px]">
         <div className="text-center">
-          <h2 className="border-skyBlue2 mb-20 inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-black">
+          <h2 className="mb-20 inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-3xl font-semibold uppercase text-black md:text-[40px]">
             Technology We Use
           </h2>
         </div>
         <div className="relative min-h-[230px] w-full bg-[url('/images/cms/tech-bg.jpg')] bg-cover pb-[70px] pt-14">
           <div className="container mt-2.5">
-            <div className="grid grid-cols-2 gap-7 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-7 lg:grid-cols-6">
               {icons.map((item, index) => (
                 <div
                   key={index}
