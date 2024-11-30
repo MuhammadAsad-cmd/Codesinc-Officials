@@ -19,11 +19,11 @@ const WhySection = ({
   return (
     <>
       <div className="overflow-hidden bg-offWhite">
-        <div className="container py-[50px]">
-          <div className="flex justify-center">
+        <div className="container px-4 py-[50px]">
+          <div className="flex flex-col justify-center gap-y-6 md:flex-row">
             <div
               data-aos={animation === "left" ? "fade-right" : "fade-left"}
-              className="w-[48%] px-4"
+              className="md:w-[48%] lg:px-4"
             >
               <h3
                 className={`${textColor} mb-2.5 mt-5 font-montserrat text-lg font-semibold uppercase`}
@@ -36,7 +36,7 @@ const WhySection = ({
             </div>
             <div
               data-aos={animation === "left" ? "fade-left" : "fade-right"}
-              className="w-[52%] px-4"
+              className="md:w-[52%] lg:px-4"
             >
               <div className="mx-auto w-[90%]">
                 <Image

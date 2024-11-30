@@ -16,10 +16,10 @@ const ServicesList = ({
   return (
     <>
       <div className={`${BgColor} textColor py-20 text-white`}>
-        <div className="container flex px-4">
-          <div className="w-[41.66%] px-4">
+        <div className="container flex flex-col px-4 md:flex-row">
+          <div className="md:w-[41.66%] lg:px-4">
             <h3
-              className={`mb-2.5 inline-block ${ColorHead} border-b-2 ${borderColor} border-white pb-[15px] font-montserrat text-[30px] font-bold uppercase`}
+              className={`mb-2.5 inline-block ${ColorHead} border-b-2 ${borderColor} border-white pb-[15px] font-montserrat text-2xl font-bold uppercase md:text-[30px]`}
             >
               {title}
             </h3>
@@ -43,7 +43,7 @@ const ServicesList = ({
               {des3}
             </p>
           </div>
-          <div className="w-[58.33%]">
+          <div className="md:w-[58.33%]">
             <div className="mt-6">
               <Image
                 width={580}

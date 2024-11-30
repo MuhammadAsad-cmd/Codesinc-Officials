@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
+import ServicesGrid from "../ServicesGrid/ServicesGrid";
 
 const BusinessIntelligence = () => {
   const servicesData = [
@@ -51,55 +52,46 @@ const BusinessIntelligence = () => {
 
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/cms/bg-bi.jpg"
-          alt="Software Development"
-          className="h-[720px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[58.33%] px-4 pb-[200px] pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
-                  Business Intelligence Services
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Transform your raw data into the real knowledge with our
-                  Business Intelligence Solutions. We can help turn your data
-                  into actionable insights through our business intelligence
-                  solutions.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-rosePink font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[41.6%] px-4">
-                <ContactsForm
-                  bgColor="ContactBg"
-                  textColor="text-white"
-                  buttonColor="bg-rosePink"
-                  buttonText="Get Started"
-                  placeholders={{
-                    name: "Enter Your Name *",
-                    email: "Enter Your Email *",
-                    projectType: "Choose a Project Type",
-                    phone: "Enter Your Phone *",
-                    message: "Describe Your Project *",
-                  }}
-                />
-              </div>
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
+        style={{ backgroundImage: "url('/images/cms/bg-bi.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+              Business Intelligence Services
+            </h1>
+            <p className="mt-[25px] text-base font-medium leading-7 text-white">
+              Transform your raw data into the real knowledge with our Business
+              Intelligence Solutions. We can help turn your data into actionable
+              insights through our business intelligence solutions.
+            </p>
+            <div className="mt-[30px]">
+              <a
+                href="#second-sec"
+                className="font-montserrat text-xl font-extrabold leading-7 text-rosePink hover:underline"
+              >
+                view detail &gt;
+              </a>
             </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+            <ContactsForm
+              bgColor="ContactBg"
+              textColor="text-white"
+              buttonColor="bg-rosePink"
+              buttonText="Get Started"
+              placeholders={{
+                name: "Enter Your Name *",
+                email: "Enter Your Email *",
+                projectType: "Choose a Project Type",
+                phone: "Enter Your Phone *",
+                message: "Describe Your Project *",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -108,9 +100,9 @@ const BusinessIntelligence = () => {
         breadcrumbPath="/business-intelligence"
       />
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bi.jpg')] bg-cover bg-[34%]"></div>
-      <div className="container">
-        <div className="my-20 flex">
-          <div className="w-[58.33%] px-4">
+      <div className="container px-4">
+        <div className="my-20 flex flex-col md:flex-row">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="w- mt-6 flex items-center justify-center">
               <Image
                 width={522}
@@ -121,22 +113,17 @@ const BusinessIntelligence = () => {
               />
             </div>
           </div>
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+          <div className="md:px-4 lg:w-[41.66%]">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Business Intelligence & Analytics
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
-              Our profitable and inclusive Business Intelligence and Analytics
-              services gives a foundation for insight and analysis to help you
-              make more insightful business decisions, make bold actions, and
-              execute quickly. Our services of data warehousing, data mining,
-              information analytics and reporting services can help collect and
-              assemble data from across the enterprise into a central data
-              warehouse, enabling you to leverage that data to make time
-              critical, strategic decisions.
+              Transform your raw data into the real knowledge with our Business
+              Intelligence Solutions. We can help turn your data into actionable
+              insights through our business intelligence solutions.
             </p>
-            <div className="flex items-center justify-center">
-              <button className="bg-rosePink mt-10 flex h-[45px] items-center justify-center px-[60px] py-2.5 capitalize text-white">
+            <div className="md:flex md:items-center md:justify-center">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
             </div>
@@ -145,14 +132,14 @@ const BusinessIntelligence = () => {
       </div>
       <div className="bg-[#f2f5f9] py-[50px] text-center text-Gray">
         <div className="container px-4">
-          <h3 className="mb-2.5 mt-5 text-center text-[30px] font-bold uppercase text-[#333333]">
+          <h3 className="mb-2.5 mt-5 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px]">
             Business Intelligence Benefits
           </h3>
           <p className="font-montserrat text-[15px] font-normal leading-7 text-Gray">
             We are experts in offering eCommerce development for different
             industry verticals.
           </p>
-          <div className="grid grid-cols-4 gap-6 py-[50px]">
+          <div className="grid grid-cols-1 gap-6 py-[50px] md:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col items-center justify-center">
               <Image
                 width={96}
@@ -219,10 +206,10 @@ const BusinessIntelligence = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="my-28 flex">
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+      <div className="container px-4">
+        <div className="my-28 flex flex-col gap-y-6 md:flex-row">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Visualise Data
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -233,13 +220,13 @@ const BusinessIntelligence = () => {
               early BPO services, you can give complete focus on your main
               competencies during the crucial start-up period.
             </p>
-            <div className="flex items-center justify-center">
-              <button className="bg-rosePink mt-10 flex h-[45px] items-center justify-center px-[60px] py-2.5 capitalize text-white">
+            <div className="md:flex md:items-center md:justify-center">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
             </div>
           </div>
-          <div className="w-[58.33%] px-4">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}
@@ -253,42 +240,12 @@ const BusinessIntelligence = () => {
         </div>
       </div>
 
-      <div className="bg-[#fbfbfb]">
-        <div className="container px-4 py-[50px]">
-          <div>
-            <h2 className="mb-2.5 mt-5 text-center text-[30px] font-bold uppercase text-[#333333]">
-              This is how we will accelerate your growth
-            </h2>
-
-            <div className="mt-[30px] grid grid-cols-3">
-              {servicesData.map((service, index) => (
-                <div
-                  key={index}
-                  className={`${
-                    index < servicesData.length - 3 ? "border-b" : ""
-                  } ${index % 3 !== 2 ? "border-r" : ""} border-[#f3f3f3] px-5 py-5 text-center`}
-                >
-                  <div className="flex items-center justify-center">
-                    <Image
-                      width={56}
-                      height={56}
-                      unoptimized
-                      src={service.image}
-                      alt={service.alt}
-                    />
-                  </div>
-                  <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
-                    {service.title}
-                  </h4>
-                  <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesGrid
+        backgroundColor="bg-[#fbfbfb]"
+        title="This is how we will accelerate your growth"
+        data={servicesData}
+        textColor="text-[#333333]"
+      />
     </>
   );
 };

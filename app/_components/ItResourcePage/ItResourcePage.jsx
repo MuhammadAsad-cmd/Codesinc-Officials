@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
+import ServicesGrid from "../ServicesGrid/ServicesGrid";
 
 const ItResourcePage = () => {
   const servicesData = [
@@ -267,42 +268,12 @@ const ItResourcePage = () => {
         </div>
       </div>
 
-      <div className="bg-[#fbfbfb]">
-        <div className="container px-4 py-[50px]">
-          <div>
-            <h2 className="mb-2.5 mt-5 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px]">
-              This is how we will accelerate your growth
-            </h2>
-
-            <div className="mt-[30px] grid grid-cols-1 md:grid-cols-3">
-              {servicesData.map((service, index) => (
-                <div
-                  key={index}
-                  className={`${
-                    index < servicesData.length - 3 ? "border-b" : ""
-                  } ${index % 3 !== 2 ? "max-md:border-b md:border-r" : ""} border-[#f3f3f3] px-5 py-5 text-center`}
-                >
-                  <div className="flex items-center justify-center">
-                    <Image
-                      width={56}
-                      height={56}
-                      unoptimized
-                      src={service.image}
-                      alt={service.alt}
-                    />
-                  </div>
-                  <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
-                    {service.title}
-                  </h4>
-                  <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesGrid
+        backgroundColor="bg-[#fbfbfb]"
+        title="This is how we will accelerate your growth"
+        data={servicesData}
+        textColor="text-[#333333]"
+      />
     </>
   );
 };

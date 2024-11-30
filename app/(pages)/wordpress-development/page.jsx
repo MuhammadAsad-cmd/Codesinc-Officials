@@ -4,6 +4,7 @@ import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ProjectContact from "@/app/_components/Common/Contact/ProjectContact";
 import EmergencySupport from "@/app/_components/EmergencySupport/EmergencySupport";
+import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import Maintenance from "@/app/_components/ServicesComponent/Maintenence";
 import Maintenence from "@/app/_components/ServicesComponent/Maintenence";
@@ -103,57 +104,30 @@ const page = () => {
     ],
     buttonText: "Get Started",
   };
+
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-vividaqua"
+      borderColor="border-[#1a7f8c]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[70px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white pb-[200px]">
-                <Image
-                  width={140}
-                  height={140}
-                  unoptimized
-                  src="/images/cms/wordpress1-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  Get Wordpress Development Services
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Create Powerful & Lead generation Wordpress Websites from our
-                  expert Wordpress Web Developers.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-vividaqua font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-vividaqua"
-                  borderColor="border-[#1a7f8c]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/cms/wordpress1-icon.png"
+        title="Get Wordpress Development Services"
+        description="  Create Powerful & Lead generation Wordpress Websites from our
+                  expert Wordpress Web Developers."
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-vividaqua"
+        iconWidth={140}
+        iconHeight={140}
+        rightSection={CustomProjectContact}
+      />
       <Breadcrumbs
         title="Wordpress Development"
         breadcrumbPath="/woocommerce-development"

@@ -4,11 +4,11 @@ import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ProjectContact from "@/app/_components/Common/Contact/ProjectContact";
 import EmergencySupport from "@/app/_components/EmergencySupport/EmergencySupport";
+import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import HowWedoIt from "@/app/_components/SectionComponents/HowWedoIt";
 import ServicesList from "@/app/_components/SectionComponents/ServicesList";
 import WhySection from "@/app/_components/SectionComponents/WhySection";
-import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -32,57 +32,28 @@ const page = () => {
         "Our WooCommerce experts helps you to get comfortable with the system and provides full time support and maintenance to ensure that your online business is effectively meeting with its objectives.",
     },
   ];
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-PlumPurple"
+      borderColor="border-[#70526a]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[70px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white pb-[200px]">
-                <Image
-                  width={450}
-                  height={90}
-                  unoptimized
-                  src="/images/logos/woocommerce-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  Best Woocommerce Development Agency
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Our WooCommerce developers have an experience of over 13 years
-                  in development of amazing WooCommerce stores.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-PlumPurple font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-PlumPurple"
-                  borderColor="border-[#70526a]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/logos/woocommerce-icon.png"
+        title="Best Woocommerce Development Agency"
+        description=" Our WooCommerce developers have an experience of over 13 years in development of amazing WooCommerce stores."
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-PlumPurple"
+        iconWidth={450}
+        iconHeight={90}
+        rightSection={CustomProjectContact}
+      />
       <Breadcrumbs
         title="woocommerce Development"
         breadcrumbPath="/woocommerce-development"

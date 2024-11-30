@@ -4,11 +4,11 @@ import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ProjectContact from "@/app/_components/Common/Contact/ProjectContact";
 import EmergencySupport from "@/app/_components/EmergencySupport/EmergencySupport";
+import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import Maintenance from "@/app/_components/ServicesComponent/Maintenence";
 import Outsource from "@/app/_components/ServicesComponent/Outsource";
 import Services from "@/app/_components/ServicesComponent/Services";
-import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -83,58 +83,31 @@ const page = () => {
     ],
     buttonText: "Get Started",
   };
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-deepRed"
+      borderColor="border-[#a9423d]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[70px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white pb-[200px]">
-                <Image
-                  width={157}
-                  height={165}
-                  unoptimized
-                  src="/images/cms/ang1-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  Angular JS Application Development Services
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Hire our AngularJS developers to get the best AngularJS
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/cms/ang1-icon.png"
+        title="Angular JS Application Development Services"
+        description=" Hire our AngularJS developers to get the best AngularJS
                   development services and turn your apps or websites fast,
-                  scalable and appealing. We build only what you actually need.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-deepRed font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-deepRed"
-                  borderColor="border-[#a9423d]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  scalable and appealing. We build only what you actually need."
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-deepRed"
+        iconWidth={157}
+        iconHeight={165}
+        rightSection={CustomProjectContact}
+      />
+
       <Breadcrumbs
         title="Angular js Development"
         breadcrumbPath="/zend-development"

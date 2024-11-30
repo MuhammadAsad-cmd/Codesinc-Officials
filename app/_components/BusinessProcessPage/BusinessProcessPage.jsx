@@ -2,58 +2,96 @@ import Image from "next/image";
 import React from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ContactsForm from "../Common/Contact/ContactsForm";
+import ServicesGrid from "../ServicesGrid/ServicesGrid";
 
 const BusinessProcessPage = () => {
+  const servicesData = [
+    {
+      image: "/images/cms/bo1.png",
+      alt: "Responsive E-Commerce Site",
+      title: "Recruitment Process Outsourcing",
+      description:
+        "Our BPO services provide flexible and scalable recruitment solutions which can include anything from sourcing and selection to onboarding individuals. We process tasks faster, more efficiently and at cost-effective rate than you could ever do in-house.",
+    },
+    {
+      image: "/images/cms/bo2.png",
+      alt: "Best User Experience",
+      title: "IT Support",
+      description:
+        "From application development to network and server support, we aim to continuously deliver value in achieving the business goals of our clients. Helpdesk models are designed in order to meet the needs of individual customers for successful outsourcing outcome.",
+    },
+    {
+      image: "/images/cms/bo3.png",
+      alt: "Data Acquisitions & Migration",
+      title: "Data Procurement & Migration",
+      description:
+        "Losing data can be painful for any website owner, as it takes years to build product & user databases. We understand this concern and guarantee a safe migration without the risk of any data loss, so your new website works without any lags caused due to data migration.",
+    },
+    {
+      image: "/images/cms/bo4.png",
+      alt: "Plugin Development",
+      title: "Data Processing",
+      description:
+        "With increasing costs towards employees' salaries, overheads and infrastructural load, outsourcing your data processing needs to our BPO services is the only solution you are looking for.",
+    },
+    {
+      image: "/images/cms/bo5.png",
+      alt: "App Development",
+      title: "Web Development",
+      description:
+        "Whether you want a fancy, appealing, new landing page for your startup business or hundreds of inner pages for your existing website, we have got you covered.",
+    },
+    {
+      image: "/images/cms/bo6.png",
+      alt: "E-Commerce Maintenance",
+      title: "Market Research & Survey",
+      description:
+        "We ensure that the research solutions provided to you are customized enough to meet clients' business objectives by critically analyzing the information input.",
+    },
+  ];
+
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/cms/bg-bo.jpg"
-          alt="Software Development"
-          className="h-[720px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[58.33%] px-4 pb-[200px] pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
-                  Business Process Outsourcing Solutions
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Offering cost-effective, flexible and scalable BPO services to
-                  clients, and helping ensure competitive advantage through the
-                  power of Business Process Outsourcing Solutions
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-goldenYellow font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[41.6%] px-4">
-                <ContactsForm
-                  bgColor="ContactBg"
-                  textColor="text-white"
-                  buttonColor="bg-goldenYellow"
-                  buttonText="Request a Quote"
-                  placeholders={{
-                    name: "Enter Your Name *",
-                    email: "Enter Your Email *",
-                    projectType: "Choose a Project Type",
-                    phone: "Enter Your Phone *",
-                    message: "Describe Your Project *",
-                  }}
-                />
-              </div>
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
+        style={{ backgroundImage: "url('/images/cms/bg-bo.jpg')" }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+              Business Process Outsourcing Solutions
+            </h1>
+            <p className="mt-[25px] text-base font-medium leading-7 text-white">
+              Offering cost-effective, flexible and scalable BPO services to
+              clients, and helping ensure competitive advantage through the
+              power of Business Process Outsourcing Solutions
+            </p>
+            <div className="mt-[30px]">
+              <a
+                href="#second-sec"
+                className="font-montserrat text-xl font-extrabold leading-7 text-goldenYellow hover:underline"
+              >
+                view detail &gt;
+              </a>
             </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+            <ContactsForm
+              bgColor="ContactBg"
+              textColor="text-white"
+              buttonColor="bg-goldenYellow"
+              buttonText="Request a Quote"
+              placeholders={{
+                name: "Enter Your Name *",
+                email: "Enter Your Email *",
+                projectType: "Choose a Project Type",
+                phone: "Enter Your Phone *",
+                message: "Describe Your Project *",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -62,9 +100,9 @@ const BusinessProcessPage = () => {
         breadcrumbPath="/web-design"
       />
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bo.jpg')] bg-cover bg-[34%]"></div>
-      <div className="container">
-        <div className="my-20 flex">
-          <div className="w-[58.33%] px-4">
+      <div className="container px-4">
+        <div className="my-20 flex flex-col md:flex-row">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -75,8 +113,8 @@ const BusinessProcessPage = () => {
               />
             </div>
           </div>
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Achieve Cost Efficiency
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -85,16 +123,16 @@ const BusinessProcessPage = () => {
               competencies, businesses have turned to BPO services as a mean of
               gaining enhanced competitiveness.
             </p>
-            <div className="flex items-center justify-center">
-              <button className="bg-goldenYellow mt-10 flex h-[45px] items-center justify-center px-[60px] py-2.5 capitalize text-white">
+            <div className="md:flex md:items-center md:justify-center">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-goldenYellow px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
             </div>
           </div>
         </div>
-        <div className="my-28 flex">
-          <div className="w-[41.66%] px-4">
-            <h2 className="mb-5 mt-10 text-left text-[30px] font-semibold uppercase text-Gray">
+        <div className="my-28 flex flex-col md:flex-row">
+          <div className="md:w-[41.66%] lg:px-4">
+            <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               BPO For Startups
             </h2>
             <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
@@ -106,12 +144,12 @@ const BusinessProcessPage = () => {
               competencies during the crucial start-up period.
             </p>
             <div className="flex items-center justify-center">
-              <button className="bg-goldenYellow mt-10 flex h-[45px] items-center justify-center px-[60px] py-2.5 capitalize text-white">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-goldenYellow px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
             </div>
           </div>
-          <div className="w-[58.33%] px-4">
+          <div className="md:w-[58.33%] lg:px-4">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -128,7 +166,7 @@ const BusinessProcessPage = () => {
 
       <div className="bg-[#e0e0e0] py-[50px] text-center">
         <div className="container px-4">
-          <h2 className="mb-2.5 mt-5 text-center text-[30px] font-bold uppercase">
+          <h2 className="mb-2.5 mt-5 text-center text-2xl font-bold uppercase md:text-[30px]">
             Call Center Services
           </h2>
           <p className="font-montserrat text-[15px] font-medium leading-7 text-[#333333]">
@@ -139,9 +177,9 @@ const BusinessProcessPage = () => {
             profit and growth while retaining total customer satisfaction
             because your success means a lot to us.
           </p>
-          <div className="mt-[50px] flex items-center">
-            <div className="w-1/2">
-              <div className="text-goldenYellow mx-[60px] flex flex-col items-center rounded-2xl bg-Gray p-5">
+          <div className="mt-[50px] flex flex-col items-center gap-y-6 md:flex-row">
+            <div className="w-full md:w-1/2">
+              <div className="flex flex-col items-center rounded-2xl bg-Gray p-5 text-goldenYellow md:mx-[60px]">
                 <Image
                   width={100}
                   height={100}
@@ -165,8 +203,8 @@ const BusinessProcessPage = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
-              <div className="text-goldenYellow mx-[60px] flex flex-col items-center rounded-2xl bg-Gray p-5">
+            <div className="w-full md:w-1/2">
+              <div className="flex flex-col items-center rounded-2xl bg-Gray p-5 text-goldenYellow md:mx-[60px]">
                 <Image
                   width={100}
                   height={100}
@@ -194,136 +232,12 @@ const BusinessProcessPage = () => {
         </div>
       </div>
 
-      <div className="container px-4 py-[50px]">
-        <div>
-          <h2 className="mb-5 mt-10 text-center text-[30px] font-bold text-Gray">
-            This is how we will accelerate your growth
-          </h2>
-
-          <div className="mt-[30px] grid grid-cols-3">
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={56}
-                  height={56}
-                  unoptimized
-                  src="/images/cms/bo1.png"
-                  alt="Responsive E-Commerce Site"
-                />
-              </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
-                Recruitment Process Outsourcing
-              </h4>
-              <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                WOur BPO services provide flexible and scalable recruitment
-                solutions which can include anything from sourcing and selection
-                to onboarding individuals. We process tasks faster, more
-                efficiently and at cost-effective rate than you could ever do
-                in-house.
-              </p>
-            </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={56}
-                  height={56}
-                  unoptimized
-                  src="/images/cms/bo2.png"
-                  alt="Best User Experience"
-                />
-              </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold uppercase leading-4">
-                IT Support
-              </h4>
-              <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                From application development to network and server support, we
-                aim to continuously deliver value in achieving the business
-                goals of our clients. Helpdesk models are designed in order to
-                meet the needs of individual customers for successful
-                outsourcing outcome.
-              </p>
-            </div>
-            <div className="border-b border-r border-[#f3f3f3] px-5 py-5 text-center">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={56}
-                  height={56}
-                  unoptimized
-                  src="/images/cms/bo3.png"
-                  alt="Data Acquisitions &amp; Migration"
-                />
-              </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
-                Data Procurement & Migration
-              </h4>
-              <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                Losing data can be painful for any website owner, as it takes
-                years to build product & user databases. We understand this
-                concern and guarantee a safe migration without the risk of any
-                data loss, so your new website works without any lags caused to
-                due data migration.
-              </p>
-            </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={56}
-                  height={56}
-                  unoptimized
-                  src="/images/cms/bo4.png"
-                  alt="Plugin Development"
-                />
-              </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
-                Data Processing
-              </h4>
-              <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                With increasing costs towards employees salaries, overheads and
-                infrastructural load, outsourcing your data processing needs our
-                BPO services to be the only solution you are looking for.
-              </p>
-            </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={56}
-                  height={56}
-                  unoptimized
-                  src="/images/cms/bo5.png"
-                  alt="App Development"
-                />
-              </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
-                Web Development
-              </h4>
-              <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                Whether you want a fancy,appealing, new landing page for your
-                startup business or hundreds of inner pages for your existing
-                website, we have got you covered.
-              </p>
-            </div>
-            <div className="border-r border-[#f3f3f3] px-5 py-5 text-center">
-              <div className="flex items-center justify-center">
-                <Image
-                  width={56}
-                  height={56}
-                  unoptimized
-                  src="/images/cms/bo6.png"
-                  alt="E-Commerce Maintenance"
-                />
-              </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
-                Market Research & Survey
-              </h4>
-              <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
-                We ensure that the research solutions provided to you are
-                customized enough to meet clients&quot; business objectives by
-                critically analyzing the information input.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesGrid
+        backgroundColor="bg-[#fbfbfb]"
+        title="This is how we will accelerate your growth"
+        data={servicesData}
+        textColor="text-[#333333]"
+      />
     </>
   );
 };

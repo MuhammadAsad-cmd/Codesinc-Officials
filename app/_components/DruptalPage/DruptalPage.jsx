@@ -7,6 +7,7 @@ import ContentSection from "../SectionComponents/ContentSection";
 import WhySection from "../SectionComponents/WhySection";
 import ServicesList from "../SectionComponents/ServicesList";
 import HowWedoIt from "../SectionComponents/HowWedoIt";
+import ReusableHero from "../ReusableHero/ReusableHero";
 
 const DruptalPage = () => {
   const items = [
@@ -29,59 +30,29 @@ const DruptalPage = () => {
         "Our Drupal experts helps you to get comfortable with the system and provides full time support and maintenance to ensure that your online business is effectively meeting with its objectives.",
     },
   ];
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-[#0077c0]"
+      borderColor="border-[#31607e]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/logos/drupal-icon.png"
+        title="Business Process Outsourcing Solutions"
+        description="  Offering cost-effective, flexible and scalable BPO services to clients, and helping ensure competitive advantage through the power of Business Process Outsourcing Solutions"
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-goldenYellow"
+        iconWidth={135}
+        iconHeight={135}
+        rightSection={CustomProjectContact}
+      />
 
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white pb-[200px]">
-                <Image
-                  width={135}
-                  height={153}
-                  unoptimized
-                  src="/images/logos/drupal-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  Best Drupal Development services & solutions
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Discover the flexibility to build greater websites with the
-                  best Drupal CMS development company. Hire our Drupal
-                  developers to provide customize solutions for your business
-                  needs.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-xl font-extrabold leading-7 text-[#0077c0] hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-[#0077c0]"
-                  borderColor="border-[#31607e]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <Breadcrumbs title="Drupal Development" breadcrumbPath="/web-design" />
       <EmergencySupport BgColor="bg-darkBlue" />
 

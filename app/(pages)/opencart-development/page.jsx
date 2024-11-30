@@ -4,6 +4,7 @@ import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ProjectContact from "@/app/_components/Common/Contact/ProjectContact";
 import EmergencySupport from "@/app/_components/EmergencySupport/EmergencySupport";
+import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import HowWedoIt from "@/app/_components/SectionComponents/HowWedoIt";
 import ServicesList from "@/app/_components/SectionComponents/ServicesList";
@@ -32,57 +33,29 @@ const page = () => {
         "Our OpenCart experts helps you to get comfortable with the system and provides full time support and maintenance to ensure that your online business is effectively meeting with its objectives.",
     },
   ];
+
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-[#34c8f0]"
+      borderColor="border-[#2e6c85]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[70px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white px-4 pb-[200px]">
-                <Image
-                  width={191}
-                  height={135}
-                  unoptimized
-                  src="/images/logos/opencart-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  OpenCart Development the best ecommerce platform.
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Opencart, PHP based online store management system to create
-                  engaging e-commerce solutions and optimize the online stores.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-xl font-extrabold leading-7 text-PlumPurple hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-[#34c8f0]"
-                  borderColor="border-[#2e6c85]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/logos/opencart-icon.png"
+        title="OpenCart Development the best ecommerce platform."
+        description=" Opencart, PHP based online store management system to create engaging e-commerce solutions and optimize the online stores."
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-PlumPurple"
+        iconWidth={191}
+        iconHeight={135}
+        rightSection={CustomProjectContact}
+      />
       <Breadcrumbs
         title="Opencart Development"
         breadcrumbPath="/opencart-development"

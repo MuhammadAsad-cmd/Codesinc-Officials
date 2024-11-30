@@ -4,6 +4,7 @@ import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ProjectContact from "@/app/_components/Common/Contact/ProjectContact";
 import EmergencySupport from "@/app/_components/EmergencySupport/EmergencySupport";
+import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import HowWedoIt from "@/app/_components/SectionComponents/HowWedoIt";
 import ServicesList from "@/app/_components/SectionComponents/ServicesList";
@@ -32,58 +33,31 @@ const page = () => {
         "Our Prestashop experts helps you to get comfortable with the system and provides full time support and maintenance to ensure that your online business is effectively meeting with its objectives.",
     },
   ];
+
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-black"
+      borderColor="border-[#2b2b29]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[70px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white px-4 pb-[200px]">
-                <Image
-                  width={115}
-                  height={172}
-                  unoptimized
-                  src="/images/logos/prestoshop-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  Prestashop Development And E-commerce Solution.
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Develop the user friendly shopping cart with our Prestashop
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/logos/prestoshop-icon.png"
+        title=" Prestashop Development And E-commerce Solution."
+        description=" Develop the user friendly shopping cart with our Prestashop
                   development services. Our Prestashop developers will help you
-                  improve sales and performance for your business.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-LeafGreen font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-black"
-                  borderColor="border-[#2b2b29]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  improve sales and performance for your business."
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-LeafGreen"
+        iconWidth={115}
+        iconHeight={172}
+        rightSection={CustomProjectContact}
+      />
       <Breadcrumbs
         title="Prestashop Development"
         breadcrumbPath="/opencart-development"

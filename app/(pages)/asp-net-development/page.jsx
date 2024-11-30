@@ -4,6 +4,7 @@ import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ProjectContact from "@/app/_components/Common/Contact/ProjectContact";
 import EmergencySupport from "@/app/_components/EmergencySupport/EmergencySupport";
+import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import Maintenance from "@/app/_components/ServicesComponent/Maintenence";
 import Maintenence from "@/app/_components/ServicesComponent/Maintenence";
@@ -84,59 +85,33 @@ const page = () => {
     ],
     buttonText: "Get Started",
   };
+
+  const CustomProjectContact = (
+    <ProjectContact
+      bgColor="bg-DeepBlue"
+      borderColor="border-[#426680]"
+      borderBottom="border-white"
+    />
+  );
   return (
     <>
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/logos/drupal-main.png"
-          alt="Software Development"
-          className="h-[880px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[70px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[66.6%] border-white pb-[200px]">
-                <Image
-                  width={247}
-                  height={131}
-                  unoptimized
-                  src="/images/cms/dot1-icon.png"
-                  alt="drupal"
-                />
-                <h1 className="mb-2.5 mt-5 font-montserrat text-[46px] font-bold uppercase leading-[50px] text-white">
-                  Hire Best Asp.Net Development Services
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Codesinc delivers reliable Asp dot Net development services
+      <ReusableHero
+        backgroundImage="/images/logos/drupal-main.png"
+        iconImage="/images/cms/dot1-icon.png"
+        title=" Hire Best Asp.Net Development Services"
+        description="Codesinc delivers reliable Asp dot Net development services
                   which caters to the goals and needs of your business. We give
                   highly scalable and result oriented Asp.Net web development
-                  services.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="text-DeepBlue font-montserrat text-xl font-extrabold leading-7 hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[33.33%]">
-                <ProjectContact
-                  bgColor="bg-DeepBlue"
-                  borderColor="border-[#426680]"
-                  borderBottom="border-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  services."
+        buttonText="View Detail"
+        buttonLink="#second-sec"
+        textColor="text-white"
+        buttonColor="text-DeepBlue"
+        iconWidth={247}
+        iconHeight={131}
+        rightSection={CustomProjectContact}
+      />
+
       <Breadcrumbs
         title="ASP.Net Development"
         breadcrumbPath="/woocommerce-development"

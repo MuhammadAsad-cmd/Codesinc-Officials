@@ -11,16 +11,16 @@ const Maintenance = ({
 }) => {
   return (
     <div className="bg-offWhite py-[60px]">
-      <div className="container text-center">
+      <div className="container px-4 text-center">
         <h2
-          className={`inline-block items-center justify-center border-b-[3px] ${borderBottom} pb-3 font-montserrat text-[40px] font-semibold uppercase text-Gray`}
+          className={`inline-block items-center justify-center border-b-[3px] ${borderBottom} pb-3 font-montserrat text-[30px] font-semibold uppercase text-Gray md:text-[40px]`}
         >
           {title}
         </h2>
         <p className="mb-2.5 mt-4 font-montserrat text-[15px] font-normal leading-[21px] text-Gray">
           {subtitle}
         </p>
-        <div className="mt-[70px] flex items-center justify-center gap-8">
+        <div className="mt-[70px] flex flex-col justify-center gap-4 md:flex-row lg:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}

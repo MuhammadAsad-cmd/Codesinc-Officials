@@ -6,12 +6,12 @@ const HowWedoIt = ({ borderColor, textColor, items }) => {
     <div className="bg-offWhite py-[70px]">
       <div className="container px-4 text-center">
         <h4
-          className={`${borderColor} inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-[40px] font-semibold uppercase text-Gray`}
+          className={`${borderColor} inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-[30px] font-semibold uppercase text-Gray md:text-[40px]`}
         >
           how we do it
         </h4>
         <div className="mx-auto mt-[50px]">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {items.map((item, index) => (
               <div
                 key={index}
