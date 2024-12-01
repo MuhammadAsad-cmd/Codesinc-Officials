@@ -40,114 +40,53 @@ const AzurePage = () => {
 
   return (
     <>
-      <div className="absolute -left-[70px] top-0">
-        <Image
-          width={170}
-          height={292}
-          unoptimized
-          src="/images/cms/left-header.png"
-          alt="Left Header"
-          className="h-full w-[170px]"
-        />
-      </div>
-      {/* <div className="absolute right-0 top-0">
-        <Image
-          width={554}
-          height={672}
-          unoptimized
-          src="/images/cms/right-img.png"
-          alt="Right Image"
-          className="h-full"
-        />
-      </div> */}
-      {/* <div className="container px-4">
-        <div className="flex items-center">
-          <div className="mt-[100px] border py-20">
-            <div>
-              <h1 className="mb-2.5 mt-5 border pt-[50px] text-[50px] font-bold leading-[55px] text-[#4b4a4b]">
-                Simplify
-                <span className="text-[#bccf31]"> Cloud Migrations</span>
-              </h1>
-              <p>
-                Arpatech will help you migrate your existing
-                infrastructure/applications to Azure Cloud , so you can benefit
-                from minimum downtimes and predictable outcomes.
-              </p>
-              <p>
-                Do not know how to setup Azure? Our experts will help you set up
-                Azure platform with appropriate architecture and important
-                security foundations. We are here to help you explore Azure
-                offerings that can benefit the nature of your applications.
-              </p>
-              <p>
-                Arpatech experts are offering these <span>FREE</span> services
-                to help your business maintain its growth in these times of
-                crisis.
-              </p>
-              <div>
-                <button>Start Your Free Trial </button>
-              </div>
+      <div
+        className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[150px]"
+        style={{
+          backgroundImage: "url('/images/cms/technological-blue.jpg')",
+        }}
+      >
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+          {/* Left Section */}
+          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
+            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+              DevOps & Cloud Services for Seamless Operations
+            </h1>
+            <p className="mt-[25px] text-base font-medium leading-7 text-white">
+              Transform your business with scalable cloud solutions and agile
+              DevOps practices. Boost efficiency, ensure reliability, and
+              accelerate your development pipeline with our expertise.
+            </p>
+            <div className="mt-[30px]">
+              <a
+                href="#second-sec"
+                className="font-montserrat text-xl font-extrabold leading-7 text-[#bcce32] hover:underline"
+              >
+                view detail &gt;
+              </a>
             </div>
           </div>
-        </div>
-      </div> */}
 
-      <div className="relative w-full">
-        <Image
-          width={1000}
-          height={627}
-          unoptimized
-          src="/images/cms/bg-bi.jpg"
-          alt="Software Development"
-          className="h-[720px] w-full"
-        />
-
-        {/* Overlay with Opacity */}
-        <div className="absolute top-[100px] w-full py-20 pb-[30px]">
-          <div className="container">
-            <div className="flex">
-              <div className="mt-[50px] w-[58.33%] px-4 pb-[200px] pt-[70px]">
-                <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
-                  Business Intelligence Services
-                </h1>
-                <p className="mt-[25px] text-base font-medium leading-7 text-white">
-                  Transform your raw data into the real knowledge with our
-                  Business Intelligence Solutions. We can help turn your data
-                  into actionable insights through our business intelligence
-                  solutions.
-                </p>
-                <div className="mt-[30px]">
-                  <a
-                    href="#second-sec"
-                    className="font-montserrat text-xl font-extrabold leading-7 text-rosePink hover:underline"
-                  >
-                    view detail &gt;
-                  </a>
-                </div>
-              </div>
-              <div className="w-[41.6%] px-4">
-                <ContactsForm
-                  bgColor="ContactBg"
-                  textColor="text-white"
-                  buttonColor="bg-rosePink"
-                  buttonText="Get Started"
-                  placeholders={{
-                    name: "Enter Your Name *",
-                    email: "Enter Your Email *",
-                    projectType: "Choose a Project Type",
-                    phone: "Enter Your Phone *",
-                    message: "Describe Your Project *",
-                  }}
-                />
-              </div>
-            </div>
+          {/* Right Section */}
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+            <ContactsForm
+              bgColor="ContactBg"
+              textColor="text-white"
+              buttonColor="bg-[#bcce32]"
+              buttonText="Get Started"
+              placeholders={{
+                name: "Enter Your Name *",
+                email: "Enter Your Email *",
+                projectType: "Choose a Project Type",
+                phone: "Enter Your Phone *",
+                message: "Describe Your Project *",
+              }}
+            />
           </div>
         </div>
       </div>
-      <Breadcrumbs
-        title="Cloud Services"
-        breadcrumbPath="/business-intelligence"
-      />
+
+      <Breadcrumbs title="Cloud Services" breadcrumbPath="/cloudservices" />
       <div className="container mt-[50px] text-center">
         <h2 className="my-[50px] font-montserrat text-[45px] font-bold leading-[50px] text-black">
           Getting Started
@@ -176,9 +115,9 @@ const AzurePage = () => {
       </div>
 
       <div id="devsecops" className="bg-[#f6f6f6] py-[50px]">
-        <div className="container flex">
-          <div className="w-1/2">
-            <h3 className="mb-2 mt-[50px] text-[45px] font-bold uppercase leading-[49px] text-[#4b4a4b]">
+        <div className="container flex flex-col px-4 md:flex-row">
+          <div className="md:w-1/2">
+            <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
               DevSecOps & Cloud Security
             </h3>
             <p className="mb-2.5 text-[15px] font-normal leading-[30px]">
@@ -188,7 +127,7 @@ const AzurePage = () => {
               cloud platform using modern DevOps approaches.
             </p>
           </div>
-          <div className="mx-auto w-1/2">
+          <div className="mx-auto md:w-1/2">
             <Image
               width={400}
               height={340}
@@ -200,9 +139,12 @@ const AzurePage = () => {
         </div>
       </div>
 
-      <div id="devops" className="container flex py-[50px]">
-        <div className="w-1/2">
-          <h3 className="mb-2 mt-[50px] text-[45px] font-bold uppercase leading-[49px] text-[#4b4a4b]">
+      <div
+        id="devops"
+        className="container flex flex-col px-4 py-[50px] md:flex-row"
+      >
+        <div className="md:w-1/2">
+          <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
             DevOps Automation (CI/CD)
           </h3>
           <p className="mb-2.5 text-[15px] font-normal leading-[30px]">
@@ -240,9 +182,12 @@ const AzurePage = () => {
           </div>
         </div>
       </div>
-      <div id="config" className="container flex py-[50px]">
-        <div className="w-1/2">
-          <h3 className="mb-2 mt-[50px] text-[45px] font-bold uppercase leading-[49px] text-[#4b4a4b]">
+      <div
+        id="config"
+        className="container flex flex-col px-4 py-[50px] md:flex-row"
+      >
+        <div className="md:w-1/2">
+          <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
             Cloud Platform Build & Migration
           </h3>
           <p className="mb-2.5 text-[15px] font-normal leading-[30px]">
@@ -258,7 +203,7 @@ const AzurePage = () => {
             be neutralized, re-platformed and strengthened.
           </p>
         </div>
-        <div className="mx-auto w-1/2">
+        <div className="mx-auto md:w-1/2">
           <Image
             width={400}
             height={340}
@@ -269,9 +214,9 @@ const AzurePage = () => {
         </div>
       </div>
       <div id="monitoring" className="bg-[#f6f6f6] py-[50px]">
-        <div className="container flex">
-          <div className="w-1/2">
-            <h3 className="mb-2 mt-[50px] text-[45px] font-bold uppercase leading-[49px] text-[#4b4a4b]">
+        <div className="container flex flex-col px-4 md:flex-row">
+          <div className="md:w-1/2">
+            <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
               Continuous Monitoring
             </h3>
             <p className="mb-2.5 text-[15px] font-normal leading-[30px]">
@@ -282,7 +227,7 @@ const AzurePage = () => {
               infrastructure as it moves from development to production.
             </p>
           </div>
-          <div className="mx-auto w-1/2">
+          <div className="mx-auto md:w-1/2">
             <Image
               width={400}
               height={340}
@@ -293,9 +238,12 @@ const AzurePage = () => {
           </div>
         </div>
       </div>
-      <div id="reports" className="container flex py-[50px]">
-        <div className="w-1/2">
-          <h3 className="mb-2 mt-[50px] text-[45px] font-bold uppercase leading-[49px] text-[#4b4a4b]">
+      <div
+        id="reports"
+        className="container flex flex-col px-4 py-[50px] md:flex-row"
+      >
+        <div className="md:w-1/2">
+          <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
             Reports and Analytics
           </h3>
           <p className="mb-2.5 text-[15px] font-normal leading-[30px]">
@@ -306,7 +254,7 @@ const AzurePage = () => {
             multidimensional reports from diverse data sources.
           </p>
         </div>
-        <div className="mx-auto w-1/2">
+        <div className="mx-auto md:w-1/2">
           <Image
             width={400}
             height={340}
@@ -317,9 +265,9 @@ const AzurePage = () => {
         </div>
       </div>
       <div id="cloud" className="bg-[#f6f6f6] py-[50px]">
-        <div className="container flex">
-          <div className="w-1/2">
-            <h3 className="mb-2 mt-[50px] text-[45px] font-bold uppercase leading-[49px] text-[#4b4a4b]">
+        <div className="container flex flex-col px-4 md:flex-row">
+          <div className="md:w-1/2">
+            <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
               Configuration Management
             </h3>
             <p className="mb-2.5 text-[15px] font-normal leading-[30px]">
@@ -328,7 +276,7 @@ const AzurePage = () => {
               infrastructure.
             </p>
           </div>
-          <div className="mx-auto w-1/2">
+          <div className="mx-auto md:w-1/2">
             <Image
               width={400}
               height={340}

@@ -60,7 +60,7 @@ export const services = [
       "From dedicated and multi-tiered teams of professionals to simple staff augmentation, we offer exceptional service of resource allocation.",
     icon: FaRobot,
     image: "/images/ser6.jpg",
-    link: "/web-design-development",
+    link: "/artificial-intelligence",
   },
   {
     title: "Ecommerce Solution",

@@ -18,7 +18,7 @@ const Clients = () => {
   return (
     <>
       <div className="container px-4">
-        <h4 className="mb-[30px] mt-2.5 text-center font-montserrat text-3xl font-black uppercase leading-5 text-Gray md:text-[40px]">
+        <h4 className="mb-[30px] mt-2.5 text-center font-montserrat text-3xl font-bold uppercase leading-5 text-Gray md:text-[40px]">
           Clients
         </h4>
         <p className="mx-auto mb-[30px] text-center font-montserrat text-sm font-normal leading-6 text-Gray md:w-[44%]">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import {
   FaFacebookF,
+  FaInstagram,
   FaLinkedinIn,
   FaTwitter,
   FaWhatsapp,
@@ -66,9 +67,11 @@ const Footer = () => {
               </h3>
               <ul className="space-y-1 max-lg:space-y-2">
                 <li>
-                  <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
-                    About
-                  </p>
+                  <Link href="/about-us">
+                    <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
+                      About
+                    </p>
+                  </Link>
                 </li>
                 <li>
                   <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
@@ -83,24 +86,55 @@ const Footer = () => {
               </h3>
               <ul className="space-y-[5px] max-md:flex max-md:items-center max-md:gap-4">
                 <li>
-                  <div className="flex size-10 items-center justify-center bg-[#3b5b99] text-2xl text-white">
+                  <Link
+                    href="https://www.facebook.com/codesincpak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-10 items-center justify-center bg-[#3b5b99] text-2xl text-white"
+                  >
                     <FaFacebookF />
-                  </div>
+                  </Link>
                 </li>
                 <li>
-                  <div className="flex size-10 items-center justify-center bg-[#00acee] text-2xl text-white">
+                  <Link
+                    href="https://x.com/codesinc_pak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-10 items-center justify-center bg-[#00acee] text-2xl text-white"
+                  >
                     <FaTwitter />
-                  </div>
+                  </Link>
                 </li>
                 <li>
-                  <div className="flex size-10 items-center justify-center bg-[#507da2] text-2xl text-white">
+                  <Link
+                    href="https://www.linkedin.com/company/codesinc/posts/?feedView=all&viewAsMember=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-10 items-center justify-center bg-[#507da2] text-2xl text-white"
+                  >
                     <FaLinkedinIn />
-                  </div>
+                  </Link>
                 </li>
                 <li>
-                  <div className="flex size-10 items-center justify-center bg-[#43993b] text-2xl text-white">
+                  <Link
+                    href="https://wa.me/923126806286"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-10 items-center justify-center bg-[#43993b] text-2xl text-white"
+                  >
                     <FaWhatsapp />
-                  </div>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="https://www.instagram.com/codesinc_pakistan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-10 items-center justify-center bg-[#df4a33] text-2xl text-white"
+                  >
+                    <FaInstagram />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -112,12 +146,18 @@ const Footer = () => {
               TECHNOLOGY)
             </p>
             <div className="flex items-center gap-1.5">
-              <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
+              <Link
+                href="/terms"
+                className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]"
+              >
                 Terms and Conditions
-              </p>{" "}
-              <p className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]">
+              </Link>{" "}
+              <Link
+                href="/privacy"
+                className="cursor-pointer text-sm font-medium leading-[21px] text-[grey] duration-300 ease-in-out hover:text-[#b2b2b2]"
+              >
                 Privacy Policy
-              </p>
+              </Link>
             </div>
           </div>
         </div>

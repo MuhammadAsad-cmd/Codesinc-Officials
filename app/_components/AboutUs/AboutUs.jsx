@@ -38,9 +38,9 @@ const AboutUs = () => {
 
       <Breadcrumbs title="about us" breadcrumbPath="/about-us" />
 
-      <section className="container">
+      <section className="container px-4">
         <div className="py-[50px]">
-          <h2 className="mb-2.5 mt-5 font-montserrat text-[60px] font-bold uppercase leading-[66px] tracking-tighter">
+          <h2 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase leading-[66px] tracking-tighter md:text-5xl">
             About Us
           </h2>
           <br />
@@ -111,24 +111,16 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <div className="relative">
-        <Image
-          width={1200}
-          height={618}
-          unoptimized
-          src="/images/parallaxxx.jpg"
-          alt="Parallax Image"
-          className="h-[618px] w-full"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div className="container">
-            <h1 className="text-center text-[60px] font-bold uppercase tracking-tighter text-white">
+      <div className="h-full w-full bg-[url('/images/parallaxxx.jpg')] bg-cover bg-center">
+        <div className="flex h-full flex-col items-center justify-center">
+          <div className="container px-4 py-20">
+            <h1 className="text-center text-4xl font-bold uppercase tracking-tighter text-white md:text-5xl">
               Brains Behind Codesinc
             </h1>
-            <div className="mt-[60px] grid w-full grid-cols-3 gap-8">
-              <div className="min-h-[332px] bg-white px-10 py-2.5">
-                <h2 className="mt-5 text-center font-Helvetica text-[22px] font-medium uppercase text-lightblue">
-                  Engr.Muhammad Fayyaz
+            <div className="mt-[60px] grid w-full grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8">
+              <div className="bg-white px-10 py-5">
+                <h2 className="text-center font-Helvetica text-[22px] font-medium uppercase text-lightblue">
+                  Engr. Muhammad Fayyaz
                 </h2>
                 <h3 className="text-center text-xl leading-[22px] text-[#777777]">
                   CEO of Codesinc
@@ -142,8 +134,8 @@ const AboutUs = () => {
                   company.
                 </p>
               </div>
-              <div className="min-h-[332px] bg-white px-10 py-2.5">
-                <h2 className="mt-5 text-center font-Helvetica text-[22px] font-medium uppercase text-lightblue">
+              <div className="bg-white px-10 py-5">
+                <h2 className="text-center font-Helvetica text-[22px] font-medium uppercase text-lightblue">
                   Tanveer Hussain
                 </h2>
                 <h3 className="text-center text-xl leading-[22px] text-[#777777]">
@@ -154,12 +146,12 @@ const AboutUs = () => {
                   design and his commitment to crafting visually stunning and
                   user-centric experiences. As the Creative Director, he sets
                   the artistic direction for CodesInc, infusing every project
-                  with a touch of innovation and aesthetic brilliance..
+                  with a touch of innovation and aesthetic brilliance.
                 </p>
               </div>
-              <div className="min-h-[332px] bg-white px-10 py-2.5">
-                <h2 className="mt-5 text-center font-Helvetica text-[22px] font-medium uppercase text-lightblue">
-                  Engr.Muhammad Shahbaz
+              <div className="bg-white px-10 py-5">
+                <h2 className="text-center font-Helvetica text-[22px] font-medium uppercase text-lightblue">
+                  Engr. Muhammad Shahbaz
                 </h2>
                 <h3 className="text-center text-xl leading-[22px] text-[#777777]">
                   Project Manager

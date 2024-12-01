@@ -43,9 +43,9 @@ const Testimonials = () => {
 
   return (
     <>
-      <div className="bg-offWhite py-[50px] pb-20">
+      <div className="my-14 bg-offWhite py-[50px] pb-20">
         <div className="container px-4 md:px-8">
-          <h1 className="mb-2.5 text-center text-3xl font-semibold uppercase md:mt-5 md:text-4xl lg:text-[45px]">
+          <h1 className="mb-2.5 text-center text-3xl font-semibold uppercase md:mt-5 md:text-4xl">
             Client Testimonials
           </h1>
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

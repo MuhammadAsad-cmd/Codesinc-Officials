@@ -17,7 +17,7 @@ const ServicesGrid = ({ backgroundColor, title, data, textColor }) => {
                 key={index}
                 className={`${
                   index < data.length - 3 ? "border-b" : ""
-                } ${index % 3 !== 2 ? "border-b md:border-r" : ""} border-[#f3f3f3] px-5 py-5 text-center`}
+                } ${index % 3 !== 2 ? "max-md:border-b md:border-r" : ""} border-[#f3f3f3] px-5 py-5 text-center`}
               >
                 <div className="flex items-center justify-center">
                   <Image

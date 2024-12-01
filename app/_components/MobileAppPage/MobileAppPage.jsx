@@ -1,9 +1,16 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import VideoSection from "../VideoSection/VideoSection";
 
 const MobileAppPage = () => {
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <div className="relative w-full">
@@ -18,15 +25,14 @@ const MobileAppPage = () => {
           heightClass="h-[650px]"
         />
 
-        {/* Overlay with Opacity */}
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute top-[30%] w-full">
-          <div className="container">
-            <h1 className="mx-auto mb-2.5 mt-5 w-full max-w-[900px] text-center font-montserrat text-[48px] font-bold uppercase leading-[52px] text-white">
+        <div className="absolute top-[20%] w-full lg:top-[30%]">
+          <div className="container px-4">
+            <h1 className="mx-auto mb-2.5 mt-5 w-full text-center font-montserrat text-4xl font-bold uppercase text-white md:max-w-[900px] lg:text-[48px] lg:leading-[52px]">
               How a hit <span className="text-lightblue"> mobile App </span>
               development company Works?
             </h1>
-            <p className="mx-auto w-4/5 text-center font-montserrat text-[13px] font-normal text-white">
+            <p className="mx-auto text-center font-montserrat text-base font-normal text-white md:w-4/5">
               Codesinc app development services help our developers enter a
               unique platform that is agile, accessible and user-friendly for
               the end user. Given Arpatech’s track record and expertise in app
@@ -35,10 +41,16 @@ const MobileAppPage = () => {
             </p>
 
             <div className="mt-10 flex h-full w-full items-center justify-center gap-5">
-              <button className="flex h-14 items-center justify-center rounded-full bg-lightblue px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue">
+              <button
+                onClick={() => handleScroll("readmore")}
+                className="flex h-14 items-center justify-center rounded-full bg-lightblue px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
+              >
                 Read more
               </button>
-              <button className="flex h-14 items-center justify-center rounded-full border-2 border-white bg-transparent px-[60px] text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue">
+              <button
+                onClick={() => handleScroll("contact")}
+                className="flex h-14 items-center justify-center rounded-full border-2 border-white bg-transparent px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
+              >
                 Get Started
               </button>
             </div>
@@ -47,19 +59,22 @@ const MobileAppPage = () => {
       </div>
       <Breadcrumbs
         title="Mobile app development"
-        breadcrumbPath="/web-design"
+        breadcrumbPath="/mobile-application-development"
       />
-      <div className="bg-[url('/images/mobile-01.gif')] bg-[length:15.25%] bg-fixed bg-[16.9%_170px] bg-no-repeat py-[100px]">
-        <div className="container">
+      <div
+        id="readmore"
+        className="bg-none bg-[length:15.25%] bg-fixed bg-[16.9%_170px] bg-no-repeat py-20 md:py-[100px] lg:bg-[url('/images/mobile-01.gif')]"
+      >
+        <div className="container px-4">
           <div className="flex justify-end text-center">
-            <div className="max-w-[66.66%]">
-              <h2 className="text-[40px] uppercase">
+            <div className="lg:max-w-[66.66%]">
+              <h2 className="text-3xl uppercase md:text-[40px]">
                 choose your desired service
               </h2>
-              <h2 className="text-[30px] font-normal capitalize">
+              <h2 className="text-2xl font-normal capitalize md:text-[30px]">
                 And Let us worry about the rest!
               </h2>
-              <div className="mt-12 grid grid-cols-2 gap-12">
+              <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
                 <div className="bg-[#fcfcfc] p-5">
                   <Image
                     src="/images/apple-1.png"
@@ -121,18 +136,18 @@ const MobileAppPage = () => {
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden bg-[#07befa] bg-[url('/images/mobile-02.gif')] bg-[length:15%] bg-fixed bg-[17%_170px] bg-no-repeat pb-[150px] pt-[100px] text-white">
+      <div className="relative overflow-hidden bg-[#07befa] bg-none bg-[length:15%] bg-fixed bg-[17%_170px] bg-no-repeat py-20 text-white md:pb-[150px] md:pt-[100px] lg:bg-[url('/images/mobile-02.gif')]">
         <Image
           src="/images/flower.png"
           alt="flower"
           width={248}
           height={350}
-          className="absolute right-0 top-3"
+          className="absolute right-0 top-3 hidden lg:block"
         />
-        <div className="container mb-12">
+        <div className="container mb-12 px-4">
           <div className="flex justify-end">
-            <div className="max-w-[66.66%]">
-              <h2 className="mb-[30px] border-b border-b-white/40 pb-5 text-[40px] font-bold uppercase">
+            <div className="lg:max-w-[66.66%]">
+              <h2 className="mb-[30px] border-b border-b-white/40 pb-5 text-3xl font-bold uppercase md:text-[40px]">
                 Progressive web Apps
               </h2>
               <div className="space-y-2.5 font-montserrat text-[15px] font-medium leading-6">
@@ -173,19 +188,19 @@ const MobileAppPage = () => {
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden bg-[#c60544] bg-[url('/images/mobile-03.gif')] bg-[length:15%] bg-fixed bg-[17%_170px] bg-no-repeat pb-[150px] pt-[100px] text-white">
+      <div className="relative overflow-hidden bg-[#c60544] bg-none bg-[length:15%] bg-fixed bg-[17%_170px] bg-no-repeat py-20 pb-20 text-white md:pb-[150px] md:pt-[100px] lg:bg-[url('/images/mobile-03.gif')]">
         -
         <Image
           src="/images/handfree.png"
           alt="handfree"
           width={248}
           height={350}
-          className="absolute -right-5 top-3"
+          className="absolute -right-5 top-3 hidden lg:block"
         />
-        <div className="container mb-12">
+        <div className="container mb-12 px-4">
           <div className="flex justify-end">
-            <div className="max-w-[66.66%]">
-              <h2 className="text-[40px] font-bold uppercase leading-[38px]">
+            <div className="lg:max-w-[66.66%]">
+              <h2 className="text-3xl font-bold uppercase leading-[38px] md:text-[40px]">
                 We Make Sure Every Pixel Resonates Your Brand!
               </h2>
               <p className="mb-[30px] mt-3 border-b border-b-white/40 pb-5 text-[20px] font-medium uppercase">
@@ -220,8 +235,8 @@ const MobileAppPage = () => {
         </div>
       </div>
       <div className="bg-offWhite">
-        <div className="container py-[100px]">
-          <h2 className="mb-2.5 mt-5 text-center text-[30px] uppercase text-black">
+        <div className="container px-4 py-20 md:py-[100px]">
+          <h2 className="mb-2.5 mt-5 text-center text-2xl uppercase text-black md:text-[30px]">
             What is custom mobile App development?
           </h2>
           <p className="tetxt-Gray text-center text-[14px] font-normal leading-[1.75]">
@@ -232,9 +247,9 @@ const MobileAppPage = () => {
             internet pages. Arpatech stands out from the crow in this aspect
             since it offers customized mobile app development.
           </p>
-          <div className="-mx-[15px] mt-[30px] flex flex-wrap">
+          <div className="mt-[30px] flex flex-wrap">
             <div className="flex-[0_0_100%] px-[15px] sm:flex-[0_0_50%]">
-              <h3 className="mb-2.5 mt-5 text-[24px] font-bold uppercase">
+              <h3 className="mb-2.5 mt-5 text-xl font-bold uppercase max-md:text-center md:text-[24px]">
                 Devices for mobile app development
               </h3>
               <p className="text-[15px] font-normal leading-[1.75]">
@@ -248,7 +263,7 @@ const MobileAppPage = () => {
                 screen length.
               </p>
             </div>
-            <div className="flex-[0_0_100%] px-[15px] sm:flex-[0_0_50%]">
+            <div className="flex-[0_0_100%] sm:flex-[0_0_50%] md:px-[15px]">
               <Image
                 src="/images/custom-right.png"
                 alt="custom-right"
@@ -260,8 +275,8 @@ const MobileAppPage = () => {
             </div>
           </div>
         </div>
-        <div className="container pb-[50px]">
-          <h2 className="mb-2.5 mt-5 text-[24px] uppercase">
+        <div className="container px-4 pb-6 md:pb-[50px]">
+          <h2 className="mb-2.5 mt-5 text-xl uppercase md:text-[24px]">
             Situations for mobile app development
           </h2>
           <p className="tetxt-Gray mb-2.5 text-[15px] font-normal leading-[1.75]">
@@ -288,9 +303,9 @@ const MobileAppPage = () => {
             orientated, code sub versioning using GIThub, SVN and distinct
             undertaking management tools.
           </p>
-          <div className="-mx-[15px] mt-[30px] flex flex-wrap">
-            <div className="flex-[0_0_100%] px-[15px] sm:flex-[0_0_50%]">
-              <h3 className="mb-2.5 mt-5 text-[30px] font-bold uppercase text-black">
+          <div className="mt-[30px] flex flex-wrap">
+            <div className="flex-[0_0_100%] sm:flex-[0_0_50%] md:px-[15px]">
+              <h3 className="mb-2.5 mt-5 text-2xl font-bold uppercase text-black md:text-[30px]">
                 What are Hybrid Apps?
               </h3>
               <p className="mb-2.5 text-[15px] font-normal leading-[1.75]">
@@ -333,8 +348,8 @@ const MobileAppPage = () => {
                 className="h-full w-auto max-w-[85%] object-contain"
               />
             </div>
-            <div className="mt-[30px] flex-[0_0_100%] px-[15px] sm:flex-[0_0_50%]">
-              <h3 className="mb-2.5 mt-5 text-[30px] font-bold uppercase text-black">
+            <div className="mt-[30px] flex-[0_0_100%] sm:flex-[0_0_50%] md:px-[15px]">
+              <h3 className="mb-2.5 mt-5 text-2xl font-bold uppercase text-black md:text-[30px]">
                 What are native Apps?
               </h3>
               <p className="mb-2.5 text-[15px] font-normal leading-[1.75]">
@@ -352,7 +367,7 @@ const MobileAppPage = () => {
             </div>
           </div>
           <div className="mt-[30px]">
-            <h2 className="mb-2.5 mt-5 text-[30px] uppercase leading-[38px] text-black">
+            <h2 className="mb-2.5 mt-5 text-2xl uppercase text-black md:text-[30px] md:leading-[38px]">
               We develop delightful apps our every app is an everlasting
               experience
             </h2>
@@ -366,8 +381,8 @@ const MobileAppPage = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto w-full max-w-[1140px] py-[100px]">
-        <h2 className="text-center text-[40px] uppercase text-Gray">
+      <div className="container mx-auto w-full max-w-[1140px] py-20 md:py-[100px]">
+        <h2 className="text-center text-3xl uppercase text-Gray md:text-[40px]">
           Our Simple Mantra For Your Success
         </h2>
         <Image

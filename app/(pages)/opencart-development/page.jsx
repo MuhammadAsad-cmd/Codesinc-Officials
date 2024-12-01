@@ -9,6 +9,7 @@ import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import HowWedoIt from "@/app/_components/SectionComponents/HowWedoIt";
 import ServicesList from "@/app/_components/SectionComponents/ServicesList";
 import WhySection from "@/app/_components/SectionComponents/WhySection";
+import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
 
@@ -100,6 +101,7 @@ const page = () => {
         items={items}
       />
       <AllProjects />
+      <Testimonials />
       <Clients />
       <ContactForm />
     </>

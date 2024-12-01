@@ -9,6 +9,7 @@ import ContentSection from "@/app/_components/SectionComponents/ContentSection";
 import Maintenance from "@/app/_components/ServicesComponent/Maintenence";
 import Outsource from "@/app/_components/ServicesComponent/Outsource";
 import Services from "@/app/_components/ServicesComponent/Services";
+import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import React from "react";
 
 const page = () => {
@@ -153,7 +154,9 @@ const page = () => {
       />
 
       <AllProjects />
+      <Testimonials />
       <Clients />
+
       <ContactForm />
     </>
   );

@@ -5,6 +5,7 @@ import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ContactsForm from "@/app/_components/Common/Contact/ContactsForm";
 import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ServicesGrid from "@/app/_components/ServicesGrid/ServicesGrid";
+import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
 
@@ -288,6 +289,7 @@ const page = () => {
         textColor="text-[#333333]"
       />
       <AllProjects />
+      <Testimonials />
       <Clients />
       <ContactForm />
     </>

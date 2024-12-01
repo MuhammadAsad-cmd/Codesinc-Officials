@@ -92,7 +92,10 @@ const AllProjects = () => {
 
   return (
     <>
-      <section className="container w-full px-4 py-[50px] md:mb-10 md:px-8">
+      <section
+        id="portfolio"
+        className="container w-full px-4 py-[50px] md:mb-10 md:px-8"
+      >
         {/* Filter Controls */}
         <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
           <div className="lg:w-1/2">
@@ -162,10 +165,10 @@ const AllProjects = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center">
+        <div className="mt-10 flex items-center justify-center">
           <Link
             href="/all-projects"
-            className="mt-6 flex h-[34px] w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 py-1.5 text-sm font-bold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
+            className="flex h-9 w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 font-montserrat text-sm font-semibold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
           >
             Show more
           </Link>
