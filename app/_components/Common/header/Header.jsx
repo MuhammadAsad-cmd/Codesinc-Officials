@@ -43,13 +43,14 @@ const Header = () => {
               : "h-[68px] w-full max-w-[1140px] lg:rounded-lg"
           }`}
         >
-          <div
+          {/* <div
             className={` ${
               isScrolled
                 ? "mx-auto flex h-full w-full max-w-[1140px] items-center justify-between gap-16"
                 : "flex h-full items-center gap-16 max-lg:justify-between"
             }`}
-          >
+          > */}
+          <div className="mx-auto flex h-full w-full max-w-[1140px] items-center justify-between">
             <Link href="/">
               <Image
                 width={60}
@@ -113,13 +114,17 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+            <button className="hidden h-[38px] items-center justify-center rounded bg-lightblue px-4 py-2 text-base font-semibold uppercase leading-5 text-white transition-transform duration-300 lg:flex">
+              Get a Free Quote
+            </button>
             <div
               onClick={() => toggleMenuSidebar(true)}
               className="hidden size-12 cursor-pointer items-center justify-center text-4xl text-white max-lg:flex"
             >
               <MdOutlineMenu />
             </div>
-            <div className="absolute right-7 top-8 ml-auto hidden xl:block">
+          </div>
+          {/* <div className="absolute right-7 top-8 ml-auto hidden xl:block">
               <button
                 onClick={() => handleScroll("contact")}
                 className={`flex h-[38px] items-center justify-center rounded bg-lightblue px-5 py-2 text-base font-semibold uppercase leading-5 text-white transition-transform duration-300 ${
@@ -128,8 +133,8 @@ const Header = () => {
               >
                 Get a Free Quote
               </button>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </header>
 

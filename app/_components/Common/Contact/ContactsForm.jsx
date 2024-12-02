@@ -1,5 +1,6 @@
 "use client";
 import { countries } from "@/app/Data/Countries";
+import useFormLogic from "@/Hooks/FormLogic";
 import React, { useState } from "react";
 
 const ContactsForm = ({
@@ -16,28 +17,25 @@ const ContactsForm = ({
     message: "Your Message *",
   },
 }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    projectType: "",
-    country: "",
-    phone: "",
-    message: "",
-  });
+  const serviceId = "service_xjw782n";
+  const templateId = "template_lt3pcfh";
+  const publicKey = "0o0gCGbCz8eTBNTkg";
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const onSuccess = () => {
+    alert("Message sent successfully!");
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    // Handle form submission
+  const onError = () => {
+    alert("Failed to send the message. Please try again.");
   };
+
+  const { formData, handleChange, handleSubmit } = useFormLogic(
+    serviceId,
+    templateId,
+    publicKey,
+    onSuccess,
+    onError,
+  );
 
   return (
     <div className={`${bgColor} w-full p-[25px]`}>
@@ -83,10 +81,18 @@ const ContactsForm = ({
             <option value="" disabled>
               {placeholders.projectType}
             </option>
-            <option value="Web Development">Web Development</option>
-            <option value="Mobile App">Mobile App</option>
-            <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Web">Web Design & Development</option>
+            <option value="App">Mobile App Development</option>
+            <option value="Software">Software Development</option>
+            <option value="Startup">Startup Solution</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Artificial">Artificial Intelligence</option>
+            <option value="Ecommerce">Ecommerce Solution</option>
+            <option value="Managed">Managed Cloud Hosting</option>
+            <option value="IT">IT Resource Allocation</option>
+            <option value="Business">Business Intelligence</option>
+            <option value="Outsourcing">Business Process Outsourcing</option>
+            <option value="Digital">Digital Marketing</option>
           </select>
         </div>
         <div className="mb-4 grid grid-cols-2 gap-5">

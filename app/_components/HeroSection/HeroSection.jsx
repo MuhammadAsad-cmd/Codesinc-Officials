@@ -63,8 +63,8 @@ const HeroSection = () => {
           />
         </div>
         <div className="block bg-[url('/images/mobileview/mobhero1.jpg')] bg-cover bg-fixed bg-center bg-no-repeat max-md:min-h-[80vh]">
-          <div className="absolute top-[6%] w-full lg:top-[18%]">
-            <div className="container px-4 md:px-8">
+          <div className="absolute top-[6%] flex w-full flex-col justify-center max-md:h-full lg:top-[18%]">
+            <div className="container h-full px-4 md:px-8">
               <div className="mx-auto hidden md:block">
                 <Image
                   width={250}
@@ -106,7 +106,7 @@ const HeroSection = () => {
                   ))}
                 </Swiper>
               </div>
-              <div className="mt-9 flex h-full w-full items-center justify-center gap-5">
+              <div className="mt-9 flex w-full items-center justify-center gap-5">
                 <button
                   onClick={() => handleScroll("services")}
                   className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"

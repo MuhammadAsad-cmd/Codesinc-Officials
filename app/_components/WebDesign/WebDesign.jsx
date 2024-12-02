@@ -22,29 +22,35 @@ const WebDesign = () => {
             srcLang: "en",
             label: "English",
           }}
-          heightClass="h-[600px] md:h-[650px]"
+          heightClass="h-[650px]"
         />
 
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute top-[16%] w-full lg:top-[25%]">
+        <div className="absolute top-[16%] w-full lg:top-1/3">
           <div className="container px-4 md:px-8">
             <h1 className="mx-auto mb-2.5 mt-5 text-center font-montserrat text-[45px] font-bold uppercase leading-[48px] text-white sm:max-w-[730px] lg:text-[48px] lg:leading-[52px]">
               We Create Exceptionally Creative{" "}
               <span className="text-lightblue"> Web Designs </span>
             </h1>
-            <p className="mx-auto text-center font-montserrat text-[13px] font-normal text-white md:w-4/5">
+            <p className="mx-auto text-center font-montserrat text-base font-normal tracking-[1px] text-white md:w-4/5">
               Codesinc knows your high standards and loves to meet them
               ingeniously. We being a pioneer web development company respect
               your time and ideas and deliver most alluring web designs.
             </p>
 
-            <div className="mt-10 flex h-full w-full items-center justify-center gap-5">
-              <button className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]">
+            <div className="mt-10 flex w-full items-center justify-center gap-5">
+              <Link
+                href="#service"
+                className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
+              >
                 Read more
-              </button>
-              <button className="flex h-14 items-center justify-center whitespace-nowrap rounded-full border-2 border-white bg-transparent px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]">
+              </Link>
+              <Link
+                href="#contact"
+                className="flex h-14 items-center justify-center whitespace-nowrap rounded-full border-2 border-white bg-transparent px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -53,7 +59,7 @@ const WebDesign = () => {
         title="Web Design & Development"
         breadcrumbPath="/web-design"
       />
-      <div className="container px-4 md:px-8">
+      <div id="service" className="container px-4 md:px-8">
         <div className="mt-10 w-full">
           <h2 className="text-center font-montserrat text-4xl font-bold uppercase text-Gray md:text-[40px] md:leading-[44px]">
             choose your desired service

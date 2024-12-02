@@ -27,12 +27,12 @@ const Dropdown = () => {
       link: "/startup",
       extra: "360 Degree Solution",
     },
-
     {
-      title: "Digital Marketing",
-      icon: "/images/11.png",
-      link: "/services/digital-marketing",
+      title: "Artificial Intelligence",
+      icon: "/images/4.png",
+      link: "artificial-intelligence",
     },
+
     {
       title: "Ecommerce Development",
       icon: "/images/5.png",
@@ -63,6 +63,11 @@ const Dropdown = () => {
       title: "Business Process Outsourcing",
       icon: "/images/10.png",
       link: "/business-process-outsourcing",
+    },
+    {
+      title: "Digital Marketing",
+      icon: "/images/11.png",
+      link: "digital-marketing",
     },
   ];
 
