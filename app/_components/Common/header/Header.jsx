@@ -7,20 +7,11 @@ import { MdMenu, MdOutlineMenu } from "react-icons/md";
 import MenuSidebar from "../../Sidebars/MenuSidebar";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuSidebarOpen, setIsMenuSidebarOpen] = useState(false);
 
   const toggleMenuSidebar = (state) => {
     setIsMenuSidebarOpen(state);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -31,25 +22,8 @@ const Header = () => {
 
   return (
     <>
-      <header
-        className={`left-0 right-0 z-[100] lg:fixed ${
-          isScrolled ? "top-0 mx-auto w-full" : "lg:top-7"
-        } transition-all duration-500`}
-      >
-        <div
-          className={`mx-auto bg-customGray px-3 ${
-            isScrolled
-              ? "h-[88px]"
-              : "h-[68px] w-full max-w-[1140px] lg:rounded-lg"
-          }`}
-        >
-          {/* <div
-            className={` ${
-              isScrolled
-                ? "mx-auto flex h-full w-full max-w-[1140px] items-center justify-between gap-16"
-                : "flex h-full items-center gap-16 max-lg:justify-between"
-            }`}
-          > */}
+      <header className="left-0 right-0 top-0 z-[100] mx-auto w-full lg:fixed">
+        <div className="mx-auto h-[88px] bg-customGray px-3">
           <div className="mx-auto flex h-full w-full max-w-[1140px] items-center justify-between">
             <Link href="/">
               <Image
@@ -114,7 +88,10 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <button className="hidden h-[38px] items-center justify-center rounded bg-lightblue px-4 py-2 text-base font-semibold uppercase leading-5 text-white transition-transform duration-300 lg:flex">
+            <button
+              onClick={() => handleScroll("contact")}
+              className="hidden h-[38px] items-center justify-center rounded bg-lightblue px-4 py-2 text-base font-semibold uppercase leading-5 text-white transition-transform duration-300 lg:flex"
+            >
               Get a Free Quote
             </button>
             <div
@@ -124,17 +101,6 @@ const Header = () => {
               <MdOutlineMenu />
             </div>
           </div>
-          {/* <div className="absolute right-7 top-8 ml-auto hidden xl:block">
-              <button
-                onClick={() => handleScroll("contact")}
-                className={`flex h-[38px] items-center justify-center rounded bg-lightblue px-5 py-2 text-base font-semibold uppercase leading-5 text-white transition-transform duration-300 ${
-                  isScrolled ? "translate-y-0" : "-translate-y-4"
-                }`}
-              >
-                Get a Free Quote
-              </button>
-            </div> */}
-          {/* </div> */}
         </div>
       </header>
 

@@ -12,6 +12,8 @@ import { HiWrench } from "react-icons/hi2";
 import { AiOutlineArrowsAlt } from "react-icons/ai";
 import { TiArrowSortedUp } from "react-icons/ti";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const tabs = [
   {
@@ -93,20 +95,40 @@ const TechnologySection = () => {
     return () => clearTimeout(timeout);
   }, [activeTab]);
 
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 700, // Animation duration in ms
+      once: true, // Animation runs once when scrolled into view
+    });
+  }, []);
+
   return (
-    <section className="container mx-auto mb-12 h-[600px] px-4 py-6 pb-2 md:mb-20 md:px-8 md:py-14 md:pb-14 lg:h-[750px]">
+    <section
+      className="container mx-auto mb-6 h-[600px] px-4 py-6 pb-2 md:mb-14 md:px-8 md:py-14 md:pb-10 lg:h-[750px]"
+      data-aos="fade-up"
+    >
       <div className="mb-8 text-center">
-        <h3 className="text-center font-montserrat text-4xl font-semibold uppercase leading-[42px] md:text-[40px] md:leading-[58px]">
+        <h3
+          className="text-center font-montserrat text-4xl font-semibold uppercase leading-[42px] md:text-[40px] md:leading-[58px]"
+          data-aos="fade-down"
+        >
           Technology & Business <br />
-          <span className="text-lg font-medium tracking-[6px] md:text-[26px] lg:text-[32px]">
+          <span
+            className="text-lg font-medium tracking-[6px] md:text-[26px] lg:text-[32px]"
+            data-aos="fade-right"
+          >
             Partners Around the World
           </span>
         </h3>
       </div>
 
       {/* Horizontal Tab Icons */}
-      <div className="">
-        <ul className="relative mb-5 flex w-full items-center justify-between max-md:overflow-x-auto">
+      <div className="relative mb-5">
+        <ul
+          className="flex w-full items-center justify-between max-md:overflow-x-auto"
+          data-aos="zoom-in"
+        >
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -118,6 +140,7 @@ const TechnologySection = () => {
                     : `border-[${tab.color}] text-[${tab.color}]`
                 }`}
                 onClick={() => setActiveTab(tab.id)}
+                data-aos="fade-up"
               >
                 <Icon
                   className="text-3xl"
@@ -135,10 +158,10 @@ const TechnologySection = () => {
               </li>
             );
           })}
-          <div className="absolute top-[50%] -z-10 h-0.5 w-full bg-[#ddd]"></div>
         </ul>
-        <div className="w-full border-t border-[#ddd]"></div>
+        <div className="absolute top-[50%] -z-10 h-0.5 w-full bg-[#ddd]"></div>
       </div>
+
       {/* Active Tab Content */}
       <div className="overflow-hidden pt-[50px] text-center">
         {tabs.map(
@@ -146,12 +169,12 @@ const TechnologySection = () => {
             activeTab === tab.id && (
               <div
                 key={tab.id}
-                className="flex flex-col items-center justify-center overflow-x-hidden overflow-y-hidden"
+                className="flex flex-col items-center justify-center"
+                data-aos="fade-in"
               >
                 <h3
-                  className={`mb-2.5 mt-5 pb-2.5 text-center font-montserrat text-[35px] font-semibold capitalize leading-[58px] transition-all duration-700 ${
-                    animate ? "animate-slideUp" : ""
-                  }`}
+                  className={`mb-2.5 mt-5 pb-2.5 text-center font-montserrat text-[35px] font-semibold capitalize leading-[58px] transition-all duration-700`}
+                  data-aos="fade-down"
                 >
                   {tab.label}
                 </h3>
@@ -161,9 +184,8 @@ const TechnologySection = () => {
                   unoptimized
                   src={tab.image}
                   alt={tab.label}
-                  className={`h-full w-auto transition-transform duration-700 ease-in-out ${
-                    animate ? "animate-zoomOutUp" : ""
-                  }`}
+                  className="h-full w-auto"
+                  data-aos="zoom-in"
                 />
               </div>
             ),

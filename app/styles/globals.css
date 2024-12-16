@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "fonts.css";
+
+:root {
+  --font-family: "Outfit", sans-serif;
+}
+
 html,
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
+  transition: direction 0.3s ease;
   font-weight: 700;
   color: #333;
   width: 100%;
@@ -139,4 +146,28 @@ body {
 
 .DrupalBorder {
   border: 10px solid rgba(0, 119, 192, 0.4);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mixup {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

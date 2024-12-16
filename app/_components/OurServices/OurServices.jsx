@@ -1,14 +1,25 @@
+"use client";
 import { services } from "@/app/Data/Services";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const OurServices = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <>
       <div id="services" className="bg-offWhite py-[50px]">
         <div className="container mb-12 px-4 md:px-8">
-          <div className="mb-[60px]">
+          <div className="mb-[60px]" data-aos="fade-up">
             <h2 className="mb-2.5 mt-5 text-center text-4xl font-[550] uppercase md:text-[45px] md:leading-[49px]">
               What we do
             </h2>
@@ -27,6 +38,8 @@ const OurServices = () => {
               <div
                 key={index}
                 className="group relative h-[290px] overflow-hidden border border-lightblue bg-white p-6 hover:bg-none lg:px-[38px] lg:py-10"
+                data-aos="zoom-in" // Animation for individual service cards
+                data-aos-delay={index * 100} // Add delay for staggered animations
               >
                 <div className="absolute inset-x-5 inset-y-10 z-50 flex flex-col items-center text-center md:inset-x-[38px]">
                   <div className="mb-4">

@@ -3,9 +3,9 @@ import HeroSection from "./_components/HeroSection/HeroSection";
 import ContactForm from "./_components/Common/Contact/ContactForm";
 import SupportOptions from "./_components/SupportOptions/SupportOptions";
 import OurServices from "./_components/OurServices/OurServices";
-import AllProjects from "./_components/AllProjects/AllProjects";
 import TechnologySection from "./_components/Technologies/Technologies";
 import Testimonials from "./_components/Testimonials/Testimonials";
+import HomePageProjects from "./_components/AllProjects/HomePageProjects";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <HeroSection />
       <OurServices />
       <SupportOptions />
-      <AllProjects />
+      <HomePageProjects />
       <TechnologySection />
       <Testimonials />
       <ContactForm />

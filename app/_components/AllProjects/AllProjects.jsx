@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaImage, FaLink } from "react-icons/fa6";
+import { projects } from "@/app/Data/Projects";
 
 // Array of technologies
 const technologies = [
@@ -13,58 +14,6 @@ const technologies = [
   { name: "WordPress", filter: ".wordpress" },
   { name: "Shopify", filter: ".shopify" },
   { name: "Webflow", filter: ".webflow" },
-];
-
-// Array of projects
-const projects = [
-  {
-    id: 1,
-    category: "web",
-    image: "/images/portfolio-app-2.png",
-    title: "Web Project 1",
-  },
-  {
-    id: 2,
-    category: "ecommerce",
-    image: "/images/portfolio-shopify-1.png",
-    title: "E-Commerce Project 1",
-  },
-  {
-    id: 3,
-    category: "app",
-    image: "/images/portfolio-app-2.png",
-    title: "App Project 1",
-  },
-  {
-    id: 4,
-    category: "wordpress",
-    image: "/images/portfolio-wordpress-2.png",
-    title: "WordPress Project 1",
-  },
-  {
-    id: 5,
-    category: "shopify",
-    image: "/images/portfolio-shopify-1.png",
-    title: "Shopify Project 1",
-  },
-  {
-    id: 6,
-    category: "webflow",
-    image: "/images/portfolio-app-2.png",
-    title: "Webflow Project 1",
-  },
-  {
-    id: 7,
-    category: "web",
-    image: "/images/portfolio-app-2.png",
-    title: "Web Project 2",
-  },
-  {
-    id: 8,
-    category: "app",
-    image: "/images/portfolio-app-2.png",
-    title: "App Project 2",
-  },
 ];
 
 const AllProjects = () => {
@@ -98,12 +47,12 @@ const AllProjects = () => {
       >
         {/* Filter Controls */}
         <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
-          <div className="lg:w-1/2">
+          <div className="lg:w-[55%]">
             <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
               Award Winning Projects
             </h2>
           </div>
-          <div className="flex flex-wrap justify-center max-lg:gap-4 lg:w-1/2 lg:gap-3">
+          <div className="flex flex-wrap justify-center max-lg:gap-4 lg:w-[45%] lg:gap-3">
             {technologies.map((tech, index) => (
               <button
                 key={index}
@@ -144,7 +93,7 @@ const AllProjects = () => {
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 {/* Link Icon */}
                 <Link
-                  href={`/projects/${project.id}`}
+                  href={project.link}
                   className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-4xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
                   title="View Project Details"
                 >
@@ -164,14 +113,6 @@ const AllProjects = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-10 flex items-center justify-center">
-          <Link
-            href="/all-projects"
-            className="flex h-9 w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 font-montserrat text-sm font-semibold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
-          >
-            Show more
-          </Link>
         </div>
       </section>
     </>

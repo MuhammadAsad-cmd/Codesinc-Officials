@@ -47,7 +47,7 @@ const Dropdown = () => {
     {
       title: "DevOps",
       icon: "/images/11.png",
-      link: "/services/digital-marketing",
+      link: "/digital-marketing",
     },
     {
       title: "IT Resource Allocation & Management",

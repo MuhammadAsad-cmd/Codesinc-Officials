@@ -16,6 +16,10 @@ module.exports = {
       },
 
       keyframes: {
+        autoScroll: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
         slideLeft: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
@@ -31,11 +35,10 @@ module.exports = {
         slideLeft: "slideLeft 1s ease-out forwards",
         slideLeft: "slideLeft 10s linear infinite",
         run: "run 0.7s linear infinite",
+        "auto-scroll": "autoScroll 5s linear",
       },
       fontFamily: {
-        sans: ["Lato", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        montserrat: ["var(--font-montserrat)", "sans-serif"],
-        Helvetica: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
+        english: ["Outfit", "sans-serif"],
       },
       colors: {
         customGray: "#3e3e3e",
