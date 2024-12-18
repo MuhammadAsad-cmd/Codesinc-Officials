@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectContact from "../Common/Contact/ProjectContact";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import Services from "../ServicesComponent/Services";
 import EmergencySupport from "../EmergencySupport/EmergencySupport";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const StartUpPage = () => {
   const servicesData = [
@@ -50,6 +53,14 @@ const StartUpPage = () => {
         "The business developers do meetings with the startups to smoothen the communication channel and advise them on goal setting, business planning, and startup events.",
     },
   ];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div
@@ -58,8 +69,8 @@ const StartUpPage = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="md:w-1/2 xl:w-2/3">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
+          <div className="md:w-1/2 xl:w-2/3" data-aos="fade-right">
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
               WE HELP, SUPPORT & ELEVATE STARTUPS!
             </h1>
 
@@ -72,7 +83,7 @@ const StartUpPage = () => {
           </div>
 
           {/* Right Section */}
-          <div className="mt-8 md:w-1/2 lg:mt-0 xl:w-1/3">
+          <div className="mt-8 md:w-1/2 lg:mt-0 xl:w-1/3" data-aos="fade-left">
             <ProjectContact
               bgColor="bg-[#00b1ff]"
               borderColor="border-[#157e94]"
@@ -87,11 +98,11 @@ const StartUpPage = () => {
       <div className="bg-white py-[70px] text-center">
         <div className="container px-4">
           <div>
-            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
+            <h2 className="font-montserrat inline-block border-b-[3px] border-skyBlue2 pb-3 text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
               STARTUPS
             </h2>
             <div className="mt-20 flex flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
-              <div className="md:w-1/2 lg:px-4">
+              <div className="md:w-1/2 lg:px-4" data-aos="fade-right">
                 <Image
                   width={555}
                   height={264}
@@ -100,8 +111,8 @@ const StartUpPage = () => {
                   alt="Software Development"
                 />
               </div>
-              <div className="md:w-1/2 lg:px-4">
-                <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray max-md:text-center">
+              <div className="md:w-1/2 lg:px-4" data-aos="fade-left">
+                <p className="font-montserrat text-left text-[15px] font-normal leading-[26px] text-Gray max-md:text-center">
                   We Empower Startups And Enable Them Reach New Heights! We
                   believe in collaborative approach so as to groom the
                   entrepreneurs throughout their startup journey and further
@@ -118,7 +129,7 @@ const StartUpPage = () => {
       </div>
       <div className="bg-offWhite py-[60px]">
         <div className="container px-4 text-center">
-          <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
+          <h2 className="font-montserrat inline-block border-b-[3px] border-skyBlue2 pb-3 text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
             What We Offer
           </h2>
           <div className="mt-[70px] flex flex-col justify-center max-md:items-center max-md:space-y-8 md:flex-row lg:gap-8">
@@ -130,7 +141,7 @@ const StartUpPage = () => {
                 src="/images/cms/sp-cloud.png"
                 alt="Cloud"
               />
-              <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
+              <h3 className="font-montserrat mb-2.5 mt-[30px] text-xl font-semibold uppercase leading-[22px]">
                 Web Development
               </h3>
               <p className="font-montserrat text-[13px] font-normal leading-[22px] text-Gray md:w-[90%]">
@@ -150,7 +161,7 @@ const StartUpPage = () => {
                 src="/images/cms/sp-mobile.png"
                 alt="Cloud"
               />
-              <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
+              <h3 className="font-montserrat mb-2.5 mt-[30px] text-xl font-semibold uppercase leading-[22px]">
                 App Development
               </h3>
               <p className="font-montserrat text-[13px] font-normal leading-[22px] text-Gray md:w-[90%]">
@@ -170,7 +181,7 @@ const StartUpPage = () => {
                 src="/images/cms/sp-web.png"
                 alt="Cloud"
               />
-              <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
+              <h3 className="font-montserrat mb-2.5 mt-[30px] text-xl font-semibold uppercase leading-[22px]">
                 Cloud Hosting
               </h3>
               <p className="font-montserrat text-[13px] font-normal leading-[22px] text-Gray md:w-[90%]">
@@ -188,11 +199,11 @@ const StartUpPage = () => {
       </div>
       <div className="container px-4 py-[50px]">
         <div className="flex flex-col justify-center max-md:space-y-10 md:flex-row">
-          <div className="md:w-[41.66%]">
-            <h2 className="mb-2.5 mt-5 font-montserrat text-[26px] font-normal uppercase text-black max-md:text-center md:text-[30px]">
+          <div className="md:w-[41.66%]" data-aos="zoom-in">
+            <h2 className="font-montserrat mb-2.5 mt-5 text-[26px] font-normal uppercase text-black max-md:text-center md:text-[30px]">
               Incubation &amp; Funding
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray max-md:text-center">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-[26px] text-Gray max-md:text-center">
               With the strong network of worldwide investors both local and
               international associated with Codesinc, we help connecting our
               startups with the best potential investors to support and turn
@@ -202,7 +213,7 @@ const StartUpPage = () => {
               Get Started
             </button>
           </div>
-          <div className="px-4 md:w-[58.33%]">
+          <div className="px-4 md:w-[58.33%]" data-aos="fade-up">
             <div className="mx-auto md:w-[90%]">
               <Image
                 width={555}

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,8 +10,17 @@ import { FaPaintBrush, FaRegLifeRing, FaSearch } from "react-icons/fa";
 import { FaGears } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 import VideoSection from "../VideoSection/VideoSection";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WebDesign = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Duration of animations in milliseconds
+      once: true, // Animation happens only once
+      easing: "ease-in-out", // Animation easing style
+    });
+  }, []);
   return (
     <>
       <div className="relative w-full">
@@ -28,11 +38,11 @@ const WebDesign = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute top-[16%] w-full lg:top-1/3">
           <div className="container px-4 md:px-8">
-            <h1 className="mx-auto mb-2.5 mt-5 text-center font-montserrat text-[45px] font-bold uppercase leading-[48px] text-white sm:max-w-[730px] lg:text-[48px] lg:leading-[52px]">
+            <h1 className="font-montserrat mx-auto mb-2.5 mt-5 text-center text-[45px] font-bold uppercase leading-[48px] text-white sm:max-w-[730px] lg:text-[48px] lg:leading-[52px]">
               We Create Exceptionally Creative{" "}
               <span className="text-lightblue"> Web Designs </span>
             </h1>
-            <p className="mx-auto text-center font-montserrat text-base font-normal tracking-[1px] text-white md:w-4/5">
+            <p className="font-montserrat mx-auto text-center text-base font-normal tracking-[1px] text-white md:w-4/5">
               Codesinc knows your high standards and loves to meet them
               ingeniously. We being a pioneer web development company respect
               your time and ideas and deliver most alluring web designs.
@@ -61,7 +71,7 @@ const WebDesign = () => {
       />
       <div id="service" className="container px-4 md:px-8">
         <div className="mt-10 w-full">
-          <h2 className="text-center font-montserrat text-4xl font-bold uppercase text-Gray md:text-[40px] md:leading-[44px]">
+          <h2 className="font-montserrat text-center text-4xl font-bold uppercase text-Gray md:text-[40px] md:leading-[44px]">
             choose your desired service
           </h2>
           <p className="my-2.5 text-center text-2xl font-normal uppercase tracking-[3px] text-Gray md:text-[30px]">
@@ -88,7 +98,7 @@ const WebDesign = () => {
                     </div>
                   </div>
                   {service.title && (
-                    <h3 className="mt-5 font-montserrat text-[28px] font-semibold uppercase text-Gray">
+                    <h3 className="font-montserrat mt-5 text-[28px] font-semibold uppercase text-Gray">
                       {service.title}
                     </h3>
                   )}
@@ -122,7 +132,7 @@ const WebDesign = () => {
                   </div>
                 </div>
 
-                <button className="mt-4 rounded-full border border-brightOrange px-10 py-1.5 font-montserrat text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
+                <button className="font-montserrat mt-4 rounded-full border border-brightOrange px-10 py-1.5 text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
                   Get Free Quote
                 </button>
               </div>
@@ -146,7 +156,7 @@ const WebDesign = () => {
                     </div>
                   </div>
                   {service.title && (
-                    <h3 className="mt-5 font-montserrat text-[28px] font-semibold uppercase text-Gray">
+                    <h3 className="font-montserrat mt-5 text-[28px] font-semibold uppercase text-Gray">
                       {service.title}
                     </h3>
                   )}
@@ -173,7 +183,7 @@ const WebDesign = () => {
                   </div>
                 </div>
 
-                <button className="mt-4 rounded-full border border-brightOrange px-10 py-1.5 font-montserrat text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
+                <button className="font-montserrat mt-4 rounded-full border border-brightOrange px-10 py-1.5 text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
                   Get Free Quote
                 </button>
               </div>
@@ -183,7 +193,7 @@ const WebDesign = () => {
       </div>
       <div className="bg-emeraldGreen py-[100px] text-white">
         <div className="container flex flex-col gap-7 px-4 max-md:gap-y-9 md:flex-row">
-          <div className="md:w-[58.33%]">
+          <div className="md:w-[58.33%]" data-aos="fade-right">
             <div>
               <Image
                 width={685}
@@ -195,8 +205,8 @@ const WebDesign = () => {
               />
             </div>
           </div>
-          <div className="md:w-[41.66%] lg:mt-20">
-            <h3 className="mb-5 font-montserrat text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
+          <div className="md:w-[41.66%] lg:mt-20" data-aos="fade-left">
+            <h3 className="font-montserrat mb-5 text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
               Ecommerce Websites Based On Globally Recognized Standards
             </h3>
             <p className="font-montserrat text-base font-normal leading-7">
@@ -211,7 +221,7 @@ const WebDesign = () => {
       </div>
       <div className="bg-skyBlue py-[100px] text-white">
         <div className="container flex flex-col gap-10 px-4 max-md:gap-y-9 md:flex-row">
-          <div className="px-4 md:w-[41.66%]">
+          <div className="px-4 md:w-[41.66%]" data-aos="zoom-in">
             <div>
               <Image
                 width={685}
@@ -223,8 +233,11 @@ const WebDesign = () => {
               />
             </div>
           </div>
-          <div className="border-b border-[#00afdf] px-4 pb-[60px] md:w-[58.33%] lg:mt-20">
-            <h3 className="mb-5 font-montserrat text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
+          <div
+            data-aos="fade-up"
+            className="border-b border-[#00afdf] px-4 pb-[60px] md:w-[58.33%] lg:mt-20"
+          >
+            <h3 className="font-montserrat mb-5 text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
               We Mold Web Designs According To Your Brand
             </h3>
             <p className="font-montserrat text-base font-normal leading-7">
@@ -240,7 +253,7 @@ const WebDesign = () => {
       </div>
       <div className="bg-redAccent py-[100px] text-white">
         <div className="container flex flex-col gap-10 px-4 max-md:gap-y-9 md:flex-row">
-          <div className="md:w-[41.66%]">
+          <div className="md:w-[41.66%]" data-aos="fade-left">
             <div className="lg:mx-20">
               <Image
                 width={285}
@@ -252,8 +265,8 @@ const WebDesign = () => {
               />
             </div>
           </div>
-          <div className="md:w-[58.33%] lg:mt-20">
-            <h3 className="mb-5 font-montserrat text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
+          <div className="md:w-[58.33%] lg:mt-20" data-aos="fade-right">
+            <h3 className="font-montserrat mb-5 text-2xl font-semibold uppercase md:text-[30px] md:leading-10">
               We Deliver Mobile Sophisticated Web Development Services
             </h3>
             <p className="font-montserrat text-base font-normal leading-7">
@@ -269,7 +282,7 @@ const WebDesign = () => {
       </div>
       <div className="bg-[#f3f3f3] py-[100px] text-center">
         <div className="container px-4">
-          <h3 className="text-center font-montserrat text-[40px] font-semibold uppercase text-Gray">
+          <h3 className="font-montserrat text-center text-[40px] font-semibold uppercase text-Gray">
             How We Do It
           </h3>
           <ul className="my-[50px] grid grid-cols-2 items-center justify-center md:grid-cols-4">

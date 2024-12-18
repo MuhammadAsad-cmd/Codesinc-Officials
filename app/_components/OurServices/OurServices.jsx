@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 const OurServices = () => {
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 200,
       easing: "ease-in-out",
       once: true,
     });
@@ -38,8 +38,8 @@ const OurServices = () => {
               <div
                 key={index}
                 className="group relative h-[290px] overflow-hidden border border-lightblue bg-white p-6 hover:bg-none lg:px-[38px] lg:py-10"
-                data-aos="zoom-in" // Animation for individual service cards
-                data-aos-delay={index * 100} // Add delay for staggered animations
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
               >
                 <div className="absolute inset-x-5 inset-y-10 z-50 flex flex-col items-center text-center md:inset-x-[38px]">
                   <div className="mb-4">

@@ -1,122 +1,109 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaImage, FaLink } from "react-icons/fa6";
 import { projects } from "@/app/Data/Projects";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Array of technologies
 const technologies = [
-  { name: "All", filter: "all" },
-  { name: "Web Development", filter: ".web" },
-  { name: "E-Commerce Development", filter: ".ecommerce" },
-  { name: "App Development", filter: ".app" },
-  { name: "WordPress", filter: ".wordpress" },
-  { name: "Shopify", filter: ".shopify" },
-  { name: "Webflow", filter: ".webflow" },
+  { name: "Web Development", filter: "web" },
+  { name: "E-Commerce Development", filter: "ecommerce" },
+  { name: "App Development", filter: "app" },
+  { name: "WordPress", filter: "wordpress" },
+  { name: "Shopify", filter: "shopify" },
+  { name: "Webflow", filter: "webflow" },
 ];
 
 const AllProjects = () => {
-  const containerRef = useRef(null);
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("web");
 
+  // AOS Initialization
   useEffect(() => {
-    if (typeof window !== "undefined" && containerRef.current) {
-      // Dynamically import mixitup for client-side use only
-      const mixitup = require("mixitup");
-      mixitup(containerRef.current, {
-        selectors: {
-          target: ".mix",
-        },
-        animation: {
-          duration: 300,
-        },
-      });
-    }
+    AOS.init({
+      duration: 600,
+      once: true,
+      easing: "ease-in-out",
+      offset: 100,
+    });
   }, []);
 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
   };
 
+  // Memoized Filtered Projects
+  const filteredProjects = useMemo(() => {
+    return activeFilter === "web"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
+  }, [activeFilter]);
+
   return (
-    <>
-      <section
-        id="portfolio"
-        className="container w-full px-4 py-[50px] md:mb-10 md:px-8"
-      >
-        {/* Filter Controls */}
-        <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
-          <div className="lg:w-[55%]">
-            <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
-              Award Winning Projects
-            </h2>
-          </div>
-          <div className="flex flex-wrap justify-center max-lg:gap-4 lg:w-[45%] lg:gap-3">
-            {technologies.map((tech, index) => (
-              <button
-                key={index}
-                className={`text-sm font-semibold uppercase leading-4 lg:leading-[19px] ${
-                  activeFilter === tech.filter
-                    ? "text-lightblue"
-                    : "text-gray-700"
-                } hover:text-lightblue`}
-                data-filter={tech.filter}
-                onClick={() => handleFilterClick(tech.filter)}
-              >
-                {tech.name}
-              </button>
-            ))}
-          </div>
+    <section
+      id="portfolio"
+      className="container w-full px-4 py-[50px] md:mb-10 md:px-8"
+    >
+      {/* Filter Controls */}
+      <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
+        <div className="lg:w-[55%]">
+          <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
+            Award Winning Projects
+          </h2>
         </div>
-
-        <div
-          className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4"
-          ref={containerRef}
-        >
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className={`mix ${project.category} group relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md`}
+        <div className="flex flex-wrap justify-center max-lg:gap-4 lg:w-[45%] lg:gap-3">
+          {technologies.map((tech, index) => (
+            <button
+              key={index}
+              className={`text-sm font-semibold uppercase leading-4 lg:leading-[19px] ${
+                activeFilter === tech.filter
+                  ? "text-lightblue"
+                  : "text-gray-700"
+              } hover:text-lightblue`}
+              onClick={() => handleFilterClick(tech.filter)}
             >
-              {/* Image */}
-              <Image
-                width={283}
-                height={255}
-                unoptimized
-                src={project.image}
-                alt={project.title}
-                className="h-full w-full rounded-lg object-cover transition-all duration-300 group-hover:scale-125 group-hover:opacity-50"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                {/* Link Icon */}
-                <Link
-                  href={project.link}
-                  className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-4xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
-                  title="View Project Details"
-                >
-                  <FaLink />
-                </Link>
-
-                {/* Image Icon */}
-                <a
-                  href={project.image}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mx-2 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-3xl font-medium text-lightblue shadow-md transition-transform duration-300 hover:scale-110"
-                  title="View Image"
-                >
-                  <FaImage />
-                </a>
-              </div>
-            </div>
+              {tech.name}
+            </button>
           ))}
         </div>
-      </section>
-    </>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4">
+        {filteredProjects.map((project, index) => (
+          <div
+            key={project.id}
+            className="group relative flex h-[250px] w-[280px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-delay={index % 6 === 0 ? "0" : `${index * 50}`} // Reduced delay for performance
+          >
+            {/* Image */}
+            <div className="relative h-full w-full overflow-hidden">
+              <Image
+                width={280}
+                height={280}
+                loading="lazy" // Lazy loading for optimization
+                src={project.image}
+                alt={project.title}
+                className="h-auto w-full transform rounded-lg object-cover transition-transform duration-[1500ms] group-hover:scale-110"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Show More Button */}
+      {/* <div className="mt-10 flex items-center justify-center">
+        <Link
+          href="/all-projects"
+          className="font-montserrat flex h-9 w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 text-sm font-semibold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
+        >
+          Show more
+        </Link>
+      </div> */}
+    </section>
   );
 };
 
-export default AllProjects;
+export default React.memo(AllProjects);

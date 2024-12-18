@@ -1,11 +1,20 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ProjectContact from "../Common/Contact/ProjectContact";
 import EmergencySupport from "../EmergencySupport/EmergencySupport";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SoftwareDevelop = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div
@@ -14,8 +23,8 @@ const SoftwareDevelop = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="md:w-1/2 xl:w-2/3">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
+          <div className="md:w-1/2 xl:w-2/3" data-aos="fade-right">
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
               A Software Development Company
             </h1>
             <p className="mb-6 text-white md:text-lg">
@@ -33,7 +42,7 @@ const SoftwareDevelop = () => {
           </div>
 
           {/* Right Section */}
-          <div className="mt-8 md:w-1/2 lg:mt-0 xl:w-1/3">
+          <div className="mt-8 md:w-1/2 lg:mt-0 xl:w-1/3" data-aos="fade-left">
             <ProjectContact
               bgColor="bg-[#07befa]"
               borderColor="border-[#3686a7]"
@@ -52,11 +61,11 @@ const SoftwareDevelop = () => {
       <div className="bg-white py-[70px] text-center">
         <div className="container px-4">
           <div>
-            <h2 className="inline-block border-b-[3px] border-skyBlue2 pb-3 font-montserrat text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
+            <h2 className="font-montserrat inline-block border-b-[3px] border-skyBlue2 pb-3 text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
               SOFTWARE DEVELOPMENT
             </h2>
             <div className="mt-20 flex flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
-              <div className="shrink-0 px-4 md:w-1/2">
+              <div className="shrink-0 px-4 md:w-1/2" data-aos="fade-right">
                 <Image
                   width={555}
                   height={264}
@@ -65,8 +74,8 @@ const SoftwareDevelop = () => {
                   alt="Software Development"
                 />
               </div>
-              <div className="px-4 md:w-1/2">
-                <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray">
+              <div className="px-4 md:w-1/2" data-aos="fade-left">
+                <p className="font-montserrat text-left text-[15px] font-normal leading-[26px] text-Gray">
                   We have offered custom software development services to
                   industries ranging from healthcare, finance, manufacturing and
                   technology sector. So, we have plethora of experience to Wow
@@ -83,7 +92,7 @@ const SoftwareDevelop = () => {
       </div>
       <div className="bg-skyBlue2 py-[60px] text-white">
         <div className="container px-4 text-center">
-          <h2 className="inline-block items-center justify-center border-b-[3px] border-white pb-3 text-center font-montserrat text-3xl font-semibold uppercase text-white md:text-[40px]">
+          <h2 className="font-montserrat inline-block items-center justify-center border-b-[3px] border-white pb-3 text-center text-3xl font-semibold uppercase text-white md:text-[40px]">
             Services
           </h2>
           <div className="mt-[70px] flex flex-col justify-center gap-4 md:flex-row lg:gap-8">
@@ -95,10 +104,10 @@ const SoftwareDevelop = () => {
                 src="/images/service/cloud.png"
                 alt="Cloud"
               />
-              <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
+              <h3 className="font-montserrat mb-2.5 mt-[30px] text-xl font-semibold uppercase leading-[22px]">
                 Nearshore Software Development
               </h3>
-              <p className="w-[90%] font-montserrat text-[13px] font-normal leading-[22px] text-white">
+              <p className="font-montserrat w-[90%] text-[13px] font-normal leading-[22px] text-white">
                 Don’t think too much, outsource our software application
                 developer to enhance the efficiency and quality of your software
                 projects. We do a thorough screening and verification of the
@@ -115,10 +124,10 @@ const SoftwareDevelop = () => {
                 src="/images/service/globe.png"
                 alt="Cloud"
               />
-              <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
+              <h3 className="font-montserrat mb-2.5 mt-[30px] text-xl font-semibold uppercase leading-[22px]">
                 Custom Software Solutions
               </h3>
-              <p className="w-[90%] font-montserrat text-[13px] font-normal leading-[22px] text-white">
+              <p className="font-montserrat w-[90%] text-[13px] font-normal leading-[22px] text-white">
                 No matter whether you are a startup or an fully established
                 business, our software development firm is here to guide you in
                 every stage of software development life cycle either it is
@@ -135,10 +144,10 @@ const SoftwareDevelop = () => {
                 src="/images/service/puzzle.png"
                 alt="Cloud"
               />
-              <h3 className="mb-2.5 mt-[30px] font-montserrat text-xl font-semibold uppercase leading-[22px]">
+              <h3 className="font-montserrat mb-2.5 mt-[30px] text-xl font-semibold uppercase leading-[22px]">
                 Managed Services & DevOps
               </h3>
-              <p className="w-[90%] font-montserrat text-[13px] font-normal leading-[22px] text-white">
+              <p className="font-montserrat w-[90%] text-[13px] font-normal leading-[22px] text-white">
                 Giving you enterprise level support for your mission-critical
                 environments following DevOps approach and ITIL process. By
                 outsourcing our software development services, you can easily
@@ -153,7 +162,7 @@ const SoftwareDevelop = () => {
       </div>
       <div className="mt-[50px] pb-5 pt-[30px]">
         <div className="text-center">
-          <h2 className="mb-20 inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center font-montserrat text-3xl font-semibold uppercase text-black md:text-[40px]">
+          <h2 className="font-montserrat mb-20 inline-block items-center justify-center border-b-[3px] border-skyBlue2 pb-3 text-center text-3xl font-semibold uppercase text-black md:text-[40px]">
             How We Work
           </h2>
         </div>
@@ -166,7 +175,7 @@ const SoftwareDevelop = () => {
             <h3 className="mb-5 mt-[15px] text-[23px] font-medium uppercase leading-[26px] text-white">
               Agile Software Development
             </h3>
-            <p className="mb-[50px] font-montserrat text-base font-medium leading-6">
+            <p className="font-montserrat mb-[50px] text-base font-medium leading-6">
               Our agile software development solution will give quick and
               continuous delivery of worthy softwares.We follow scrum
               methodology to achieve best results and manage all the project
@@ -180,7 +189,7 @@ const SoftwareDevelop = () => {
             <h3 className="mb-5 mt-[15px] text-[23px] font-medium uppercase leading-[26px] text-white">
               Regular Calls & Meetings
             </h3>
-            <p className="mb-[50px] font-montserrat text-base font-medium leading-6">
+            <p className="font-montserrat mb-[50px] text-base font-medium leading-6">
               We give our clients real time communication, quick reaction time
               and easy accessibility to anywhere, everywhere. Our team of
               experts software developers are just one call away to give you
@@ -194,7 +203,7 @@ const SoftwareDevelop = () => {
             <h3 className="mb-5 mt-[15px] text-[23px] font-medium uppercase leading-[26px] text-white">
               Best Development Practice
             </h3>
-            <p className="mb-[50px] font-montserrat text-base font-medium leading-6">
+            <p className="font-montserrat mb-[50px] text-base font-medium leading-6">
               Working with us, the best software application development company
               you can completely rely on with the stable demo environment,
               virtuoso QA and testing, always accessible with safe and secured
@@ -208,7 +217,7 @@ const SoftwareDevelop = () => {
             <h3 className="mb-5 mt-[15px] text-[23px] font-medium uppercase leading-[26px] text-white">
               High Personal Involvement
             </h3>
-            <p className="mb-[50px] font-montserrat text-base font-medium leading-6">
+            <p className="font-montserrat mb-[50px] text-base font-medium leading-6">
               Our motto is “Clients is the family.” We are the best software
               development firm because we love to serve our clients and take our
               clients success, achievements as of our own. We truly believe in

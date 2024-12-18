@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaImage, FaLink } from "react-icons/fa6";
 import { projects } from "@/app/Data/Projects";
-import AOS from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS styles
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const technologies = [
   { name: "Web Development", filter: "web" },
@@ -24,18 +24,20 @@ const HomePageProjects = () => {
     setActiveFilter(filter);
   };
 
-  const filteredProjects =
-    activeFilter === "web"
+  const filteredProjects = useMemo(() => {
+    return activeFilter === "web"
       ? projects
       : projects.filter((project) => project.category === activeFilter);
+  }, [activeFilter]);
 
   const limitedProjects = filteredProjects.slice(0, limit);
 
   useEffect(() => {
     AOS.init({
-      duration: 500,
-      delay: 100,
+      duration: 600,
       once: true,
+      easing: "ease-in-out",
+      offset: 100,
     });
   }, []);
 
@@ -71,7 +73,7 @@ const HomePageProjects = () => {
       {/* Projects Grid */}
       <div
         className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4"
-        style={{ opacity: 0, animation: "fadeIn 1s forwards" }} // Apply animation when the tab changes
+        // style={{ opacity: 0, animation: "fadeIn 1s forwards" }}
       >
         {limitedProjects.map((project, index) => (
           <div
@@ -116,7 +118,7 @@ const HomePageProjects = () => {
       <div className="mt-10 flex items-center justify-center">
         <Link
           href="/all-projects"
-          className="flex h-9 w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 font-montserrat text-sm font-semibold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
+          className="font-montserrat flex h-9 w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 text-sm font-semibold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
         >
           Show more
         </Link>
@@ -125,4 +127,4 @@ const HomePageProjects = () => {
   );
 };
 
-export default HomePageProjects;
+export default React.memo(HomePageProjects);
