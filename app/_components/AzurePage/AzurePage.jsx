@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AzurePage = () => {
   const items = [
@@ -38,6 +41,14 @@ const AzurePage = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -48,8 +59,11 @@ const AzurePage = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+          <div
+            className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
+            data-aos="fade-right"
+          >
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-extrabold uppercase leading-10 text-white">
               DevOps & Cloud Services for Seamless Operations
             </h1>
             <p className="mt-[25px] text-base font-medium leading-7 text-white">
@@ -68,7 +82,7 @@ const AzurePage = () => {
           </div>
 
           {/* Right Section */}
-          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]" data-aos="fade-left">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -88,7 +102,7 @@ const AzurePage = () => {
 
       <Breadcrumbs title="Cloud Services" breadcrumbPath="/cloudservices" />
       <div className="container mt-[50px] text-center">
-        <h2 className="my-[50px] font-montserrat text-[45px] font-bold leading-[50px] text-black">
+        <h2 className="font-montserrat my-[50px] text-[45px] font-bold leading-[50px] text-black">
           Getting Started
         </h2>
         <div className="grid grid-cols-3">
@@ -105,7 +119,7 @@ const AzurePage = () => {
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <p className="mb-2.5 pb-[50px] pt-[18px] font-montserrat text-base font-semibold text-black">
+                <p className="font-montserrat mb-2.5 pb-[50px] pt-[18px] text-base font-semibold text-black">
                   {label}
                 </p>
               </div>
@@ -116,7 +130,7 @@ const AzurePage = () => {
 
       <div id="devsecops" className="bg-[#f6f6f6] py-[50px]">
         <div className="container flex flex-col px-4 md:flex-row">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2" data-aos="zoom-in">
             <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
               DevSecOps & Cloud Security
             </h3>
@@ -127,7 +141,7 @@ const AzurePage = () => {
               cloud platform using modern DevOps approaches.
             </p>
           </div>
-          <div className="mx-auto md:w-1/2">
+          <div className="mx-auto md:w-1/2" data-aos="fade-up">
             <Image
               width={400}
               height={340}
@@ -143,7 +157,7 @@ const AzurePage = () => {
         id="devops"
         className="container flex flex-col px-4 py-[50px] md:flex-row"
       >
-        <div className="md:w-1/2">
+        <div className="md:w-1/2" data-aos="fade-right">
           <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
             DevOps Automation (CI/CD)
           </h3>
@@ -155,7 +169,7 @@ const AzurePage = () => {
             applications.
           </p>
         </div>
-        <div className="mx-auto w-1/2">
+        <div className="mx-auto w-1/2" data-aos="fade-left">
           <Image
             width={400}
             height={340}
@@ -165,8 +179,8 @@ const AzurePage = () => {
           />
         </div>
       </div>
-      <div className="bg-[url('/images/cms/call-bg.png')] bg-cover pb-8 pt-5 text-white">
-        <div className="container flex items-center justify-between px-4">
+      <div className="bg-none bg-cover pb-8 pt-5 text-white md:bg-[url('/images/cms/call-bg.png')]">
+        <div className="container hidden items-center justify-between px-4 md:flex">
           <div>
             <h3 className="mb-2.5 mt-5 text-[40px] font-semibold leading-[44px]">
               Let Us Help You Grow
@@ -186,7 +200,7 @@ const AzurePage = () => {
         id="config"
         className="container flex flex-col px-4 py-[50px] md:flex-row"
       >
-        <div className="md:w-1/2">
+        <div className="md:w-1/2" data-aos="fade-right">
           <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
             Cloud Platform Build & Migration
           </h3>
@@ -203,7 +217,7 @@ const AzurePage = () => {
             be neutralized, re-platformed and strengthened.
           </p>
         </div>
-        <div className="mx-auto md:w-1/2">
+        <div className="mx-auto md:w-1/2" data-aos="fade-left">
           <Image
             width={400}
             height={340}
@@ -215,7 +229,7 @@ const AzurePage = () => {
       </div>
       <div id="monitoring" className="bg-[#f6f6f6] py-[50px]">
         <div className="container flex flex-col px-4 md:flex-row">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2" data-aos="fade-right">
             <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
               Continuous Monitoring
             </h3>
@@ -227,7 +241,7 @@ const AzurePage = () => {
               infrastructure as it moves from development to production.
             </p>
           </div>
-          <div className="mx-auto md:w-1/2">
+          <div className="mx-auto md:w-1/2" data-aos="fade-left">
             <Image
               width={400}
               height={340}
@@ -242,7 +256,7 @@ const AzurePage = () => {
         id="reports"
         className="container flex flex-col px-4 py-[50px] md:flex-row"
       >
-        <div className="md:w-1/2">
+        <div className="md:w-1/2" data-aos="fade-right">
           <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
             Reports and Analytics
           </h3>
@@ -254,7 +268,7 @@ const AzurePage = () => {
             multidimensional reports from diverse data sources.
           </p>
         </div>
-        <div className="mx-auto md:w-1/2">
+        <div className="mx-auto md:w-1/2" data-aos="fade-left">
           <Image
             width={400}
             height={340}
@@ -266,7 +280,7 @@ const AzurePage = () => {
       </div>
       <div id="cloud" className="bg-[#f6f6f6] py-[50px]">
         <div className="container flex flex-col px-4 md:flex-row">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2" data-aos="zoom-in">
             <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
               Configuration Management
             </h3>
@@ -276,7 +290,7 @@ const AzurePage = () => {
               infrastructure.
             </p>
           </div>
-          <div className="mx-auto md:w-1/2">
+          <div className="mx-auto md:w-1/2" data-aos="fade-up">
             <Image
               width={400}
               height={340}

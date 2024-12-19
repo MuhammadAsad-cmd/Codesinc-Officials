@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaImage, FaLink } from "react-icons/fa6";
 import { projects } from "@/app/Data/Projects";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -72,13 +71,13 @@ const HomePageProjects = () => {
 
       {/* Projects Grid */}
       <div
-        className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4"
+        className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         // style={{ opacity: 0, animation: "fadeIn 1s forwards" }}
       >
         {limitedProjects.map((project, index) => (
           <div
             key={project.id}
-            className="group relative flex h-[250px] w-[280px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300"
+            className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300 md:w-[280px]"
             data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
             data-aos-duration="500"

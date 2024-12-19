@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import ServicesGrid from "../ServicesGrid/ServicesGrid";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BusinessProcessPage = () => {
   const servicesData = [
@@ -50,6 +53,14 @@ const BusinessProcessPage = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -58,8 +69,11 @@ const BusinessProcessPage = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+          <div
+            data-aos="fade-right"
+            className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
+          >
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-extrabold uppercase leading-10 text-white">
               Business Process Outsourcing Solutions
             </h1>
             <p className="mt-[25px] text-base font-medium leading-7 text-white">
@@ -78,7 +92,7 @@ const BusinessProcessPage = () => {
           </div>
 
           {/* Right Section */}
-          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+          <div data-aos="fade-left" className="px-4 md:w-1/2 xl:w-[41.6%]">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -102,7 +116,7 @@ const BusinessProcessPage = () => {
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bo.jpg')] bg-cover bg-[34%]"></div>
       <div className="container px-4">
         <div className="my-20 flex flex-col md:flex-row">
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -113,11 +127,11 @@ const BusinessProcessPage = () => {
               />
             </div>
           </div>
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="fade-left">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Achieve Cost Efficiency
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Driven by the desire to minimize costs, get access to professional
               talent, blend processes, control risk and focus more on core
               competencies, businesses have turned to BPO services as a mean of
@@ -131,11 +145,11 @@ const BusinessProcessPage = () => {
           </div>
         </div>
         <div className="my-28 flex flex-col md:flex-row">
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="zoom-in">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               BPO For Startups
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Startup would love to work with and only with the experts, but
               unfortunately they come with big prices.Our BPO startup
               outsourcing services team can handle your accounting, reporting
@@ -149,7 +163,7 @@ const BusinessProcessPage = () => {
               </button>
             </div>
           </div>
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-up">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -178,7 +192,7 @@ const BusinessProcessPage = () => {
             because your success means a lot to us.
           </p>
           <div className="mt-[50px] flex flex-col items-center gap-y-6 md:flex-row">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2" data-aos="fade-right">
               <div className="flex flex-col items-center rounded-2xl bg-Gray p-5 text-goldenYellow md:mx-[60px]">
                 <Image
                   width={100}
@@ -187,7 +201,7 @@ const BusinessProcessPage = () => {
                   src="/images/cms/inbound.png"
                   alt="Inbound Call Center"
                 />
-                <h4 className="mt-2.5 font-montserrat text-base font-medium capitalize">
+                <h4 className="font-montserrat mt-2.5 text-base font-medium capitalize">
                   Inbound
                 </h4>
                 <div className="text-[15px] font-normal leading-7">
@@ -203,7 +217,7 @@ const BusinessProcessPage = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2" data-aos="fade-left">
               <div className="flex flex-col items-center rounded-2xl bg-Gray p-5 text-goldenYellow md:mx-[60px]">
                 <Image
                   width={100}
@@ -212,7 +226,7 @@ const BusinessProcessPage = () => {
                   src="/images/cms/outbound.png"
                   alt="Inbound Call Center"
                 />
-                <h4 className="mt-2.5 font-montserrat text-base font-medium capitalize">
+                <h4 className="font-montserrat mt-2.5 text-base font-medium capitalize">
                   Outbound
                 </h4>
                 <div className="text-[15px] font-normal leading-7">

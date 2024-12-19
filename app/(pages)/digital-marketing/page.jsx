@@ -1,15 +1,18 @@
-import AllProjects from "@/app/_components/AllProjects/AllProjects";
+"use client";
+import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 import Breadcrumbs from "@/app/_components/BreadCrumbs/Breadcrumbs";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ContactsForm from "@/app/_components/Common/Contact/ContactsForm";
-import ReusableHero from "@/app/_components/ReusableHero/ReusableHero";
 import ServicesGrid from "@/app/_components/ServicesGrid/ServicesGrid";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
-const page = () => {
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const DigitalMarketing = () => {
   const servicesData = [
     {
       image: "/images/cms/d1.png",
@@ -54,6 +57,13 @@ const page = () => {
         "Strategic marketing content planning, creation, management systems, and programs to support value selling and digital marketing channels, all comes in Brand Publishing.",
     },
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div
@@ -62,8 +72,11 @@ const page = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+          <div
+            data-aos="fade-right"
+            className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
+          >
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-extrabold uppercase leading-10 text-white">
               A Premier Digital Marketing Company
             </h1>
             <p className="mt-[25px] text-base font-medium leading-7 text-white">
@@ -82,7 +95,7 @@ const page = () => {
           </div>
 
           {/* Right Section */}
-          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+          <div data-aos="fade-left" className="px-4 md:w-1/2 xl:w-[41.6%]">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -107,7 +120,7 @@ const page = () => {
 
       <div className="container px-4">
         <div className="my-20 flex flex-col md:flex-row">
-          <div className="md:w-1/2 lg:px-4">
+          <div className="md:w-1/2 lg:px-4" data-aos="fade-right">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -118,11 +131,11 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="md:w-1/2 lg:px-4">
+          <div className="md:w-1/2 lg:px-4" data-aos="fade-left">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-white md:text-[30px]">
               Who We Are
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7">
               We offer the professional digital marketing services to give you
               the best digital exposure your brand deserves. We believe that
               going virtual is the way to success, for any physical business,
@@ -225,7 +238,7 @@ const page = () => {
       </div>
       <div className="container px-4">
         <div className="my-20 flex flex-col md:flex-row">
-          <div className="md:w-1/2 lg:px-4">
+          <div className="md:w-1/2 lg:px-4" data-aos="zoom-in">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -236,11 +249,11 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="md:w-1/2 lg:px-4">
+          <div className="md:w-1/2 lg:px-4" data-aos="fade-up">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase md:text-[30px]">
               Strategic Search Optimization
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7">
               SEO does sound like rocket science. But with the right combination
               of widget and module, the whole exercise becomes as easy as
               falling off a log! With every new year, our digital marketing
@@ -252,7 +265,7 @@ const page = () => {
           </div>
         </div>
         <div className="my-20 flex flex-col-reverse md:flex-row-reverse">
-          <div className="md:w-1/2 lg:px-4">
+          <div className="md:w-1/2 lg:px-4" data-aos="fade-right">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={465}
@@ -263,11 +276,11 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="md:w-1/2 lg:px-4">
+          <div className="md:w-1/2 lg:px-4" data-aos="fade-left">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase md:text-[30px]">
               Unlock the Power of Social Platforms
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7">
               To realize the marketing potential of digital services, you have
               to unlock the power of social platforms to make them truly useful
               for your consumers. Social media postings can be useful in driving
@@ -288,7 +301,7 @@ const page = () => {
         data={servicesData}
         textColor="text-[#333333]"
       />
-      <AllProjects />
+      <HomePageProjects />
       <Testimonials />
       <Clients />
       <ContactForm />
@@ -296,4 +309,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DigitalMarketing;

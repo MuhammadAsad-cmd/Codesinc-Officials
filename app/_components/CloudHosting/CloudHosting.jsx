@@ -1,32 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import { countries } from "@/app/Data/Countries";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ContactsForm from "../Common/Contact/ContactsForm";
 
 const CloudHosting = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    projectType: "",
-    country: "",
-    phone: "",
-    message: "",
-  });
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    // Handle form submission
-  };
   return (
     <>
       <div
@@ -35,8 +23,8 @@ const CloudHosting = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-12 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="md:w-1/2 xl:w-2/3">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
+          <div className="md:w-1/2 xl:w-2/3" data-aos="fade-right">
+            <h1 className="font-montserrat mb-2.5 mt-5 text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
               Get Secure Managed Cloud Hosting Services
             </h1>
             <p className="mb-6 text-white md:text-lg">
@@ -52,106 +40,26 @@ const CloudHosting = () => {
           </div>
 
           {/* Right Section */}
-          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
-            <div className="ContactBg w-full p-[25px]">
-              <p className="text-center font-montserrat text-[22px] font-semibold uppercase leading-6 text-white">
-                Get Free Quote Now
-              </p>
-              <p className="mx-auto mt-[5px] w-full pb-[13px] text-center font-montserrat text-[15px] font-normal capitalize leading-5 tracking-[1px] text-white">
-                Tell us about your Project
-              </p>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name*"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                    required
-                  />
-                </div>
-                <div className="mb-4 grid grid-cols-2 gap-5">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email *"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                    required
-                  />
-
-                  <select
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                    required
-                  >
-                    <option value="" disabled>
-                      Select Project Type
-                    </option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Mobile App">Mobile App</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                  </select>
-                </div>
-                <div className="mb-4 grid grid-cols-2 gap-5">
-                  <select
-                    name="country"
-                    value={formData.country}
-                    onChange={handleChange}
-                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                    required
-                  >
-                    <option value="" disabled>
-                      Select Country
-                    </option>
-                    {countries.map((country, index) => (
-                      <option key={index} value={country}>
-                        {country}
-                      </option>
-                    ))}
-                  </select>
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Your Phone *"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="ContactBg h-[42px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <textarea
-                    name="message"
-                    placeholder="Your Message *"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="ContactBg h-[120px] w-full border-b border-white pt-5 font-montserrat text-[15px] font-normal text-white outline-none placeholder:text-white"
-                    rows="4"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="mt-[30px] flex h-[41px] w-full items-center justify-center bg-[#591661] px-[30px] py-1.5 font-montserrat text-lg font-semibold uppercase text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue"
-                >
-                  Request a Quote
-                </button>
-              </form>
-            </div>
+          <div className="md:w-1/2 xl:w-[41.6%]" data-aos="fade-left">
+            <ContactsForm
+              bgColor="ContactBg"
+              textColor="text-white"
+              buttonColor="bg-[#07befa]"
+              buttonText="Get Started"
+              placeholders={{
+                name: "Enter Your Name *",
+                email: "Enter Your Email *",
+                projectType: "Choose a Project Type",
+                phone: "Enter Your Phone *",
+                message: "Describe Your Project *",
+              }}
+            />
           </div>
         </div>
       </div>
       <Breadcrumbs title="Managed Cloud Hosting" breadcrumbPath="/web-design" />
       <div className="container my-20 flex flex-col px-4 md:flex-row">
-        <div className="md:w-[58.33%] lg:px-4">
+        <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
           <div className="mt-6">
             <Image
               width={580}
@@ -163,11 +71,11 @@ const CloudHosting = () => {
             />
           </div>
         </div>
-        <div className="md:w-[41.66%] lg:px-4">
+        <div className="md:w-[41.66%] lg:px-4" data-aos="fade-left">
           <h2 className="mb-5 mt-10 text-left text-2xl font-semibold text-Gray lg:text-[30px]">
             Managed Cloud Hosting
           </h2>
-          <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+          <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
             Our Cloud Management Services empowers our customers to build a
             custom solution that fulfils their unique requirements in a secure,
             flexible and highly available environment. Make your selection from
@@ -415,7 +323,7 @@ const CloudHosting = () => {
                   alt="Responsive E-Commerce Site"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-[15px] font-bold leading-4">
                 Server Management
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -434,7 +342,7 @@ const CloudHosting = () => {
                   alt="Best User Experience"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-[15px] font-bold leading-4">
                 App Optimization
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -453,7 +361,7 @@ const CloudHosting = () => {
                   alt="Data Acquisitions &amp; Migration"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-[15px] font-bold leading-4">
                 Data Backup
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -471,7 +379,7 @@ const CloudHosting = () => {
                   alt="Plugin Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-[15px] font-bold leading-4">
                 Auto Healing
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -490,7 +398,7 @@ const CloudHosting = () => {
                   alt="App Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-[15px] font-bold leading-4">
                 24x7 Monitoring
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -509,7 +417,7 @@ const CloudHosting = () => {
                   alt="E-Commerce Maintenance"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-[15px] font-bold leading-4">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-[15px] font-bold leading-4">
                 E-Commerce Maintenance
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">

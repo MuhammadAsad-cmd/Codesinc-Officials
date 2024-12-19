@@ -1,4 +1,4 @@
-import AllProjects from "@/app/_components/AllProjects/AllProjects";
+import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 import Breadcrumbs from "@/app/_components/BreadCrumbs/Breadcrumbs";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
@@ -138,7 +138,7 @@ Php is utilized in 75% of the web sites and for good reason. Some of largest web
         borderBottom="border-SlateBlue"
       />
 
-      <AllProjects />
+      <HomePageProjects />
       <Testimonials />
       <Clients />
       <ContactForm />

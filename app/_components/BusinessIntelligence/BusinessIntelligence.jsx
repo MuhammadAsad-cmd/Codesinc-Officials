@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ServicesGrid from "../ServicesGrid/ServicesGrid";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BusinessIntelligence = () => {
   const servicesData = [
@@ -50,6 +53,13 @@ const BusinessIntelligence = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div
@@ -58,8 +68,11 @@ const BusinessIntelligence = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+          <div
+            className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
+            data-aos="fade-right"
+          >
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-extrabold uppercase leading-10 text-white">
               Business Intelligence Services
             </h1>
             <p className="mt-[25px] text-base font-medium leading-7 text-white">
@@ -78,7 +91,7 @@ const BusinessIntelligence = () => {
           </div>
 
           {/* Right Section */}
-          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]" data-aos="fade-left">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -102,7 +115,7 @@ const BusinessIntelligence = () => {
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bi.jpg')] bg-cover bg-[34%]"></div>
       <div className="container px-4">
         <div className="my-20 flex flex-col md:flex-row">
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="w- mt-6 flex items-center justify-center">
               <Image
                 width={522}
@@ -113,11 +126,11 @@ const BusinessIntelligence = () => {
               />
             </div>
           </div>
-          <div className="md:px-4 lg:w-[41.66%]">
+          <div className="md:px-4 lg:w-[41.66%]" data-aos="fade-left">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Business Intelligence & Analytics
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Transform your raw data into the real knowledge with our Business
               Intelligence Solutions. We can help turn your data into actionable
               insights through our business intelligence solutions.
@@ -148,7 +161,7 @@ const BusinessIntelligence = () => {
                 src="/images/cms/bi-1.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Make smart, quick decisions
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -164,7 +177,7 @@ const BusinessIntelligence = () => {
                 src="/images/cms/bi-2.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Discover hidden opportunities
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -180,7 +193,7 @@ const BusinessIntelligence = () => {
                 src="/images/cms/bi-3.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Work better, together
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -196,7 +209,7 @@ const BusinessIntelligence = () => {
                 src="/images/cms/bi-4.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Ready for action
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -208,11 +221,11 @@ const BusinessIntelligence = () => {
       </div>
       <div className="container px-4">
         <div className="my-28 flex flex-col gap-y-6 md:flex-row">
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="zoom-in">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Visualise Data
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Startup would love to work with and only with the experts, but
               unfortunately they come with big prices.Our BPO startup
               outsourcing services team can handle your accounting, reporting
@@ -226,7 +239,7 @@ const BusinessIntelligence = () => {
               </button>
             </div>
           </div>
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-up">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}

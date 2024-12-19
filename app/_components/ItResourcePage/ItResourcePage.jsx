@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ServicesGrid from "../ServicesGrid/ServicesGrid";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ItResourcePage = () => {
   const servicesData = [
@@ -49,6 +52,15 @@ const ItResourcePage = () => {
         "Our Managed IT services gives you the best security services to minimize the risk and ensures the continuity by proactively limiting the impact of a security breach",
     },
   ];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -57,8 +69,8 @@ const ItResourcePage = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="md:w-3/4 lg:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
+          <div className="md:w-3/4 lg:w-[58.33%]" data-aos="fade-right">
+            <h1 className="font-montserrat mb-2.5 mt-5 text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
               Effective IT Support & Management Services
             </h1>
             <p className="mb-6 text-white md:text-lg">
@@ -74,7 +86,7 @@ const ItResourcePage = () => {
           </div>
 
           {/* Right Section */}
-          <div className="md:w-3/4 md:px-4 lg:w-[41.6%]">
+          <div className="md:w-3/4 md:px-4 lg:w-[41.6%]" data-aos="fade-left">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -98,7 +110,7 @@ const ItResourcePage = () => {
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-it.jpg')] bg-cover bg-[34%]"></div>
       <div className="container px-4">
         <div className="my-20 flex flex-col md:flex-row">
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="w- mt-6 flex items-center justify-center">
               <Image
                 width={560}
@@ -109,11 +121,11 @@ const ItResourcePage = () => {
               />
             </div>
           </div>
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="fade-left">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               What we do
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Codesinc Resource Service Management provides tracking, analysis
               and optimization of corporate and enterprise human resources to
               minimize resource utilization, cut down waste and boost up
@@ -147,7 +159,7 @@ const ItResourcePage = () => {
                 src="/images/cms/it1.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Cloud Services
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -164,7 +176,7 @@ const ItResourcePage = () => {
                 src="/images/cms/it2.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Disaster Recovery
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -182,7 +194,7 @@ const ItResourcePage = () => {
                 src="/images/cms/it3.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Security Services
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -199,7 +211,7 @@ const ItResourcePage = () => {
                 src="/images/cms/it4.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Network & Server Management
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -213,7 +225,7 @@ const ItResourcePage = () => {
       </div>
       <div className="container px-4">
         <div className="my-28 flex flex-col md:flex-row">
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="zoom-in">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}
@@ -224,11 +236,11 @@ const ItResourcePage = () => {
               />
             </div>
           </div>
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="fade-up">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               Resource Planning
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Our resource project management plan will help you identify the
               resources required to complete your project done. Our IT
               management services helps businesses to strengthen their
@@ -240,11 +252,11 @@ const ItResourcePage = () => {
           </div>
         </div>
         <div className="my-28 flex flex-col md:flex-row">
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="fade-right">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px] md:leading-9">
               Resource Management
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Resource management is the efficient and effective implementation
               and allocation of a business resources when and where they are
               needed. Our IT services utilizes professional services automation
@@ -254,7 +266,7 @@ const ItResourcePage = () => {
               leverage the business.
             </p>
           </div>
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-left">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}

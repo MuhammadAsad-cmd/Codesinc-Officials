@@ -1,4 +1,8 @@
+"use client";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ReusableHero = ({
   backgroundImage,
@@ -14,6 +18,13 @@ const ReusableHero = ({
   iconHeight = 153,
   rightSection = null,
 }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <div
       className={`h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[100px] ${containerBgColor}`}
@@ -21,7 +32,7 @@ const ReusableHero = ({
     >
       <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
         {/* Left Section */}
-        <div className="xl:w-[58.33%]">
+        <div data-aos="fade-right" className="xl:w-[58.33%]">
           <div className="max-lg:flex max-lg:items-center max-lg:justify-center">
             <Image
               width={iconWidth}
@@ -32,7 +43,7 @@ const ReusableHero = ({
             />
           </div>
           <h1
-            className={`mb-2.5 mt-5 font-montserrat text-[30px] font-extrabold uppercase leading-10 md:text-4xl ${textColor}`}
+            className={`font-montserrat mb-2.5 mt-5 text-[30px] font-extrabold uppercase leading-10 md:text-4xl ${textColor}`}
           >
             {title}
           </h1>
@@ -52,7 +63,9 @@ const ReusableHero = ({
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/2 lg:w-[33.33%]">{rightSection}</div>
+        <div data-aos="fade-left" className="md:w-1/2 lg:w-[33.33%]">
+          {rightSection}
+        </div>
       </div>
     </div>
   );

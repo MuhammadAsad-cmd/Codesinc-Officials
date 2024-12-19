@@ -1,11 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import Image from "next/image";
-import { countries } from "@/app/Data/Countries";
 import ContactsForm from "../Common/Contact/ContactsForm";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const EcommercePage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div
@@ -14,8 +22,8 @@ const EcommercePage = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="md:w-1/2 xl:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-bold uppercase text-white lg:text-[46px] lg:leading-[50px]">
+          <div className="md:w-1/2 xl:w-[58.33%]" data-aos="fade-right">
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white lg:text-[46px] lg:leading-[50px]">
               Ecommerce web development
             </h1>
             <p className="mb-6 text-white md:text-lg">
@@ -33,7 +41,7 @@ const EcommercePage = () => {
           </div>
 
           {/* Right Section */}
-          <div className="md:w-1/2 xl:w-[41.6%]">
+          <div className="md:w-1/2 xl:w-[41.6%]" data-aos="fade-left">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -53,7 +61,10 @@ const EcommercePage = () => {
       <Breadcrumbs title="Ecommerce Development" breadcrumbPath="/web-design" />
       <div className="w-full bg-none bg-cover bg-[34%] py-2.5 md:bg-[url('/images/meetup-bar.png')]">
         <div className="container hidden items-center px-4 md:flex">
-          <div className="flex w-[49%] items-center justify-around">
+          <div
+            className="flex w-[49%] items-center justify-around"
+            data-aos="fade-right"
+          >
             <div className="w-1/2">
               <h2 className="text-center text-[21px] font-medium uppercase leading-[29px] text-[#333333]">
                 Magento Certified partner
@@ -72,7 +83,10 @@ const EcommercePage = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[51%] items-center justify-around">
+          <div
+            className="flex w-[51%] items-center justify-around"
+            data-aos="fade-left"
+          >
             <div className="flex w-1/2 items-center justify-center">
               <div className="">
                 <Image
@@ -94,7 +108,7 @@ const EcommercePage = () => {
       </div>
 
       <div className="container my-20 flex flex-col px-4 md:flex-row">
-        <div className="md:w-[58.33%] lg:px-4">
+        <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
           <div className="mt-6">
             <Image
               width={580}
@@ -106,11 +120,11 @@ const EcommercePage = () => {
             />
           </div>
         </div>
-        <div className="md:w-[41.66%] lg:px-4">
+        <div className="md:w-[41.66%] lg:px-4" data-aos="fade-left">
           <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
             OPTIMIZED ECOMMERCE ENGINES?
           </h2>
-          <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+          <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
             Codesinc employs advanced systems to develop Online Systems. Being a
             hub for technology &amp; research, we believe in exploring different
             verticals while working on a particular industry. For example, if we
@@ -128,7 +142,7 @@ const EcommercePage = () => {
       <div className="BgTechHub py-[30px] text-center text-white">
         <div className="container px-4">
           <div className="technology-stack-main">
-            <h3 className="mb-2.5 mt-5 font-montserrat text-[26px] font-bold uppercase leading-[33px] md:text-[30px]">
+            <h3 className="font-montserrat mb-2.5 mt-5 text-[26px] font-bold uppercase leading-[33px] md:text-[30px]">
               Tech <span className="font-medium"> Hub </span>
             </h3>
             <p className="font-montserrat text-[15px] font-normal leading-[26px]">
@@ -200,7 +214,7 @@ const EcommercePage = () => {
       </div>
       <div className="bg-[#e3e3e3] pb-[70px]">
         <div className="container flex flex-col px-4 pt-20 md:flex-row">
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="zoom-in">
             <div className="">
               <Image
                 width={580}
@@ -212,11 +226,11 @@ const EcommercePage = () => {
               />
             </div>
           </div>
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="fade-up">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold text-Gray md:text-[30px]">
               Where Codesinc Comes In
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               To take advantage from the real powers of the blooming internet
               and ecommerce, Codesinc lends an assisting hand. The IT
               improvement firm facilitates your enterprise by presenting and
@@ -262,7 +276,7 @@ const EcommercePage = () => {
                   alt="Responsive E-Commerce Site"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold">
                 RESPONSIVE WEBSITE SOLUTIONS
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -282,7 +296,7 @@ const EcommercePage = () => {
                   alt="Best User Experience"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold">
                 User Experience
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -302,7 +316,7 @@ const EcommercePage = () => {
                   alt="Data Acquisitions &amp; Migration"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold">
                 Data Procurement &amp; Migration
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -323,7 +337,7 @@ const EcommercePage = () => {
                   alt="Plugin Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold">
                 Plugin Development
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -345,7 +359,7 @@ const EcommercePage = () => {
                   alt="App Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold">
                 App Development
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -366,7 +380,7 @@ const EcommercePage = () => {
                   alt="E-Commerce Maintenance"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold">
                 Maintenance &amp; Support
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -385,13 +399,13 @@ const EcommercePage = () => {
           <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-black md:text-[30px]">
             eCommerce web cart
           </h2>
-          <p className="text-left font-montserrat text-sm font-medium leading-6 text-Gray">
+          <p className="font-montserrat text-left text-sm font-medium leading-6 text-Gray">
             The sector of digital landscape is converting with each passing day,
             and it is essential for the companies to search for avenues with the
             intention to increase the web search of the consumers. eCommerce
             website & purchasing Cart features that We Serve
           </p>
-          <ul className="mt-4 list-inside list-disc space-y-[15px] font-montserrat text-sm font-medium leading-[21px] text-Gray">
+          <ul className="font-montserrat mt-4 list-inside list-disc space-y-[15px] text-sm font-medium leading-[21px] text-Gray">
             <li>Search Engine friendly URL structure</li>
             <li>Option to customize name, Meta and descriptions For SEO</li>
             <li>Expert and personalized design layout</li>
@@ -439,7 +453,7 @@ const EcommercePage = () => {
                   alt="Responsive E-Commerce Site"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold uppercase">
                 Product Purchase Online
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -462,7 +476,7 @@ const EcommercePage = () => {
                   alt="Best User Experience"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold uppercase">
                 Purchasing Cart
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -485,7 +499,7 @@ const EcommercePage = () => {
                   alt="Data Acquisitions &amp; Migration"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold uppercase">
                 Payment Gateway Integration
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -508,7 +522,7 @@ const EcommercePage = () => {
                   alt="Plugin Development"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold uppercase">
                 Minimalism in layout
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -531,7 +545,7 @@ const EcommercePage = () => {
                   alt="loading-time"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold uppercase">
                 Loading Time conundrum
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">
@@ -554,7 +568,7 @@ const EcommercePage = () => {
                   alt="E-Commerce Maintenance"
                 />
               </div>
-              <h4 className="mb-5 mt-2.5 font-montserrat text-base font-bold uppercase">
+              <h4 className="font-montserrat mb-5 mt-2.5 text-base font-bold uppercase">
                 Leveraging Social Media
               </h4>
               <p className="mt-2 min-h-[160px] px-2 text-center text-[15px] font-normal leading-[21px] text-Gray">

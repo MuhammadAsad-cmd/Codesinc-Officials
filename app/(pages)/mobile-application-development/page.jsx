@@ -1,4 +1,4 @@
-import AllProjects from "@/app/_components/AllProjects/AllProjects";
+import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import MobileAppPage from "@/app/_components/MobileAppPage/MobileAppPage";
@@ -8,7 +8,7 @@ const MobileApplicationDevelopment = () => {
   return (
     <>
       <MobileAppPage />
-      <AllProjects />
+      <HomePageProjects />
       <Testimonials />
       <Clients />
       <ContactForm />

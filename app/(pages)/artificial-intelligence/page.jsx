@@ -1,15 +1,17 @@
-import AllProjects from "@/app/_components/AllProjects/AllProjects";
+"use client";
 import Breadcrumbs from "@/app/_components/BreadCrumbs/Breadcrumbs";
-import BusinessIntelligence from "@/app/_components/BusinessIntelligence/BusinessIntelligence";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import ContactsForm from "@/app/_components/Common/Contact/ContactsForm";
 import ServicesGrid from "@/app/_components/ServicesGrid/ServicesGrid";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 
-const page = () => {
+const Artificial = () => {
   const servicesData = [
     {
       image: "/images/cms/bi1.png",
@@ -54,6 +56,14 @@ const page = () => {
         "Deploy AI-powered chatbots and virtual assistants for 24/7 support.",
     },
   ];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div
@@ -64,8 +74,11 @@ const page = () => {
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
-          <div className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]">
-            <h1 className="mb-2.5 mt-5 font-montserrat text-4xl font-extrabold uppercase leading-10 text-white">
+          <div
+            data-aos="fade-right"
+            className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
+          >
+            <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-extrabold uppercase leading-10 text-white">
               Transform Your Business with Cutting-Edge AI Solutions
             </h1>
             <p className="mt-[25px] text-base font-medium leading-7 text-white">
@@ -85,7 +98,7 @@ const page = () => {
           </div>
 
           {/* Right Section */}
-          <div className="px-4 md:w-1/2 xl:w-[41.6%]">
+          <div className="px-4 md:w-1/2 xl:w-[41.6%]" data-aos="fade-left">
             <ContactsForm
               bgColor="ContactBg"
               textColor="text-white"
@@ -102,6 +115,7 @@ const page = () => {
           </div>
         </div>
       </div>
+
       <Breadcrumbs
         title="Business Intelligence"
         breadcrumbPath="/business-intelligence"
@@ -109,7 +123,7 @@ const page = () => {
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bi.jpg')] bg-cover bg-[34%]"></div>
       <div className="container px-4">
         <div className="my-20 flex flex-col md:flex-row">
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="w- mt-6 flex items-center justify-center">
               <Image
                 width={522}
@@ -120,11 +134,11 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="md:px-4 lg:w-[41.66%]">
+          <div className="md:px-4 lg:w-[41.66%]" data-aos="fade-left">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               ARTIFICIAL INTELLIGENCE SOLUTIONS
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Our AI solutions are designed to revolutionize your business
               operations. Leverage advanced machine learning algorithms, natural
               language processing, and AI-driven insights to unlock hidden
@@ -155,7 +169,7 @@ const page = () => {
                 src="/images/cms/bi-1.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Make smart, quick decisions
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -171,7 +185,7 @@ const page = () => {
                 src="/images/cms/bi-2.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Discover hidden opportunities
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -187,7 +201,7 @@ const page = () => {
                 src="/images/cms/bi-3.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Work better, together
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -203,7 +217,7 @@ const page = () => {
                 src="/images/cms/bi-4.png"
                 alt="Cloud"
               />
-              <h4 className="my-2.5 font-montserrat text-lg font-bold text-Gray">
+              <h4 className="font-montserrat my-2.5 text-lg font-bold text-Gray">
                 Ready for action
               </h4>
               <p className="mb-2.5 text-[15px] font-normal leading-[22px]">
@@ -215,11 +229,11 @@ const page = () => {
       </div>
       <div className="container px-4">
         <div className="my-28 flex flex-col gap-y-6 md:flex-row">
-          <div className="md:w-[41.66%] lg:px-4">
+          <div className="md:w-[41.66%] lg:px-4" data-aos="zoom-in">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">
               VISUALIZE YOUR DATA
             </h2>
-            <p className="text-left font-montserrat text-[15px] font-normal leading-7 text-Gray">
+            <p className="font-montserrat text-left text-[15px] font-normal leading-7 text-Gray">
               Make your data work for you with advanced AI visualization tools.
               Gain actionable insights and identify trends effortlessly with
               interactive and customizable dashboards.
@@ -228,7 +242,7 @@ const page = () => {
               get started
             </button>
           </div>
-          <div className="md:w-[58.33%] lg:px-4">
+          <div className="md:w-[58.33%] lg:px-4" data-aos="fade-up">
             <div className="mt-6 flex w-full items-center justify-center">
               <Image
                 width={500}
@@ -248,7 +262,7 @@ const page = () => {
         data={servicesData}
         textColor="text-[#333333]"
       />
-      <AllProjects />
+      <HomePageProjects />
       <Testimonials />
       <Clients />
       <ContactForm />
@@ -256,4 +270,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Artificial;

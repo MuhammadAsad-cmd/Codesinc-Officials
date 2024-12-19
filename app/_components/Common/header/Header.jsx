@@ -36,7 +36,7 @@ const Header = () => {
               />
             </Link>
             <nav className="hidden lg:block">
-              <ul className="flex items-center gap-6 font-montserrat text-white">
+              <ul className="font-montserrat flex items-center gap-6 text-white">
                 <li>
                   <Link href="/">
                     <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
@@ -54,26 +54,27 @@ const Header = () => {
                   </Link>
                 </li>
                 <ServicesDropdown />
-                <li>
-                  <Link href="/contact-us">
-                    <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
-                      Contact
-                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                    </p>
-                  </Link>
-                </li>
-                <li>
+
+                {/* <li>
                   <Link href="/careers">
                     <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
                       Careers
                       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
                     </p>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/all-projects">
                     <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
                       Portfolio
+                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact-us">
+                    <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
+                      Contact
                       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
                     </p>
                   </Link>

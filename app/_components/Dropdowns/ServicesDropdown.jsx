@@ -47,7 +47,7 @@ const Dropdown = () => {
     {
       title: "DevOps",
       icon: "/images/11.png",
-      link: "/digital-marketing",
+      link: "/cloudservices",
     },
     {
       title: "IT Resource Allocation & Management",
@@ -106,7 +106,7 @@ const Dropdown = () => {
                         height: "72px",
                       }}
                     ></div>
-                    <p className="mt-2 font-montserrat text-[13px] font-normal leading-[18px]">
+                    <p className="font-montserrat mt-2 text-[13px] font-normal leading-[18px]">
                       {service.title}
                     </p>
                     {service.extra && (

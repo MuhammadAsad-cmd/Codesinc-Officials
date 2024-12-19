@@ -1,4 +1,4 @@
-import AllProjects from "@/app/_components/AllProjects/AllProjects";
+import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 import AzurePage from "@/app/_components/AzurePage/AzurePage";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
@@ -9,7 +9,7 @@ const page = () => {
   return (
     <>
       <AzurePage />
-      <AllProjects />
+      <HomePageProjects />
       <Testimonials />
       <Clients />
       <ContactForm />

@@ -1,4 +1,4 @@
-import AllProjects from "@/app/_components/AllProjects/AllProjects";
+import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 import Breadcrumbs from "@/app/_components/BreadCrumbs/Breadcrumbs";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
@@ -11,7 +11,6 @@ import Maintenence from "@/app/_components/ServicesComponent/Maintenence";
 import Outsource from "@/app/_components/ServicesComponent/Outsource";
 import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
-import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -175,7 +174,7 @@ const page = () => {
         hoverBgColor="hover:bg-DarkRed"
       />
 
-      <AllProjects />
+      <HomePageProjects />
       <Testimonials />
       <Clients />
       <ContactForm />
