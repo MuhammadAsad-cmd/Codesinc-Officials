@@ -95,17 +95,14 @@ const AllProjects = () => {
                 }
               }}
             >
-              <Link href={project.link} target="_blank">
-                <Image
-                  width={280}
-                  height={280}
-                  unoptimized
-                  priority
-                  src={project.image}
-                  alt={project.title}
-                  className="h-auto w-full rounded-lg object-cover"
-                />
-              </Link>
+              <Image
+                width={280}
+                height={280}
+                unoptimized
+                src={project.image}
+                alt={project.title}
+                className="h-auto w-full rounded-lg object-cover"
+              />
             </div>
           </div>
         ))}
