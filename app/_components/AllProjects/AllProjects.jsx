@@ -1,25 +1,22 @@
 "use client";
-import React, { useEffect, useState, useMemo } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { projects } from "@/app/Data/Projects";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// Array of technologies
-const technologies = [
-  { name: "Web Development", filter: "web" },
-  { name: "E-Commerce Development", filter: "ecommerce" },
-  { name: "App Development", filter: "app" },
-  { name: "WordPress", filter: "wordpress" },
-  { name: "Shopify", filter: "shopify" },
-  { name: "Webflow", filter: "webflow" },
-];
+import Link from "next/link";
+import {
+  AppProjects,
+  ECommProjects,
+  ShopifyProjects,
+  technologies,
+  WebflowProjects,
+  Webprojects,
+  WordpressProjects,
+} from "@/app/Data/Projects";
+import Image from "next/image";
 
 const AllProjects = () => {
-  const [activeFilter, setActiveFilter] = useState("web");
+  const [activeFilter, setActiveFilter] = useState("Web Development");
 
-  // AOS Initialization
   useEffect(() => {
     AOS.init({
       duration: 600,
@@ -29,23 +26,27 @@ const AllProjects = () => {
     });
   }, []);
 
-  const handleFilterClick = (filter) => {
-    setActiveFilter(filter);
+  const getProjects = () => {
+    if (activeFilter === "Web Development") {
+      return Webprojects;
+    } else if (activeFilter === "E-Commerce Development") {
+      return ECommProjects;
+    } else if (activeFilter === "App Development") {
+      return AppProjects;
+    } else if (activeFilter === "WordPress") {
+      return WordpressProjects;
+    } else if (activeFilter === "Shopify") {
+      return ShopifyProjects;
+    } else if (activeFilter === "Webflow") {
+      return WebflowProjects;
+    }
+    return [];
   };
 
-  // Memoized Filtered Projects
-  const filteredProjects = useMemo(() => {
-    return activeFilter === "web"
-      ? projects
-      : projects.filter((project) => project.category === activeFilter);
-  }, [activeFilter]);
+  const projects = getProjects();
 
   return (
-    <section
-      id="portfolio"
-      className="container w-full px-4 py-[50px] md:mb-10 md:px-8"
-    >
-      {/* Filter Controls */}
+    <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
       <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
         <div className="lg:w-[55%]">
           <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
@@ -53,30 +54,26 @@ const AllProjects = () => {
           </h2>
         </div>
         <div className="flex flex-wrap justify-center max-lg:gap-4 lg:w-[45%] lg:gap-3">
-          {technologies.map((tech, index) => (
+          {technologies.map((tech) => (
             <button
-              key={index}
+              key={tech.name}
               className={`text-sm font-semibold uppercase leading-4 lg:leading-[19px] ${
-                activeFilter === tech.filter
-                  ? "text-lightblue"
-                  : "text-gray-700"
+                activeFilter === tech.name ? "text-lightblue" : "text-gray-700"
               } hover:text-lightblue`}
-              onClick={() => handleFilterClick(tech.filter)}
+              onClick={() => setActiveFilter(tech.name)}
             >
               {tech.name}
             </button>
           ))}
         </div>
       </div>
-
-      {/* Projects Grid */}
-      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filteredProjects.map((project, index) => (
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {projects.map((project, index) => (
           <div
             key={project.id}
+            data-aos={`fade-up`}
+            data-aos-delay={`${index * 100}`}
             className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300 md:w-[280px]"
-            data-aos="fade-up"
-            data-aos-delay={index % 6 === 0 ? "0" : `${index * 50}`} // Reduced delay for performance
           >
             <div
               className="relative h-full w-full overflow-hidden"
@@ -95,30 +92,23 @@ const AllProjects = () => {
                 }
               }}
             >
-              <Image
-                width={280}
-                height={280}
-                unoptimized
-                src={project.image}
-                alt={project.title}
-                className="h-auto w-full rounded-lg object-cover"
-              />
+              <Link href={project.link} target="_blank">
+                <Image
+                  width={280}
+                  height={280}
+                  unoptimized
+                  priority
+                  src={project.image}
+                  alt={project.title}
+                  className="h-auto w-full rounded-lg object-cover"
+                />
+              </Link>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Show More Button */}
-      {/* <div className="mt-10 flex items-center justify-center">
-        <Link
-          href="/all-projects"
-          className="font-montserrat flex h-9 w-[115px] items-center justify-center rounded bg-[#03a4f2] px-3 text-sm font-semibold uppercase leading-5 text-white duration-300 ease-in-out hover:bg-goldenYellow"
-        >
-          Show more
-        </Link>
-      </div> */}
     </section>
   );
 };
 
-export default React.memo(AllProjects);
+export default AllProjects;
