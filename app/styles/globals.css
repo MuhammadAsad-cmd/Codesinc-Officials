@@ -172,26 +172,28 @@ body {
   }
 }
 
-/* .scrollToTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  background-color: #000000;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-} */
 .scrollToTopBtn {
   @apply fixed bottom-[30px] right-5 flex size-11 items-center justify-center rounded-full border-none bg-lightblue text-white transition-all ease-in-out;
 }
 
 .scrollToTopBtn:hover {
   bottom: 30px;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 5s linear;
+}
+
+.image-container:hover img {
+  transform: translateY(-80%);
 }

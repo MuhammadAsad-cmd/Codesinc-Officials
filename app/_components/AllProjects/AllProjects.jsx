@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
@@ -17,6 +17,22 @@ import Image from "next/image";
 const AllProjects = () => {
   const [activeFilter, setActiveFilter] = useState("Web Development");
 
+  // Create a map for quick access to projects
+  const projectMap = useMemo(
+    () =>
+      new Map([
+        ["Web Development", Webprojects],
+        ["E-Commerce Development", ECommProjects],
+        ["App Development", AppProjects],
+        ["WordPress", WordpressProjects],
+        ["Shopify", ShopifyProjects],
+        ["Webflow", WebflowProjects],
+      ]),
+    [],
+  );
+
+  const projects = projectMap.get(activeFilter) || [];
+
   useEffect(() => {
     AOS.init({
       duration: 600,
@@ -25,25 +41,6 @@ const AllProjects = () => {
       offset: 100,
     });
   }, []);
-
-  const getProjects = () => {
-    if (activeFilter === "Web Development") {
-      return Webprojects;
-    } else if (activeFilter === "E-Commerce Development") {
-      return ECommProjects;
-    } else if (activeFilter === "App Development") {
-      return AppProjects;
-    } else if (activeFilter === "WordPress") {
-      return WordpressProjects;
-    } else if (activeFilter === "Shopify") {
-      return ShopifyProjects;
-    } else if (activeFilter === "Webflow") {
-      return WebflowProjects;
-    }
-    return [];
-  };
-
-  const projects = getProjects();
 
   return (
     <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
@@ -71,33 +68,16 @@ const AllProjects = () => {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            data-aos={`fade-up`}
+            data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
             className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300 md:w-[280px]"
           >
-            <div
-              className="relative h-full w-full overflow-hidden"
-              onMouseEnter={(e) => {
-                const img = e.currentTarget.querySelector("img");
-                if (img) {
-                  img.style.transition = "transform 5s linear";
-                  img.style.transform = "translateY(-80%)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                const img = e.currentTarget.querySelector("img");
-                if (img) {
-                  img.style.transition = "transform 3s linear";
-                  img.style.transform = "translateY(0)";
-                }
-              }}
-            >
+            <div className="image-container relative h-full w-full overflow-hidden">
               <Link href={project.link} target="_blank">
                 <Image
                   width={280}
                   height={280}
-                  unoptimized
-                  priority
+                  priority={index < 4}
                   src={project.image}
                   alt={project.title}
                   className="h-auto w-full rounded-lg object-cover"

@@ -13,167 +13,153 @@ export const Webprojects = [
   // web
   {
     id: 1,
-    image: "/images/WEB PROJECTS/httpmotorwarranty.com.au.png",
-    title: "App Project 1",
-    link: "https://motorwarranty.com.au",
+    image: "/images/WEB PROJECTS/Z-NET.png",
+    title: "App Project 2",
+    link: "https://znetrealty.com/",
   },
   {
     id: 2,
-    image: "/images/WEB PROJECTS/httpsaitimestation.com.png",
-    title: "WordPress Project 1",
-    link: "https://www.aitimestation.com",
+    image: "/images/WEB PROJECTS/httpmotorwarranty.com.au.png",
+    title: "Motor Easy   ",
+    link: "https://motorwarranty.com.au/",
   },
   {
     id: 3,
-
-    image: "/images/WEB PROJECTS/httpsbelaaz.com.png",
-    title: "Shopify Project 1",
-    link: "https://belaaz.com",
+    image: "/images/WEB PROJECTS/httpssara-hairstudio.com.png",
+    title: "Sara Hair Studio ",
+    link: "https://sara-hairstudio.com",
   },
   {
     id: 4,
-
     image: "/images/WEB PROJECTS/httpsgtfs-web.vercel.app.png",
-    title: "Webflow Project 1",
+    title: "GFTS   ",
     link: "https://gtfs-web.vercel.app",
   },
   {
     id: 5,
-
-    image: "/images/WEB PROJECTS/httpsourbrandtv.com.png",
-    title: "Web Project 2",
-    link: "https://ourbrandtv.com",
-  },
-  {
-    id: 6,
-
     image: "/images/WEB PROJECTS/httpsquestlb.net.png",
-    title: "App Project 2",
+    title: "CRM",
     link: "https://questlb.net",
   },
   {
+    id: 6,
+    image: "/images/WEB PROJECTS/httpsourbrandtv.com.png",
+    title: "Our brand media",
+    link: "https://ourbrandtv.com",
+  },
+  {
     id: 7,
-
-    image: "/images/WEB PROJECTS/httpssara-hairstudio.com.png",
-    title: "App Project 2",
-    link: "https://sara-hairstudio.com",
+    image: "/images/WEB PROJECTS/httpswww.seseo.dk.png",
+    title: "Seseo",
+    link: "https://seseo.dk",
   },
   {
     id: 8,
-
-    image: "/images/WEB PROJECTS/httpswww.clickbooster.io.png",
-    title: "App Project 2",
-    link: "https://www.clickbooster.io",
+    image: "/images/WEB PROJECTS/httpswww.mypandaplayhouse.com.png",
+    title: "BadSkull panda",
+    link: "https://www.mypandaplayhouse.com",
   },
   {
     id: 9,
-
-    image: "/images/WEB PROJECTS/httpswww.maxonify.com.png",
-    title: "App Project 2",
-    link: "https://www.maxonify.com",
+    image: "/images/WEB PROJECTS/httpswww.vvs-247.dk.png",
+    title: "Carpenter",
+    link: "https://www.vvs-247.dk",
   },
   {
     id: 10,
-
     image: "/images/WEB PROJECTS/httpswww.mikkelsentt.dk.png",
-    title: "App Project 2",
+    title: "Plumber site",
     link: "https://www.mikkelsentt.dk",
   },
   {
     id: 11,
-
-    image: "/images/WEB PROJECTS/httpswww.mypandaplayhouse.com.png",
-    title: "App Project 2",
-    link: "https://www.mypandaplayhouse.com",
+    image: "/images/WEB PROJECTS/httpsaitimestation.com.png",
+    title: "AI Time Station",
+    link: "https://aitimestation.com",
   },
-
   {
     id: 12,
-
-    image: "/images/WEB PROJECTS/httpswww.seseo.dk.png",
-    title: "App Project 2",
-    link: "https://www.seseo.dk",
-  },
-  {
-    id: 13,
-
-    image: "/images/WEB PROJECTS/httpswww.varle.dk.png",
-    title: "App Project 2",
-    link: "https://www.varle.dk",
-  },
-  {
-    id: 14,
-
-    image: "/images/WEB PROJECTS/httpswww.vvs-247.dk.png",
-    title: "App Project 2",
-    link: "https://www.vvs-247.dk",
-  },
-  {
-    id: 15,
-
     image: "/images/WEB PROJECTS/httpsxtwo.brainwave-genai.com.png",
-    title: "App Project 2",
+    title: "X-Two",
     link: "https://xtwo.brainwave-genai.com",
   },
-  {
-    id: 16,
+  // {
+  //   id: 16,
+  //   image: "/images/WEB PROJECTS/httpsbelaaz.com.png",
+  //   title: "Shopify Project 1",
+  //   link: "https://belaaz.com",
+  // },
 
-    image: "/images/WEB PROJECTS/Z-NET.png",
-    title: "App Project 2",
-    link: "https://www.Z-NET",
-  },
+  // {
+  //   id: 17,
+  //   image: "/images/WEB PROJECTS/httpswww.clickbooster.io.png",
+  //   title: "App Project 2",
+  //   link: "https://www.clickbooster.io",
+  // },
+  // {
+  //   id: 18,
+  //   image: "/images/WEB PROJECTS/httpswww.maxonify.com.png",
+  //   title: "App Project 2",
+  //   link: "https://www.maxonify.com",
+  // },
+
+  // {
+  //   id: 13,
+  //   image: "/images/WEB PROJECTS/httpswww.varle.dk.png",
+  //   title: "App Project 2",
+  //   link: "https://www.varle.dk",
+  // },
 ];
 
 export const ECommProjects = [
   //   ecommerce Projects
   {
     id: 1,
-
-    image: "/images/E-COMMERCE PROJECT/httpsbeehive.com.pk.png",
-    title: "Web Project 1",
-    link: "https://beehive.com.pk",
+    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    title: "hurrcollective",
+    link: "https://www.hurrcollective.com",
   },
   {
     id: 2,
-
+    image: "/images/E-COMMERCE PROJECT/httpswww.clicky.pk.png",
+    title: "clicky",
+    link: "https://clicky.pk",
+  },
+  {
+    id: 3,
     image: "/images/E-COMMERCE PROJECT/httpsbababoota.com.png",
     title: "httpsbababoota.com.png",
     link: "https://bababoota.com/",
   },
   {
-    id: 3,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
-    title: "App Project 2",
-    link: "https://www.hurrcollective.com",
-  },
-  {
     id: 4,
-
-    image: "/images/E-COMMERCE PROJECT/httpsequatorstores.com.png",
-    title: "App Project 2",
-    link: "https://equatorstores.com",
-  },
-  {
-    id: 5,
-
-    image: "/images/E-COMMERCE PROJECT/httpsrollover.com.pk.png",
-    title: "App Project 2",
-    link: "https://rollover.com.pk",
-  },
-  {
-    id: 6,
-
     image: "/images/E-COMMERCE PROJECT/httpssehgalmotors.pk.png",
-    title: "App Project 2",
+    title: "sehgalmotors",
     link: "https://sehgalmotors.pk",
   },
   {
+    id: 5,
+    image: "/images/E-COMMERCE PROJECT/httpssehgalmotors.pk.png",
+    title: "done-right-decals",
+    link: "https://done-right-decals-five.vercel.app",
+  },
+  {
+    id: 6,
+    image: "/images/E-COMMERCE PROJECT/httpsrollover.com.pk.png",
+    title: "rollover",
+    link: "https://rollover.com.pk",
+  },
+  {
     id: 7,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.clicky.pk.png",
-    title: "App Project 2",
-    link: "https://www.clicky.pk",
+    image: "/images/E-COMMERCE PROJECT/httpsbeehive.com.pk.png",
+    title: "beehive",
+    link: "https://beehive.com.pk",
+  },
+  {
+    id: 8,
+    image: "/images/E-COMMERCE PROJECT/httpsequatorstores.com.png",
+    title: "equatorstores",
+    link: "https://equatorstores.com",
   },
 ];
 
@@ -255,30 +241,113 @@ export const WordpressProjects = [
   //   wordpress
   {
     id: 1,
-    image: "/images/wordpress project/httpsdrummonds-uk.com.png",
-    title: "App Project 2",
-    link: "https://drummonds-uk.com",
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "Arclinea   ",
+    link: "https://arclinea.com/it/",
   },
   {
     id: 2,
     image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
-    title: "App Project 2",
+    title: "officinegullo   ",
+    link: "https://officinegullo.com/en/",
+  },
+  {
+    id: 3,
+    image: "/images/wordpress project/httpsdrummonds-uk.com.png",
+    title: "drummonds-uk",
+    link: "https://drummonds-uk.com",
+  },
+  {
+    id: 4,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "officinegullo   ",
     link: "https://hendon.qodeinteractive.com",
+  },
+  {
+    id: 5,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "Aprimopiano",
+    link: "https://www.primopiano.com/it/",
+  },
+  {
+    id: 6,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "theglenwoodjh",
+    link: "https://theglenwoodjh.com/",
+  },
+  {
+    id: 7,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "isospace",
+    link: "https://www.isospace.fr",
+  },
+  {
+    id: 8,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "souslaplumedepauline",
+    link: "https://souslaplumedepauline.fr/",
+  },
+  {
+    id: 9,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "shaadicentral",
+    link: "https://www.shaadicentral.in/",
+  },
+  {
+    id: 10,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "shaadicentral",
+    link: "https://www.clickbooster.io/",
   },
 ];
 export const ShopifyProjects = [
-  //   wordpress
   {
     id: 1,
     image: "/images/wordpress project/httpsdrummonds-uk.com.png",
-    title: "App Project 2",
-    link: "https://drummonds-uk.com",
+    title: "dolitashoes",
+    link: "https://www.dolitashoes.com/",
   },
   {
     id: 2,
     image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
-    title: "App Project 2",
-    link: "https://hendon.qodeinteractive.com",
+    title: "silentpodsdubai",
+    link: "https://silentpodsdubai.com/",
+  },
+  {
+    id: 3,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "beautyspa",
+    link: "https://www.beautyspa.it/",
+  },
+  {
+    id: 4,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "alkaitis",
+    link: "https://alkaitis.com/",
+  },
+  {
+    id: 5,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "rapha",
+    link: "https://www.rapha.cc/",
+  },
+  {
+    id: 6,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "trendygolf",
+    link: "https://trendygolf.com/",
+  },
+  {
+    id: 7,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "eastsideco",
+    link: "https://eastsideco.com/",
+  },
+  {
+    id: 7,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "thesewingstudio",
+    link: "https://www.thesewingstudio.co.uk/",
   },
 ];
 export const WebflowProjects = [
@@ -286,13 +355,92 @@ export const WebflowProjects = [
   {
     id: 1,
     image: "/images/wordpress project/httpsdrummonds-uk.com.png",
-    title: "App Project 2",
-    link: "https://drummonds-uk.com",
+    title: "mondayscoffee",
+    link: "https://mondayscoffee.webflow.io/",
   },
   {
     id: 2,
     image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
-    title: "App Project 2",
-    link: "https://hendon.qodeinteractive.com",
+    title: "Honenaerascott",
+    link: "https://www.honenaerascott.com/",
+  },
+  {
+    id: 3,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "Honenaerascott",
+    link: "https://business.strava.com/",
+  },
+  {
+    id: 4,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "thefurrow",
+    link: "https://thefurrow.tv/",
+  },
+  {
+    id: 5,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "mackandpouya",
+    link: "https://www.mackandpouya.com/",
+  },
+  {
+    id: 6,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "conservationguide",
+    link: "https://www.conservationguide.org/",
+  },
+  {
+    id: 7,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.saltydonut.com/",
+  },
+  //   wix
+  {
+    id: 8,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.ebulletins.com/",
+  },
+  {
+    id: 9,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.tinktankstudio.com/",
+  },
+  {
+    id: 10,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://rashi.org.il/",
+  },
+  {
+    id: 11,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.monetago.com/",
+  },
+  {
+    id: 12,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.thegrilledcheesefactory.fr/",
+  },
+  {
+    id: 13,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.seasonsincolour.com/",
+  },
+  {
+    id: 14,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.matchmediagroup.com/",
+  },
+  {
+    id: 15,
+    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    title: "saltydonut",
+    link: "https://www.mikaelareuben.com/",
   },
 ];

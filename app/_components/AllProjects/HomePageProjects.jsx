@@ -18,7 +18,20 @@ const HomePageProjects = () => {
   const [activeFilter, setActiveFilter] = useState("Web Development");
   const limit = 12;
 
+  const projectMap = {
+    "Web Development": Webprojects,
+    "E-Commerce Development": ECommProjects,
+    "App Development": AppProjects,
+    WordPress: WordpressProjects,
+    Shopify: ShopifyProjects,
+    Webflow: WebflowProjects,
+  };
+
+  // Cache filtered projects
+  const projects = projectMap[activeFilter]?.slice(0, limit) || [];
+
   useEffect(() => {
+    // Initialize AOS only once
     AOS.init({
       duration: 600,
       once: true,
@@ -27,24 +40,6 @@ const HomePageProjects = () => {
     });
   }, []);
 
-  const getProjects = () => {
-    if (activeFilter === "Web Development") {
-      return Webprojects;
-    } else if (activeFilter === "E-Commerce Development") {
-      return ECommProjects;
-    } else if (activeFilter === "App Development") {
-      return AppProjects;
-    } else if (activeFilter === "WordPress") {
-      return WordpressProjects;
-    } else if (activeFilter === "Shopify") {
-      return ShopifyProjects;
-    } else if (activeFilter === "Webflow") {
-      return WebflowProjects;
-    }
-    return [];
-  };
-
-  const projects = getProjects().slice(0, limit);
   return (
     <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
       <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
@@ -71,33 +66,16 @@ const HomePageProjects = () => {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            data-aos={`fade-up`}
+            data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
             className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300 md:w-[280px]"
           >
-            <div
-              className="relative h-full w-full overflow-hidden"
-              onMouseEnter={(e) => {
-                const img = e.currentTarget.querySelector("img");
-                if (img) {
-                  img.style.transition = "transform 5s linear";
-                  img.style.transform = "translateY(-80%)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                const img = e.currentTarget.querySelector("img");
-                if (img) {
-                  img.style.transition = "transform 3s linear";
-                  img.style.transform = "translateY(0)";
-                }
-              }}
-            >
+            <div className="image-container relative h-full w-full overflow-hidden">
               <Link href={project.link} target="_blank">
                 <Image
                   width={280}
                   height={280}
-                  unoptimized
-                  priority
+                  priority={index < 4}
                   src={project.image}
                   alt={project.title}
                   className="h-auto w-full rounded-lg object-cover"
@@ -119,4 +97,4 @@ const HomePageProjects = () => {
   );
 };
 
-export default React.memo(HomePageProjects);
+export default HomePageProjects;
