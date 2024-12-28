@@ -94,9 +94,7 @@ const HomePageProjects = () => {
                     src={project.image}
                     alt={project.title}
                     className="h-auto w-full rounded-lg object-cover"
-                    onLoadingComplete={(img) =>
-                      checkHoverCondition(project.id, img)
-                    }
+                    onLoad={(img) => checkHoverCondition(project.id, img)}
                   />
                 </div>
               </Link>

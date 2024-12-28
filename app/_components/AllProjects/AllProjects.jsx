@@ -17,6 +17,7 @@ import Image from "next/image";
 
 const AllProjects = () => {
   const [activeFilter, setActiveFilter] = useState("Web Development");
+  const [hoverEnabled, setHoverEnabled] = useState({});
 
   // Create a map for quick access to projects
   const projectMap = useMemo(
@@ -43,6 +44,14 @@ const AllProjects = () => {
       offset: 100,
     });
   }, []);
+
+  const checkHoverCondition = (id, imageRef) => {
+    if (imageRef?.naturalHeight > 250) {
+      setHoverEnabled((prev) => ({ ...prev, [id]: true }));
+    } else {
+      setHoverEnabled((prev) => ({ ...prev, [id]: false }));
+    }
+  };
 
   return (
     <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
@@ -83,6 +92,7 @@ const AllProjects = () => {
                   src={project.image}
                   alt={project.title}
                   className="h-auto w-full rounded-lg object-cover"
+                  onLoad={(img) => checkHoverCondition(project.id, img)}
                 />
               </Link>
             </div>
