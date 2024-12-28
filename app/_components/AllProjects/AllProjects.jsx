@@ -10,6 +10,7 @@ import {
   technologies,
   WebflowProjects,
   Webprojects,
+  WixProjects,
   WordpressProjects,
 } from "@/app/Data/Projects";
 import Image from "next/image";
@@ -27,6 +28,7 @@ const AllProjects = () => {
         ["WordPress", WordpressProjects],
         ["Shopify", ShopifyProjects],
         ["Webflow", WebflowProjects],
+        ["Wix", WixProjects],
       ]),
     [],
   );
@@ -64,13 +66,13 @@ const AllProjects = () => {
           ))}
         </div>
       </div>
-      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {projects.map((project, index) => (
           <div
             key={project.id}
             data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
-            className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300 md:w-[280px]"
+            className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300"
           >
             <div className="image-container relative h-full w-full overflow-hidden">
               <Link href={project.link} target="_blank">

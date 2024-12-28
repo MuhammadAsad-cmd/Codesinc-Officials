@@ -21,7 +21,7 @@ const CloudHosting = () => {
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[150px]"
         style={{ backgroundImage: "url('/images/cms/cloud-bg.jpg')" }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-12 px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-12 overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div className="md:w-1/2 xl:w-2/3" data-aos="fade-right">
             <h1 className="font-montserrat mb-2.5 mt-5 text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
@@ -58,7 +58,7 @@ const CloudHosting = () => {
         </div>
       </div>
       <Breadcrumbs title="Managed Cloud Hosting" breadcrumbPath="/web-design" />
-      <div className="container my-20 flex flex-col px-4 md:flex-row">
+      <div className="container my-20 flex flex-col overflow-hidden px-4 md:flex-row">
         <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
           <div className="mt-6">
             <Image

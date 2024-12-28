@@ -20,7 +20,7 @@ const EcommercePage = () => {
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[170px]"
         style={{ backgroundImage: "url('/images/cms/ecom-bg.jpg')" }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div className="md:w-1/2 xl:w-[58.33%]" data-aos="fade-right">
             <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white lg:text-[46px] lg:leading-[50px]">
@@ -60,7 +60,7 @@ const EcommercePage = () => {
       </div>
       <Breadcrumbs title="Ecommerce Development" breadcrumbPath="/web-design" />
       <div className="w-full bg-none bg-cover bg-[34%] py-2.5 md:bg-[url('/images/meetup-bar.png')]">
-        <div className="container hidden items-center px-4 md:flex">
+        <div className="container hidden items-center overflow-hidden px-4 md:flex">
           <div
             className="flex w-[49%] items-center justify-around"
             data-aos="fade-right"
@@ -107,7 +107,7 @@ const EcommercePage = () => {
         </div>
       </div>
 
-      <div className="container my-20 flex flex-col px-4 md:flex-row">
+      <div className="container my-20 flex flex-col overflow-hidden px-4 md:flex-row">
         <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
           <div className="mt-6">
             <Image
@@ -212,7 +212,7 @@ const EcommercePage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#e3e3e3] pb-[70px]">
+      <div className="overflow-hidden bg-[#e3e3e3] pb-[70px]">
         <div className="container flex flex-col px-4 pt-20 md:flex-row">
           <div className="md:w-[58.33%] lg:px-4" data-aos="zoom-in">
             <div className="">

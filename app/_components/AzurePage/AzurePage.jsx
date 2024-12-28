@@ -57,7 +57,7 @@ const AzurePage = () => {
           backgroundImage: "url('/images/cms/technological-blue.jpg')",
         }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div
             className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
@@ -128,7 +128,7 @@ const AzurePage = () => {
         </div>
       </div>
 
-      <div id="devsecops" className="bg-[#f6f6f6] py-[50px]">
+      <div id="devsecops" className="overflow-hidden bg-[#f6f6f6] py-[50px]">
         <div className="container flex flex-col px-4 md:flex-row">
           <div className="md:w-1/2" data-aos="zoom-in">
             <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
@@ -155,7 +155,7 @@ const AzurePage = () => {
 
       <div
         id="devops"
-        className="container flex flex-col px-4 py-[50px] md:flex-row"
+        className="container flex flex-col overflow-hidden px-4 py-[50px] md:flex-row"
       >
         <div className="md:w-1/2" data-aos="fade-right">
           <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
@@ -198,7 +198,7 @@ const AzurePage = () => {
       </div>
       <div
         id="config"
-        className="container flex flex-col px-4 py-[50px] md:flex-row"
+        className="container flex flex-col overflow-hidden px-4 py-[50px] md:flex-row"
       >
         <div className="md:w-1/2" data-aos="fade-right">
           <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
@@ -227,7 +227,7 @@ const AzurePage = () => {
           />
         </div>
       </div>
-      <div id="monitoring" className="bg-[#f6f6f6] py-[50px]">
+      <div id="monitoring" className="overflow-hidden bg-[#f6f6f6] py-[50px]">
         <div className="container flex flex-col px-4 md:flex-row">
           <div className="md:w-1/2" data-aos="fade-right">
             <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
@@ -254,7 +254,7 @@ const AzurePage = () => {
       </div>
       <div
         id="reports"
-        className="container flex flex-col px-4 py-[50px] md:flex-row"
+        className="container flex flex-col overflow-hidden px-4 py-[50px] md:flex-row"
       >
         <div className="md:w-1/2" data-aos="fade-right">
           <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">
@@ -278,7 +278,7 @@ const AzurePage = () => {
           />
         </div>
       </div>
-      <div id="cloud" className="bg-[#f6f6f6] py-[50px]">
+      <div id="cloud" className="overflow-hidden bg-[#f6f6f6] py-[50px]">
         <div className="container flex flex-col px-4 md:flex-row">
           <div className="md:w-1/2" data-aos="zoom-in">
             <h3 className="mb-2 mt-[50px] text-3xl font-bold uppercase text-[#4b4a4b] md:text-4xl">

@@ -21,7 +21,7 @@ const SoftwareDevelop = () => {
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[100px]"
         style={{ backgroundImage: "url('/images/cms/soft-bg.jpg')" }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div className="md:w-1/2 xl:w-2/3" data-aos="fade-right">
             <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
@@ -64,7 +64,7 @@ const SoftwareDevelop = () => {
             <h2 className="font-montserrat inline-block border-b-[3px] border-skyBlue2 pb-3 text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
               SOFTWARE DEVELOPMENT
             </h2>
-            <div className="mt-20 flex flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
+            <div className="overflow-hiddenflex mt-20 flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
               <div className="shrink-0 px-4 md:w-1/2" data-aos="fade-right">
                 <Image
                   width={555}

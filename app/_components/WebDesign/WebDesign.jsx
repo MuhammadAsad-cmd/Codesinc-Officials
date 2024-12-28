@@ -38,7 +38,7 @@ const WebDesign = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute top-[16%] w-full lg:top-1/3">
           <div className="container px-4 md:px-8">
-            <h1 className="font-montserrat mx-auto mb-2.5 mt-5 text-center text-[45px] font-bold uppercase leading-[48px] text-white sm:max-w-[730px] lg:text-[48px] lg:leading-[52px]">
+            <h1 className="font-montserrat mx-auto mb-2.5 mt-5 text-center text-4xl font-bold uppercase text-white sm:max-w-[730px] md:text-[45px] md:leading-[48px] lg:text-[48px] lg:leading-[52px]">
               We Create Exceptionally Creative{" "}
               <span className="text-lightblue"> Web Designs </span>
             </h1>
@@ -48,7 +48,7 @@ const WebDesign = () => {
               your time and ideas and deliver most alluring web designs.
             </p>
 
-            <div className="mt-10 flex w-full items-center justify-center gap-5">
+            <div className="mt-10 flex w-full flex-col items-center justify-center gap-5 md:flex-row">
               <Link
                 href="#service"
                 className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-9 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
@@ -71,7 +71,7 @@ const WebDesign = () => {
       />
       <div id="service" className="container px-4 md:px-8">
         <div className="mt-10 w-full">
-          <h2 className="font-montserrat text-center text-4xl font-bold uppercase text-Gray md:text-[40px] md:leading-[44px]">
+          <h2 className="font-montserrat text-center text-3xl font-bold uppercase text-Gray md:text-[40px] md:leading-[44px]">
             choose your desired service
           </h2>
           <p className="my-2.5 text-center text-2xl font-normal uppercase tracking-[3px] text-Gray md:text-[30px]">
@@ -191,7 +191,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className="bg-emeraldGreen py-[100px] text-white">
+      <div className="overflow-hidden bg-emeraldGreen py-[100px] text-white">
         <div className="container flex flex-col gap-7 px-4 max-md:gap-y-9 md:flex-row">
           <div className="md:w-[58.33%]" data-aos="fade-right">
             <div>
@@ -219,7 +219,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className="bg-skyBlue py-[100px] text-white">
+      <div className="overflow-hidden bg-skyBlue py-[100px] text-white">
         <div className="container flex flex-col gap-10 px-4 max-md:gap-y-9 md:flex-row">
           <div className="px-4 md:w-[41.66%]" data-aos="zoom-in">
             <div>
@@ -251,7 +251,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className="bg-redAccent py-[100px] text-white">
+      <div className="overflow-hidden bg-redAccent py-[100px] text-white">
         <div className="container flex flex-col gap-10 px-4 max-md:gap-y-9 md:flex-row">
           <div className="md:w-[41.66%]" data-aos="fade-left">
             <div className="lg:mx-20">
@@ -280,7 +280,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f3f3f3] py-[100px] text-center">
+      <div className="overflow-hidden bg-[#f3f3f3] py-[100px] text-center">
         <div className="container px-4">
           <h3 className="font-montserrat text-center text-[40px] font-semibold uppercase text-Gray">
             How We Do It

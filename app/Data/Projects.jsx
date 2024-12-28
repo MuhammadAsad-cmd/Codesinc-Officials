@@ -6,6 +6,7 @@ export const technologies = [
   { name: "WordPress" },
   { name: "Shopify" },
   { name: "Webflow" },
+  { name: "Wix" },
 ];
 
 // Array of projects
@@ -167,73 +168,57 @@ export const AppProjects = [
   //   app
   {
     id: 1,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    image: "/images/appprojects/APP 1.png",
     title: "App Project 2",
-    link: "https://play.google.com/store/apps/details?id=com.marketplace.themarketplace.googleply",
+    link: "https://play.google.com/store/apps/details?id=tech.neyber.mshop.seller",
   },
   {
     id: 2,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    image: "/images/appprojects/App 2.png",
     title: "App Project 2",
     link: "https://play.google.com/store/apps/details?id=com.ecomlix.dropshipy",
   },
   {
     id: 3,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
-    title: "App Project 2",
-    link: "https://play.google.com/store/apps/details?id=com.forefo.black_men_fashion",
-  },
-  {
-    id: 4,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
-    title: "App Project 2",
-    link: "https://play.google.com/store/apps/details?id=com.fastyle.African.Fashion.Design",
-  },
-  {
-    id: 5,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    image: "/images/appprojects/App 3.png",
     title: "App Project 2",
     link: "https://play.google.com/store/apps/details?id=com.onebyte.gharpar",
   },
   {
-    id: 6,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    id: 4,
+    image: "/images/appprojects/APP 4.png",
     title: "App Project 2",
-    link: "https://play.google.com/store/apps/details?id=com.warshatec.uber_driver",
+    link: "https://play.google.com/store/apps/details?id=com.forefo.black_men_fashion",
+  },
+  {
+    id: 5,
+    image: "/images/appprojects/App 5.png",
+    title: "App Project 2",
+    link: "https://play.google.com/store/apps/details?id=com.hotelux",
+  },
+  {
+    id: 6,
+    image: "/images/appprojects/App 6.png",
+    title: "App Project 2",
+    link: "https://play.google.com/store/apps/details?id=com.fastyle.African.Fashion.Design",
   },
   {
     id: 7,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    image: "/images/appprojects/App 7.png",
     title: "App Project 2",
     link: "https://play.google.com/store/apps/details?id=com.apnisawari.customerApp",
   },
   {
     id: 8,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    image: "/images/appprojects/App 8.png",
     title: "App Project 2",
-    link: "https://play.google.com/store/apps/details?id=com.fnp.fithero",
+    link: "https://play.google.com/store/apps/details?id=com.nextgendating.belikee",
   },
   {
     id: 9,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
+    image: "/images/appprojects/App 9.png",
     title: "App Project 2",
-    link: "https://play.google.com/store/apps/details?id=com.whatscash",
-  },
-  {
-    id: 10,
-
-    image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
-    title: "App Project 2",
-    link: "https://apps.apple.com/us/app/our-brand-media-llc/id6472877792",
+    link: "https://play.google.com/store/apps/details?id=com.spestalk.chat",
   },
 ];
 
@@ -241,61 +226,61 @@ export const WordpressProjects = [
   //   wordpress
   {
     id: 1,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/arclinea.png",
     title: "Arclinea   ",
     link: "https://arclinea.com/it/",
   },
   {
     id: 2,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/officine gullo.png",
     title: "officinegullo   ",
     link: "https://officinegullo.com/en/",
   },
   {
     id: 3,
-    image: "/images/wordpress project/httpsdrummonds-uk.com.png",
+    image: "/images/wordpress project/drummonds.png",
     title: "drummonds-uk",
     link: "https://drummonds-uk.com",
   },
   {
     id: 4,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/hendon.png",
     title: "officinegullo   ",
     link: "https://hendon.qodeinteractive.com",
   },
   {
     id: 5,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/primopiano.png",
     title: "Aprimopiano",
     link: "https://www.primopiano.com/it/",
   },
   {
     id: 6,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/thegalenwood.png",
     title: "theglenwoodjh",
     link: "https://theglenwoodjh.com/",
   },
   {
     id: 7,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/isospace.png",
     title: "isospace",
     link: "https://www.isospace.fr",
   },
   {
     id: 8,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/souslaplumede.png",
     title: "souslaplumedepauline",
     link: "https://souslaplumedepauline.fr/",
   },
   {
     id: 9,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/shaadicenter.png",
     title: "shaadicentral",
     link: "https://www.shaadicentral.in/",
   },
   {
     id: 10,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/wordpress project/clickbooster.png",
     title: "shaadicentral",
     link: "https://www.clickbooster.io/",
   },
@@ -303,49 +288,49 @@ export const WordpressProjects = [
 export const ShopifyProjects = [
   {
     id: 1,
-    image: "/images/wordpress project/httpsdrummonds-uk.com.png",
+    image: "/images/shopify/doliashoes.png",
     title: "dolitashoes",
     link: "https://www.dolitashoes.com/",
   },
   {
     id: 2,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/shopify/silenpodsduabia.png",
     title: "silentpodsdubai",
     link: "https://silentpodsdubai.com/",
   },
   {
     id: 3,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/shopify/beautyspait.png",
     title: "beautyspa",
     link: "https://www.beautyspa.it/",
   },
   {
     id: 4,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/shopify/alkaitis.png",
     title: "alkaitis",
     link: "https://alkaitis.com/",
   },
   {
     id: 5,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/shopify/rapha.png",
     title: "rapha",
     link: "https://www.rapha.cc/",
   },
   {
     id: 6,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/shopify/trendyglof.png",
     title: "trendygolf",
     link: "https://trendygolf.com/",
   },
   {
     id: 7,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/shopify/eastsideco.png",
     title: "eastsideco",
     link: "https://eastsideco.com/",
   },
   {
-    id: 7,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 8,
+    image: "/images/shopify/thesewingsstudio.png",
     title: "thesewingstudio",
     link: "https://www.thesewingstudio.co.uk/",
   },
@@ -354,92 +339,95 @@ export const WebflowProjects = [
   //   wordpress
   {
     id: 1,
-    image: "/images/wordpress project/httpsdrummonds-uk.com.png",
+    image: "/images/webflow project/mondaycoffee.png",
     title: "mondayscoffee",
     link: "https://mondayscoffee.webflow.io/",
   },
   {
     id: 2,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/webflow project/honenaerascott.png",
     title: "Honenaerascott",
     link: "https://www.honenaerascott.com/",
   },
   {
     id: 3,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/webflow project/strava.png",
     title: "Honenaerascott",
     link: "https://business.strava.com/",
   },
   {
     id: 4,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/webflow project/furrow.png",
     title: "thefurrow",
     link: "https://thefurrow.tv/",
   },
   {
     id: 5,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/webflow project/mackandpouya.png",
     title: "mackandpouya",
     link: "https://www.mackandpouya.com/",
   },
   {
     id: 6,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/webflow project/conservationguide.png",
     title: "conservationguide",
     link: "https://www.conservationguide.org/",
   },
   {
     id: 7,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    image: "/images/webflow project/saltydonuts.png",
     title: "saltydonut",
     link: "https://www.saltydonut.com/",
   },
+];
+
+export const WixProjects = [
   //   wix
   {
-    id: 8,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 1,
+    image: "/images/wix project/ebulletins.png",
     title: "saltydonut",
     link: "https://www.ebulletins.com/",
   },
   {
-    id: 9,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 2,
+    image: "/images/wix project/tinkankstudio.png",
     title: "saltydonut",
     link: "https://www.tinktankstudio.com/",
   },
   {
-    id: 10,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 3,
+    image: "/images/wix project/rashi.png",
     title: "saltydonut",
     link: "https://rashi.org.il/",
   },
   {
-    id: 11,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 4,
+    image: "/images/wix project/monetage.png",
     title: "saltydonut",
     link: "https://www.monetago.com/",
   },
   {
-    id: 12,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 5,
+    image: "/images/wix project/grilledcheese.png",
     title: "saltydonut",
     link: "https://www.thegrilledcheesefactory.fr/",
   },
   {
-    id: 13,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 6,
+    image: "/images/wix project/seasonsincolour.png",
     title: "saltydonut",
     link: "https://www.seasonsincolour.com/",
   },
   {
-    id: 14,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 7,
+    image: "/images/wix project/matchmedia.png",
     title: "saltydonut",
     link: "https://www.matchmediagroup.com/",
   },
   {
-    id: 15,
-    image: "/images/wordpress project/httpshendon.qodeinteractive.com.png",
+    id: 8,
+    image: "/images/wix project/mikaelareuben.png",
     title: "saltydonut",
     link: "https://www.mikaelareuben.com/",
   },

@@ -72,7 +72,7 @@ const Artificial = () => {
           backgroundImage: "url('/images/cms/connecting-lines.jpg')",
         }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div
             data-aos="fade-right"
@@ -121,7 +121,7 @@ const Artificial = () => {
         breadcrumbPath="/business-intelligence"
       />
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bi.jpg')] bg-cover bg-[34%]"></div>
-      <div className="container px-4">
+      <div className="container overflow-hidden px-4">
         <div className="my-20 flex flex-col md:flex-row">
           <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="w- mt-6 flex items-center justify-center">
@@ -227,7 +227,7 @@ const Artificial = () => {
           </div>
         </div>
       </div>
-      <div className="container px-4">
+      <div className="container overflow-hidden px-4">
         <div className="my-28 flex flex-col gap-y-6 md:flex-row">
           <div className="md:w-[41.66%] lg:px-4" data-aos="zoom-in">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">

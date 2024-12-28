@@ -67,7 +67,7 @@ const StartUpPage = () => {
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[100px]"
         style={{ backgroundImage: "url('/images/cms/startup-bg.jpg')" }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div className="md:w-1/2 xl:w-2/3" data-aos="fade-right">
             <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
@@ -101,7 +101,7 @@ const StartUpPage = () => {
             <h2 className="font-montserrat inline-block border-b-[3px] border-skyBlue2 pb-3 text-3xl font-semibold uppercase text-Gray lg:text-[40px]">
               STARTUPS
             </h2>
-            <div className="mt-20 flex flex-col items-center justify-center max-md:space-y-6 md:flex-row md:items-start">
+            <div className="mt-20 flex flex-col items-center justify-center overflow-hidden max-md:space-y-6 md:flex-row md:items-start">
               <div className="md:w-1/2 lg:px-4" data-aos="fade-right">
                 <Image
                   width={555}
@@ -197,7 +197,7 @@ const StartUpPage = () => {
           </div>
         </div>
       </div>
-      <div className="container px-4 py-[50px]">
+      <div className="container overflow-hidden px-4 py-[50px]">
         <div className="flex flex-col justify-center max-md:space-y-10 md:flex-row">
           <div className="md:w-[41.66%]" data-aos="zoom-in">
             <h2 className="font-montserrat mb-2.5 mt-5 text-[26px] font-normal uppercase text-black max-md:text-center md:text-[30px]">

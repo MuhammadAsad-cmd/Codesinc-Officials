@@ -67,7 +67,7 @@ const ItResourcePage = () => {
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 lg:py-[170px]"
         style={{ backgroundImage: "url('/images/cms/it-bg.jpg')" }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div className="md:w-3/4 lg:w-[58.33%]" data-aos="fade-right">
             <h1 className="font-montserrat mb-2.5 mt-5 text-2xl font-extrabold uppercase text-white md:text-[31px] md:leading-[35px]">
@@ -108,7 +108,7 @@ const ItResourcePage = () => {
         breadcrumbPath="/business-intelligence"
       />
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-it.jpg')] bg-cover bg-[34%]"></div>
-      <div className="container px-4">
+      <div className="container overflow-hidden px-4">
         <div className="my-20 flex flex-col md:flex-row">
           <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="w- mt-6 flex items-center justify-center">
@@ -223,7 +223,7 @@ const ItResourcePage = () => {
           </div>
         </div>
       </div>
-      <div className="container px-4">
+      <div className="container overflow-hidden px-4">
         <div className="my-28 flex flex-col md:flex-row">
           <div className="md:w-[58.33%] lg:px-4" data-aos="zoom-in">
             <div className="mt-6 flex w-full items-center justify-center">
@@ -251,7 +251,7 @@ const ItResourcePage = () => {
             </p>
           </div>
         </div>
-        <div className="my-28 flex flex-col md:flex-row">
+        <div className="my-28 flex flex-col overflow-hidden md:flex-row">
           <div className="md:w-[41.66%] lg:px-4" data-aos="fade-right">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px] md:leading-9">
               Resource Management

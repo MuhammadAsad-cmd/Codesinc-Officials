@@ -180,20 +180,17 @@ body {
   bottom: 30px;
 }
 
-.image-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
+.your_frame {
   overflow: hidden;
 }
 
-.image-container img {
-  display: block;
+.your_frame img {
+  object-fit: cover;
   width: 100%;
-  height: auto;
-  transition: transform 5s linear;
+  transform: translateY(0);
+  transition: 3s ease-in-out;
 }
 
-.image-container:hover img {
-  transform: translateY(-80%);
+.your_frame.hover-enabled:hover img {
+  transform: translateY(calc(-100% + 250px));
 }

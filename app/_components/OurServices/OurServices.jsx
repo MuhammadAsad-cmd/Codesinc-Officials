@@ -18,7 +18,7 @@ const OurServices = () => {
   return (
     <>
       <div id="services" className="bg-offWhite py-[50px]">
-        <div className="container mb-12 px-4 md:px-8">
+        <div className="container mb-12 overflow-hidden px-4 md:px-8">
           <div className="mb-[60px]" data-aos="fade-up">
             <h2 className="mb-2.5 mt-5 text-center text-4xl font-[550] uppercase md:text-[45px] md:leading-[49px]">
               What we do

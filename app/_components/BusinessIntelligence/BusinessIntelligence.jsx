@@ -66,7 +66,7 @@ const BusinessIntelligence = () => {
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
         style={{ backgroundImage: "url('/images/cms/bg-bi.jpg')" }}
       >
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 px-4 text-center lg:flex-row lg:text-left">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-8 overflow-hidden px-4 text-center lg:flex-row lg:text-left">
           {/* Left Section */}
           <div
             className="mt-[50px] px-4 pb-20 pt-5 md:w-1/2 lg:pb-[200px] lg:pt-[70px] xl:w-[58.33%]"
@@ -113,7 +113,7 @@ const BusinessIntelligence = () => {
         breadcrumbPath="/business-intelligence"
       />
       <div className="h-[120px] w-full bg-[url('/images/cms/meetup-bar-bi.jpg')] bg-cover bg-[34%]"></div>
-      <div className="container px-4">
+      <div className="container overflow-hidden px-4">
         <div className="my-20 flex flex-col md:flex-row">
           <div className="md:w-[58.33%] lg:px-4" data-aos="fade-right">
             <div className="w- mt-6 flex items-center justify-center">
@@ -143,7 +143,7 @@ const BusinessIntelligence = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f2f5f9] py-[50px] text-center text-Gray">
+      <div className="overflow-hidden bg-[#f2f5f9] py-[50px] text-center text-Gray">
         <div className="container px-4">
           <h3 className="mb-2.5 mt-5 text-center text-2xl font-bold uppercase text-[#333333] md:text-[30px]">
             Business Intelligence Benefits
@@ -219,7 +219,7 @@ const BusinessIntelligence = () => {
           </div>
         </div>
       </div>
-      <div className="container px-4">
+      <div className="container overflow-hidden px-4">
         <div className="my-28 flex flex-col gap-y-6 md:flex-row">
           <div className="md:w-[41.66%] lg:px-4" data-aos="zoom-in">
             <h2 className="mb-5 mt-10 text-left text-2xl font-semibold uppercase text-Gray md:text-[30px]">

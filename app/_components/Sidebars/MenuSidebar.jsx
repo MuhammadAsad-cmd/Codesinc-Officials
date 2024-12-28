@@ -4,8 +4,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
-  const [activeTab, setActiveTab] = useState("Menu");
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -78,7 +76,7 @@ const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
                   />
                 </Link>
               </div>
-              <ul className="flex flex-col gap-5 font-montserrat text-white">
+              <ul className="font-montserrat flex flex-col gap-5 text-white">
                 <li>
                   <Link href="/">
                     <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
@@ -95,26 +93,27 @@ const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
                     </p>
                   </Link>
                 </li>
-                <li>
-                  <Link href="/contact-us">
-                    <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
-                      Contact
-                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                    </p>
-                  </Link>
-                </li>
-                <li>
+
+                {/* <li>
                   <Link href="/careers">
                     <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
                       Careers
                       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
                     </p>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/all-projects">
                     <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
                       Portfolio
+                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact-us">
+                    <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
+                      Contact
                       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
                     </p>
                   </Link>

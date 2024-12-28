@@ -9,6 +9,7 @@ import {
   technologies,
   WebflowProjects,
   Webprojects,
+  WixProjects,
   WordpressProjects,
 } from "@/app/Data/Projects";
 import Link from "next/link";
@@ -16,6 +17,7 @@ import Image from "next/image";
 
 const HomePageProjects = () => {
   const [activeFilter, setActiveFilter] = useState("Web Development");
+  const [hoverEnabled, setHoverEnabled] = useState({});
   const limit = 12;
 
   const projectMap = {
@@ -25,9 +27,9 @@ const HomePageProjects = () => {
     WordPress: WordpressProjects,
     Shopify: ShopifyProjects,
     Webflow: WebflowProjects,
+    Wix: WixProjects,
   };
 
-  // Cache filtered projects
   const projects = projectMap[activeFilter]?.slice(0, limit) || [];
 
   useEffect(() => {
@@ -39,6 +41,14 @@ const HomePageProjects = () => {
       offset: 100,
     });
   }, []);
+
+  const checkHoverCondition = (id, imageRef) => {
+    if (imageRef?.naturalHeight > 250) {
+      setHoverEnabled((prev) => ({ ...prev, [id]: true }));
+    } else {
+      setHoverEnabled((prev) => ({ ...prev, [id]: false }));
+    }
+  };
 
   return (
     <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
@@ -62,24 +72,33 @@ const HomePageProjects = () => {
           ))}
         </div>
       </div>
-      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {projects.map((project, index) => (
           <div
             key={project.id}
             data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
-            className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300 md:w-[280px]"
+            className="group relative flex h-[250px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-md transition-all duration-300"
           >
-            <div className="image-container relative h-full w-full overflow-hidden">
+            <div className="relative h-full w-full overflow-hidden">
               <Link href={project.link} target="_blank">
-                <Image
-                  width={280}
-                  height={280}
-                  priority={index < 4}
-                  src={project.image}
-                  alt={project.title}
-                  className="h-auto w-full rounded-lg object-cover"
-                />
+                <div
+                  className={`your_frame ${
+                    hoverEnabled[project.id] ? "hover-enabled" : ""
+                  }`}
+                >
+                  <Image
+                    width={280}
+                    height={280}
+                    priority={index < 4}
+                    src={project.image}
+                    alt={project.title}
+                    className="h-auto w-full rounded-lg object-cover"
+                    onLoadingComplete={(img) =>
+                      checkHoverCondition(project.id, img)
+                    }
+                  />
+                </div>
               </Link>
             </div>
           </div>
