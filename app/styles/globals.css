@@ -179,7 +179,6 @@ body {
 .scrollToTopBtn:hover {
   bottom: 30px;
 }
-
 .your_frame {
   overflow: hidden;
 }
@@ -188,7 +187,7 @@ body {
   object-fit: cover;
   width: 100%;
   transform: translateY(0);
-  transition: 3s ease-in-out;
+  transition: transform 3s ease-in-out;
 }
 
 .your_frame.hover-enabled:hover img {

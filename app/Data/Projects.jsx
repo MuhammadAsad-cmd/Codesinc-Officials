@@ -7,6 +7,7 @@ export const technologies = [
   { name: "Shopify" },
   { name: "Webflow" },
   { name: "Wix" },
+  { name: "Framer" },
 ];
 
 // Array of projects
@@ -180,7 +181,7 @@ export const AppProjects = [
   },
   {
     id: 3,
-    image: "/images/appprojects/App 3.png",
+    image: "/images/appprojects/app.jpg",
     title: "App Project 2",
     link: "https://play.google.com/store/apps/details?id=com.onebyte.gharpar",
   },
@@ -430,5 +431,52 @@ export const WixProjects = [
     image: "/images/wix project/mikaelareuben.png",
     title: "saltydonut",
     link: "https://www.mikaelareuben.com/",
+  },
+];
+export const FramerProjects = [
+  //   wix
+  {
+    id: 1,
+    image: "/images/framer/screencapture-bajgartoffice-2024-12-27-16_05_18.png",
+    title: "saltydonut",
+    link: "https://www.ebulletins.com/",
+  },
+  {
+    id: 2,
+    image: "/images/framer/screencapture-becklyn-en-2024-12-27-16_07_12.png",
+    title: "saltydonut",
+    link: "https://www.tinktankstudio.com/",
+  },
+  {
+    id: 3,
+    image:
+      "/images/framer/screencapture-crazycreative-design-2024-12-27-16_03_48.png",
+    title: "saltydonut",
+    link: "https://rashi.org.il/",
+  },
+  {
+    id: 4,
+    image: "/images/framer/screencapture-ds-k-site-2024-12-27-16_16_23.png",
+    title: "saltydonut",
+    link: "https://www.monetago.com/",
+  },
+  {
+    id: 5,
+    image:
+      "/images/framer/screencapture-findmy-vitra-en-en-questionnaire-chairs-questions-sitting-time-2024-12-27-16_08_33.png",
+    title: "saltydonut",
+    link: "https://www.thegrilledcheesefactory.fr/",
+  },
+  {
+    id: 6,
+    image: "/images/framer/screencapture-miyagami-2024-12-27-16_06_20.png",
+    title: "saltydonut",
+    link: "https://www.seasonsincolour.com/",
+  },
+  {
+    id: 7,
+    image: "/images/framer/screencapture-tellet-ai-2024-12-27-16_14_38.png",
+    title: "saltydonut",
+    link: "https://www.matchmediagroup.com/",
   },
 ];

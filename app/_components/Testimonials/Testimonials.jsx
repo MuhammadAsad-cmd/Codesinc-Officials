@@ -29,9 +29,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="pb-20">
+    <div className="mt-6 pb-20">
       <div className="container px-4 md:px-8">
-        <h1 className="mb-2.5 text-center text-3xl font-semibold uppercase md:mt-5 md:text-4xl">
+        <h1 className="mb-2.5 text-center text-3xl font-bold uppercase md:mt-5 md:text-[40px]">
           Client Testimonials
         </h1>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

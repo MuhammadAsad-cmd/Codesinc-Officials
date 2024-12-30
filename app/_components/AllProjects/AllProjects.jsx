@@ -6,6 +6,7 @@ import Link from "next/link";
 import {
   AppProjects,
   ECommProjects,
+  FramerProjects,
   ShopifyProjects,
   technologies,
   WebflowProjects,
@@ -30,6 +31,7 @@ const AllProjects = () => {
         ["Shopify", ShopifyProjects],
         ["Webflow", WebflowProjects],
         ["Wix", WixProjects],
+        ["Framer", FramerProjects],
       ]),
     [],
   );
@@ -45,14 +47,18 @@ const AllProjects = () => {
     });
   }, []);
 
+  useEffect(() => {
+    AOS.refresh();
+  }, [activeFilter]);
+
   const checkHoverCondition = (id, imageRef) => {
+    console.log("ImageRef:", imageRef);
     if (imageRef?.naturalHeight > 250) {
       setHoverEnabled((prev) => ({ ...prev, [id]: true }));
     } else {
       setHoverEnabled((prev) => ({ ...prev, [id]: false }));
     }
   };
-
   return (
     <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
       <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
@@ -75,7 +81,10 @@ const AllProjects = () => {
           ))}
         </div>
       </div>
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div
+        key={activeFilter}
+        className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
         {projects.map((project, index) => (
           <div
             key={project.id}
@@ -85,15 +94,21 @@ const AllProjects = () => {
           >
             <div className="image-container relative h-full w-full overflow-hidden">
               <Link href={project.link} target="_blank">
-                <Image
-                  width={280}
-                  height={280}
-                  priority={index < 4}
-                  src={project.image}
-                  alt={project.title}
-                  className="h-auto w-full rounded-lg object-cover"
-                  onLoad={(img) => checkHoverCondition(project.id, img)}
-                />
+                <div
+                  className={`your_frame ${hoverEnabled[project.id] ? "hover-enabled" : ""}`}
+                >
+                  <Image
+                    width={280}
+                    height={280}
+                    priority={index < 4}
+                    src={project.image}
+                    alt={project.title}
+                    className="h-auto w-full rounded-lg object-cover"
+                    onLoadingComplete={(img) =>
+                      checkHoverCondition(project.id, img)
+                    }
+                  />
+                </div>
               </Link>
             </div>
           </div>

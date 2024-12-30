@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import {
   AppProjects,
   ECommProjects,
+  FramerProjects,
   ShopifyProjects,
   technologies,
   WebflowProjects,
@@ -28,6 +29,7 @@ const HomePageProjects = () => {
     Shopify: ShopifyProjects,
     Webflow: WebflowProjects,
     Wix: WixProjects,
+    Framer: FramerProjects,
   };
 
   const projects = projectMap[activeFilter]?.slice(0, limit) || [];
@@ -42,7 +44,12 @@ const HomePageProjects = () => {
     });
   }, []);
 
+  useEffect(() => {
+    AOS.refresh();
+  }, [activeFilter]);
+
   const checkHoverCondition = (id, imageRef) => {
+    console.log("ImageRef:", imageRef);
     if (imageRef?.naturalHeight > 250) {
       setHoverEnabled((prev) => ({ ...prev, [id]: true }));
     } else {
@@ -51,7 +58,10 @@ const HomePageProjects = () => {
   };
 
   return (
-    <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
+    <section
+      id="portfolio"
+      className="container mx-auto mt-5 px-4 py-10 md:px-8"
+    >
       <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
         <div className="lg:w-[55%]">
           <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
@@ -72,7 +82,10 @@ const HomePageProjects = () => {
           ))}
         </div>
       </div>
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div
+        key={activeFilter}
+        className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
         {projects.map((project, index) => (
           <div
             key={project.id}
@@ -83,9 +96,7 @@ const HomePageProjects = () => {
             <div className="relative h-full w-full overflow-hidden">
               <Link href={project.link} target="_blank">
                 <div
-                  className={`your_frame ${
-                    hoverEnabled[project.id] ? "hover-enabled" : ""
-                  }`}
+                  className={`your_frame ${hoverEnabled[project.id] ? "hover-enabled" : ""}`}
                 >
                   <Image
                     width={280}
@@ -94,7 +105,9 @@ const HomePageProjects = () => {
                     src={project.image}
                     alt={project.title}
                     className="h-auto w-full rounded-lg object-cover"
-                    onLoad={(img) => checkHoverCondition(project.id, img)}
+                    onLoadingComplete={(img) =>
+                      checkHoverCondition(project.id, img)
+                    }
                   />
                 </div>
               </Link>

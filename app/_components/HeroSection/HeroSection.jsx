@@ -62,7 +62,7 @@ const HeroSection = () => {
             heightClass="h-[620px] lg:h-[755px]"
           />
         </div>
-        <div className="block bg-[url('/images/mobileview/mobhero1.jpg')] bg-cover bg-fixed bg-center bg-no-repeat max-md:h-[110vh]">
+        <div className="block bg-[url('/images/mobileview/mobhero1.jpg')] bg-cover bg-fixed bg-center bg-no-repeat max-md:h-[100vh]">
           <div className="absolute top-[6%] flex w-full flex-col justify-center lg:top-[18%]">
             <div className="container h-full px-4 md:px-8">
               <div className="mx-auto hidden md:block">

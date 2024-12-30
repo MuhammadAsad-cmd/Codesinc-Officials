@@ -1,4 +1,4 @@
-import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
+import WebDevProjects from "@/app/_components/AllProjects/WebDevProjects";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
@@ -9,7 +9,7 @@ const page = () => {
   return (
     <>
       <WebDesign />
-      <HomePageProjects />
+      <WebDevProjects />
       <Testimonials />
       <Clients />
       <ContactForm />
