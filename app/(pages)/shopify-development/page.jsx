@@ -1,4 +1,4 @@
-import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
+import Shopifyprojects from "@/app/_components/AllProjects/ShopifyProjects";
 import Breadcrumbs from "@/app/_components/BreadCrumbs/Breadcrumbs";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
@@ -10,7 +10,6 @@ import HowWedoIt from "@/app/_components/SectionComponents/HowWedoIt";
 import ServicesList from "@/app/_components/SectionComponents/ServicesList";
 import WhySection from "@/app/_components/SectionComponents/WhySection";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
-import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -99,7 +98,7 @@ const page = () => {
         textColor="text-LeafGreen"
         items={items}
       />
-      <HomePageProjects />
+      <Shopifyprojects />
       <Testimonials />
       <Clients />
       <ContactForm />

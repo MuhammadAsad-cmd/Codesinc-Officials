@@ -1,4 +1,4 @@
-import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
+import WordPressProjects from "@/app/_components/AllProjects/WordPressProjects";
 import Breadcrumbs from "@/app/_components/BreadCrumbs/Breadcrumbs";
 import Clients from "@/app/_components/Clients/Clients";
 import ContactForm from "@/app/_components/Common/Contact/ContactForm";
@@ -175,7 +175,7 @@ const page = () => {
         hoverBgColor="hover:bg-[#00b1ff]"
       />
 
-      <HomePageProjects />
+      <WordPressProjects />
       <Testimonials />
       <Clients />
       <ContactForm />
