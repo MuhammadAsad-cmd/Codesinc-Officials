@@ -10,12 +10,11 @@ export const technologies = [
   { name: "Framer" },
 ];
 
-// Array of projects
+// web projects
 export const Webprojects = [
-  // web
   {
     id: 1,
-    image: "/images/WEB PROJECTS/Z-NET.png",
+    image: "/images/WEB PROJECTS/web1.jpg",
     title: "App Project 2",
     link: "https://znetrealty.com/",
   },
@@ -113,8 +112,8 @@ export const Webprojects = [
   // },
 ];
 
+//   ecommerce Projects
 export const ECommProjects = [
-  //   ecommerce Projects
   {
     id: 1,
     image: "/images/E-COMMERCE PROJECT/httpswww.hurrcollective.com.png",
@@ -165,8 +164,8 @@ export const ECommProjects = [
   },
 ];
 
+//   app
 export const AppProjects = [
-  //   app
   {
     id: 1,
     image: "/images/appprojects/APP 1.png",
@@ -223,8 +222,8 @@ export const AppProjects = [
   },
 ];
 
+//   wordpress
 export const WordpressProjects = [
-  //   wordpress
   {
     id: 1,
     image: "/images/wordpress project/arclinea.png",
@@ -286,6 +285,7 @@ export const WordpressProjects = [
     link: "https://www.clickbooster.io/",
   },
 ];
+// shopify
 export const ShopifyProjects = [
   {
     id: 1,
@@ -336,8 +336,8 @@ export const ShopifyProjects = [
     link: "https://www.thesewingstudio.co.uk/",
   },
 ];
+//   webflow
 export const WebflowProjects = [
-  //   wordpress
   {
     id: 1,
     image: "/images/webflow project/mondaycoffee.png",
@@ -382,8 +382,8 @@ export const WebflowProjects = [
   },
 ];
 
+//   wix
 export const WixProjects = [
-  //   wix
   {
     id: 1,
     image: "/images/wix project/ebulletins.png",
@@ -433,50 +433,48 @@ export const WixProjects = [
     link: "https://www.mikaelareuben.com/",
   },
 ];
+//   Framer
 export const FramerProjects = [
-  //   wix
   {
     id: 1,
-    image: "/images/framer/screencapture-bajgartoffice-2024-12-27-16_05_18.png",
+    image: "/images/framer/ds-k.png",
     title: "saltydonut",
-    link: "https://www.ebulletins.com/",
+    link: "https://ds-k.site/",
   },
   {
     id: 2,
-    image: "/images/framer/screencapture-becklyn-en-2024-12-27-16_07_12.png",
+    image: "/images/framer/crazycreative.png",
     title: "saltydonut",
-    link: "https://www.tinktankstudio.com/",
+    link: "https://crazycreative.design/",
   },
   {
     id: 3,
-    image:
-      "/images/framer/screencapture-crazycreative-design-2024-12-27-16_03_48.png",
+    image: "/images/framer/findmy.png",
     title: "saltydonut",
-    link: "https://rashi.org.il/",
+    link: "https://findmy.vitra.com/",
   },
   {
     id: 4,
-    image: "/images/framer/screencapture-ds-k-site-2024-12-27-16_16_23.png",
+    image: "/images/framer/becklyn.png",
     title: "saltydonut",
-    link: "https://www.monetago.com/",
+    link: "https://becklyn.com/en",
   },
   {
     id: 5,
-    image:
-      "/images/framer/screencapture-findmy-vitra-en-en-questionnaire-chairs-questions-sitting-time-2024-12-27-16_08_33.png",
+    image: "/images/framer/meyagami.png",
     title: "saltydonut",
-    link: "https://www.thegrilledcheesefactory.fr/",
+    link: "https://www.miyagami.com/",
   },
   {
     id: 6,
-    image: "/images/framer/screencapture-miyagami-2024-12-27-16_06_20.png",
+    image: "/images/framer/baggartoffice.png",
     title: "saltydonut",
-    link: "https://www.seasonsincolour.com/",
+    link: "https://bajgartoffice.com/",
   },
   {
     id: 7,
-    image: "/images/framer/screencapture-tellet-ai-2024-12-27-16_14_38.png",
+    image: "/images/framer/tellet.png",
     title: "saltydonut",
-    link: "https://www.matchmediagroup.com/",
+    link: "https://tellet.ai/",
   },
 ];
