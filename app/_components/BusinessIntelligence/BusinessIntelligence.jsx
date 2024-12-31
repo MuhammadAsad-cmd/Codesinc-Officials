@@ -6,6 +6,7 @@ import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const BusinessIntelligence = () => {
   const servicesData = [
@@ -135,11 +136,14 @@ const BusinessIntelligence = () => {
               Intelligence Solutions. We can help turn your data into actionable
               insights through our business intelligence solutions.
             </p>
-            <div className="md:flex md:items-center md:justify-center">
+            <Link
+              href="#contact"
+              className="md:flex md:items-center md:justify-center"
+            >
               <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -233,11 +237,14 @@ const BusinessIntelligence = () => {
               early BPO services, you can give complete focus on your main
               competencies during the crucial start-up period.
             </p>
-            <div className="md:flex md:items-center md:justify-center">
+            <Link
+              href="#contact"
+              className="md:flex md:items-center md:justify-center"
+            >
               <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
-            </div>
+            </Link>
           </div>
           <div className="md:w-[58.33%] lg:px-4" data-aos="fade-up">
             <div className="mt-6 flex w-full items-center justify-center">

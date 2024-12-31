@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -19,6 +19,7 @@ import Image from "next/image";
 const HomePageProjects = () => {
   const [activeFilter, setActiveFilter] = useState("Web Development");
   const [hoverEnabled, setHoverEnabled] = useState({});
+  const imageRefs = useRef({});
   const limit = 12;
 
   const projectMap = {
@@ -48,9 +49,9 @@ const HomePageProjects = () => {
     AOS.refresh();
   }, [activeFilter]);
 
-  const checkHoverCondition = (id, imageRef) => {
-    console.log("ImageRef:", imageRef);
-    if (imageRef?.naturalHeight > 250) {
+  const checkHoverCondition = (id) => {
+    const img = imageRefs.current[id];
+    if (img?.naturalHeight > 250) {
       setHoverEnabled((prev) => ({ ...prev, [id]: true }));
     } else {
       setHoverEnabled((prev) => ({ ...prev, [id]: false }));
@@ -101,13 +102,13 @@ const HomePageProjects = () => {
                   <Image
                     width={280}
                     height={280}
+                    unoptimized
                     priority={index < 4}
                     src={project.image}
                     alt={project.title}
                     className="h-auto w-full rounded-lg object-cover"
-                    onLoadingComplete={(img) =>
-                      checkHoverCondition(project.id, img)
-                    }
+                    onLoad={() => checkHoverCondition(project.id)}
+                    ref={(el) => (imageRefs.current[project.id] = el)}
                   />
                 </div>
               </Link>

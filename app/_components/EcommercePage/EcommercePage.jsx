@@ -5,6 +5,7 @@ import Image from "next/image";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const EcommercePage = () => {
   useEffect(() => {
@@ -132,11 +133,11 @@ const EcommercePage = () => {
             made systems but a wholistic and professional ecommerce web
             development company.
           </p>
-          <div className="flex items-center justify-center">
+          <Link href="#contact" className="flex items-center justify-center">
             <button className="mt-10 flex h-[45px] items-center justify-center bg-[#591661] px-[60px] py-2.5 capitalize text-white">
               get started
             </button>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="BgTechHub py-[30px] text-center text-white">
@@ -242,11 +243,11 @@ const EcommercePage = () => {
               example of the way custom ecommerce website development has
               contributed handsomely to the improvement of ecommerce.
             </p>
-            <div className="flex items-center justify-center">
+            <Link href="#contact" className="flex items-center justify-center">
               <button className="mt-10 flex h-[45px] items-center justify-center bg-[#591661] px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

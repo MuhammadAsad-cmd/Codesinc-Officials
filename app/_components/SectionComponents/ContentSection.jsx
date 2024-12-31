@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const ContentSection = ({
   title,
@@ -23,7 +24,7 @@ const ContentSection = ({
           <div>
             <h2
               data-aos="fade-up"
-              className={`${borderColor} inline-block border-b-[3px] pb-3 font-montserrat text-[30px] font-semibold uppercase text-Gray md:text-[40px]`}
+              className={`${borderColor} font-montserrat inline-block border-b-[3px] pb-3 text-[30px] font-semibold uppercase text-Gray md:text-[40px]`}
             >
               {title}
             </h2>
@@ -44,17 +45,19 @@ const ContentSection = ({
                 data-aos={animation === "left" ? "fade-left" : "fade-right"}
                 className="md:w-1/2 lg:px-4"
               >
-                <p className="text-left font-montserrat text-[15px] font-normal leading-[26px] text-Gray">
+                <p className="font-montserrat text-left text-[15px] font-normal leading-[26px] text-Gray">
                   {description}
                 </p>
               </div>
             </div>
-            <button
-              data-aos="fade-up"
-              className={`${borderColor} ${textColor} mx-auto mt-10 flex items-center justify-center rounded-full border-2 px-[60px] py-2.5 text-[15px] capitalize`}
-            >
-              Get Started
-            </button>
+            <Link href="#contact">
+              <button
+                data-aos="fade-up"
+                className={`${borderColor} ${textColor} mx-auto mt-10 flex items-center justify-center rounded-full border-2 px-[60px] py-2.5 text-[15px] capitalize`}
+              >
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

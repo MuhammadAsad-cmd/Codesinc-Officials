@@ -5,6 +5,7 @@ import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ContactsForm from "../Common/Contact/ContactsForm";
+import Link from "next/link";
 
 const CloudHosting = () => {
   useEffect(() => {
@@ -85,11 +86,11 @@ const CloudHosting = () => {
             administrators and complete support for every aspect of your server
             management.
           </p>
-          <div className="flex items-center justify-center">
+          <Link href="#contact" className="flex items-center justify-center">
             <button className="mt-10 flex h-[45px] items-center justify-center bg-[#4dbac8] px-[60px] py-2.5 capitalize text-white">
               get started
             </button>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="py-[50px]">

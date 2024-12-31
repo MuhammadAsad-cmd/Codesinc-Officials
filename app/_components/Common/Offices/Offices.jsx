@@ -121,45 +121,63 @@ const Offices = () => {
                   </div>
                 </div>
               </section>
-
-              {/* Australia Section */}
+              <h2 className="mb-2 mt-6 text-2xl font-normal uppercase text-lightblue">
+                Europe
+              </h2>
               <section>
-                <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
-                  Australia
-                </h2>
-                <div className="lg:w-1/3">
-                  <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    Melbourne
-                  </h3>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    167 – 169 Street South Melbourne 3205.
-                  </p>
-                  <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    Phone
-                  </h4>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    +61 (386) 460100
-                  </p>
+                <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
+                  {/* Europe Section */}
+                  <section className="lg:w-1/3">
+                    <div>
+                      <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
+                        Melbourne
+                      </h3>
+                      <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                        167 – 169 Street South Melbourne 3205.
+                      </p>
+                      <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                        Phone
+                      </h4>
+                      <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                        +61 (386) 460100
+                      </p>
+                    </div>
+                  </section>
+
+                  {/* America Section */}
+                  <section className="lg:w-1/3">
+                    <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue"></h2>
+                    <div>
+                      <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
+                        USA
+                      </h3>
+                      <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                        1 Merchants Plz, Bangor, ME, United States, Maine.
+                      </p>
+                      <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                        Phone
+                      </h4>
+                      <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                        +1 (207) 947-9333
+                      </p>
+                    </div>
+                  </section>
                 </div>
               </section>
 
-              {/* America Section */}
               <section>
-                <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
-                  America
-                </h2>
-                <div className="lg:w-1/3">
+                <div className="mt-4 lg:w-1/3">
                   <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    USA
+                    France
                   </h3>
                   <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    1 Merchants Plz, Bangor, ME, United States, Maine.
+                    46 Rue du Printemps, 31000 Toulouse, France
                   </p>
                   <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
                     Phone
                   </h4>
                   <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    +1 (207) 947-9333
+                    +33621337627
                   </p>
                 </div>
               </section>

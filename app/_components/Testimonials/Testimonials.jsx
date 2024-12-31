@@ -29,7 +29,7 @@ const Testimonials = () => {
         <h1 className="mb-2.5 text-center text-3xl font-bold uppercase md:mt-5 md:text-[40px]">
           Client Testimonials
         </h1>
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map(({ id, video }) => (
             <div
               key={id}
@@ -64,7 +64,7 @@ const Testimonials = () => {
           onClick={closeModal} // Close modal on clicking outside
         >
           <div
-            className="relative w-[700px] max-w-full rounded-lg bg-black"
+            className="relative w-[800px] max-w-full rounded-lg bg-black"
             onClick={(e) => e.stopPropagation()} // Prevent close on clicking inside
           >
             <button

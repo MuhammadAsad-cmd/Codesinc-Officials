@@ -6,6 +6,7 @@ import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const ItResourcePage = () => {
   const servicesData = [
@@ -132,11 +133,14 @@ const ItResourcePage = () => {
               critical tasks, projects and processes by smart resource
               allotment.
             </p>
-            <div className="flex md:items-center md:justify-center">
+            <Link
+              href="#contact"
+              className="flex md:items-center md:justify-center"
+            >
               <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

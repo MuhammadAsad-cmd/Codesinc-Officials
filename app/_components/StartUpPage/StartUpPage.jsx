@@ -7,6 +7,7 @@ import Services from "../ServicesComponent/Services";
 import EmergencySupport from "../EmergencySupport/EmergencySupport";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const StartUpPage = () => {
   const servicesData = [
@@ -73,7 +74,6 @@ const StartUpPage = () => {
             <h1 className="font-montserrat mb-2.5 mt-5 text-4xl font-bold uppercase text-white md:text-[46px] md:leading-[50px]">
               WE HELP, SUPPORT & ELEVATE STARTUPS!
             </h1>
-
             <a
               href="#second-sec"
               className="inline-block text-lg font-bold text-[#07befa] hover:underline"
@@ -121,9 +121,11 @@ const StartUpPage = () => {
                 </p>
               </div>
             </div>
-            <button className="mx-auto mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2">
-              Get Started
-            </button>
+            <Link href="#contact">
+              <button className="mx-auto mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -149,9 +151,11 @@ const StartUpPage = () => {
                 business. We implement your ideas to create the website which
                 best reflects your startup and give your brand an identity.
               </p>
-              <button className="mx-auto mt-8 flex h-9 items-center justify-center rounded-full border-2 bg-[#00b1ff] px-10 py-[7px] text-sm font-bold capitalize leading-5 text-white">
-                Get Started
-              </button>
+              <Link href="#contact">
+                <button className="mx-auto mt-8 flex h-9 items-center justify-center rounded-full border-2 bg-[#00b1ff] px-10 py-[7px] text-sm font-bold capitalize leading-5 text-white">
+                  Get Started
+                </button>
+              </Link>
             </div>
             <div className="flex flex-col items-center md:w-1/3">
               <Image
@@ -169,9 +173,11 @@ const StartUpPage = () => {
                 app development for your startup business with us. Our solid
                 foundation will help your startup to be adaptable and scalable.
               </p>
-              <button className="mx-auto mt-8 flex h-9 items-center justify-center rounded-full border-2 bg-[#00b1ff] px-10 py-[7px] text-sm font-bold capitalize leading-5 text-white">
-                Get Started
-              </button>
+              <Link href="#contact">
+                <button className="mx-auto mt-8 flex h-9 items-center justify-center rounded-full border-2 bg-[#00b1ff] px-10 py-[7px] text-sm font-bold capitalize leading-5 text-white">
+                  Get Started
+                </button>
+              </Link>
             </div>
             <div className="flex flex-col items-center md:w-1/3">
               <Image
@@ -190,9 +196,11 @@ const StartUpPage = () => {
                 security patches, managed cloud hosting and bug fixing, we serve
                 you with the best.
               </p>
-              <button className="mx-auto mt-8 flex h-9 items-center justify-center rounded-full border-2 bg-[#00b1ff] px-10 py-[7px] text-sm font-bold capitalize leading-5 text-white">
-                Get Started
-              </button>
+              <Link href="#contact">
+                <button className="mx-auto mt-8 flex h-9 items-center justify-center rounded-full border-2 bg-[#00b1ff] px-10 py-[7px] text-sm font-bold capitalize leading-5 text-white">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -209,9 +217,11 @@ const StartUpPage = () => {
               startups with the best potential investors to support and turn
               their raw ideas into great companies.
             </p>
-            <button className="mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2 max-md:mx-auto">
-              Get Started
-            </button>
+            <Link href="#contact">
+              <button className="mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2 max-md:mx-auto">
+                Get Started
+              </button>
+            </Link>
           </div>
           <div className="px-4 md:w-[58.33%]" data-aos="fade-up">
             <div className="mx-auto md:w-[90%]">

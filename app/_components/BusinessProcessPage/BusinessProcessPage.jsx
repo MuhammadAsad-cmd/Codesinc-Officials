@@ -6,6 +6,7 @@ import ContactsForm from "../Common/Contact/ContactsForm";
 import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const BusinessProcessPage = () => {
   const servicesData = [
@@ -137,11 +138,14 @@ const BusinessProcessPage = () => {
               competencies, businesses have turned to BPO services as a mean of
               gaining enhanced competitiveness.
             </p>
-            <div className="md:flex md:items-center md:justify-center">
+            <Link
+              href="#contact"
+              className="md:flex md:items-center md:justify-center"
+            >
               <button className="mt-10 flex h-[45px] items-center justify-center bg-goldenYellow px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="my-28 flex flex-col overflow-hidden md:flex-row">

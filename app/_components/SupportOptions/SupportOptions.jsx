@@ -18,8 +18,7 @@ const SupportOptions = () => {
             </div>
             <div className="border-r border-Gray px-7">
               {" "}
-              <Link
-                target="_blank"
+              <a
                 href="tel:+923013887598"
                 className="flex flex-col items-center gap-2 xl:flex-row"
               >
@@ -33,7 +32,7 @@ const SupportOptions = () => {
                 <p className="text-xl font-extrabold text-Gray">
                   +92 (301) 388-7598
                 </p>
-              </Link>{" "}
+              </a>{" "}
             </div>
             <div className="border-r border-Gray px-10 py-2.5">
               {" "}
@@ -54,8 +53,8 @@ const SupportOptions = () => {
             </div>
             <div className="px-10 py-[17px]">
               {" "}
-              <Link
-                href="#"
+              <a
+                href="mailto:helpdesk@codes-inc.com"
                 className="flex flex-col items-center gap-2 xl:flex-row"
               >
                 <Image
@@ -66,7 +65,7 @@ const SupportOptions = () => {
                   alt="email"
                 />{" "}
                 <p className="text-xl font-extrabold text-Gray"> Email Us </p>
-              </Link>{" "}
+              </a>{" "}
             </div>
           </div>
         </div>

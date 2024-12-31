@@ -11,6 +11,7 @@ import React, { useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const DigitalMarketing = () => {
   const servicesData = [
@@ -146,11 +147,14 @@ const DigitalMarketing = () => {
               engage with their customers in a new better way. We aim to do the
               same for you.
             </p>
-            <div className="md:flex md:items-center md:justify-center">
+            <Link
+              href="#contact"
+              className="md:flex md:items-center md:justify-center"
+            >
               <button className="mt-10 flex h-[45px] items-center justify-center bg-[#35a4dc] px-[60px] py-2.5 capitalize text-white">
                 get started
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

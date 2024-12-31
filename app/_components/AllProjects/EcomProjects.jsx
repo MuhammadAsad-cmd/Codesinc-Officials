@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
@@ -8,6 +8,8 @@ import { ECommProjects } from "@/app/Data/Projects";
 
 const EcomProjects = () => {
   const [hoverEnabled, setHoverEnabled] = useState({});
+
+  const imageRefs = useRef({});
 
   useEffect(() => {
     AOS.init({
@@ -18,14 +20,15 @@ const EcomProjects = () => {
     });
   }, []);
 
-  const checkHoverCondition = (id, imageRef) => {
-    console.log("ImageRef:", imageRef);
-    if (imageRef?.naturalHeight > 250) {
+  const checkHoverCondition = (id) => {
+    const img = imageRefs.current[id];
+    if (img?.naturalHeight > 250) {
       setHoverEnabled((prev) => ({ ...prev, [id]: true }));
     } else {
       setHoverEnabled((prev) => ({ ...prev, [id]: false }));
     }
   };
+
   return (
     <>
       <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
@@ -50,13 +53,13 @@ const EcomProjects = () => {
                     <Image
                       width={280}
                       height={280}
+                      unoptimized
                       priority={index < 4}
                       src={project.image}
                       alt={project.title}
                       className="h-auto w-full rounded-lg object-cover"
-                      onLoadingComplete={(img) =>
-                        checkHoverCondition(project.id, img)
-                      }
+                      onLoad={() => checkHoverCondition(project.id)}
+                      ref={(el) => (imageRefs.current[project.id] = el)}
                     />
                   </div>
                 </Link>

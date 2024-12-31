@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HowWedoIt = ({ borderColor, textColor, items }) => {
@@ -6,7 +7,7 @@ const HowWedoIt = ({ borderColor, textColor, items }) => {
     <div className="bg-offWhite py-[70px]">
       <div className="container px-4 text-center">
         <h4
-          className={`${borderColor} inline-block items-center justify-center border-b-[3px] pb-3 text-center font-montserrat text-[30px] font-semibold uppercase text-Gray md:text-[40px]`}
+          className={`${borderColor} font-montserrat inline-block items-center justify-center border-b-[3px] pb-3 text-center text-[30px] font-semibold uppercase text-Gray md:text-[40px]`}
         >
           how we do it
         </h4>
@@ -29,17 +30,19 @@ const HowWedoIt = ({ borderColor, textColor, items }) => {
                 <h3 className="mb-2.5 mt-[30px] text-center text-xl font-semibold uppercase group-hover:border-white">
                   {item.title}
                 </h3>
-                <p className="mb-2.5 font-montserrat text-[13px] font-normal leading-[21px] text-Gray">
+                <p className="font-montserrat mb-2.5 text-[13px] font-normal leading-[21px] text-Gray">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
-          <button
-            className={`${borderColor} ${textColor} mx-auto mt-10 flex items-center justify-center rounded-full border-2 px-[60px] py-2.5 text-[15px] capitalize`}
-          >
-            Get Started
-          </button>
+          <Link href="#contact">
+            <button
+              className={`${borderColor} ${textColor} mx-auto mt-10 flex items-center justify-center rounded-full border-2 px-[60px] py-2.5 text-[15px] capitalize`}
+            >
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import ProjectContact from "../Common/Contact/ProjectContact";
 import EmergencySupport from "../EmergencySupport/EmergencySupport";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const SoftwareDevelop = () => {
   useEffect(() => {
@@ -84,9 +85,11 @@ const SoftwareDevelop = () => {
                 </p>
               </div>
             </div>
-            <button className="mx-auto mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2">
-              Get Started
-            </button>
+            <Link href="#contact">
+              <button className="mx-auto mt-10 flex items-center justify-center rounded-full border-2 border-skyBlue2 px-[60px] py-2.5 text-[15px] capitalize text-skyBlue2">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -155,9 +158,11 @@ const SoftwareDevelop = () => {
               </p>
             </div>
           </div>
-          <button className="mx-auto mt-10 flex h-[45px] items-center justify-center rounded-full border-2 border-white px-[60px] py-2.5 text-[15px] capitalize text-white">
-            Get Started
-          </button>
+          <Link href="#contact">
+            <button className="mx-auto mt-10 flex h-[45px] items-center justify-center rounded-full border-2 border-white px-[60px] py-2.5 text-[15px] capitalize text-white">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
       <div className="mt-[50px] pb-5 pt-[30px]">

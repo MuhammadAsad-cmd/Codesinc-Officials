@@ -10,6 +10,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
+import Link from "next/link";
 
 const Artificial = () => {
   const servicesData = [
@@ -144,10 +145,11 @@ const Artificial = () => {
               language processing, and AI-driven insights to unlock hidden
               opportunities and streamline your workflows.
             </p>
-
-            <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
-              get started
-            </button>
+            <Link href="#contact">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
+                get started
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -238,9 +240,11 @@ const Artificial = () => {
               Gain actionable insights and identify trends effortlessly with
               interactive and customizable dashboards.
             </p>
-            <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
-              get started
-            </button>
+            <Link href="#contact">
+              <button className="mt-10 flex h-[45px] items-center justify-center bg-rosePink px-[60px] py-2.5 capitalize text-white">
+                get started
+              </button>
+            </Link>
           </div>
           <div className="md:w-[58.33%] lg:px-4" data-aos="fade-up">
             <div className="mt-6 flex w-full items-center justify-center">
