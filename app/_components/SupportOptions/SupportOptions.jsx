@@ -19,7 +19,7 @@ const SupportOptions = () => {
             <div className="border-r border-Gray px-7">
               {" "}
               <a
-                href="tel:+923013887598"
+                href="tel:+923126806286."
                 className="flex flex-col items-center gap-2 xl:flex-row"
               >
                 <Image
@@ -30,7 +30,7 @@ const SupportOptions = () => {
                   alt="Call Us"
                 />
                 <p className="text-xl font-extrabold text-Gray">
-                  +92 (301) 388-7598
+                  +92 312 6806286.
                 </p>
               </a>{" "}
             </div>

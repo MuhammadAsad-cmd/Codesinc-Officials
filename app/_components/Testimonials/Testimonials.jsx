@@ -17,12 +17,6 @@ const Testimonials = () => {
     setCurrentVideo(null);
   };
 
-  // Function to extract the video ID from a YouTube URL
-  const getYouTubeThumbnail = (url) => {
-    const videoId = url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
-    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`; // HQ thumbnail
-  };
-
   return (
     <div className="mt-6 pb-20">
       <div className="container px-4 md:px-8">
@@ -30,21 +24,20 @@ const Testimonials = () => {
           Client Testimonials
         </h1>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map(({ id, video }) => (
+          {testimonials.map(({ id, thumbnail, video }) => (
             <div
               key={id}
               onClick={() => openModal(video)}
               className="cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out"
             >
-              <div className="relative max-h-[320px]">
-                {/* Generate Thumbnail Dynamically */}
+              <div className="relative h-[320px] w-full">
                 <Image
-                  width={250}
-                  height={250}
+                  width={320}
+                  height={320}
                   unoptimized
-                  src={getYouTubeThumbnail(video)}
+                  src={thumbnail}
                   alt={`Testimonial ${id}`}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-skyBlue/60 text-xl text-white">
@@ -69,7 +62,7 @@ const Testimonials = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute -right-3 -top-3 z-10 flex size-8 items-center justify-center rounded-full bg-white text-black"
+              className="absolute -right-3 -top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-black"
             >
               ✕
             </button>

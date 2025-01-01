@@ -80,9 +80,9 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="tel:+923013887598">
+                  <a href="tel:+923126806286.">
                     <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
-                      Call: +92 (301) 388-7598
+                      Call: +92 312 6806286.
                       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
                     </p>
                   </a>

@@ -6,6 +6,7 @@ import "swiper/css/autoplay";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import VideoSection from "../VideoSection/VideoSection";
+import { usePathname } from "next/navigation";
 
 const slidesData = [
   {
@@ -41,6 +42,8 @@ const slidesData = [
 ];
 
 const HeroSection = () => {
+  const pathname = usePathname();
+
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -63,7 +66,7 @@ const HeroSection = () => {
           />
         </div>
         <div className="block bg-[url('/images/mobileview/mobhero1.jpg')] bg-cover bg-fixed bg-center bg-no-repeat max-md:h-[100vh]">
-          <div className="absolute top-[6%] flex w-full flex-col justify-center lg:top-[18%]">
+          <div className="absolute top-1/2 w-full -translate-y-1/2 transform">
             <div className="container h-full px-4 md:px-8">
               <div className="mx-auto hidden md:block">
                 <Image
@@ -76,7 +79,7 @@ const HeroSection = () => {
                   className="mx-auto md:h-[103px] md:w-[129px] lg:h-[200px] lg:w-[250px]"
                 />
               </div>
-              <h1 className="font-montserrat mx-auto mb-2.5 mt-5 text-center text-4xl font-bold uppercase text-white md:max-w-[500px] md:text-[40px] md:leading-[46px] lg:text-[48px] lg:leading-[52px]">
+              <h1 className="font-montserrat mx-auto mb-2.5 mt-5 text-center text-[40px] font-bold uppercase leading-[46px] text-white md:max-w-[500px] lg:text-[48px] lg:leading-[52px]">
                 World&apos;s Finest Technology Hub
               </h1>
               <div className="my-4 w-full">
@@ -106,13 +109,16 @@ const HeroSection = () => {
                   ))}
                 </Swiper>
               </div>
+              {/* Action buttons */}
               <div className="mt-9 flex w-full flex-col items-center justify-center gap-5 md:flex-row">
-                <button
-                  onClick={() => handleScroll("services")}
-                  className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
-                >
-                  View Services
-                </button>
+                {pathname !== "/all-projects" && (
+                  <button
+                    onClick={() => handleScroll("services")}
+                    className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
+                  >
+                    View Services
+                  </button>
+                )}
                 <button
                   onClick={() => handleScroll("portfolio")}
                   className="flex h-14 items-center justify-center whitespace-nowrap rounded-full border-2 border-white bg-transparent px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"

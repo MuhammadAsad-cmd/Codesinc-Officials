@@ -131,10 +131,11 @@ const WebDesign = () => {
                     ))}
                   </div>
                 </div>
-
-                <button className="font-montserrat mt-4 rounded-full border border-brightOrange px-10 py-1.5 text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
-                  Get Free Quote
-                </button>
+                <Link href="#contact">
+                  <button className="font-montserrat mt-4 rounded-full border border-brightOrange px-10 py-1.5 text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
+                    Get Free Quote
+                  </button>
+                </Link>
               </div>
             ))}
             {application.map((service, index) => (
@@ -182,10 +183,11 @@ const WebDesign = () => {
                     ))}
                   </div>
                 </div>
-
-                <button className="font-montserrat mt-4 rounded-full border border-brightOrange px-10 py-1.5 text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
-                  Get Free Quote
-                </button>
+                <Link href="#contact">
+                  <button className="font-montserrat mt-4 rounded-full border border-brightOrange px-10 py-1.5 text-[13px] font-semibold uppercase text-brightOrange transition duration-300">
+                    Get Free Quote
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
