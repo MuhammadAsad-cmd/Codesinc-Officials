@@ -110,7 +110,7 @@ const TechnologySection = () => {
     >
       <div className="mb-8 text-center">
         <h3
-          className="text-center font-montserrat text-4xl font-semibold uppercase leading-[42px] md:text-[40px] md:leading-[58px]"
+          className="font-montserrat text-center text-4xl font-semibold uppercase leading-[42px] md:text-[40px] md:leading-[58px]"
           data-aos="fade-down"
         >
           Technology & Business <br />
@@ -126,7 +126,7 @@ const TechnologySection = () => {
       {/* Horizontal Tab Icons */}
       <div className="relative mb-5">
         <ul
-          className="flex w-full items-center justify-between max-md:overflow-x-auto"
+          className="flex w-full items-center justify-between overflow-x-auto max-md:gap-2"
           data-aos="zoom-in"
         >
           {tabs.map((tab) => {
@@ -134,7 +134,7 @@ const TechnologySection = () => {
             return (
               <li
                 key={tab.id}
-                className={`relative flex size-14 flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-2 bg-white transition-all duration-300 ease-in-out lg:size-[70px] ${
+                className={`relative flex size-14 flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-2 bg-white transition-all duration-300 ease-in-out md:size-[70px] ${
                   activeTab === tab.id
                     ? "border-[#ddd] text-[#ddd]"
                     : `border-[${tab.color}] text-[${tab.color}]`
@@ -173,7 +173,7 @@ const TechnologySection = () => {
                 data-aos="fade-in"
               >
                 <h3
-                  className={`mb-2.5 mt-5 pb-2.5 text-center font-montserrat text-[35px] font-semibold capitalize leading-[58px] transition-all duration-700`}
+                  className={`font-montserrat mb-2.5 mt-5 pb-2.5 text-center text-[35px] font-semibold capitalize leading-[58px] transition-all duration-700`}
                   data-aos="fade-down"
                 >
                   {tab.label}

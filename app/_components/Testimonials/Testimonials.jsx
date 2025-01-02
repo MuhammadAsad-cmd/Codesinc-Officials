@@ -18,12 +18,12 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="mt-6 pb-20">
+    <div id="testimonials" className="mt-6 pb-20">
       <div className="container px-4 md:px-8">
         <h1 className="mb-2.5 text-center text-3xl font-bold uppercase md:mt-5 md:text-[40px]">
           Client Testimonials
         </h1>
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map(({ id, thumbnail, video }) => (
             <div
               key={id}

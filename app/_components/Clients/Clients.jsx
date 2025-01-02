@@ -18,10 +18,10 @@ const Clients = () => {
   return (
     <>
       <div className="container px-4">
-        <h4 className="mb-[30px] mt-2.5 text-center font-montserrat text-3xl font-bold uppercase leading-5 text-Gray md:text-[40px]">
+        <h4 className="font-montserrat mb-[30px] mt-2.5 text-center text-3xl font-bold uppercase leading-5 text-Gray md:text-[40px]">
           Clients
         </h4>
-        <p className="mx-auto mb-[30px] text-center font-montserrat text-sm font-normal leading-6 text-Gray md:w-[44%]">
+        <p className="font-montserrat mx-auto mb-[30px] text-center text-base font-normal text-Gray md:w-[44%]">
           These are some names of clienteles that trust us and chose our
           development services for their complex ecosystems.
         </p>

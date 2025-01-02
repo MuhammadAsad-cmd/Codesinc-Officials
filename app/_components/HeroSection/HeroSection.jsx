@@ -62,7 +62,7 @@ const HeroSection = () => {
               srcLang: "en",
               label: "English",
             }}
-            heightClass="h-[620px] lg:h-[755px]"
+            heightClass="h-[620px] lg:h-[720px]"
           />
         </div>
         <div className="block bg-[url('/images/mobileview/mobhero1.jpg')] bg-cover bg-fixed bg-center bg-no-repeat max-md:h-[100vh]">
@@ -111,13 +111,22 @@ const HeroSection = () => {
               </div>
               {/* Action buttons */}
               <div className="mt-9 flex w-full flex-col items-center justify-center gap-5 md:flex-row">
-                {pathname !== "/all-projects" && (
+                {pathname === "/testimonials" ? (
                   <button
-                    onClick={() => handleScroll("services")}
+                    onClick={() => handleScroll("testimonials")}
                     className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
                   >
-                    View Services
+                    View Testimonials
                   </button>
+                ) : (
+                  pathname !== "/all-projects" && (
+                    <button
+                      onClick={() => handleScroll("services")}
+                      className="flex h-14 items-center justify-center whitespace-nowrap rounded-full bg-lightblue px-8 text-lg uppercase tracking-wider text-white duration-300 ease-in-out hover:bg-white hover:text-lightblue md:px-[60px]"
+                    >
+                      View Services
+                    </button>
+                  )
                 )}
                 <button
                   onClick={() => handleScroll("portfolio")}

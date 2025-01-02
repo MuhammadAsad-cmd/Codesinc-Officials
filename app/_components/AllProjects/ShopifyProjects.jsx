@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { GoArrowRight } from "react-icons/go";
 
 const Shopifyprojects = () => {
   const [hoverEnabled, setHoverEnabled] = useState({});
@@ -32,7 +33,7 @@ const Shopifyprojects = () => {
       <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
         <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
           <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">
-            Web Development Projects
+            Shopify Development Projects
           </h2>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -60,6 +61,13 @@ const Shopifyprojects = () => {
                       ref={(el) => (imageRefs.current[project.id] = el)}
                     />
                   </div>
+                </Link>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  className="absolute bottom-4 right-4 flex size-10 items-center justify-center rounded-full bg-skyBlue opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <GoArrowRight className="text-3xl text-white transition-transform duration-300 hover:rotate-[-45deg] group-hover:scale-110" />
                 </Link>
               </div>
             </div>

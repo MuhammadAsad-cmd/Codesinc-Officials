@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { GoArrowRight } from "react-icons/go";
 
 const MobileProjects = () => {
   const [hoverEnabled, setHoverEnabled] = useState({});
@@ -60,6 +61,13 @@ const MobileProjects = () => {
                       ref={(el) => (imageRefs.current[project.id] = el)}
                     />
                   </div>
+                </Link>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  className="absolute bottom-4 right-4 flex size-10 items-center justify-center rounded-full bg-skyBlue opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <GoArrowRight className="text-3xl text-white transition-transform duration-300 hover:rotate-[-45deg] group-hover:scale-110" />
                 </Link>
               </div>
             </div>

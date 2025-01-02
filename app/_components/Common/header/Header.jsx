@@ -55,14 +55,14 @@ const Header = () => {
                 </li>
                 <ServicesDropdown />
 
-                {/* <li>
-                  <Link href="/careers">
+                <li>
+                  <Link href="/testimonials">
                     <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
-                      Careers
+                      Testimonials
                       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
                     </p>
                   </Link>
-                </li> */}
+                </li>
                 <li>
                   <Link href="/all-projects">
                     <p className="group relative inline-block text-base font-normal uppercase leading-5 tracking-[1px] hover:text-white">
