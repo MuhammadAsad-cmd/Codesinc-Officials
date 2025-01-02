@@ -53,6 +53,13 @@ export const testimonials = [
     name: "Jane Smith",
     position: "Product Manager",
     video: "https://www.youtube.com/embed/PU-RscdGCuY",
+    thumbnail: "/images/clinets/c1.png",
+  },
+  {
+    id: 9,
+    name: "Jane Smith",
+    position: "Product Manager",
+    video: "https://www.youtube.com/embed/PU-RscdGCuY",
     thumbnail: "/images/clinets/c9.jpg",
   },
 ];

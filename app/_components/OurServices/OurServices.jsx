@@ -41,20 +41,21 @@ const OurServices = () => {
                 data-aos="zoom-in"
                 data-aos-delay={index * 100}
               >
-                <div className="absolute inset-x-5 inset-y-10 z-50 flex flex-col items-center text-center md:inset-x-[38px]">
-                  <Link href={service.link}>
-                    <div className="mb-4">
-                      <service.icon className="text-[44px] font-black text-lightblue duration-300 ease-in-out group-hover:text-white" />
-                    </div>
+                <Link
+                  href={service.link}
+                  className="absolute inset-x-5 inset-y-10 z-50 flex flex-col items-center text-center md:inset-x-[38px]"
+                >
+                  <div className="mb-4">
+                    <service.icon className="text-[44px] font-black text-lightblue duration-300 ease-in-out group-hover:text-white" />
+                  </div>
 
-                    <h2 className="my-2.5 text-2xl font-bold capitalize duration-300 ease-in-out group-hover:text-white">
-                      {service.title}
-                    </h2>
-                    <p className="my-2 w-full max-w-[272px] text-center text-base font-normal text-darkGray duration-300 ease-in-out group-hover:text-white">
-                      {service.description}
-                    </p>
-                  </Link>
-                </div>
+                  <h2 className="my-2.5 text-2xl font-bold capitalize duration-300 ease-in-out group-hover:text-white">
+                    {service.title}
+                  </h2>
+                  <p className="my-2 w-full max-w-[272px] text-center text-base font-normal text-darkGray duration-300 ease-in-out group-hover:text-white">
+                    {service.description}
+                  </p>
+                </Link>
                 <div className="absolute inset-0 z-30 w-0 opacity-0 transition-all duration-300 ease-in-out group-hover:w-full group-hover:opacity-100">
                   <Image
                     width={350}

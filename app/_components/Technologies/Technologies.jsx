@@ -126,7 +126,7 @@ const TechnologySection = () => {
       {/* Horizontal Tab Icons */}
       <div className="relative mb-5">
         <ul
-          className="flex w-full items-center justify-between overflow-x-auto max-md:gap-2"
+          className="flex w-full items-center justify-between max-md:gap-2 max-md:overflow-x-auto"
           data-aos="zoom-in"
         >
           {tabs.map((tab) => {
@@ -149,7 +149,7 @@ const TechnologySection = () => {
                   }}
                 />
                 <div
-                  className={`absolute -bottom-9 text-4xl text-[#ddd] transition-transform duration-300 ease-in-out ${
+                  className={`absolute text-4xl text-[#ddd] transition-transform duration-300 ease-in-out md:-bottom-9 ${
                     activeTab === tab.id ? "opacity-100" : "opacity-0"
                   }`}
                 >

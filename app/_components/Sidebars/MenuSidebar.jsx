@@ -3,19 +3,20 @@ import { services } from "@/app/Data/Services";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        // Adjust the breakpoint as needed
         toggleMenuSidebar(false);
       }
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -23,12 +24,12 @@ const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // Disable scrolling when sidebar is open
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Enable scrolling when sidebar is closed
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = "auto"; // Reset scrolling when component unmounts
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
@@ -40,6 +41,10 @@ const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
 
   const handleCloseSidebar = () => {
     toggleMenuSidebar(false);
+  };
+
+  const toggleServices = () => {
+    setIsServicesOpen((prev) => !prev);
   };
 
   return (
@@ -98,16 +103,36 @@ const MenuSidebar = ({ isOpen, toggleMenuSidebar }) => {
                     </p>
                   </Link>
                 </li>
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <Link href={service.link}>
-                      <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
-                        {service.title}
-                        <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                      </p>
-                    </Link>
-                  </li>
-                ))}
+
+                <li>
+                  <div
+                    className="flex cursor-pointer items-center justify-between"
+                    onClick={toggleServices}
+                  >
+                    <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
+                      Services
+                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                    </p>
+                    {isServicesOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                  </div>
+                  <ul
+                    className={`flex flex-col gap-4 overflow-hidden transition-all duration-300 ${
+                      isServicesOpen ? "mt-3 max-h-screen" : "max-h-0"
+                    }`}
+                  >
+                    {services.map((service, index) => (
+                      <li key={index}>
+                        <Link href={service.link}>
+                          <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
+                            {service.title}
+                            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+
                 <li>
                   <Link href="/testimonials">
                     <p className="group relative inline-block text-base font-normal leading-5 tracking-[1px] hover:text-white">
