@@ -30,7 +30,7 @@ const Offices = () => {
   return (
     <>
       <div className="container px-4 py-[50px] md:px-8">
-        <div className="flex w-full flex-col gap-2 lg:flex-row lg:items-center">
+        <div className="flex w-full flex-col gap-5 lg:flex-row lg:items-center">
           <div className="lg:w-[41.67%]">
             <div className="relative">
               <Image
@@ -85,7 +85,10 @@ const Offices = () => {
                 <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue">
                   Asia
                 </h2>
-                <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-center">
+                <h3 className="mb-2 pb-1 text-2xl font-medium uppercase leading-6 text-Gray">
+                  Pakistan
+                </h3>
+                <div className="mt-2 flex flex-col gap-4 lg:flex-row lg:items-center">
                   {/* Pakistan - Rahim Yar Khan */}
                   <div className="lg:w-1/3">
                     <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
@@ -121,13 +124,14 @@ const Offices = () => {
                   </div>
                 </div>
               </section>
-              <h2 className="mb-2 mt-6 text-2xl font-normal uppercase text-lightblue">
-                Europe
-              </h2>
+
               <section>
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
                   {/* Europe Section */}
                   <section className="lg:w-1/3">
+                    <h3 className="mb-2 pb-1 text-2xl font-medium uppercase leading-6 text-Gray">
+                      Austrilia{" "}
+                    </h3>
                     <div>
                       <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
                         Melbourne
@@ -146,7 +150,7 @@ const Offices = () => {
 
                   {/* America Section */}
                   <section className="lg:w-1/3">
-                    <h2 className="mb-[15px] mt-2.5 text-2xl font-normal uppercase text-lightblue"></h2>
+                    <h3 className="mb-2 pb-1 text-2xl font-medium uppercase leading-6 text-Gray"></h3>
                     <div>
                       <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
                         USA
@@ -162,23 +166,23 @@ const Offices = () => {
                       </p>
                     </div>
                   </section>
-                </div>
-              </section>
-
-              <section>
-                <div className="mt-4 lg:w-1/3">
-                  <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    France
-                  </h3>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    46 Rue du Printemps, 31000 Toulouse, France
-                  </p>
-                  <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
-                    Phone
-                  </h4>
-                  <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
-                    +33621337627
-                  </p>
+                  <section className="lg:w-1/3">
+                    <h3 className="mb-2 pb-1 text-2xl font-medium uppercase leading-6 text-Gray"></h3>
+                    <div>
+                      <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
+                        France
+                      </h3>
+                      <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                        46 Rue du Printemps, 31000 Toulouse, France
+                      </p>
+                      <h4 className="pb-1 pt-6 text-[17px] font-medium uppercase leading-6 text-Gray">
+                        Phone
+                      </h4>
+                      <p className="break-words text-base font-normal leading-[22px] tracking-wide text-Gray">
+                        +33621337627
+                      </p>
+                    </div>
+                  </section>
                 </div>
               </section>
             </div>
