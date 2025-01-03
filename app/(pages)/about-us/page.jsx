@@ -8,7 +8,6 @@ const page = () => {
   return (
     <>
       <AboutUs />
-      <Testimonials />
       <Clients />
       <ContactForm />
     </>
