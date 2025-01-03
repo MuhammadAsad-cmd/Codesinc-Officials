@@ -88,8 +88,8 @@ const Offices = () => {
                 <h3 className="mb-2 pb-1 text-2xl font-medium uppercase leading-6 text-Gray">
                   Pakistan
                 </h3>
+                {/* Pakistan  */}
                 <div className="mt-2 flex flex-col gap-4 lg:flex-row lg:items-center">
-                  {/* Pakistan - Rahim Yar Khan */}
                   <div className="lg:w-1/3">
                     <h3 className="pb-1 text-[17px] font-medium uppercase leading-6 text-Gray">
                       Rahim Yar Khan
@@ -125,7 +125,7 @@ const Offices = () => {
                 </div>
               </section>
 
-              <section>
+              <section className="mt-10">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
                   {/* Europe Section */}
                   <section className="lg:w-1/3">
