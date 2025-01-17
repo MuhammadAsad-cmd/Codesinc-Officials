@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ContactsForm from "../Common/Contact/ContactsForm";
 import Link from "next/link";
+import Head from "next/head";
 
 const CloudHosting = () => {
   useEffect(() => {
@@ -18,6 +19,30 @@ const CloudHosting = () => {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Get secure managed cloud hosting services with flexible and scalable solutions for your business needs." />
+        <meta name="keywords" content="Cloud Hosting, Managed Cloud, Hosting Services, Secure Cloud, Scalable Cloud, DigitalOcean, VULTR, Varnish Cache, Redis, Memcached, PHP, App Optimization" />
+        <meta name="author" content="Your Company Name" />
+        <title>Managed Cloud Hosting - Secure and Scalable Solutions</title>
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Managed Cloud Hosting - Secure and Scalable Solutions" />
+        <meta property="og:description" content="Experience hassle-free cloud hosting with secure, managed, and scalable solutions tailored to your business needs." />
+        <meta property="og:image" content="/images/cms/cloud-1st.png" />
+        <meta property="og:url" content="https://yourwebsite.com/cloud-hosting" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Managed Cloud Hosting - Secure and Scalable Solutions" />
+        <meta name="twitter:description" content="Experience hassle-free cloud hosting with secure, managed, and scalable solutions tailored to your business needs." />
+        <meta name="twitter:image" content="/images/cms/cloud-1st.png" />
+        <meta name="twitter:site" content="@yourtwitterhandle" />
+      </Head>
       <div
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-14 md:py-[150px]"
         style={{ backgroundImage: "url('/images/cms/cloud-bg.jpg')" }}

@@ -12,6 +12,7 @@ import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 const page = () => {
   const servicesData = [
@@ -80,6 +81,52 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>PHP Web Development Services | Custom Web Applications & Solutions</title>
+      <meta
+        name="description"
+        content="Codesinc provides top-notch PHP web development services for creating custom web applications, portals, and ecommerce solutions. Hire skilled PHP developers to develop high-standard PHP applications."
+      />
+      <meta
+        name="keywords"
+        content="PHP Development, Web Application Development, PHP Development Services, Custom PHP Web Applications, Hire PHP Developers, PHP Web Solutions"
+      />
+      <meta name="author" content="Codesinc" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="PHP Web Development Services | Custom Web Applications & Solutions"
+      />
+      <meta
+        property="og:description"
+        content="Codesinc provides top-notch PHP web development services for creating custom web applications, portals, and ecommerce solutions. Hire skilled PHP developers to develop high-standard PHP applications."
+      />
+      <meta
+        property="og:image"
+        content="/images/cms/php1-icon.png"
+      />
+      <meta property="og:url" content="https://yourwebsite.com/php-development" />
+      <meta property="og:site_name" content="Codesinc" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="PHP Web Development Services | Custom Web Applications & Solutions"
+      />
+      <meta
+        property="twitter:description"
+        content="Codesinc provides top-notch PHP web development services for creating custom web applications, portals, and ecommerce solutions. Hire skilled PHP developers to develop high-standard PHP applications."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/cms/php1-icon.png"
+      />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/php1-icon.png"

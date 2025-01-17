@@ -11,6 +11,7 @@ import Maintenence from "@/app/_components/ServicesComponent/Maintenence";
 import Outsource from "@/app/_components/ServicesComponent/Outsource";
 import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
+import Head from "next/head";
 import React from "react";
 
 const page = () => {
@@ -116,6 +117,49 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>Comprehensive CakePHP Development Services | Projects, Testimonials & Support</title>
+      <meta
+        name="description"
+        content="Explore CakePHP development services offering scalable, robust solutions for web development. Learn about our projects, read client testimonials, and connect for professional support."
+      />
+      <meta
+        name="keywords"
+        content="CakePHP Development, CakePHP Maintenance, Custom Web Development, CakePHP Projects, Client Testimonials, Scalable Solutions, Robust Web Framework, Emergency Support, CakePHP Developers"
+      />
+      <meta name="author" content="Your Company Name" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Comprehensive CakePHP Development Services | Projects, Testimonials & Support"
+      />
+      <meta
+        property="og:description"
+        content="Explore CakePHP development services offering scalable, robust solutions for web development. Learn about our projects, read client testimonials, and connect for professional support."
+      />
+      <meta property="og:image" content="/images/cms/cake1-big.png" />
+      <meta
+        property="og:url"
+        content="https://yourwebsite.com/cakephp-development-services"
+      />
+      <meta property="og:site_name" content="Your Company Name" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="Comprehensive CakePHP Development Services | Projects, Testimonials & Support"
+      />
+      <meta
+        property="twitter:description"
+        content="Explore CakePHP development services offering scalable, robust solutions for web development. Learn about our projects, read client testimonials, and connect for professional support."
+      />
+      <meta property="twitter:image" content="/images/cms/cake1-big.png" />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/cake1-icon.png"

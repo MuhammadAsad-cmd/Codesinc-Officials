@@ -11,6 +11,7 @@ import Maintenance from "@/app/_components/ServicesComponent/Maintenence";
 import Outsource from "@/app/_components/ServicesComponent/Outsource";
 import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
+import Head from "next/head";
 import React from "react";
 
 const page = () => {
@@ -94,6 +95,44 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+        {/* General Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Explore our AngularJS development services. We build fast, scalable, and dynamic apps. Get in touch for services like hybrid app development, data analysis tools, and media streaming apps."
+        />
+        <meta
+          name="keywords"
+          content="AngularJS Development Services, Hybrid App Development, Media Streaming Apps, Data Analysis Tools, AngularJS Maintenance, Outsource AngularJS Developers, Scalable Apps"
+        />
+        <meta name="author" content="Your Company Name" />
+        <title>AngularJS Development Services | Your Company</title>
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="AngularJS Development Services | Your Company" />
+        <meta
+          property="og:description"
+          content="Hire AngularJS developers for dynamic, fast, and scalable applications. We offer hybrid app development, data analysis tools, e-commerce, and more."
+        />
+        <meta property="og:image" content="/images/cms/ang1-service.png" />
+        <meta property="og:url" content="https://yourwebsite.com/angularjs-development" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AngularJS Development Services | Your Company" />
+        <meta
+          name="twitter:description"
+          content="Hire AngularJS developers for dynamic, fast, and scalable applications. We offer hybrid app development, data analysis tools, e-commerce, and more."
+        />
+        <meta name="twitter:image" content="/images/cms/ang1-service.png" />
+        <meta name="twitter:site" content="@yourtwitterhandle" />
+      </Head>
+
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/ang1-icon.png"

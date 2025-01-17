@@ -12,6 +12,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import Head from "next/head";
 
 const DigitalMarketing = () => {
   const servicesData = [
@@ -67,6 +68,52 @@ const DigitalMarketing = () => {
   }, []);
   return (
     <>
+    <Head>
+      <title>Digital Marketing Services | Boost Your Online Presence</title>
+      <meta
+        name="description"
+        content="Discover our premier digital marketing services to boost your online visibility, increase conversions, and drive targeted traffic. Let us help you unlock the full potential of your brand in the digital space."
+      />
+      <meta
+        name="keywords"
+        content="Digital Marketing, SEO, Social Media Marketing, Online Marketing, Brand Design, Digital Transformation, Content Optimization"
+      />
+      <meta name="author" content="Your Company Name" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Digital Marketing Services | Boost Your Brand's Online Presence"
+      />
+      <meta
+        property="og:description"
+        content="Discover our premier digital marketing services to boost your online visibility, increase conversions, and drive targeted traffic. Let us help you unlock the full potential of your brand in the digital space."
+      />
+      <meta
+        property="og:image"
+        content="/images/cms/digital-marketing-banner.jpg"
+      />
+      <meta property="og:url" content="https://yourwebsite.com/digital-marketing" />
+      <meta property="og:site_name" content="Your Company Name" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="Digital Marketing Services | Boost Your Brand's Online Presence"
+      />
+      <meta
+        property="twitter:description"
+        content="Discover our premier digital marketing services to boost your online visibility, increase conversions, and drive targeted traffic. Let us help you unlock the full potential of your brand in the digital space."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/cms/digital-marketing-banner.jpg"
+      />
+    </Head>
       <div
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
         style={{ backgroundImage: "url('/images/cms/digital-bg.jpg')" }}

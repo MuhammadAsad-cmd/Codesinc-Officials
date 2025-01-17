@@ -7,6 +7,7 @@ import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import Head from "next/head";
 
 const BusinessIntelligence = () => {
   const servicesData = [
@@ -63,6 +64,22 @@ const BusinessIntelligence = () => {
   }, []);
   return (
     <>
+      <Head>
+        <meta name="description" content="Explore our Business Intelligence Services that transform raw data into actionable insights. Learn how our solutions can boost your business with data-driven analytics." />
+        <meta name="keywords" content="Business Intelligence, Data Analytics, Business Solutions, Marketing Analytics, Web Analytics, Customer Success, Sales Analytics, Operations Analytics" />
+        <meta name="author" content="Your Company Name" />
+        <meta property="og:title" content="Business Intelligence Services" />
+        <meta property="og:description" content="Explore our Business Intelligence Services that transform raw data into actionable insights. Learn how our solutions can boost your business with data-driven analytics." />
+        <meta property="og:image" content="/images/cms/bi1.png" />
+        <meta property="og:url" content="https://www.yourwebsite.com/business-intelligence" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Business Intelligence Services" />
+        <meta name="twitter:description" content="Explore our Business Intelligence Services that transform raw data into actionable insights. Learn how our solutions can boost your business with data-driven analytics." />
+        <meta name="twitter:image" content="/images/cms/bi1.png" />
+        <meta name="twitter:url" content="https://www.yourwebsite.com/business-intelligence" />
+        <link rel="canonical" href="https://www.yourwebsite.com/business-intelligence" />
+      </Head>
       <div
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
         style={{ backgroundImage: "url('/images/cms/bg-bi.jpg')" }}

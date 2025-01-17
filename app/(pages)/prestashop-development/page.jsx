@@ -12,6 +12,7 @@ import WhySection from "@/app/_components/SectionComponents/WhySection";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 const page = () => {
   const items = [
@@ -44,6 +45,52 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>Prestashop Development & E-commerce Solutions | Custom Shopping Cart Development</title>
+      <meta
+        name="description"
+        content="Develop a user-friendly shopping cart with our Prestashop development services. Our Prestashop developers will help you enhance sales and performance for your business with custom solutions."
+      />
+      <meta
+        name="keywords"
+        content="Prestashop Development, E-commerce Development, Custom Prestashop Solutions, Prestashop Shopping Cart, Prestashop Customization, Prestashop Theme Development, Hire Prestashop Developers"
+      />
+      <meta name="author" content="YourCompanyName" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Prestashop Development & E-commerce Solutions | Custom Shopping Cart Development"
+      />
+      <meta
+        property="og:description"
+        content="Develop a user-friendly shopping cart with our Prestashop development services. Our Prestashop developers will help you enhance sales and performance for your business with custom solutions."
+      />
+      <meta
+        property="og:image"
+        content="/images/logos/prestoshop-icon.png"
+      />
+      <meta property="og:url" content="https://yourwebsite.com/prestashop-development" />
+      <meta property="og:site_name" content="YourCompanyName" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="Prestashop Development & E-commerce Solutions | Custom Shopping Cart Development"
+      />
+      <meta
+        property="twitter:description"
+        content="Develop a user-friendly shopping cart with our Prestashop development services. Our Prestashop developers will help you enhance sales and performance for your business with custom solutions."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/logos/prestoshop-icon.png"
+      />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/logos/prestoshop-icon.png"

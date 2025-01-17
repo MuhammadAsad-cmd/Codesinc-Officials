@@ -11,6 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import HomePageProjects from "@/app/_components/AllProjects/HomePageProjects";
 import Link from "next/link";
+import Head from "next/head";
 
 const Artificial = () => {
   const servicesData = [
@@ -67,6 +68,52 @@ const Artificial = () => {
   }, []);
   return (
     <>
+      <Head>
+        <title>Transform Your Business with AI Solutions | Artificial Intelligence</title>
+        <meta
+          name="description"
+          content="Empower your business with tailored Artificial Intelligence solutions. From predictive analytics to automation, we help you stay ahead of the competition."
+        />
+        <meta
+          name="keywords"
+          content="Artificial Intelligence, AI Solutions, Predictive Analytics, Automation, Machine Learning, Business Intelligence, AI-driven Marketing, Web Analytics, AI Support Systems"
+        />
+        <meta name="author" content="Your Company Name" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Transform Your Business with AI Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Empower your business with tailored Artificial Intelligence solutions. From predictive analytics to automation, we help you stay ahead of the competition."
+        />
+        <meta property="og:image" content="/images/cms/connecting-lines.jpg" />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/artificial-intelligence"
+        />
+        <meta property="og:site_name" content="Your Company Name" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:title"
+          content="Transform Your Business with AI Solutions"
+        />
+        <meta
+          property="twitter:description"
+          content="Empower your business with tailored Artificial Intelligence solutions. From predictive analytics to automation, we help you stay ahead of the competition."
+        />
+        <meta
+          property="twitter:image"
+          content="/images/cms/connecting-lines.jpg"
+        />
+      </Head>
       <div
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
         style={{

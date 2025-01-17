@@ -7,6 +7,7 @@ import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import Head from "next/head";
 
 const BusinessProcessPage = () => {
   const servicesData = [
@@ -64,6 +65,20 @@ const BusinessProcessPage = () => {
 
   return (
     <>
+      <Head>
+        <meta name="description" content="Explore our Business Process Outsourcing (BPO) services that provide cost-effective, flexible, and scalable solutions for various business needs, including recruitment, IT support, data processing, and more." />
+        <meta name="keywords" content="BPO, Business Process Outsourcing, IT Support, Recruitment Process Outsourcing, Data Processing, Market Research, Web Development, Call Center Services" />
+        <meta name="author" content="Your Company Name" />
+        <meta property="og:title" content="Business Process Outsourcing Solutions" />
+        <meta property="og:description" content="Offering cost-effective, flexible, and scalable BPO services to clients, helping ensure competitive advantage through outsourcing solutions." />
+        <meta property="og:image" content="/images/cms/bo1.png" />
+        <meta property="og:url" content="yourwebsite.com/business-process" />
+        <meta name="twitter:title" content="Business Process Outsourcing Solutions" />
+        <meta name="twitter:description" content="Explore our cost-effective and scalable BPO services to enhance your business processes." />
+        <meta name="twitter:image" content="/images/cms/bo1.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
       <div
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[170px]"
         style={{ backgroundImage: "url('/images/cms/bg-bo.jpg')" }}

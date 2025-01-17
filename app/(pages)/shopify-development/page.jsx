@@ -11,6 +11,7 @@ import ServicesList from "@/app/_components/SectionComponents/ServicesList";
 import WhySection from "@/app/_components/SectionComponents/WhySection";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import React from "react";
+import Head from "next/head";
 
 const page = () => {
   const items = [
@@ -42,6 +43,52 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>Shopify Development Services | YourCompanyName</title>
+      <meta
+        name="description"
+        content="Develop responsive, custom Shopify ecommerce websites with impactful user interfaces by our expert Shopify developers. Enhance your online business with our Shopify solutions."
+      />
+      <meta
+        name="keywords"
+        content="Shopify Development, Shopify Website, Ecommerce Development, Shopify Experts, Shopify Solutions"
+      />
+      <meta name="author" content="YourCompanyName" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Shopify Development Services | YourCompanyName"
+      />
+      <meta
+        property="og:description"
+        content="Develop responsive, custom Shopify ecommerce websites with impactful user interfaces by our expert Shopify developers. Enhance your online business with our Shopify solutions."
+      />
+      <meta
+        property="og:image"
+        content="/images/logos/shopify-logo.png" // Replace with your Shopify logo or related image
+      />
+      <meta property="og:url" content="https://yourwebsite.com/shopify-development" />
+      <meta property="og:site_name" content="YourCompanyName" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="Shopify Development Services | YourCompanyName"
+      />
+      <meta
+        property="twitter:description"
+        content="Develop responsive, custom Shopify ecommerce websites with impactful user interfaces by our expert Shopify developers. Enhance your online business with our Shopify solutions."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/logos/shopify-logo.png" // Replace with your Shopify logo or related image
+      />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/shopify-bag.png"

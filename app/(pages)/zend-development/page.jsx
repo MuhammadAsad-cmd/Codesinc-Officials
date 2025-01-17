@@ -12,6 +12,7 @@ import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 const page = () => {
   const servicesData = [
@@ -95,6 +96,46 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>Zend Development Services | YourCompanyName</title>
+      <meta
+        name="description"
+        content="Explore our Zend Framework development services at YourCompanyName. We specialize in Zend application development, enterprise-level solutions, and custom Zend development for scalable and secure web applications."
+      />
+      <meta
+        name="keywords"
+        content="Zend development, Zend Framework, Zend web applications, Zend PHP, custom Zend development, Zend application development"
+      />
+      <meta name="author" content="YourCompanyName" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Zend Development Services | YourCompanyName" />
+      <meta
+        property="og:description"
+        content="Explore our Zend Framework development services at YourCompanyName. We specialize in Zend application development, enterprise-level solutions, and custom Zend development for scalable and secure web applications."
+      />
+      <meta
+        property="og:image"
+        content="/images/logos/company-logo.png" // Replace with your relevant image
+      />
+      <meta property="og:url" content="https://yourwebsite.com/zend-development" />
+      <meta property="og:site_name" content="YourCompanyName" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content="Zend Development Services | YourCompanyName" />
+      <meta
+        property="twitter:description"
+        content="Explore our Zend Framework development services at YourCompanyName. We specialize in Zend application development, enterprise-level solutions, and custom Zend development for scalable and secure web applications."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/logos/company-logo.png" // Replace with your relevant image
+      />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/zend1-icon.png"

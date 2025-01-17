@@ -11,6 +11,7 @@ import Maintenence from "@/app/_components/ServicesComponent/Maintenence";
 import Outsource from "@/app/_components/ServicesComponent/Outsource";
 import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -96,6 +97,49 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>Hire Best ASP.Net Development Services | Codesinc</title>
+      <meta
+        name="description"
+        content="Codesinc delivers reliable ASP.Net development services catering to business goals and needs. Get highly scalable and result-oriented ASP.Net web development solutions."
+      />
+      <meta
+        name="keywords"
+        content="ASP.Net Development, Dot Net Developers, ASP.Net Web Applications, Dynamic Web Pages, Enterprise-Level Web Applications, Custom ASP.Net Solutions, Business Growth, ASP.Net Services"
+      />
+      <meta name="author" content="Codesinc" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Hire Best ASP.Net Development Services | Codesinc"
+      />
+      <meta
+        property="og:description"
+        content="Codesinc delivers reliable ASP.Net development services catering to business goals and needs. Get highly scalable and result-oriented ASP.Net web development solutions."
+      />
+      <meta property="og:image" content="/images/logos/drupal-main.png" />
+      <meta
+        property="og:url"
+        content="https://yourwebsite.com/asp-net-development"
+      />
+      <meta property="og:site_name" content="Codesinc" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="Hire Best ASP.Net Development Services | Codesinc"
+      />
+      <meta
+        property="twitter:description"
+        content="Codesinc delivers reliable ASP.Net development services catering to business goals and needs. Get highly scalable and result-oriented ASP.Net web development solutions."
+      />
+      <meta property="twitter:image" content="/images/logos/drupal-main.png" />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/dot1-icon.png"

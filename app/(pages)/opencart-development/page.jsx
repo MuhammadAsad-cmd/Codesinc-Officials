@@ -12,6 +12,7 @@ import WhySection from "@/app/_components/SectionComponents/WhySection";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 const page = () => {
   const items = [
@@ -44,6 +45,52 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>OpenCart Development | Powerful Ecommerce Solutions</title>
+      <meta
+        name="description"
+        content="Discover OpenCart development services to create feature-rich ecommerce solutions. We offer store customization, theme design, module development, and mobile app conversion for your online store."
+      />
+      <meta
+        name="keywords"
+        content="OpenCart Development, Ecommerce Platform, OpenCart Customization, Online Store Development, OpenCart Mobile App, OpenCart Theme Design, Ecommerce Solutions"
+      />
+      <meta name="author" content="Your Company Name" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="OpenCart Development | Powerful Ecommerce Solutions"
+      />
+      <meta
+        property="og:description"
+        content="Discover OpenCart development services to create feature-rich ecommerce solutions. We offer store customization, theme design, module development, and mobile app conversion for your online store."
+      />
+      <meta
+        property="og:image"
+        content="/images/cms/opencart-development-banner.jpg"
+      />
+      <meta property="og:url" content="https://yourwebsite.com/opencart-development" />
+      <meta property="og:site_name" content="Your Company Name" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:title"
+        content="OpenCart Development | Powerful Ecommerce Solutions"
+      />
+      <meta
+        property="twitter:description"
+        content="Discover OpenCart development services to create feature-rich ecommerce solutions. We offer store customization, theme design, module development, and mobile app conversion for your online store."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/cms/opencart-development-banner.jpg"
+      />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/logos/opencart-icon.png"

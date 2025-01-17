@@ -3,6 +3,7 @@ import { AppProjects } from "@/app/Data/Projects";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import Head from "next/head"; // Import Head for meta tags
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { GoArrowRight } from "react-icons/go";
@@ -28,8 +29,30 @@ const MobileProjects = () => {
       setHoverEnabled((prev) => ({ ...prev, [id]: false }));
     }
   };
+
   return (
     <>
+      <Head>
+        <title>Mobile App Development Projects | Portfolio</title>
+        <meta
+          name="description"
+          content="Explore our mobile app development projects showcasing cutting-edge apps with sleek designs and intuitive user experiences."
+        />
+        <meta
+          name="keywords"
+          content="Mobile App Development, App Portfolio, Cutting-edge Apps, Intuitive Designs, Mobile Projects"
+        />
+        <meta name="author" content="Your Name" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Mobile App Development Projects | Portfolio" />
+        <meta
+          property="og:description"
+          content="Browse our portfolio of expertly crafted mobile apps, featuring advanced features and seamless user experiences."
+        />
+        <meta property="og:image" content="/path-to-thumbnail.jpg" />
+        <meta property="og:url" content="https://yourwebsite.com/mobile-projects" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
         <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
           <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">

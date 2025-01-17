@@ -6,6 +6,7 @@ import Breadcrumbs from "../BreadCrumbs/Breadcrumbs";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Head from "next/head";
 
 const AzurePage = () => {
   const items = [
@@ -51,6 +52,22 @@ const AzurePage = () => {
 
   return (
     <>
+      <Head>
+        <meta name="description" content="Explore our DevOps and Cloud Services that offer scalable solutions and agile practices to enhance efficiency, security, and reliability in your business." />
+        <meta name="keywords" content="DevSecOps, Cloud Security, DevOps Automation, CI/CD, Configuration Management, Continuous Monitoring, Cloud Platform Migration, Reports and Analytics" />
+        <meta name="author" content="ARPAtech" />
+        <meta property="og:title" content="DevOps & Cloud Services for Seamless Operations" />
+        <meta property="og:description" content="Transform your business with scalable cloud solutions and agile DevOps practices. Boost efficiency, ensure reliability, and accelerate your development pipeline with our expertise." />
+        <meta property="og:image" content="/images/cms/technological-blue.jpg" />
+        <meta property="og:url" content="https://www.yourwebsite.com/azurepage" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DevOps & Cloud Services for Seamless Operations" />
+        <meta name="twitter:description" content="Transform your business with scalable cloud solutions and agile DevOps practices. Boost efficiency, ensure reliability, and accelerate your development pipeline with our expertise." />
+        <meta name="twitter:image" content="/images/cms/technological-blue.jpg" />
+        <meta name="twitter:url" content="https://www.yourwebsite.com/azurepage" />
+        <link rel="canonical" href="https://www.yourwebsite.com/azurepage" />
+      </Head>
       <div
         className="h-full min-h-screen w-full bg-cover bg-center bg-no-repeat py-12 md:py-[150px]"
         style={{

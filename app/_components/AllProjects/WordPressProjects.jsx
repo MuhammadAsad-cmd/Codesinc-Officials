@@ -3,6 +3,7 @@ import { WordpressProjects } from "@/app/Data/Projects";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import Head from "next/head"; // Import Head for meta tags
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { GoArrowRight } from "react-icons/go";
@@ -31,6 +32,27 @@ const WordPressProjects = () => {
 
   return (
     <>
+      <Head>
+        <title>WordPress Development Projects | Portfolio</title>
+        <meta
+          name="description"
+          content="Discover our portfolio of WordPress development projects, featuring custom themes, plugins, and beautifully crafted websites."
+        />
+        <meta
+          name="keywords"
+          content="WordPress Development, WordPress Projects, Custom WordPress Themes, WordPress Plugins, WordPress Portfolio"
+        />
+        <meta name="author" content="Your Name" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="WordPress Development Projects | Portfolio" />
+        <meta
+          property="og:description"
+          content="Explore our WordPress development portfolio showcasing custom themes, plugins, and professional website solutions."
+        />
+        <meta property="og:image" content="/path-to-thumbnail.jpg" />
+        <meta property="og:url" content="https://yourwebsite.com/wordpress-projects" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <section id="portfolio" className="container mx-auto px-4 py-10 md:px-8">
         <div className="flex w-full flex-col gap-3 max-lg:gap-y-6 max-md:mt-5 lg:flex-row">
           <h2 className="text-3xl uppercase text-[#464646] max-lg:text-center md:text-[38px] md:leading-10">

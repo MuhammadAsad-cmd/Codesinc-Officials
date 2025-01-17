@@ -13,6 +13,7 @@ import Services from "@/app/_components/ServicesComponent/Services";
 import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 const page = () => {
   const items = [
@@ -115,6 +116,46 @@ const page = () => {
   );
   return (
     <>
+    <Head>
+      <title>WordPress Development Services | YourCompanyName</title>
+      <meta
+        name="description"
+        content="Explore our WordPress development services at YourCompanyName. We specialize in creating custom WordPress websites, theme design, plugin development, and ongoing support to ensure your business succeeds online."
+      />
+      <meta
+        name="keywords"
+        content="WordPress development, WordPress custom themes, WordPress plugins, WordPress website design, WordPress development agency"
+      />
+      <meta name="author" content="YourCompanyName" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="WordPress Development Services | YourCompanyName" />
+      <meta
+        property="og:description"
+        content="Explore our WordPress development services at YourCompanyName. We specialize in creating custom WordPress websites, theme design, plugin development, and ongoing support to ensure your business succeeds online."
+      />
+      <meta
+        property="og:image"
+        content="/images/logos/company-logo.png" // Replace with your relevant image
+      />
+      <meta property="og:url" content="https://yourwebsite.com/wordpress-development" />
+      <meta property="og:site_name" content="YourCompanyName" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content="WordPress Development Services | YourCompanyName" />
+      <meta
+        property="twitter:description"
+        content="Explore our WordPress development services at YourCompanyName. We specialize in creating custom WordPress websites, theme design, plugin development, and ongoing support to ensure your business succeeds online."
+      />
+      <meta
+        property="twitter:image"
+        content="/images/logos/company-logo.png" // Replace with your relevant image
+      />
+    </Head>
       <ReusableHero
         backgroundImage="/images/logos/drupal-main.png"
         iconImage="/images/cms/wordpress1-icon.png"
